@@ -26,7 +26,149 @@
           </tr>
         </thead>
         <tbody>
-                  </tbody>
+          <tr><td>AllowActivationDelegationAttr</td><td><pre>Enables the allowActivationDelegation attribute on iframes.
+<a href="https://www.chromestatus.com/features/6025124331388928">https://www.chromestatus.com/features/6025124331388928</a>
+
+TODO(mustaq): Deprecated, see kUserActivationPostMessageTransfer.</pre></td><td>❌</td></tr><tr><td>AllowContentInitiatedDataUrlNavigations</td><td><pre>Enables content-initiated, main frame navigations to data URLs.
+TODO(meacer): Remove when the deprecation is complete.
+<a href="https://www.chromestatus.com/feature/5669602927312896">https://www.chromestatus.com/feature/5669602927312896</a></pre></td><td>❌</td></tr><tr><td>AndroidDownloadableFontsMatching</td><td><pre>Allows Blink to request fonts from the Android Downloadable Fonts API through
+the service implemented on the Java side.</pre></td><td>✅</td></tr><tr><td>AudioServiceLaunchOnStartup</td><td><pre>Launches the audio service on the browser startup.</pre></td><td>❌</td></tr><tr><td>AudioServiceOutOfProcess</td><td><pre>Runs the audio service in a separate process.</pre></td><td>❌</td></tr><tr><td>AudioServiceSandbox</td><td><pre>Enables the audio-service sandbox. This feature has an effect only when the
+kAudioServiceOutOfProcess feature is enabled.</pre></td><td>❌</td></tr><tr><td>BackgroundFetch</td><td><pre>Kill switch for Background Fetch.</pre></td><td>✅</td></tr><tr><td>BackForwardCache</td><td><pre>Enable using the BackForwardCache.</pre></td><td>❌</td></tr><tr><td>BackForwardCacheMemoryControls</td><td><pre>&quot;BackForwardCacheMemoryControls&quot; is checked before &quot;BackForwardCache&quot;. It
+means the low memory devices will activate neither the control group nor the
+experimental group of the BackForwardCache field trial.</pre></td><td>❌</td></tr><tr><td>BlockCredentialedSubresources</td><td><pre>Block subresource requests whose URLs contain embedded credentials (e.g.
+<code>https://user:pass@example.com/resource</code>).</pre></td><td>✅</td></tr><tr><td>BlockInsecurePrivateNetworkRequests</td><td><pre>When kBlockInsecurePrivateNetworkRequests is enabled, requests initiated
+from a less-private network may only target a more-private network if the
+initiating context is secure.
+
+<a href="https://wicg.github.io/cors-rfc1918/#integration-fetch">https://wicg.github.io/cors-rfc1918/#integration-fetch</a></pre></td><td>❌</td></tr><tr><td>BrowserUseDisplayThreadPriority</td><td>&mdash;</td><td>❌</td></tr><tr><td>BrowserVerifiedUserActivationKeyboard</td><td><pre>When enabled, keyboard user activation will be verified by the browser side.</pre></td><td>❌</td></tr><tr><td>BrowserVerifiedUserActivationMouse</td><td><pre>When enabled, mouse user activation will be verified by the browser side.</pre></td><td>❌</td></tr><tr><td>CacheInlineScriptCode</td><td><pre>Enables code caching for inline scripts.</pre></td><td>✅</td></tr><tr><td>CacheStorageParallelOps</td><td><pre>Enables support for parallel cache_storage operations via the
+&quot;max_shared_ops&quot; fieldtrial parameter.</pre></td><td>✅</td></tr><tr><td>Canvas2DImageChromium</td><td><pre>If Canvas2D Image Chromium is allowed, this feature controls whether it is
+enabled.</pre></td><td>❌</td></tr><tr><td>ClearCrossBrowsingContextGroupMainFrameName</td><td><pre>Clear the frame name for the top-level cross-browsing-context-group
+navigation.</pre></td><td>❌</td></tr><tr><td>ClickPointerEvent</td><td>&mdash;</td><td>❌</td></tr><tr><td>CodeCacheDeletionWithoutFilter</td><td><pre>When enabled, code cache does not use a browsing_data filter for deletions.</pre></td><td>✅</td></tr><tr><td>ConsolidatedMovementXY</td><td><pre>When enabled, event.movement is calculated in blink instead of in browser.</pre></td><td>✅</td></tr><tr><td>ConversionMeasurement</td><td><pre>Controls whether the Conversion Measurement API is enabled.</pre></td><td>❌</td></tr><tr><td>CookieDeprecationMessages</td><td><pre>Show messages in DevTools about upcoming deprecations that would affect
+sent/received cookies.</pre></td><td>✅</td></tr><tr><td>CooperativeScheduling</td><td><pre>Enables Blink cooperative scheduling.</pre></td><td>❌</td></tr><tr><td>CrashReporting</td><td><pre>Enables crash reporting via Reporting API.
+<a href="https://www.w3.org/TR/reporting/#crash-report">https://www.w3.org/TR/reporting/#crash-report</a></pre></td><td>✅</td></tr><tr><td>CriticalClientHint</td><td><pre>Enables support for the <code>Critical-CH</code> response header.
+<a href="https://github.com/WICG/client-hints-infrastructure/blob/master/reliability.md#critical-ch">https://github.com/WICG/client-hints-infrastructure/blob/master/reliability.md#critical-ch</a></pre></td><td>❌</td></tr><tr><td>DataSaverHoldback</td><td><pre>Puts save-data header in the holdback mode. This disables sending of
+save-data header to origins, and to the renderer processes within Chrome.</pre></td><td>❌</td></tr><tr><td>DesktopCaptureChangeSource</td><td><pre>Enable changing source dynamically for desktop capture.</pre></td><td>✅</td></tr><tr><td>DocumentPolicy</td><td><pre>Enable document policy for configuring and restricting feature behavior.</pre></td><td>✅</td></tr><tr><td>DocumentPolicyNegotiation</td><td><pre>Enable document policy negotiation mechanism.</pre></td><td>❌</td></tr><tr><td>EmbeddingRequiresOptIn</td><td><pre>Requires documents embedded via &lt;iframe&gt;, etc, to explicitly opt-into the
+embedding: <a href="https://github.com/mikewest/embedding-requires-opt-in">https://github.com/mikewest/embedding-requires-opt-in</a>.</pre></td><td>❌</td></tr><tr><td>EnableNewCanvas2DAPI</td><td><pre>Enables new canvas 2d api features. Enabled either with either
+enable-experimental-canvas-features or new-canvas-2d-api runtime flags</pre></td><td>❌</td></tr><tr><td>EnumerateDevicesHideDeviceIDs</td><td><pre>If this feature is enabled and device permission is not granted by the user,
+media-device enumeration will provide at most one device per type and the
+device IDs will not be available.
+TODO(crbug.com/1019176): remove the feature in M89.</pre></td><td>✅</td></tr><tr><td>ExperimentalAccessibilityLabels</td><td><pre>When a screen reader is detected, allow users the option of letting
+Google provide descriptions for unlabeled images.</pre></td><td>✅</td></tr><tr><td>ExpensiveBackgroundTimerThrottling</td><td><pre>Throttle tasks in Blink background timer queues based on CPU budgets
+for the background tab. Bug: <a href="https://crbug.com/639852">https://crbug.com/639852</a>.</pre></td><td>✅</td></tr><tr><td>ExtraSafelistedRequestHeadersForOutOfBlinkCors</td><td><pre>Extra CORS safelisted headers. See <a href="https://crbug.com/999054">https://crbug.com/999054</a>.</pre></td><td>❌</td></tr><tr><td>FeaturePolicyForClientHints</td><td><pre>Controls whether Client Hints are guarded by FeaturePolicy.</pre></td><td>✅</td></tr><tr><td>FirstScrollLatencyMeasurement</td><td><pre>Controls whether or not First Scroll Latency will be measured and reported.
+First Scroll Latency (tracking bug: crbug.com/922980) measures, for the
+first scroll of a navigation, the latency between the user's input and the
+display's update.</pre></td><td>✅</td></tr><tr><td>FontSrcLocalMatching</td><td><pre>Enables fixes for matching src: local() for web fonts correctly against full
+font name or postscript name. Rolling out behind a flag, as enabling this
+enables a font indexer on Android which we need to test in the field first.</pre></td><td>✅</td></tr><tr><td>ForwardMemoryPressureEventsToGpuProcess</td><td><pre>Feature controlling whether or not memory pressure signals will be forwarded
+to the GPU process.</pre></td><td>❌</td></tr><tr><td>FractionalScrollOffsets</td><td><pre>Enables scrollers inside Blink to store scroll offsets in fractional
+floating-point numbers rather than truncating to integers.</pre></td><td>❌</td></tr><tr><td>NetworkQualityEstimatorWebHoldback</td><td><pre>Puts network quality estimate related Web APIs in the holdback mode. When the
+holdback is enabled the related Web APIs return network quality estimate
+set by the experiment (regardless of the actual quality).</pre></td><td>❌</td></tr><tr><td>GreaseUACH</td><td><pre>Determines if an extra brand version pair containing possibly escaped double
+quotes and escaped backslashed should be added to the Sec-CH-UA header
+(activated by kUserAgentClientHint)</pre></td><td>✅</td></tr><tr><td>HistoryManipulationIntervention</td><td><pre>If a page does a client side redirect or adds to the history without a user
+gesture, then skip it on back/forward UI.</pre></td><td>✅</td></tr><tr><td>HistoryPreventSandboxedNavigation</td><td><pre>Prevents sandboxed iframes from using the history API to navigate frames
+outside their subttree, if they are restricted from doing top-level
+navigations.</pre></td><td>✅</td></tr><tr><td>IdleDetection</td><td><pre>This is intended as a kill switch for the Idle Detection feature. To enable
+this feature, the experimental web platform features flag should be set,
+or the site should obtain an Origin Trial token.</pre></td><td>✅</td></tr><tr><td>InstalledApp</td><td><pre>Kill switch for the GetInstalledRelatedApps API.</pre></td><td>✅</td></tr><tr><td>InstalledAppProvider</td><td><pre>Allow Windows specific implementation for the GetInstalledRelatedApps API.</pre></td><td>✅</td></tr><tr><td>InstalledAppsInCbd</td><td><pre>Show warning about clearing data from installed apps in the clear browsing
+data flow. The warning will be shown in a second dialog.</pre></td><td>❌</td></tr><tr><td>IsolateOrigins</td><td><pre>Alternative to switches::kIsolateOrigins, for turning on origin isolation.
+List of origins to isolate has to be specified via
+kIsolateOriginsFieldTrialParamName.</pre></td><td>❌</td></tr><tr><td>LangClientHintHeader</td><td><pre>Experimental handling of accept-language via client hints.</pre></td><td>❌</td></tr><tr><td>LazyFrameLoading</td><td>&mdash;</td><td>✅</td></tr><tr><td>LazyFrameVisibleLoadTimeMetrics</td><td>&mdash;</td><td>❌</td></tr><tr><td>LazyImageLoading</td><td>&mdash;</td><td>✅</td></tr><tr><td>LazyImageVisibleLoadTimeMetrics</td><td>&mdash;</td><td>❌</td></tr><tr><td>LazyInitializeMediaControls</td><td><pre>Enable lazy initialization of the media controls.</pre></td><td>✅</td></tr><tr><td>LegacyWindowsDWriteFontFallback</td><td><pre>Configures whether Blink on Windows 8.0 and below should use out of process
+API font fallback calls to retrieve a fallback font family name as opposed to
+using a hard-coded font lookup table.</pre></td><td>❌</td></tr><tr><td>LogJsConsoleMessages</td><td>&mdash;</td><td>✅</td></tr><tr><td>MBIMode</td><td><pre>The MBI mode controls whether or not communication over the
+AgentSchedulingGroup is ordered with respect to the render-process-global
+legacy IPC channel, as well as the granularity of AgentSchedulingGroup
+creation. This will break ordering guarantees between different agent
+scheduling groups (ordering withing a group is still preserved).
+DO NOT USE! The feature is not yet fully implemented. See crbug.com/1111231.</pre></td><td>❌</td></tr><tr><td>MediaDevicesSystemMonitorCaching</td><td><pre>If this feature is enabled, media-device enumerations use a cache that is
+invalidated upon notifications sent by base::SystemMonitor. If disabled, the
+cache is considered invalid on every enumeration request.</pre></td><td>❌</td></tr><tr><td>MojoDedicatedThread</td><td><pre>If enabled Mojo uses a dedicated background thread to listen for incoming
+IPCs. Otherwise it's configured to use Content's IO thread for that purpose.</pre></td><td>❌</td></tr><tr><td>MojoVideoCapture</td><td><pre>Enables/disables the video capture service.</pre></td><td>✅</td></tr><tr><td>MojoVideoCaptureSecondary</td><td><pre>A secondary switch used in combination with kMojoVideoCapture.
+This is intended as a kill switch to allow disabling the service on
+particular groups of devices even if they forcibly enable kMojoVideoCapture
+via a command-line argument.</pre></td><td>✅</td></tr><tr><td>MouseSubframeNoImplicitCapture</td><td><pre>When enable, iframe does not implicit capture mouse event.</pre></td><td>❌</td></tr><tr><td>NetworkServiceInProcess</td><td><pre>If the network service is enabled, runs it in process.</pre></td><td>❌</td></tr><tr><td>NeverSlowMode</td><td>&mdash;</td><td>❌</td></tr><tr><td>NotificationContentImage</td><td><pre>Kill switch for Web Notification content images.</pre></td><td>✅</td></tr><tr><td>NotificationTriggers</td><td><pre>Enables the notification trigger API.</pre></td><td>✅</td></tr><tr><td>OriginIsolationHeader</td><td><pre>Controls the Origin-Agent-Cluster header. Tracking bug
+<a href="https://crbug.com/1042415">https://crbug.com/1042415</a>; flag removal bug (for when this is fully launched)
+<a href="https://crbug.com/1148057">https://crbug.com/1148057</a>.
+
+The name is &quot;OriginIsolationHeader&quot; because that was the old name when the
+feature was under development.</pre></td><td>❌</td></tr><tr><td>OriginPolicy</td><td><pre>Origin Policy. See <a href="https://crbug.com/751996">https://crbug.com/751996</a></pre></td><td>❌</td></tr><tr><td>OpenXrExtendedFeatureSupport</td><td><pre>Some WebXR features may have been enabled for ARCore, but are not yet ready
+to be plumbed up from the OpenXR backend. This feature provides a mechanism
+to gate such support in a generic way. Note that this feature should not be
+used for features we intend to ship simultaneously on both OpenXR and ArCore.
+For those features, a feature-specific flag should be created if needed.</pre></td><td>❌</td></tr><tr><td>PeriodicBackgroundSync</td><td><pre>Whether web apps can run periodic tasks upon network connectivity.</pre></td><td>❌</td></tr><tr><td>PermissionsPolicyHeader</td><td><pre>Enable permission policy for configuring and restricting feature behavior.</pre></td><td>✅</td></tr><tr><td>Pepper3DImageChromium</td><td><pre>If Pepper 3D Image Chromium is allowed, this feature controls whether it is
+enabled.</pre></td><td>❌</td></tr><tr><td>PepperCrossOriginRedirectRestriction</td><td><pre>Kill-switch to introduce a compatibility breaking restriction.</pre></td><td>✅</td></tr><tr><td>ProcessSharingWithDefaultSiteInstances</td><td><pre>Enables process sharing for sites that do not require a dedicated process
+by using a default SiteInstance. Default SiteInstances will only be used
+on platforms that do not use full site isolation.
+Note: This feature is mutally exclusive with
+kProcessSharingWithStrictSiteInstances. Only one of these should be enabled
+at a time.</pre></td><td>✅</td></tr><tr><td>ProcessSharingWithStrictSiteInstances</td><td><pre>Whether cross-site frames should get their own SiteInstance even when
+strict site isolation is disabled. These SiteInstances will still be
+grouped into a shared default process based on BrowsingInstance.</pre></td><td>❌</td></tr><tr><td>HighPriorityBeforeUnload</td><td><pre>Tells the RenderFrameHost to send beforeunload messages on a different
+local frame interface which will handle the messages at a higher priority.</pre></td><td>❌</td></tr><tr><td>PrioritizeBootstrapTasks</td><td><pre>Under this flag bootstrap (aka startup) tasks will be prioritized. This flag
+is used by various modules to determine whether special scheduling
+arrangements need to be made to prioritize certain tasks.</pre></td><td>✅</td></tr><tr><td>ProactivelySwapBrowsingInstance</td><td><pre>Enable the ProactivelySwapBrowsingInstance experiment. A browsing instance
+represents a set of frames that can script each other. Currently, Chrome does
+not always switch BrowsingInstance when navigating in between two unrelated
+pages. This experiment makes Chrome swap BrowsingInstances for cross-site
+HTTP(S) navigations when the BrowsingInstance doesn't contain any other
+windows.</pre></td><td>❌</td></tr><tr><td>PushSubscriptionChangeEvent</td><td><pre>Fires the <code>pushsubscriptionchange</code> event defined here:
+<a href="https://w3c.github.io/push-api/#the-pushsubscriptionchange-event">https://w3c.github.io/push-api/#the-pushsubscriptionchange-event</a>
+for subscription refreshes, revoked permissions or subscription losses</pre></td><td>❌</td></tr><tr><td>DirectSockets</td><td><pre>Enables the Direct Sockets API.</pre></td><td>❌</td></tr><tr><td>ReloadHiddenTabsWithCrashedSubframes</td><td><pre>Causes hidden tabs with crashed subframes to be marked for reload, meaning
+that if a user later switches to that tab, the current page will be
+reloaded.  This will hide crashed subframes from the user at the cost of
+extra reloads.</pre></td><td>❌</td></tr><tr><td>RenderDocument</td><td><pre>Enable using the RenderDocument.</pre></td><td>✅</td></tr><tr><td>SkipEarlyCommitPendingForCrashedFrame</td><td><pre>Enables skipping the early call to CommitPending when navigating away from a
+crashed frame.</pre></td><td>❌</td></tr><tr><td>RunVideoCaptureServiceInBrowserProcess</td><td><pre>Run video capture service in the Browser process as opposed to a dedicated
+utility process</pre></td><td>❌</td></tr><tr><td>SavePageAsWebBundle</td><td><pre>Enables saving pages as Web Bundle.</pre></td><td>❌</td></tr><tr><td>SecurePaymentConfirmationDebug</td><td><pre>Used to control whether to remove the restriction that PaymentCredential in
+WebAuthn and secure payment confirmation method in PaymentRequest API must
+use a user verifying platform authenticator. When enabled, this allows using
+such devices as UbiKey on Linux, which can make development easier.</pre></td><td>❌</td></tr><tr><td>SendBeaconThrowForBlobWithNonSimpleType</td><td><pre>Make sendBeacon throw for a Blob with a non simple type.</pre></td><td>❌</td></tr><tr><td>ServiceWorkerPaymentApps</td><td><pre>Service worker based payment apps as defined by w3c here:
+<a href="https://w3c.github.io/webpayments-payment-apps-api/">https://w3c.github.io/webpayments-payment-apps-api/</a>
+TODO(rouslan): Remove this.</pre></td><td>✅</td></tr><tr><td>ServiceWorkerPrefersUnusedProcess</td><td><pre>If enabled, prefer to start service workers in an unused renderer process if
+available. This helps let navigations and service workers use the same
+process when a process was already created for a navigation but not yet
+claimed by it (as is common for navigations from the Android New Tab Page).</pre></td><td>❌</td></tr><tr><td>ServiceWorkerTerminationOnNoControllee</td><td><pre>Use this feature to experiment terminating a service worker when it doesn't
+control any clients: <a href="https://crbug.com/1043845">https://crbug.com/1043845</a>.</pre></td><td>❌</td></tr><tr><td>SharedArrayBuffer</td><td><pre><a href="http://tc39.github.io/ecmascript_sharedmem/shmem.html">http://tc39.github.io/ecmascript_sharedmem/shmem.html</a></pre></td><td>✅</td></tr><tr><td>RestrictSharedArrayBuffer</td><td><pre>Convenience feature for developers testing SABs and Cross-origin Isolation.
+Disables both SharedArrayBuffer and WebAssemblyThreads features, so SABs
+require COOP+COEP isolation.
+TODO(bbudge) Remove after reverse origin trial. See <a href="https://crbug.com/923807">https://crbug.com/923807</a></pre></td><td>❌</td></tr><tr><td>SignedExchangePrefetchCacheForNavigations</td><td><pre>Signed HTTP Exchange prefetch cache for navigations
+<a href="https://crbug.com/968427">https://crbug.com/968427</a></pre></td><td>❌</td></tr><tr><td>SignedExchangeReportingForDistributors</td><td><pre>Signed Exchange Reporting for distributors
+<a href="https://www.chromestatus.com/features/5687904902840320">https://www.chromestatus.com/features/5687904902840320</a></pre></td><td>✅</td></tr><tr><td>SignedExchangeSubresourcePrefetch</td><td><pre>Subresource prefetching+loading via Signed HTTP Exchange
+<a href="https://www.chromestatus.com/features/5126805474246656">https://www.chromestatus.com/features/5126805474246656</a></pre></td><td>✅</td></tr><tr><td>SignedHTTPExchange</td><td><pre>Origin-Signed HTTP Exchanges (for WebPackage Loading)
+<a href="https://www.chromestatus.com/features/5745285984681984">https://www.chromestatus.com/features/5745285984681984</a></pre></td><td>✅</td></tr><tr><td>SignedHTTPExchangePingValidity</td><td><pre>Whether to send a ping to the inner URL upon navigation or not.</pre></td><td>❌</td></tr><tr><td>WebOTP</td><td><pre>This is intended as a kill switch for the WebOTP Service feature. To enable
+this feature, the experimental web platform features flag should be set.</pre></td><td>✅</td></tr><tr><td>WebOTPAssertionFeaturePolicy</td><td><pre>Enables WebOTP calls in cross-origin iframes if allowed by Permissions
+Policy.</pre></td><td>❌</td></tr><tr><td>SpareRendererForSitePerProcess</td><td><pre>Controls whether SpareRenderProcessHostManager tries to always have a warm
+spare renderer process around for the most recently requested BrowserContext.
+This feature is only consulted in site-per-process mode.</pre></td><td>✅</td></tr><tr><td>StorageServiceOutOfProcess</td><td><pre>Enables the out-of-process Storage Service.</pre></td><td>✅</td></tr><tr><td>StrictOriginIsolation</td><td><pre>Controls whether site isolation should use origins instead of scheme and
+eTLD+1.</pre></td><td>❌</td></tr><tr><td>SubresourceWebBundles</td><td><pre>Enables subresource loading with Web Bundles.</pre></td><td>❌</td></tr><tr><td>SyntheticPointerActions</td><td><pre>Dispatch touch events to &quot;SyntheticGestureController&quot; for events from
+Devtool Protocol Input.dispatchTouchEvent to simulate touch events close to
+real OS events.</pre></td><td>❌</td></tr><tr><td>TimerThrottlingForHiddenFrames</td><td><pre>Throttle Blink timers in out-of-view cross origin frames.</pre></td><td>✅</td></tr><tr><td>TouchpadAsyncPinchEvents</td><td><pre>Enables async touchpad pinch zoom events. We check the ACK of the first
+synthetic wheel event in a pinch sequence, then send the rest of the
+synthetic wheel events of the pinch sequence as non-blocking if the first
+event’s ACK is not canceled.</pre></td><td>✅</td></tr><tr><td>TouchpadOverscrollHistoryNavigation</td><td><pre>Allows swipe left/right from touchpad change browser navigation. Currently
+only enabled by default on CrOS.</pre></td><td>❌</td></tr><tr><td>TrustedDOMTypes</td><td><pre>Controls whether the Trusted Types API is available.</pre></td><td>✅</td></tr><tr><td>UseFramePriorityInRenderProcessHost</td><td><pre>Controls whether the RenderProcessHost uses its frames' priorities for
+determining if it should be backgrounded. When all frames associated with a
+RenderProcessHost are low priority, that process may be backgrounded even if
+those frames are visible.</pre></td><td>❌</td></tr><tr><td>UserActivationSameOriginVisibility</td><td><pre>Allows user activation propagation to all frames having the same origin as
+the activation notifier frame.  This is an intermediate measure before we
+have an iframe attribute to declaratively allow user activation propagation
+to subframes.</pre></td><td>✅</td></tr><tr><td>UserAgentClientHint</td><td><pre>An experimental replacement for the <code>User-Agent</code> header, defined in
+<a href="https://tools.ietf.org/html/draft-west-ua-client-hints">https://tools.ietf.org/html/draft-west-ua-client-hints</a>.</pre></td><td>❌</td></tr><tr><td>VerifyDidCommitParams</td><td><pre>Enables comparing browser and renderer's DidCommitProvisionalLoadParams in
+RenderFrameHostImpl::VerifyThatBrowserAndRendererCalculatedDidCommitParamsMatch.</pre></td><td>❌</td></tr><tr><td>VideoPlaybackQuality</td><td><pre>Controls whether the &lt;video&gt;.getVideoPlaybackQuality() API is enabled.</pre></td><td>✅</td></tr><tr><td>V8VmFuture</td><td><pre>Enables future V8 VM features</pre></td><td>❌</td></tr><tr><td>WebAppManifestDisplayOverride</td><td><pre>Enable display_override manifest entry for web applications.</pre></td><td>✅</td></tr><tr><td>WebAppWindowControlsOverlay</td><td><pre>Enable window controls overlays for desktop PWAs</pre></td><td>❌</td></tr><tr><td>WebAssemblyBaseline</td><td><pre>Enable WebAssembly baseline compilation (Liftoff).</pre></td><td>✅</td></tr><tr><td>WebAssemblyLazyCompilation</td><td><pre>Enable WebAssembly lazy compilation (JIT on first call).</pre></td><td>❌</td></tr><tr><td>WebAssemblySimd</td><td><pre>Enable WebAssembly SIMD.
+<a href="https://github.com/WebAssembly/Simd">https://github.com/WebAssembly/Simd</a></pre></td><td>❌</td></tr><tr><td>WebAssemblyTiering</td><td><pre>Enable WebAssembly tiering (Liftoff -&gt; TurboFan).</pre></td><td>✅</td></tr><tr><td>WebAssemblyThreads</td><td><pre>Enable WebAssembly threads.
+<a href="https://github.com/WebAssembly/threads">https://github.com/WebAssembly/threads</a></pre></td><td>✅</td></tr><tr><td>WebAssemblyTrapHandler</td><td>&mdash;</td><td>❌</td></tr><tr><td>WebAuthentication</td><td><pre>Controls whether the WebAuthentication API is enabled:
+<a href="https://w3c.github.io/webauthn">https://w3c.github.io/webauthn</a></pre></td><td>✅</td></tr><tr><td>WebAuthenticationCable</td><td><pre>Controls whether CTAP2 devices can communicate via the WebAuthentication API
+using pairingless BLE protocol.
+<a href="https://w3c.github.io/webauthn">https://w3c.github.io/webauthn</a></pre></td><td>✅</td></tr><tr><td>WebBluetoothNewPermissionsBackend</td><td><pre>Controls whether Web Bluetooth should use the new permissions backend. The
+new permissions backend uses ChooserContextBase, which is used by other
+device APIs, such as WebUSB.</pre></td><td>❌</td></tr><tr><td>WebBundles</td><td><pre>Controls whether Web Bundles (Bundled HTTP Exchanges) is enabled.
+<a href="https://wicg.github.io/webpackage/draft-yasskin-wpack-bundled-exchanges.html">https://wicg.github.io/webpackage/draft-yasskin-wpack-bundled-exchanges.html</a>
+When this feature is enabled, Chromium can load unsigned Web Bundles local
+file under file:// URL (and content:// URI on Android).</pre></td><td>❌</td></tr><tr><td>WebBundlesFromNetwork</td><td><pre>When this feature is enabled, Chromium will be able to load unsigned Web
+Bundles file under https: URL and localhost http: URL.
+TODO(crbug.com/1018640): Implement this feature.</pre></td><td>❌</td></tr><tr><td>WebGLImageChromium</td><td><pre>If WebGL Image Chromium is allowed, this feature controls whether it is
+enabled.</pre></td><td>✅</td></tr><tr><td>WebID</td><td><pre>Enable browser mediation API for federated identity interactions.</pre></td><td>❌</td></tr><tr><td>WebOtpBackendAuto</td><td><pre>Controls which backend is used to retrieve OTP on Android. When disabled
+we use User Consent API.</pre></td><td>❌</td></tr><tr><td>WebPayments</td><td><pre>The JavaScript API for payments on the web.</pre></td><td>✅</td></tr><tr><td>WebPaymentsMinimalUI</td><td><pre>Minimal user interface experience for payments on the web.</pre></td><td>❌</td></tr><tr><td>WebRTC-UseGpuMemoryBufferVideoFrames</td><td><pre>Use GpuMemoryBuffer backed VideoFrames in media streams.</pre></td><td>✅</td></tr><tr><td>WebUIReportOnlyTrustedTypes</td><td><pre>Enables report-only Trusted Types experiment on WebUIs</pre></td><td>❌</td></tr><tr><td>WebUSB</td><td><pre>Controls whether the WebUSB API is enabled:
+<a href="https://wicg.github.io/webusb">https://wicg.github.io/webusb</a></pre></td><td>✅</td></tr><tr><td>WebXR</td><td><pre>Controls whether the WebXR Device API is enabled.</pre></td><td>✅</td></tr><tr><td>WebXRARModule</td><td><pre>Enables access to AR features via the WebXR API.</pre></td><td>✅</td></tr><tr><td>WebXRHandInput</td><td><pre>Enables access to articulated hand tracking sensor input.</pre></td><td>❌</td></tr><tr><td>WebXRHitTest</td><td><pre>Enables access to raycasting against estimated XR scene geometry.</pre></td><td>✅</td></tr><tr><td>WebXRIncubations</td><td><pre>Enables access to experimental WebXR features.</pre></td><td>❌</td></tr>        </tbody>
       </table>
     </div>
     <div class="container">
