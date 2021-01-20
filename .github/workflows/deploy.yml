@@ -15,7 +15,7 @@ jobs:
           persist-credentials: false
 
       - name: Build page
-        run: apt-get -y install doxygen && ./run.sh
+        run: sudo apt-get -y install doxygen && ./run.sh
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1
