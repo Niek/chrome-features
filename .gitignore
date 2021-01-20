@@ -1,5 +1,5 @@
 xml/
 vendor/
-index.html
+build/
 *.cc
 *.json5
