@@ -6,4 +6,5 @@ wget -q "https://raw.githubusercontent.com/chromium/chromium/master/third_party/
 rm -rf xml
 echo -e "GENERATE_HTML=NO\nGENERATE_LATEX=NO\nGENERATE_XML=YES\nQUIET=YES\nFILE_PATTERNS=*.cc" | doxygen -
 composer install
-php run.php > index.html
+mkdir -p build
+php run.php > build/index.html
