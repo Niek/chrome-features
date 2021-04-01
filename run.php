@@ -4,11 +4,10 @@ require __DIR__ . '/vendor/autoload.php';
 
 $Parsedown = new Parsedown();
 
-$xml = simplexml_load_file('xml/namespacefeatures.xml');
-$lines = simplexml_load_file('xml/content__features_8cc.xml')->compounddef->programlisting->codeline;
 $blinkFeatures = json5_decode(file_get_contents('./runtime_enabled_features.json5'), true);
 $blinkSettings = json5_decode(file_get_contents('./settings.json5'), true);
 
+// Parse blink features descriptions
 $desc = [];
 foreach (file('./runtime_enabled_features.json5') as $line) {
   if (strpos(trim($line), '//') === 0) {
@@ -27,8 +26,10 @@ foreach (file('./runtime_enabled_features.json5') as $line) {
   }
 }
 
+// Parse Chrome features
 $features = [];
 
+$lines = simplexml_load_file('xml/content__features_8cc.xml')->compounddef->programlisting->codeline;
 function getDescription($line)
 {
   global $lines;
@@ -53,7 +54,7 @@ function getDescription($line)
   return array_reverse($description);
 }
 
-foreach ($xml->compounddef->sectiondef as $i) {
+foreach (simplexml_load_file('xml/namespacefeatures.xml')->compounddef->sectiondef as $i) {
   foreach ($i->memberdef as $j) {
     if ($j->type == 'const base::Feature') {
       $f = $j->initializer[0];
@@ -62,6 +63,28 @@ foreach ($xml->compounddef->sectiondef as $i) {
       $line = intval($j->location->attributes()['line']);
       $description = getDescription($line);
       $features[] = ['name' => $name, 'enabled_default' => $enabled, 'line' => $line, 'description' => $description];
+    }
+  }
+}
+
+// Parse Chrome prefs
+$prefs = [];
+
+foreach (simplexml_load_file('xml/namespaceprefs.xml')->compounddef->sectiondef as $i) {
+  foreach ($i->memberdef as $j) {
+    if ($j->type == 'const char') {
+      $f = $j->initializer[0];
+      if (strpos($f, '"') !== false) {
+        $name = explode('"', $f)[1];
+        $keys = explode('.', $name);
+        $val = '';               //holds next value to add to array
+        $localArray = [];          //holds the array for this input line
+        for ($i = count($keys) - 1; $i >= 0; $i--) { //go through input line in reverse order
+          $localArray = [$keys[$i] => $val]; //store previous value in array
+          $val = $localArray;           //store the array we just built. it will be the value in the next loop
+        }
+        $prefs = array_merge_recursive($prefs, $localArray);
+      }
     }
   }
 }
@@ -87,7 +110,7 @@ foreach ($xml->compounddef->sectiondef as $i) {
         Chrome features
       </h1>
       <p class="subtitle">
-        Enable with <span class="is-family-monospace">--enable-features</span>, disable with <span class="is-family-monospace">--disable-features</span>:
+        Enable with <code>--enable-features</code>, disable with <code>--disable-features</code>:
       </p>
       <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
         <thead>
@@ -111,7 +134,7 @@ foreach ($xml->compounddef->sectiondef as $i) {
         Blink features
       </h1>
       <p class="subtitle">
-        Enable with <span class="is-family-monospace">--enable-blink-features</span>, disable with <span class="is-family-monospace">--disable-blink-features</span>:
+        Enable with <code>--enable-blink-features</code>, disable with <code>--disable-blink-features</code>:
       </p>
       <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
         <thead>
@@ -135,7 +158,7 @@ foreach ($xml->compounddef->sectiondef as $i) {
         Blink settings
       </h1>
       <p class="subtitle">
-        Modify with <span class="is-family-monospace">--blink-settings</span>:
+        Modify with <code>--blink-settings</code>:
       </p>
       <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
         <thead>
@@ -153,6 +176,15 @@ foreach ($xml->compounddef->sectiondef as $i) {
           ?>
         </tbody>
       </table>
+    </div>
+    <div class="container">
+      <h1 class="title">
+        Preferences
+      </h1>
+      <p class="subtitle">
+        The following JSON preferences can be modified in the <code>Preferences</code> file in the profile:
+      </p>
+      <pre><?=json_encode($prefs, JSON_PRETTY_PRINT)?></pre>
     </div>
   </section>
   <script>
