@@ -9,6 +9,24 @@ $lines = simplexml_load_file('xml/content__features_8cc.xml')->compounddef->prog
 $blinkFeatures = json5_decode(file_get_contents('./runtime_enabled_features.json5'), true);
 $blinkSettings = json5_decode(file_get_contents('./settings.json5'), true);
 
+$desc = [];
+foreach (file('./runtime_enabled_features.json5') as $line) {
+  if (strpos(trim($line), '//') === 0) {
+    $desc[] = substr(trim($line), 2);
+  } else if (count($desc) > 0 && strpos($line, 'name: "') !== false) {
+    $key = substr($line, strpos($line, 'name: "') + 7, -3);
+    foreach ($blinkFeatures['data'] as &$d) {
+      if ($d['name'] === $key) {
+        $d['description'] = $Parsedown->line(join(PHP_EOL, $desc));
+        break;
+      }
+    }
+    $desc = [];
+  } else if (trim($line) !== '{') {
+    $desc = [];
+  }
+}
+
 $features = [];
 
 function getDescription($line)
@@ -106,7 +124,7 @@ foreach ($xml->compounddef->sectiondef as $i) {
         <tbody class="list">
           <?php
           foreach ($blinkFeatures['data'] as $f) {
-            echo '<tr><td class="name">' . $f['name'] . '</td><td>&mdash;</td><td>' . (isset($f['status']) && $f['status'] === 'stable' ? '✅' : '❌') . '</td></tr>';
+            echo '<tr><td class="name">' . $f['name'] . '</td><td>' . (isset($f['description']) ? '<pre>' . $f['description'] . '</pre>' : '&mdash;') . '</td><td>' . (isset($f['status']) && $f['status'] === 'stable' ? '✅' : '❌') . '</td></tr>';
           }
           ?>
         </tbody>
