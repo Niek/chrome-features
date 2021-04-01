@@ -56,8 +56,8 @@ foreach ($xml->compounddef->sectiondef as $i) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Chrome features</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0/css/bulma.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/list.js@2/dist/list.min.js"></script>
 </head>
 
 <body>
@@ -140,7 +140,9 @@ foreach ($xml->compounddef->sectiondef as $i) {
   <script>
     var lists = [];
     document.querySelectorAll('table').forEach(t => {
-      lists.push(new List(t, { valueNames: ['name'] }))
+      lists.push(new List(t, {
+        valueNames: ['name']
+      }))
     });
 
     document.querySelector('#search').addEventListener('keyup', k => {
