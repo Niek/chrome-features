@@ -69,7 +69,9 @@ floating-point numbers rather than truncating to integers.</pre></td><td>❌</td
 holdback is enabled the related Web APIs return network quality estimate
 set by the experiment (regardless of the actual quality).</pre></td><td>❌</td></tr><tr><td class="name">GreaseUACH</td><td><pre>Determines if an extra brand version pair containing possibly escaped double
 quotes and escaped backslashed should be added to the Sec-CH-UA header
-(activated by kUserAgentClientHint)</pre></td><td>✅</td></tr><tr><td class="name">HistoryManipulationIntervention</td><td><pre>If a page does a client side redirect or adds to the history without a user
+(activated by kUserAgentClientHint)</pre></td><td>✅</td></tr><tr><td class="name">HandwritingRecognitionEnabled</td><td><pre>Whether the handwriting recognition feature is enabled. This feature is also
+controlled by the HandwritingRecognition web platform feature. Both must be
+enabled for the feature to work.</pre></td><td>❌</td></tr><tr><td class="name">HistoryManipulationIntervention</td><td><pre>If a page does a client side redirect or adds to the history without a user
 gesture, then skip it on back/forward UI.</pre></td><td>✅</td></tr><tr><td class="name">HistoryPreventSandboxedNavigation</td><td><pre>Prevents sandboxed iframes from using the history API to navigate frames
 outside their subttree, if they are restricted from doing top-level
 navigations.</pre></td><td>✅</td></tr><tr><td class="name">IdleDetection</td><td><pre>This is intended as a kill switch for the Idle Detection feature. To enable
@@ -216,7 +218,7 @@ we use User Consent API.</pre></td><td>❌</td></tr><tr><td class="name">WebPaym
  (CSSColorScheme) or the meta tag (MetaColorScheme), the only UA
  rendering change is for the canvas background and the :root element
  color property. Enabling this runtime flag will enable dark UA
- rendering for form controls, scrollbars, etc.</pre></td><td>✅</td></tr><tr><td class="name">CSSContainerQueries</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CSSContainSize1D</td><td><pre> Support for contain:inline-size and contain:block-size</pre></td><td>❌</td></tr><tr><td class="name">CSSContentVisibility</td><td><pre> The main content-visibility feature.
+ rendering for form controls, scrollbars, etc.</pre></td><td>✅</td></tr><tr><td class="name">CSSColorTypedOM</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CSSContainerQueries</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CSSContainSize1D</td><td><pre> Support for contain:inline-size and contain:block-size</pre></td><td>❌</td></tr><tr><td class="name">CSSContentVisibility</td><td><pre> The main content-visibility feature.
  <a href="https://drafts.csswg.org/css-contain/#content-visibility">https://drafts.csswg.org/css-contain/#content-visibility</a></pre></td><td>✅</td></tr><tr><td class="name">CSSContentVisibilityHiddenMatchable</td><td><pre> The content-visibility: hidden-matchable feature. This is a planned
  follow-up to the main CSSContentVisibility feature, thus it is gated
  by a different flag.
