@@ -167,7 +167,7 @@ real OS events.</pre></td><td>❌</td></tr><tr><td class="name">TimerThrottlingF
 synthetic wheel event in a pinch sequence, then send the rest of the
 synthetic wheel events of the pinch sequence as non-blocking if the first
 event’s ACK is not canceled.</pre></td><td>✅</td></tr><tr><td class="name">TouchpadOverscrollHistoryNavigation</td><td><pre>Allows swipe left/right from touchpad change browser navigation. Currently
-only enabled by default on CrOS.</pre></td><td>❌</td></tr><tr><td class="name">TrustedDOMTypes</td><td><pre>Controls whether the Trusted Types API is available.</pre></td><td>✅</td></tr><tr><td class="name">UnrestrictedSharedArrayBuffer</td><td><pre>This feature is for a reverse Origin Trial, enabling SharedArrayBuffer and
+only enabled by default on CrOS, LaCrOS and Windows.</pre></td><td>❌</td></tr><tr><td class="name">TrustedDOMTypes</td><td><pre>Controls whether the Trusted Types API is available.</pre></td><td>✅</td></tr><tr><td class="name">UnrestrictedSharedArrayBuffer</td><td><pre>This feature is for a reverse Origin Trial, enabling SharedArrayBuffer and
 WebAssemblyThreads for sites as they migrate towards requiring cross-origin
 isolation for these features.
 TODO(bbudge): Remove when the deprecation is complete.
@@ -318,7 +318,7 @@ we use User Consent API.</pre></td><td>❌</td></tr><tr><td class="name">WebPaym
  is enabled). Used for testing; circumvents a runtime check that,
  if this RuntimeEnabledFeature is not present, guarantees the origin
  trial is enabled.</pre></td><td>❌</td></tr><tr><td class="name">UnclosedFormControlIsInvalid</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">UnderlineOffsetThickness</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">UnrestrictedSharedArrayBuffer</td><td><pre> This is a reverse OT used for a phased deprecation, on desktop
- <a href="https://crbug.com/1071424">https://crbug.com/1071424</a></pre></td><td>❌</td></tr><tr><td class="name">URLPattern</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">UserActivationSameOriginVisibility</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">UserAgentClientHint</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">UUID</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">V8IdleTasks</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">VideoAutoFullscreen</td><td><pre> Whether a video element should automatically play fullscreen unless
+ <a href="https://crbug.com/1071424">https://crbug.com/1071424</a></pre></td><td>❌</td></tr><tr><td class="name">URLPattern</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">UserActivationSameOriginVisibility</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">UserAgentClientHint</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">UUID</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">V8IdleTasks</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">VideoAutoFullscreen</td><td><pre> Whether a video element should automatically play fullscreen unless
  'playsinline' is set.</pre></td><td>❌</td></tr><tr><td class="name">VideoFullscreenOrientationLock</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">VideoPlaybackQuality</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">VideoRotateToFullscreen</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">VideoWakeLockOptimisationHiddenMuted</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">VirtualKeyboard</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">VisibilityCollapseColumn</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">VisibilityStateEntry</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WakeLock</td><td><pre> The &quot;WakeLock&quot; feature was originally implied_by &quot;ScreenWakeLock&quot; and
  &quot;SystemWakeLock&quot;. The former was removed after being promoted to
  stable, but we need to keep this feature around for code and IDLs that
@@ -328,7 +328,9 @@ we use User Consent API.</pre></td><td>❌</td></tr><tr><td class="name">WebPaym
  supporting APIs, see runtime_features.cc.</pre></td><td>✅</td></tr><tr><td class="name">WebAuthenticationConditionalUI</td><td><pre> A more subtle UI for WebAuthn that is web exposed. Under development.
  It's controlled by the corresponding Chromium feature which needs to
  be enabled to make the whole feature work.</pre></td><td>❌</td></tr><tr><td class="name">WebAuthenticationLargeBlobExtension</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebAuthenticationResidentKeyRequirement</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebBluetooth</td><td><pre> WebBluetooth is enabled by default on Android, ChromeOS and Mac.
- It is also supported in Windows 10 which is handled in runtime_features.cc</pre></td><td>❌</td></tr><tr><td class="name">WebBluetoothGetDevices</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebBluetoothManufacturerDataFilter</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebBluetoothRemoteCharacteristicNewWriteValue</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebBluetoothScanning</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebBluetoothWatchAdvertisements</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebCodecs</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebCryptoCurve25519</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebGLDraftExtensions</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebGLImageChromium</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebGPU</td><td><pre> WebGPU adds a large attack surface area to the GPU process and allows
+ It is also supported in Windows 10 which is handled in runtime_features.cc</pre></td><td>❌</td></tr><tr><td class="name">WebBluetoothGetDevices</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebBluetoothManufacturerDataFilter</td><td><pre> WebBluetoothManufacturerDataFilter is enabled by default on Android,
+ ChromeOS and Mac. It is also supported in Windows 10 which is handled in
+ runtime_features.cc</pre></td><td>❌</td></tr><tr><td class="name">WebBluetoothRemoteCharacteristicNewWriteValue</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebBluetoothScanning</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebBluetoothWatchAdvertisements</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebCodecs</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebCryptoCurve25519</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebGLDraftExtensions</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebGLImageChromium</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebGPU</td><td><pre> WebGPU adds a large attack surface area to the GPU process and allows
  running arbitrary programs on the GPU (compute shaders), which may
  perform arbitrary read/writes of GPU memory if not properly sandboxed.
  That's why it is not enabled as part of the
@@ -372,7 +374,6 @@ we use User Consent API.</pre></td><td>❌</td></tr><tr><td class="name">WebPaym
         "ephemeral_mode": "",
         "creation_time": "",
         "icon_version": "",
-        "exited_cleanly": "",
         "exit_type": "",
         "managed": {
             "serial_allow_all_ports_for_urls": "",
@@ -431,6 +432,9 @@ we use User Consent API.</pre></td><td>❌</td></tr><tr><td class="name">WebPaym
         "managed_configuration": {
             "list": "",
             "last_hash": ""
+        },
+        "default_content_setting_values": {
+            "protected_media_identifier": ""
         },
         "extensions": {
             "activity_log": {
@@ -611,9 +615,6 @@ we use User Consent API.</pre></td><td>❌</td></tr><tr><td class="name">WebPaym
                 "enabled": "",
                 "show_dialog": ""
             }
-        },
-        "privacy": {
-            "drm_enabled": ""
         }
     },
     "extensions": {
