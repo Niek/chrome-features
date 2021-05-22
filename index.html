@@ -221,11 +221,7 @@ we use User Consent API.</pre></td><td>❌</td></tr><tr><td class="name">WebPaym
  feature is disabled, origin trial tokens are ignored.</pre></td><td>❌</td></tr><tr><td class="name">ConsolidatedMovementXY</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ContactsManager</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ContactsManagerExtraProperties</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ContentIndex</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ContextMenu</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ConversionMeasurement</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ConversionMeasurementInfraSupport</td><td><pre> Feature to explicitly disable/enable the Conversion
  Measurement API when there is not browser process side infra.</pre></td><td>❌</td></tr><tr><td class="name">CookiesWithoutSameSiteMustBeSecure</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CooperativeScheduling</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CorsRFC1918</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CrossOriginIsolation</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">CrossOriginOpenerPolicyReporting</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CSS3Text</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CSSAccentColor</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CSSAspectRatioInterpolation</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">CSSAspectRatioProperty</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">CSSAtRuleCounterStyle</td><td><pre> <a href="https://drafts.csswg.org/css-counter-styles-3">https://drafts.csswg.org/css-counter-styles-3</a></pre></td><td>✅</td></tr><tr><td class="name">CSSAtRuleCounterStyleImageSymbols</td><td><pre> Whether <image> values are allowed as counter style <symbol></pre></td><td>❌</td></tr><tr><td class="name">CSSAtRuleCounterStyleInShadowDOM</td><td><pre> <a href="https://github.com/w3c/csswg-drafts/issues/5693">https://github.com/w3c/csswg-drafts/issues/5693</a>
  Experimental support of @counter-style rules in shadow DOM.</pre></td><td>❌</td></tr><tr><td class="name">CSSCalcAsInt</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CSSCalcInfinityAndNaN</td><td><pre> <a href="https://github.com/DevSDK/calc-infinity-and-NaN/blob/master/explainer.md">https://github.com/DevSDK/calc-infinity-and-NaN/blob/master/explainer.md</a></pre></td><td>❌</td></tr><tr><td class="name">CSSCaseSensitiveSelector</td><td><pre> Support case-sensitive attribute selector modifier
- <a href="https://drafts.csswg.org/selectors-4/#attribute-case">https://drafts.csswg.org/selectors-4/#attribute-case</a></pre></td><td>❌</td></tr><tr><td class="name">CSSColorSchemeUARendering</td><td><pre> When the color-scheme is supported via the CSS color-scheme property
- (CSSColorScheme) or the meta tag (MetaColorScheme), the only UA
- rendering change is for the canvas background and the :root element
- color property. Enabling this runtime flag will enable dark UA
- rendering for form controls, scrollbars, etc.</pre></td><td>✅</td></tr><tr><td class="name">CSSColorTypedOM</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CSSContainerQueries</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CSSContainSize1D</td><td><pre> Support for contain:inline-size and contain:block-size</pre></td><td>❌</td></tr><tr><td class="name">CSSContentVisibility</td><td><pre> The main content-visibility feature.
+ <a href="https://drafts.csswg.org/selectors-4/#attribute-case">https://drafts.csswg.org/selectors-4/#attribute-case</a></pre></td><td>❌</td></tr><tr><td class="name">CSSColorTypedOM</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CSSContainerQueries</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CSSContainSize1D</td><td><pre> Support for contain:inline-size and contain:block-size</pre></td><td>❌</td></tr><tr><td class="name">CSSContentVisibility</td><td><pre> The main content-visibility feature.
  <a href="https://drafts.csswg.org/css-contain/#content-visibility">https://drafts.csswg.org/css-contain/#content-visibility</a></pre></td><td>✅</td></tr><tr><td class="name">CSSContentVisibilityHiddenMatchable</td><td><pre> The content-visibility: hidden-matchable feature. This is a planned
  follow-up to the main CSSContentVisibility feature, thus it is gated
  by a different flag.
@@ -403,6 +399,12 @@ we use User Consent API.</pre></td><td>❌</td></tr><tr><td class="name">WebPaym
         "managed_user_id": "",
         "avatar_bubble_tutorial_shown": "",
         "managed_users": "",
+        "managed_accounts": {
+            "restriction": {
+                "value": "",
+                "all_managed_accounts": ""
+            }
+        },
         "content_settings": {
             "had_three_consecutive_denies": {
                 "notifications": ""
@@ -792,9 +794,6 @@ we use User Consent API.</pre></td><td>❌</td></tr><tr><td class="name">WebPaym
     "devtools": {
         "adb_key": "",
         "availability": "",
-        "remote_debugging": {
-            "allowed": ""
-        },
         "backgroundserviceexpiration": "",
         "discover_usb_devices": "",
         "edited_files": "",
