@@ -129,7 +129,7 @@ utility process</pre></td><td>❌</td></tr><tr><td class="name">SavePageAsWebBun
 disable the feature. Enabling the browser-side feature by itself does not
 actually enable the feature by default. The feature is also controlled by the
 Blink runtime feature &quot;SecurePaymentConfirmation&quot;. Both have to be enabled
-for SecurePaymentConfirmation to be available.</pre></td><td>❌</td></tr><tr><td class="name">SecurePaymentConfirmationAPIV2</td><td><pre>Used to enable API changes for Secure Payment Confirmation.
+for SecurePaymentConfirmation to be available.</pre></td><td>✅</td></tr><tr><td class="name">SecurePaymentConfirmationAPIV2</td><td><pre>Used to enable API changes for Secure Payment Confirmation.
 TODO(crbug.com/1216464): Enable by default in M93.</pre></td><td>❌</td></tr><tr><td class="name">SecurePaymentConfirmationDebug</td><td><pre>Used to control whether to remove the restriction that PaymentCredential in
 WebAuthn and secure payment confirmation method in PaymentRequest API must
 use a user verifying platform authenticator. When enabled, this allows using
@@ -161,7 +161,7 @@ used on Android, which does not use strict site isolation. See
 <a href="https://crbug.com/1018656">https://crbug.com/1018656</a>.</pre></td><td>❌</td></tr><tr><td class="name">DisableProcessReuse</td><td><pre>When enabled, OOPIFs will not try to reuse compatible processes from
 unrelated tabs.</pre></td><td>❌</td></tr><tr><td class="name">SpareRendererForSitePerProcess</td><td><pre>Controls whether SpareRenderProcessHostManager tries to always have a warm
 spare renderer process around for the most recently requested BrowserContext.
-This feature is only consulted in site-per-process mode.</pre></td><td>✅</td></tr><tr><td class="name">StorageServiceOutOfProcess</td><td><pre>Enables the out-of-process Storage Service.</pre></td><td>✅</td></tr><tr><td class="name">StrictOriginIsolation</td><td><pre>Controls whether site isolation should use origins instead of scheme and
+This feature is only consulted in site-per-process mode.</pre></td><td>✅</td></tr><tr><td class="name">StopVideoCaptureOnScreenLock</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">StorageServiceOutOfProcess</td><td><pre>Enables the out-of-process Storage Service.</pre></td><td>✅</td></tr><tr><td class="name">StrictOriginIsolation</td><td><pre>Controls whether site isolation should use origins instead of scheme and
 eTLD+1.</pre></td><td>❌</td></tr><tr><td class="name">SubresourceWebBundles</td><td><pre>Enables subresource loading with Web Bundles.</pre></td><td>❌</td></tr><tr><td class="name">SuppressDifferentOriginSubframeJSDialogs</td><td><pre>Disallows window.{alert, prompt, confirm} if triggered inside a subframe that
 is not same origin with the main frame.</pre></td><td>✅</td></tr><tr><td class="name">SyntheticPointerActions</td><td><pre>Dispatch touch events to &quot;SyntheticGestureController&quot; for events from
 Devtool Protocol Input.dispatchTouchEvent to simulate touch events close to
@@ -1034,7 +1034,10 @@ we use User Consent API.</pre></td><td>❌</td></tr><tr><td class="name">WebPaym
     "cart_discount_acknowledged": "",
     "cart_discount_enabled": "",
     "cart_used_discounts": "",
-    "fetch_keepalive_duration_on_shutdown": ""
+    "fetch_keepalive_duration_on_shutdown": "",
+    "sharing_hub": {
+        "desktop_sharing_hub_enabled": ""
+    }
 }</pre>
     </div>
   </section>
