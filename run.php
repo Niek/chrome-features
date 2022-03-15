@@ -184,9 +184,16 @@ foreach (simplexml_load_file('xml/namespaceprefs.xml')->compounddef->sectiondef 
       <p class="subtitle">
         The following JSON preferences can be modified in the <code>Preferences</code> file in the profile:
       </p>
-      <pre><?=json_encode($prefs, JSON_PRETTY_PRINT)?></pre>
+      <pre><?= json_encode($prefs, JSON_PRETTY_PRINT) ?></pre>
     </div>
   </section>
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Updated</strong>: <?= date('Y-m-d') ?>. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
+      </p>
+    </div>
+  </footer>
   <script>
     var lists = [];
     document.querySelectorAll('table').forEach(t => {
