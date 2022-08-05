@@ -376,7 +376,8 @@ we use User Consent API.</pre></td><td>❌</td></tr><tr><td class="name">WebPaym
  enable portals without browser process support.</pre></td><td>❌</td></tr><tr><td class="name">PreciseMemoryInfo</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">PreferNonCompositedScrolling</td><td><pre> Prefer not using composited scrolling. Composited scrolling will still
  be used if there are other reasons forcing compositing. For consistency,
  any code calling Settings::GetPreferCompositingToLCDTextEnabled() should
- ensure that this flag overrides the setting.</pre></td><td>❌</td></tr><tr><td class="name">PrefersColorSchemeClientHintHeader</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PrefersContrast</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PrefersReducedData</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">PrefixedVideoFullscreen</td><td><pre> This feature is deprecated and we are evangelizing affected sites.
+ ensure that this flag overrides the setting.</pre></td><td>❌</td></tr><tr><td class="name">PrefersColorSchemeClientHintHeader</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PrefersContrast</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PrefersReducedData</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">PrefixedStorageInfo</td><td><pre> TODO(crbug/695586): This flag is being used to deprecate support for
+ legacy quota API window.webkitStorageInfo.</pre></td><td>✅</td></tr><tr><td class="name">PrefixedVideoFullscreen</td><td><pre> This feature is deprecated and we are evangelizing affected sites.
  See <a href="https://crbug.com/346236">https://crbug.com/346236</a> for current status.</pre></td><td>✅</td></tr><tr><td class="name">Prerender2</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">Prerender2RelatedFeatures</td><td><pre> This RTE feature is used to indicate the status of RTE feature Prerender2
  and an embedder feature flag that enables the Prerender2. With this flag
  on, the related functions document.prerendering,
@@ -438,7 +439,8 @@ we use User Consent API.</pre></td><td>❌</td></tr><tr><td class="name">WebPaym
  supporting APIs, see runtime_features.cc.</pre></td><td>✅</td></tr><tr><td class="name">WebAuthAuthenticatorAttachment</td><td><pre> When enabled adds the authenticator attachment used for registration and
  authentication to the public key credential response.</pre></td><td>❌</td></tr><tr><td class="name">WebAuthenticationConditionalUI</td><td><pre> A more subtle UI for WebAuthn that is web exposed. Under development.
  It's controlled by the corresponding Chromium feature which needs to
- be enabled to make the whole feature work.</pre></td><td>❌</td></tr><tr><td class="name">WebAuthenticationLargeBlobExtension</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebAuthenticationRemoteDesktopSupport</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebBluetooth</td><td><pre> WebBluetooth is enabled by default on Android, ChromeOS and Mac.
+ be enabled to make the whole feature work, except for WPTs where the
+ virtual authenticator environment is used.</pre></td><td>❌</td></tr><tr><td class="name">WebAuthenticationLargeBlobExtension</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebAuthenticationRemoteDesktopSupport</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebBluetooth</td><td><pre> WebBluetooth is enabled by default on Android, ChromeOS and Mac.
  It is also supported in Windows 10 which is handled in runtime_features.cc</pre></td><td>❌</td></tr><tr><td class="name">WebBluetoothGetDevices</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebBluetoothScanning</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebBluetoothWatchAdvertisements</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebCodecs</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebCodecsDequeueEvent</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebGLColorManagement</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebGLDeveloperExtensions</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebGLDraftExtensions</td><td><pre> Draft WebGL extensions are deliberately not enabled by experimental web
  platform features.</pre></td><td>❌</td></tr><tr><td class="name">WebGLImageChromium</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebGPU</td><td><pre> WebGPU adds a large attack surface area to the GPU process and allows
  running arbitrary programs on the GPU (compute shaders), which may
@@ -1176,7 +1178,7 @@ we use User Consent API.</pre></td><td>❌</td></tr><tr><td class="name">WebPaym
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>Updated</strong>: 2022-08-04. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
+        <strong>Updated</strong>: 2022-08-05. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
       </p>
     </div>
   </footer>
