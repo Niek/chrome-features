@@ -220,7 +220,9 @@ requiring 'crossOriginIsolated'.</pre></td><td>❌</td></tr><tr><td class="name"
 <a href="https://www.chromestatus.com/feature/5687904902840320">https://www.chromestatus.com/feature/5687904902840320</a></pre></td><td>✅</td></tr><tr><td class="name">SignedHTTPExchange</td><td><pre>Origin-Signed HTTP Exchanges (for WebPackage Loading)
 <a href="https://www.chromestatus.com/feature/5745285984681984">https://www.chromestatus.com/feature/5745285984681984</a></pre></td><td>✅</td></tr><tr><td class="name">SignedHTTPExchangePingValidity</td><td><pre>Whether to send a ping to the inner URL upon navigation or not.</pre></td><td>❌</td></tr><tr><td class="name">SubframeShutdownDelay</td><td><pre>Delays RenderProcessHost shutdown by a few seconds to allow the subframe's
 process to be potentially reused. This aims to reduce process churn in
-navigations where the source and destination share subframes.</pre></td><td>❌</td></tr><tr><td class="name">UserMediaCaptureOnFocus</td><td><pre>If enabled, GetUserMedia API will only work when the concerned tab is in
+navigations where the source and destination share subframes.
+This is enabled only on platforms where the behavior leads to performance
+gains, i.e., those where process startup is expensive.</pre></td><td>❌</td></tr><tr><td class="name">UserMediaCaptureOnFocus</td><td><pre>If enabled, GetUserMedia API will only work when the concerned tab is in
 focus</pre></td><td>❌</td></tr><tr><td class="name">WebOTP</td><td><pre>This is intended as a kill switch for the WebOTP Service feature. To enable
 this feature, the experimental web platform features flag should be set.</pre></td><td>✅</td></tr><tr><td class="name">WebOTPAssertionFeaturePolicy</td><td><pre>Enables WebOTP calls in cross-origin iframes if allowed by Permissions
 Policy.</pre></td><td>❌</td></tr><tr><td class="name">WebLockScreenApi</td><td><pre>Enable the web lockscreen API implementation
@@ -1189,7 +1191,7 @@ we use User Consent API.</pre></td><td>❌</td></tr><tr><td class="name">WebPaym
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>Updated</strong>: 2022-09-09. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
+        <strong>Updated</strong>: 2022-09-10. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
       </p>
     </div>
   </footer>
