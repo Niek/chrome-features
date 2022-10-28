@@ -54,15 +54,16 @@ function getDescription($line)
   return array_reverse($description);
 }
 
-foreach (simplexml_load_file('xml/namespacefeatures.xml')->compounddef->sectiondef as $i) {
-  foreach ($i->memberdef as $j) {
-    if ($j->type == 'const base::Feature') {
-      $f = $j->initializer[0];
-      $name = explode('"', $f)[1];
-      $enabled = (strpos($f, 'FEATURE_ENABLED_BY_DEFAULT') !== false);
-      $line = intval($j->location->attributes()['line']);
-      $description = getDescription($line);
-      $features[] = ['name' => $name, 'enabled_default' => $enabled, 'line' => $line, 'description' => $description];
+foreach (['xml/namespacefeatures.xml', 'xml/namespaceblink_1_1features.xml'] as $file) {
+  foreach (simplexml_load_file($file)->compounddef->sectiondef as $i) {
+    foreach ($i->memberdef as $j) {
+      if ($j->definition == 'features::BASE_FEATURE' || $j->definition == 'blink::features::BASE_FEATURE') {
+        $name = str_replace('"', '', $j->param[1]->type);
+        $enabled = $j->param[2]->type == 'base::FEATURE_ENABLED_BY_DEFAULT';
+        $line = intval($j->location->attributes()['line']);
+        $description = getDescription($line);
+        $features[] = ['name' => $name, 'enabled_default' => $enabled, 'line' => $line, 'description' => $description];
+      }
     }
   }
 }
