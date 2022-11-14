@@ -1,15 +1,30 @@
 #!/usr/bin/env bash
 
-set -e
+set -e # Exit on error
 
-wget -q "https://raw.githubusercontent.com/chromium/chromium/main/content/public/common/content_features.cc" -O content_features.cc
-wget -q "https://raw.githubusercontent.com/chromium/chromium/main/chrome/common/pref_names.cc" -O pref_names.cc
-wget -q "https://raw.githubusercontent.com/chromium/chromium/main/third_party/blink/renderer/platform/runtime_enabled_features.json5" -O runtime_enabled_features.json5
-wget -q "https://raw.githubusercontent.com/chromium/chromium/main/third_party/blink/renderer/core/frame/settings.json5" -O settings.json5
-wget -q "https://raw.githubusercontent.com/chromium/chromium/main/third_party/blink/common/features.cc" -O features.cc
+# Create dir to download source files to
+mkdir -p src xml build
 
-rm -rf xml
-echo -e "GENERATE_HTML=NO\nGENERATE_LATEX=NO\nGENERATE_XML=YES\nQUIET=YES\nFILE_PATTERNS=*.cc" | doxygen -
+# Clean any existing files
+rm -f src/* xml/* build/*
+
+# Dfine the list of files to download and process
+files=(
+  "content/public/common/content_features.cc"
+  "chrome/common/pref_names.cc"
+  "third_party/blink/renderer/platform/runtime_enabled_features.json5"
+  "third_party/blink/renderer/core/frame/settings.json5"
+  "third_party/blink/common/features.cc"
+)
+
+# Download the files
+for file in "${files[@]}"; do
+  curl -sf "https://raw.githubusercontent.com/chromium/chromium/main/${file}" -o "src/${file//\//_}"
+done
+
+# Generate doxygen output
+echo -e "GENERATE_HTML=NO\nGENERATE_LATEX=NO\nGENERATE_XML=YES\nQUIET=YES\nINPUT=src\nFILE_PATTERNS=*.cc" | doxygen -
+
+# Process the files
 composer install
-mkdir -p build
-php run.php > build/index.html
+php run.php >build/index.html
