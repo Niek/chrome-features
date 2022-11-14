@@ -4,12 +4,12 @@ require __DIR__ . '/vendor/autoload.php';
 
 $Parsedown = new Parsedown();
 
-$blinkFeatures = json5_decode(file_get_contents('./runtime_enabled_features.json5'), true);
-$blinkSettings = json5_decode(file_get_contents('./settings.json5'), true);
+$blinkFeatures = json5_decode(file_get_contents('src/third_party_blink_renderer_platform_runtime_enabled_features.json5'), true);
+$blinkSettings = json5_decode(file_get_contents('src/third_party_blink_renderer_core_frame_settings.json5'), true);
 
 // Parse blink features descriptions
 $desc = [];
-foreach (file('./runtime_enabled_features.json5') as $line) {
+foreach (file('src/third_party_blink_renderer_platform_runtime_enabled_features.json5') as $line) {
   if (strpos(trim($line), '//') === 0) {
     $desc[] = substr(trim($line), 2);
   } else if (count($desc) > 0 && strpos($line, 'name: "') !== false) {
@@ -29,7 +29,7 @@ foreach (file('./runtime_enabled_features.json5') as $line) {
 // Parse Chrome features
 $features = [];
 
-$lines = simplexml_load_file('xml/content__features_8cc.xml')->compounddef->programlisting->codeline;
+$lines = simplexml_load_file('xml/content__public__common__content__features_8cc.xml')->compounddef->programlisting->codeline;
 function getDescription($line)
 {
   global $lines;
@@ -104,7 +104,7 @@ foreach (simplexml_load_file('xml/namespaceprefs.xml')->compounddef->sectiondef 
 
 <body>
   <section class="section">
-    <div class="container">
+    <div class="container is-fluid">
       <input class="input is-large" type="text" placeholder="Type to search settings..." id="search">
       <hr>
       <h1 class="title">
@@ -130,7 +130,7 @@ foreach (simplexml_load_file('xml/namespaceprefs.xml')->compounddef->sectiondef 
         </tbody>
       </table>
     </div>
-    <div class="container">
+    <div class="container is-fluid">
       <h1 class="title">
         Blink features
       </h1>
@@ -154,7 +154,7 @@ foreach (simplexml_load_file('xml/namespaceprefs.xml')->compounddef->sectiondef 
         </tbody>
       </table>
     </div>
-    <div class="container">
+    <div class="container is-fluid">
       <h1 class="title">
         Blink settings
       </h1>
@@ -178,7 +178,7 @@ foreach (simplexml_load_file('xml/namespaceprefs.xml')->compounddef->sectiondef 
         </tbody>
       </table>
     </div>
-    <div class="container">
+    <div class="container is-fluid">
       <h1 class="title">
         Preferences
       </h1>
