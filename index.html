@@ -535,7 +535,7 @@ occlusion notifications.</pre></td><td>❌</td></tr><tr><td class="name">Throttl
  |RTCRtpTransceiver::headerExtensionsNegotiated|.</pre></td><td>❌</td></tr><tr><td class="name">RTCStatsRelativePacketArrivalDelay</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">RTCSvcScalabilityMode</td><td><pre> Enables the use of SVC scalability mode in WebRTC.
  Spec: <a href="https://w3c.github.io/webrtc-svc/">https://w3c.github.io/webrtc-svc/</a></pre></td><td>✅</td></tr><tr><td class="name">SanitizerAPI</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SaveAsWithDeclarativeShadowDOM</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SchedulerYield</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ScopedCustomElementRegistry</td><td><pre> <a href="https://wicg.github.io/webcomponents/proposals/Scoped-Custom-Element-Registries">https://wicg.github.io/webcomponents/proposals/Scoped-Custom-Element-Registries</a></pre></td><td>❌</td></tr><tr><td class="name">ScriptedSpeechRecognition</td><td><pre> WebSpeech API with both speech recognition and synthesis functionality
  is not fully enabled on all platforms.</pre></td><td>✅</td></tr><tr><td class="name">ScriptedSpeechSynthesis</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ScriptElementSupports</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ScrollbarWidth</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ScrollCustomization</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ScrollEndEvents</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ScrollTimeline</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ScrollTopLeftInterop</td><td><pre> Implements documentElement.scrollTop/Left and bodyElement.scrollTop/Left
- as per the spec, matching other Web engines.</pre></td><td>✅</td></tr><tr><td class="name">SecureContextFixForSharedWorkers</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SecurePaymentConfirmation</td><td><pre> SecurePaymentConfirmation has shipped on some platforms, but its
+ as per the spec, matching other Web engines.</pre></td><td>✅</td></tr><tr><td class="name">SecurePaymentConfirmation</td><td><pre> SecurePaymentConfirmation has shipped on some platforms, but its
  availability is controlled by the browser process (via the
  SecurePaymentConfirmationBrowser feature), as it requires browser
  support to function. See //content/public/common/content_features.cc
@@ -572,14 +572,7 @@ occlusion notifications.</pre></td><td>❌</td></tr><tr><td class="name">Throttl
  balancing in such cases. See crbug.com/1156312</pre></td><td>✅</td></tr><tr><td class="name">UnexposedTaskIds</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">UnrestrictedSharedArrayBuffer</td><td><pre> This is a reverse OT used for a phased deprecation, on desktop
  <a href="https://crbug.com/1071424">https://crbug.com/1071424</a></pre></td><td>❌</td></tr><tr><td class="name">UpdateVideoIntrinsicSizeDuringLayout</td><td><pre> A kill switch for crbug.com/1410332.
  This was introduced in M113.</pre></td><td>❌</td></tr><tr><td class="name">URLPatternCompareComponent</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">UsedColorSchemeRootScrollbars</td><td><pre> Makes the global root scrollbars follow the preferred color scheme
- by default. Please see more details: crbug.com/1423087.</pre></td><td>❌</td></tr><tr><td class="name">UserActivationSameOriginVisibility</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">UserAgentClientHint</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">UserAgentReduction</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">UseSeparateTraversalForWillMove</td><td><pre> When moving trees between documents, traverse the tree first to
- notify nodes that they <code>WillMoveToNewDocument()</code> before doing a
- second traversal to move them.  If not set, then these two steps are
- done during a single traversal at the cost of the ordering of
- <code>WillMoveToNewDocument()</code> sometimes being called after the node has
- already been moved.  <code>false</code> is the original behavior, while <code>true</code>
- is the new default.  Switch is present in case there is some
- interaction that causes a web-visible change that wasn't anticipated.</pre></td><td>✅</td></tr><tr><td class="name">V8IdleTasks</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">VideoAutoFullscreen</td><td><pre> Whether a video element should automatically play fullscreen unless
+ by default. Please see more details: crbug.com/1423087.</pre></td><td>❌</td></tr><tr><td class="name">UserActivationSameOriginVisibility</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">UserAgentClientHint</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">UserAgentReduction</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">V8IdleTasks</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">VideoAutoFullscreen</td><td><pre> Whether a video element should automatically play fullscreen unless
  'playsinline' is set.</pre></td><td>❌</td></tr><tr><td class="name">VideoFullscreenOrientationLock</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">VideoPlaybackQuality</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">VideoRotateToFullscreen</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">VideoTrackGenerator</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">VideoTrackGeneratorInWindow</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">VideoTrackGeneratorInWorker</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ViewportHeightClientHintHeader</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ViewportSegments</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ViewTransition</td><td><pre> View transitions.
  See <a href="https://www.w3.org/TR/css-view-transitions-1/">https://www.w3.org/TR/css-view-transitions-1/</a></pre></td><td>✅</td></tr><tr><td class="name">ViewTransitionOnNavigation</td><td><pre> If enabled, ViewTransition API is supported for navigations including
  cross-document transitions.
@@ -638,6 +631,10 @@ occlusion notifications.</pre></td><td>❌</td></tr><tr><td class="name">Throttl
     "disable_screenshots": "",
     "download_restrictions": "",
     "download_bubble_enabled": "",
+    "download_bubble": {
+        "partial_view_enabled": "",
+        "partial_view_impressions": ""
+    },
     "suppress_download_bubble_iph": "",
     "download_duplicate_file_prompt_enabled": "",
     "profile": {
@@ -1324,7 +1321,7 @@ occlusion notifications.</pre></td><td>❌</td></tr><tr><td class="name">Throttl
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>Updated</strong>: 2023-03-31. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
+        <strong>Updated</strong>: 2023-04-01. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
       </p>
     </div>
   </footer>
