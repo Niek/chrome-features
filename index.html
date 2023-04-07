@@ -293,7 +293,7 @@ than going to the renderer).
 report a beforeunload handler is present. A ramification of this is
 navigations that would normally check beforeunload handlers before</pre></td><td>❌</td></tr><tr><td class="name">AutomaticLazyFrameLoadingToEmbedUrls</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">BackForwardCacheDedicatedWorker</td><td><pre>Enables controlling the time to live for pages in the BackForwardCache.
 The time to live is defined by the param 'time_to_live_seconds'; if this
-param is not specified then this feature is ignored and the default is used.</pre></td><td>✅</td></tr><tr><td class="name">BackForwardCacheNotReachedOnJavaScriptExecution</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">BackForwardCacheWithKeepaliveRequest</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">BackgroundResourceFetch</td><td><pre>&quot;BackForwardCacheMemoryControls&quot; is checked before &quot;BackForwardCache&quot;. It
+param is not specified then this feature is ignored and the default is used.</pre></td><td>✅</td></tr><tr><td class="name">BackForwardCacheDWCOnJavaScriptExecution</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">BackForwardCacheWithKeepaliveRequest</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">BackgroundResourceFetch</td><td><pre>&quot;BackForwardCacheMemoryControls&quot; is checked before &quot;BackForwardCache&quot;. It
 means the low memory devices will activate neither the control group nor the</pre></td><td>❌</td></tr><tr><td class="name">BlockingDownloadsInAdFrameWithoutUserActivation</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ConversionMeasurement</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ExcludeLowEntropyImagesFromLCP</td><td><pre>When this feature is enabled, private network requests initiated from
 non-secure contexts in the <code>public</code> address space  are blocked.
 
@@ -814,6 +814,9 @@ when desktop user agent is used.</pre></td><td>❌</td></tr><tr><td class="name"
     "browser": {
         "show_home_button": "",
         "speechinput_censor_results": "",
+        "theme": {
+            "color_scheme": ""
+        },
         "default_browser_infobar_last_declined": "",
         "should_reset_check_default_browser": "",
         "default_browser_setting_enabled": "",
@@ -1306,7 +1309,7 @@ when desktop user agent is used.</pre></td><td>❌</td></tr><tr><td class="name"
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>Updated</strong>: 2023-04-06. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
+        <strong>Updated</strong>: 2023-04-07. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
       </p>
     </div>
   </footer>
