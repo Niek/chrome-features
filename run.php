@@ -73,7 +73,7 @@ $prefs = [];
 
 foreach (simplexml_load_file('xml/namespaceprefs.xml')->compounddef->sectiondef as $i) {
   foreach ($i->memberdef as $j) {
-    if ($j->type == 'const char') {
+    if ($j->type == 'constexpr char') {
       $f = $j->initializer[0];
       if (strpos($f, '"') !== false) {
         $name = explode('"', $f)[1];
