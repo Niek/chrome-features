@@ -8,6 +8,8 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    container:
+      image: debian:latest
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v2
@@ -15,7 +17,7 @@ jobs:
           persist-credentials: false
 
       - name: Build page
-        run: sudo apt-get -y install doxygen; ./run.sh
+        run: sudo apt-get -y install doxygen && ./run.sh
         env:
           DEBIAN_FRONTEND: noninteractive
 
