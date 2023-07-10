@@ -3,3 +3,4 @@ vendor/
 build/
 *.cc
 *.json5
+*.h
