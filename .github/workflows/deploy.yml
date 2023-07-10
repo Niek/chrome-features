@@ -20,7 +20,7 @@ jobs:
           persist-credentials: false
 
       - name: Build page
-        run: apt-get update && apt-get -y install doxygen curl composer php-xml && ./run.sh
+        run: sudo apt-get update && sudo apt-get -y install doxygen curl composer php-xml && ./run.sh
         env:
           DEBIAN_FRONTEND: noninteractive
 
