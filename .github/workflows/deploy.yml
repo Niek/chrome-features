@@ -15,7 +15,7 @@ jobs:
           persist-credentials: false
 
       - name: Build page
-        run: sudo apt-get -y install doxygen && ./run.sh
+        run: sudo apt-get -y install doxygen; ./run.sh
         env:
           DEBIAN_FRONTEND: noninteractive
 
