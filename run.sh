@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -e # Exit on error
+set -ex # Exit on error, show commands
 
 # Create dir to download source files to
 mkdir -p src xml build
