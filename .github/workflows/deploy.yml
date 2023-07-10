@@ -17,7 +17,7 @@ jobs:
           persist-credentials: false
 
       - name: Build page
-        run: apt-get update && apt-get -y install doxygen && ./run.sh
+        run: apt-get update && apt-get -y install doxygen curl && ./run.sh
         env:
           DEBIAN_FRONTEND: noninteractive
 
