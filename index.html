@@ -450,7 +450,11 @@ using the kEnableExperimentalWebPlatformFeatures flag.</pre></td><td>✅</td></t
  non-hit-testable objects, e.g. with pointer-events:none.</pre></td><td>❌</td></tr><tr><td class="name">HrefTranslate</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">HTMLInvokeTargetAttribute</td><td><pre> Adds support for the experimental <code>invoketarget</code> and <code>invokeaction</code>
  attributes, as specified in the open-ui &quot;Invokers&quot; explainer.
  <a href="https://open-ui.org/components/invokers.explainer/">https://open-ui.org/components/invokers.explainer/</a></pre></td><td>❌</td></tr><tr><td class="name">HTMLLangNewInheritance</td><td><pre> Shipping in M120.  Flag should be removed after M120 has been
- shipping to stable for a few weeks.</pre></td><td>✅</td></tr><tr><td class="name">HTMLParserYieldAndDelayOftenForTesting</td><td><pre> A flag, just for local testing to make the
+ shipping to stable for a few weeks.</pre></td><td>✅</td></tr><tr><td class="name">HTMLParserFastPathBulkInsertNotify</td><td><pre> This is a killswitch. Removable a few weeks after M121 ships.
+ Feature is conditional on CSSPseudoDir as
+ Element::AdjustDirectionalityIfNeededAfterChildrenChanged() is
+ non-trivial to update if CSSPseudoDir is false, but CSSPseudoDir is in
+ the process of launching.</pre></td><td>✅</td></tr><tr><td class="name">HTMLParserYieldAndDelayOftenForTesting</td><td><pre> A flag, just for local testing to make the
  HTML parser yield more often and take longer to resume.
  This helps when debugging flaky tests caused by parser
  yielding heuristics.</pre></td><td>❌</td></tr><tr><td class="name">HTMLPopoverAttribute</td><td><pre> TODO(crbug.com/1307772): Enables the Popover API.</pre></td><td>✅</td></tr><tr><td class="name">HTMLPopoverHint</td><td><pre> TODO(crbug.com/1416284): Enables popover=hint functionality.</pre></td><td>❌</td></tr><tr><td class="name">HTMLSearchElement</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">HTMLSelectElementShowPicker</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">HTMLSelectListElement</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">HTMLUnsafeMethods</td><td><pre> <a href="http://crbug.com/1478969">http://crbug.com/1478969</a>
@@ -1339,7 +1343,7 @@ using the kEnableExperimentalWebPlatformFeatures flag.</pre></td><td>✅</td></t
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>Updated</strong>: 2023-11-04. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
+        <strong>Updated</strong>: 2023-11-05. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
       </p>
     </div>
   </footer>
