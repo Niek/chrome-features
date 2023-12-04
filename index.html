@@ -475,7 +475,8 @@ sites as they migrate towards requiring cross-origin isolation for these</pre></
  killswitch in case of any issues.
  <a href="https://github.com/w3c/csswg-drafts/issues/3440">https://github.com/w3c/csswg-drafts/issues/3440</a>
  crbug.com/1363901</pre></td><td>✅</td></tr><tr><td class="name">HasUAVisualTransition</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">HighlightInheritance</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">HighlightPointerEvents</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">HitTestOpaqueness</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">HitTestTransparency</td><td><pre> Whether we use cc::HitTestOpaqueness::kTransparent for
- non-hit-testable objects, e.g. with pointer-events:none.</pre></td><td>❌</td></tr><tr><td class="name">HrefTranslate</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">HTMLInvokeTargetAttribute</td><td><pre> Adds support for the experimental <code>invoketarget</code> and <code>invokeaction</code>
+ non-hit-testable objects, e.g. with pointer-events:none.</pre></td><td>❌</td></tr><tr><td class="name">HrefTranslate</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">HTMLInvokeActionsV2</td><td><pre> Additional default invoke actions that aren't part of v1 of invokers.
+ When this flag is disabled only v1 actions (popover and dialog defaults) will work.</pre></td><td>❌</td></tr><tr><td class="name">HTMLInvokeTargetAttribute</td><td><pre> Adds support for the experimental <code>invoketarget</code> and <code>invokeaction</code>
  attributes, as specified in the open-ui &quot;Invokers&quot; explainer.
  <a href="https://open-ui.org/components/invokers.explainer/">https://open-ui.org/components/invokers.explainer/</a></pre></td><td>❌</td></tr><tr><td class="name">HTMLLangNewInheritance</td><td><pre> Shipping in M120.  Flag should be removed after M120 has been
  shipping to stable for a few weeks.</pre></td><td>✅</td></tr><tr><td class="name">HTMLParserFastPathBulkInsertNotify</td><td><pre> This is a killswitch. Removable a few weeks after M121 ships.
@@ -1370,7 +1371,7 @@ sites as they migrate towards requiring cross-origin isolation for these</pre></
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>Updated</strong>: 2023-12-03. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
+        <strong>Updated</strong>: 2023-12-04. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
       </p>
     </div>
   </footer>
