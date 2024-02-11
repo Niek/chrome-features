@@ -443,7 +443,8 @@ menu from showing.</pre></td><td>✅</td></tr><tr><td class="name">InterestGroup
  behavior is reflected by document.baseURI.</pre></td><td>✅</td></tr><tr><td class="name">DocumentCookie</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DocumentDomain</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DocumentOpenOriginAliasRemoval</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DocumentOpenSandboxInheritanceRemoval</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">DocumentPictureInPictureAPI</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DocumentPolicyDocumentDomain</td><td><pre> Enables the ability to use Document Policy header to control feature
  DocumentDomain.</pre></td><td>❌</td></tr><tr><td class="name">DocumentPolicyNegotiation</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DocumentPolicySyncXHR</td><td><pre> Enables the ability to use Document Policy header to control feature
  SyncXHR.</pre></td><td>❌</td></tr><tr><td class="name">DocumentRenderBlocking</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DocumentWrite</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DOMParserUsesHTMLFastPathParser</td><td><pre> Controls whether DOMParser.parseFromString() attempts to use the
- html fast path parser.</pre></td><td>❌</td></tr><tr><td class="name">DOMPartsAPI</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DontFireDblclickOnDisabledFormControls</td><td><pre> Shipping in M121, so should be safe to remove in M126.</pre></td><td>✅</td></tr><tr><td class="name">DynamicScrollCullRectExpansion</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">EditContext</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ElementCapture</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ElementGetHTML</td><td><pre> This is the &quot;new&quot; version of getHTML() used for declarative shadow
+ html fast path parser. This flag is to be used as a killswitch in case
+ of any issues.</pre></td><td>✅</td></tr><tr><td class="name">DOMPartsAPI</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DontFireDblclickOnDisabledFormControls</td><td><pre> Shipping in M121, so should be safe to remove in M126.</pre></td><td>✅</td></tr><tr><td class="name">DynamicScrollCullRectExpansion</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">EditContext</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ElementCapture</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ElementGetHTML</td><td><pre> This is the &quot;new&quot; version of getHTML() used for declarative shadow
  DOM, and this version will replace the deprecated getInnerHTML(), which
  is enabled by the ElementGetInnerHTML feature.</pre></td><td>❌</td></tr><tr><td class="name">ElementGetInnerHTML</td><td><pre> This is the &quot;old&quot; version of getInnerHTML() used for declarative shadow
  DOM, and this version is deprecated. The replacement is enabled by the
@@ -503,6 +504,8 @@ menu from showing.</pre></td><td>✅</td></tr><tr><td class="name">InterestGroup
  inner-spin-button, push-button, searchfield-cancel-button,
  slider-horizontal, square-button. Disable this feature to stop
  parsing or allowing these values.
+ This feature is disabled in fieldtrial testing config because we are
+ testing the deprecation via Finch.
  <a href="https://drafts.csswg.org/css-ui-4/#appearance-switching">https://drafts.csswg.org/css-ui-4/#appearance-switching</a></pre></td><td>✅</td></tr><tr><td class="name">NonStandardAppearanceValueSliderVertical</td><td><pre> TODO(crbug.com/1426629): This feature enables the deprecated value
  slider-vertical. Disable this feature to stop parsing or allowing these
  values.
@@ -1390,7 +1393,7 @@ menu from showing.</pre></td><td>✅</td></tr><tr><td class="name">InterestGroup
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>Updated</strong>: 2024-02-10. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
+        <strong>Updated</strong>: 2024-02-11. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
       </p>
     </div>
   </footer>
