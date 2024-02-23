@@ -477,7 +477,9 @@ crbug.com/1342551</pre></td><td>❌</td></tr><tr><td class="name">LegacyParsingO
  HTML parser yield more often and take longer to resume.
  This helps when debugging flaky tests caused by parser
  yielding heuristics.</pre></td><td>❌</td></tr><tr><td class="name">HTMLPopoverHint</td><td><pre> TODO(crbug.com/1416284): Enables popover=hint functionality.</pre></td><td>❌</td></tr><tr><td class="name">HTMLSearchElement</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">HTMLSelectElementShowPicker</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">HTMLSelectListElement</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">HTMLUnsafeMethods</td><td><pre> <a href="http://crbug.com/1478969">http://crbug.com/1478969</a>
- <a href="https://github.com/whatwg/html/pull/9538">https://github.com/whatwg/html/pull/9538</a></pre></td><td>❌</td></tr><tr><td class="name">ImplicitRootScroller</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ImportAttributesDisallowUnknownKeys</td><td><pre> This change, although technically breaking, is expected to be fully web-compatible
+ <a href="https://github.com/whatwg/html/pull/9538">https://github.com/whatwg/html/pull/9538</a>
+ <a href="https://chromestatus.com/feature/6560361081995264">https://chromestatus.com/feature/6560361081995264</a>
+ Enabled by default in M123, should be safe to remove in M127</pre></td><td>✅</td></tr><tr><td class="name">ImplicitRootScroller</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ImportAttributesDisallowUnknownKeys</td><td><pre> This change, although technically breaking, is expected to be fully web-compatible
  due to how import attributes are currently used in the ecosystem. However, this is
  a killswitch just in case. This can be removed once it ships to stable and no
  regressions are reported.</pre></td><td>✅</td></tr><tr><td class="name">ImprovedXMLErrors</td><td><pre> ImprovedXMLErrors tweaks the way that we emit XML parsing errors in
@@ -497,7 +499,8 @@ crbug.com/1342551</pre></td><td>❌</td></tr><tr><td class="name">LegacyParsingO
  cancellation when the pointer is dragged out of an iframe.</pre></td><td>✅</td></tr><tr><td class="name">MouseDragOnCancelledMouseMove</td><td><pre> crbug.com/346473: Allow mouse-drag text selection even when mousemove
  event is cancelled.</pre></td><td>❌</td></tr><tr><td class="name">MutationEvents</td><td><pre> crbug.com/1446498: This feature is being used for the deprecation of
  Mutation Events.</pre></td><td>✅</td></tr><tr><td class="name">NavigateEventCommitBehavior</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">NavigateEventSourceElement</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">NavigationActivation</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">NavigationId</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">NavigatorContentUtils</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">NestedTopLayerSupport</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">NetInfoConstantType</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">NetInfoDownlinkMax</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">NextSiblingPositionUseNextCandidate</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">NoIdleEncodingForWebTests</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">NonComposedEnterLeaveEvents</td><td><pre> Makes enter/leave Mouse and Pointer Events non-composed as per
- corresponding specifications.</pre></td><td>✅</td></tr><tr><td class="name">NonStandardAppearanceValuesHighUsage</td><td><pre> TODO(crbug.com/924486): This feature enables the deprecated values
+ corresponding specifications.</pre></td><td>✅</td></tr><tr><td class="name">NonEmptyBlockquotesOnOutdenting</td><td><pre> Doesn't insert empty blockquotes on outdenting a blockquote. See
+ <a href="https://crbug.com/323960902">https://crbug.com/323960902</a></pre></td><td>✅</td></tr><tr><td class="name">NonStandardAppearanceValuesHighUsage</td><td><pre> TODO(crbug.com/924486): This feature enables the deprecated values
  inner-spin-button, push-button, searchfield-cancel-button,
  slider-horizontal, square-button. Disable this feature to stop
  parsing or allowing these values.
@@ -562,7 +565,7 @@ crbug.com/1342551</pre></td><td>❌</td></tr><tr><td class="name">LegacyParsingO
  Reporting, FLEDGE, Topics and Fenced Frames.</pre></td><td>❌</td></tr><tr><td class="name">PrivateAggregationAuctionReportBuyerDebugModeConfig</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PrivateNetworkAccessNonSecureContextsAllowed</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">PrivateNetworkAccessNullIpAddress</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">PrivateNetworkAccessPermissionPrompt</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PrivateStateTokens</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">PrivateStateTokensAlwaysAllowIssuance</td><td><pre> Always allow trust token issuance (so long as the base::Feature
  is enabled). Used for testing; circumvents a runtime check that,
  if this RuntimeEnabledFeature is not present, guarantees the origin
- trial is enabled.</pre></td><td>❌</td></tr><tr><td class="name">PushMessaging</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PushMessagingSubscriptionChange</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">QuickIntensiveWakeUpThrottlingAfterLoading</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">QuotaChange</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ReadableStreamTeeCloneForBranch2</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ReduceAcceptLanguage</td><td><pre> If enabled, the Accept-Language header will be reduced.</pre></td><td>❌</td></tr><tr><td class="name">ReduceCookieIPCs</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ReduceUserAgentAndroidVersionDeviceModel</td><td><pre> If enabled, the deviceModel will be reduced to &quot;K&quot; and the
+ trial is enabled.</pre></td><td>❌</td></tr><tr><td class="name">PushMessaging</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PushMessagingSubscriptionChange</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">QuickIntensiveWakeUpThrottlingAfterLoading</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">QuotaChange</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ReduceAcceptLanguage</td><td><pre> If enabled, the Accept-Language header will be reduced.</pre></td><td>❌</td></tr><tr><td class="name">ReduceCookieIPCs</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ReduceUserAgentAndroidVersionDeviceModel</td><td><pre> If enabled, the deviceModel will be reduced to &quot;K&quot; and the
  androidVersion will be reduced to a static &quot;10&quot; string in android
  User-Agent string.</pre></td><td>❌</td></tr><tr><td class="name">ReduceUserAgentMinorVersion</td><td><pre> If enabled, the minor version of the User-Agent string will be reduced.
  This User-Agent Reduction feature has been enabled starting from M101,
@@ -956,6 +959,7 @@ crbug.com/1342551</pre></td><td>❌</td></tr><tr><td class="name">LegacyParsingO
             "pdf_ocr_always_active": "",
             "page_colors": "",
             "apply_page_colors_only_on_increased_contrast": "",
+            "page_colors_block_list": "",
             "prefers_default_scrollbar_styles": "",
             "caretbrowsing": {
                 "enabled": "",
@@ -1396,7 +1400,7 @@ crbug.com/1342551</pre></td><td>❌</td></tr><tr><td class="name">LegacyParsingO
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>Updated</strong>: 2024-02-22. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
+        <strong>Updated</strong>: 2024-02-23. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
       </p>
     </div>
   </footer>
