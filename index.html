@@ -468,7 +468,8 @@ Please remove after M124.</pre></td><td>❌</td></tr><tr><td class="name">LCPCri
  See <a href="https://crbug.com/1366037">https://crbug.com/1366037</a></pre></td><td>❌</td></tr><tr><td class="name">DisplayCutoutAPI</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DocumentBaseURIFix</td><td><pre> Makes document's fallback base URL use about:blank instead of the base
  URL of whatever execution context created it in order to match the
  HTML spec and the behavior already shipped in all other browsers. This
- behavior is reflected by document.baseURI.</pre></td><td>✅</td></tr><tr><td class="name">DocumentCookie</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DocumentDomain</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DocumentOpenOriginAliasRemoval</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DocumentOpenSandboxInheritanceRemoval</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">DocumentPictureInPictureAPI</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DocumentPictureInPictureUserActivation</td><td><pre> Enables propagating user activation from a document picture-in-picture
+ behavior is reflected by document.baseURI.</pre></td><td>✅</td></tr><tr><td class="name">DocumentCookie</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DocumentDomain</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DocumentInstallChunking</td><td><pre> This is a performance fix for <select> popups which was enabled by
+ default in M128.</pre></td><td>✅</td></tr><tr><td class="name">DocumentOpenOriginAliasRemoval</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DocumentOpenSandboxInheritanceRemoval</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">DocumentPictureInPictureAPI</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DocumentPictureInPictureUserActivation</td><td><pre> Enables propagating user activation from a document picture-in-picture
  window up to its opener window and vice versa.</pre></td><td>❌</td></tr><tr><td class="name">DocumentPolicyDocumentDomain</td><td><pre> Enables the ability to use Document Policy header to control feature
  DocumentDomain.</pre></td><td>❌</td></tr><tr><td class="name">DocumentPolicyIncludeJSCallStacksInCrashReports</td><td><pre> Enables the ability to use Document Policy header to control feature
  IncludeJSCallStacksInCrashReports. <a href="https://chromestatus.com/feature/4731248572628992">https://chromestatus.com/feature/4731248572628992</a></pre></td><td>❌</td></tr><tr><td class="name">DocumentPolicyNegotiation</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DocumentPolicySyncXHR</td><td><pre> Enables the ability to use Document Policy header to control feature
@@ -1221,11 +1222,8 @@ Please remove after M124.</pre></td><td>❌</td></tr><tr><td class="name">LCPCri
         "DisabledModules": "",
         "ModulesOrder": "",
         "ModulesVisible": "",
-        "ModulesShownCount": "",
         "ModulesLoadedCountDict": "",
-        "ModulesInteractedCountDict": "",
-        "ModulesFirstShownTime": "",
-        "ModulesFreVisible": ""
+        "ModulesInteractedCountDict": ""
     },
     "colorpicker": {
         "SeedColorChangeCount": ""
@@ -1497,7 +1495,7 @@ Please remove after M124.</pre></td><td>❌</td></tr><tr><td class="name">LCPCri
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>Updated</strong>: 2024-07-15. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
+        <strong>Updated</strong>: 2024-07-16. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
       </p>
     </div>
   </footer>
