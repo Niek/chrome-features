@@ -538,7 +538,8 @@ when gin java bridge is enabled.</pre></td><td>❌</td></tr><tr><td class="name"
  counterpart of the base::Feature with the same name. Because local
  unpartitioned data access requires browser and renderer process
  coordination, the value of this flag is strictly controlled by the
- base::Feature variant, and setting this flag does nothing.</pre></td><td>❌</td></tr><tr><td class="name">FetchLaterAPI</td><td><pre> The Blink runtime-enabled feature name for the API's IDL.</pre></td><td>❌</td></tr><tr><td class="name">FetchUploadStreaming</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FileHandling</td><td><pre> Also enabled when blink::features::kFileHandlingAPI is overridden
+ base::Feature variant, and setting this flag does nothing.</pre></td><td>❌</td></tr><tr><td class="name">FetchBodyBytes</td><td><pre> Add Request.bytes() and Response.bytes()
+ <a href="https://chromestatus.com/feature/5239268180754432">https://chromestatus.com/feature/5239268180754432</a></pre></td><td>❌</td></tr><tr><td class="name">FetchLaterAPI</td><td><pre> The Blink runtime-enabled feature name for the API's IDL.</pre></td><td>❌</td></tr><tr><td class="name">FetchUploadStreaming</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FileHandling</td><td><pre> Also enabled when blink::features::kFileHandlingAPI is overridden
  on the command line (or via chrome://flags).</pre></td><td>❌</td></tr><tr><td class="name">FileHandlingIcons</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FileSystem</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FileSystemAccess</td><td><pre> Shared objects by OPFS and non-OPFS File System Access API.</pre></td><td>❌</td></tr><tr><td class="name">FileSystemAccessAPIExperimental</td><td><pre> In-development features for the File System Access API.</pre></td><td>❌</td></tr><tr><td class="name">FileSystemAccessGetCloudIdentifiers</td><td><pre> The FileSystemHandle.getCloudIdentifiers() method (see
  crbug.com/1443354).</pre></td><td>❌</td></tr><tr><td class="name">FileSystemAccessLocal</td><td><pre> Non-OPFS File System Access API.</pre></td><td>❌</td></tr><tr><td class="name">FileSystemAccessLockingScheme</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FileSystemAccessOriginPrivate</td><td><pre> OPFS File System Access API.</pre></td><td>✅</td></tr><tr><td class="name">FileSystemObserver</td><td><pre> The FileSystemObserver interface for the File System Access API.
  See <a href="https://crbug.com/1019297">https://crbug.com/1019297</a>.</pre></td><td>❌</td></tr><tr><td class="name">FileSystemObserverUnobserve</td><td><pre> The unobserve function of the FileSystemObserver.
@@ -907,10 +908,7 @@ when gin java bridge is enabled.</pre></td><td>❌</td></tr><tr><td class="name"
             "visited_targets": ""
         },
         "shared_array_buffer_unrestricted_access_allowed": "",
-        "sandbox_external_protocol_blocked": "",
-        "label": {
-            "preset": ""
-        }
+        "sandbox_external_protocol_blocked": ""
     },
     "homepage_is_newtabpage": "",
     "homepage": "",
@@ -1568,7 +1566,7 @@ when gin java bridge is enabled.</pre></td><td>❌</td></tr><tr><td class="name"
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>Updated</strong>: 2024-10-03. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
+        <strong>Updated</strong>: 2024-10-04. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
       </p>
     </div>
   </footer>
