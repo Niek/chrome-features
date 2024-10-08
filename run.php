@@ -98,7 +98,7 @@ foreach (simplexml_load_file('xml/namespaceprefs.xml')->compounddef->sectiondef 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Chrome features</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1/css/bulma.min.css">
   <script src="https://cdn.jsdelivr.net/npm/list.js@2/dist/list.min.js"></script>
 </head>
 
@@ -207,6 +207,15 @@ foreach (simplexml_load_file('xml/namespaceprefs.xml')->compounddef->sectiondef 
       lists.forEach(e => {
         e.search(document.querySelector('#search').value);
       });
+    });
+
+    // Set the search input value if 'q' parameter is present
+    document.addEventListener("DOMContentLoaded", function() {
+      const url = new URL(document.location.toString());
+      if (url.searchParams.has('q')) {
+        document.querySelector('#search').value = url.searchParams.get('q');
+        document.querySelector('#search').dispatchEvent(new Event('keyup'));
+      }
     });
   </script>
 </body>
