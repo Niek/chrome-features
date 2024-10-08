@@ -1546,25 +1546,37 @@ Sonoma, to avoid unnecessary changes to the screen reader state.</pre></td><td>â
     </div>
   </footer>
   <script>
-    var lists = [];
-    document.querySelectorAll('table').forEach(t => {
-      lists.push(new List(t, {
-        valueNames: ['name']
-      }))
-    });
-
-    document.querySelector('#search').addEventListener('keyup', k => {
-      lists.forEach(e => {
-        e.search(document.querySelector('#search').value);
-      });
-    });
-
-    // Set the search input value if 'q' parameter is present
+    // Wait until the DOM is fully loaded
     document.addEventListener("DOMContentLoaded", function() {
+      // Initialize List.js for each table
+      var lists = [];
+      document.querySelectorAll('table').forEach(t => {
+        lists.push(new List(t, {
+          valueNames: ['name']
+        }))
+      });
+
+      // Filter the tables based on the search input
+      const updateSearch = () => {
+        const search = document.querySelector('#search').value;
+        lists.forEach(e => e.search(search));
+
+        // Update the URL with the search query using the history API
+        const url = new URL(document.location.toString());
+        url.searchParams.set('q', search);
+        history.pushState({}, '', url.toString());
+      }
+
+      // Update the search when the input changes
+      document.querySelector('#search').addEventListener('keyup', k => {
+        updateSearch();
+      });
+
+      // Update the search when the page is loaded
       const url = new URL(document.location.toString());
       if (url.searchParams.has('q')) {
         document.querySelector('#search').value = url.searchParams.get('q');
-        document.querySelector('#search').dispatchEvent(new Event('keyup'));
+        updateSearch();
       }
     });
   </script>
