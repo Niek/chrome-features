@@ -2,6 +2,9 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
+// Disable error reporting
+error_reporting(0);
+
 $Parsedown = new Parsedown();
 
 $blinkFeatures = json5_decode(file_get_contents('src/third_party_blink_renderer_platform_runtime_enabled_features.json5'), true);
