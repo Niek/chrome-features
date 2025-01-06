@@ -19,7 +19,7 @@ foreach (file('src/third_party_blink_renderer_platform_runtime_enabled_features.
     $key = substr($line, strpos($line, 'name: "') + 7, -3);
     foreach ($blinkFeatures['data'] as &$d) {
       if ($d['name'] === $key) {
-        $d['description'] = $Parsedown->line(join(PHP_EOL, $desc));
+        $d['description'] = $Parsedown->line(htmlentities(join(PHP_EOL, $desc)));
         break;
       }
     }
@@ -76,7 +76,7 @@ $prefs = [];
 
 foreach (simplexml_load_file('xml/namespaceprefs.xml')->compounddef->sectiondef as $i) {
   foreach ($i->memberdef as $j) {
-    if ($j->type == 'constexpr char') {
+    if ($j->type == 'char') {
       $f = $j->initializer[0];
       if (strpos($f, '"') !== false) {
         $name = explode('"', $f)[1];
@@ -127,7 +127,7 @@ foreach (simplexml_load_file('xml/namespaceprefs.xml')->compounddef->sectiondef 
         <tbody class="list">
           <?php
           foreach ($features as $f) {
-            echo '<tr><td class="name">' . $f['name'] . '</td><td>' . (count($f['description']) > 0 ? '<pre>' . $Parsedown->line(implode(PHP_EOL, $f['description'])) . '</pre>' : '&mdash;') . '</td><td>' . ($f['enabled_default'] ? '✅' : '❌') . '</td></tr>';
+            echo '<tr><td class="name">' . $f['name'] . '</td><td>' . (count($f['description']) > 0 ? '<pre>' . $Parsedown->line(htmlentities(implode(PHP_EOL, $f['description']))) . '</pre>' : '&mdash;') . '</td><td>' . ($f['enabled_default'] ? '✅' : '❌') . '</td></tr>';
           }
           ?>
         </tbody>
@@ -200,7 +200,7 @@ foreach (simplexml_load_file('xml/namespaceprefs.xml')->compounddef->sectiondef 
   </footer>
   <script>
     // Wait until the DOM is fully loaded
-    //document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function() {
       // Initialize List.js for each table
       var lists = [];
       document.querySelectorAll('table').forEach(t => {
@@ -231,7 +231,7 @@ foreach (simplexml_load_file('xml/namespaceprefs.xml')->compounddef->sectiondef 
         document.querySelector('#search').value = url.searchParams.get('q');
         updateSearch();
       }
-    //});
+    });
   </script>
 </body>
 
