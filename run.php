@@ -200,7 +200,7 @@ foreach (simplexml_load_file('xml/namespaceprefs.xml')->compounddef->sectiondef 
   </footer>
   <script>
     // Wait until the DOM is fully loaded
-    document.addEventListener("DOMContentLoaded", function() {
+    //document.addEventListener("DOMContentLoaded", function() {
       // Initialize List.js for each table
       var lists = [];
       document.querySelectorAll('table').forEach(t => {
@@ -231,7 +231,7 @@ foreach (simplexml_load_file('xml/namespaceprefs.xml')->compounddef->sectiondef 
         document.querySelector('#search').value = url.searchParams.get('q');
         updateSearch();
       }
-    });
+    //});
   </script>
 </body>
 
