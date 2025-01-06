@@ -795,7 +795,737 @@ initialize COM.</pre></td><td>❌</td></tr><tr><td class="name">WebContentsForce
       <p class="subtitle">
         The following JSON preferences can be modified in the <code>Preferences</code> file in the profile:
       </p>
-      <pre>[]</pre>
+      <pre>{
+    "compact_mode": "",
+    "default_apps": "",
+    "safebrowsing_for_trusted_sources_enabled": "",
+    "disable_screenshots": "",
+    "download_bubble": {
+        "partial_view_enabled": "",
+        "partial_view_impressions": ""
+    },
+    "profile": {
+        "ephemeral_mode": "",
+        "creation_time": "",
+        "icon_version": "",
+        "icon_win11_format": "",
+        "exit_type": "",
+        "avatar_index": "",
+        "name": "",
+        "using_default_name": "",
+        "using_default_avatar": "",
+        "using_gaia_avatar": "",
+        "managed_users": "",
+        "managed_accounts": {
+            "restriction": {
+                "value": "",
+                "all_managed_accounts": ""
+            }
+        },
+        "enterprise_profile_creation": {
+            "keep_existing_data_by_default": ""
+        },
+        "content_settings": {
+            "had_three_consecutive_denies": {
+                "notifications": ""
+            },
+            "data_url_in_svg_use_enabled": ""
+        },
+        "last_used": "",
+        "last_active_profiles": "",
+        "profiles_created": "",
+        "created_by_version": "",
+        "info_cache": "",
+        "profiles_order": "",
+        "web_app": {
+            "install": {
+                "forcelist": ""
+            },
+            "policy_settings": ""
+        },
+        "managed_configuration": {
+            "list": "",
+            "last_hash": ""
+        },
+        "isolated_web_app": {
+            "install": {
+                "forcelist": "",
+                "pending_initialization_count": ""
+            }
+        },
+        "default_content_setting_values": {
+            "protected_media_identifier": ""
+        },
+        "extensions": {
+            "activity_log": {
+                "num_consumers_active": ""
+            }
+        },
+        "browser_guest_enabled": "",
+        "browser_guest_enforced": "",
+        "add_person_enabled": "",
+        "force_browser_signin": "",
+        "picker_availability_on_startup": "",
+        "picker_shown": "",
+        "show_picker_on_startup": "",
+        "web_share": {
+            "visited_targets": ""
+        },
+        "shared_array_buffer_unrestricted_access_allowed": "",
+        "sandbox_external_protocol_blocked": ""
+    },
+    "homepage_is_newtabpage": "",
+    "homepage": "",
+    "https_only_mode_enabled": "",
+    "https_first_balanced_mode_enabled": "",
+    "https_first_mode_incognito_enabled": "",
+    "https_only_mode_auto_enabled": "",
+    "https_upgrade_fallbacks": "",
+    "https_upgrade_navigations": "",
+    "important_sites_dialog": "",
+    "newtab_page_location_override": "",
+    "session": {
+        "restore_on_startup": "",
+        "startup_urls": ""
+    },
+    "feedback_allowed": "",
+    "intl": {
+        "charset_default": ""
+    },
+    "webkit": {
+        "webprefs": {
+            "fonts": {
+                "standard": {
+                    "Arab": "",
+                    "Jpan": "",
+                    "Hang": "",
+                    "Hans": "",
+                    "Hant": "",
+                    "Zyyy": ""
+                },
+                "serif": {
+                    "Arab": "",
+                    "Jpan": "",
+                    "Hang": "",
+                    "Hans": "",
+                    "Hant": "",
+                    "Zyyy": ""
+                },
+                "sansserif": {
+                    "Arab": "",
+                    "Jpan": "",
+                    "Hang": "",
+                    "Hans": "",
+                    "Hant": "",
+                    "Zyyy": ""
+                },
+                "fixed": {
+                    "Jpan": "",
+                    "Hang": "",
+                    "Hans": "",
+                    "Hant": "",
+                    "Zyyy": ""
+                },
+                "cursive": {
+                    "Zyyy": ""
+                },
+                "fantasy": {
+                    "Zyyy": ""
+                },
+                "math": {
+                    "Zyyy": ""
+                }
+            },
+            "web_security_enabled": "",
+            "dom_paste_enabled": "",
+            "text_areas_are_resizable": "",
+            "javascript_can_access_clipboard": "",
+            "tabs_to_links": "",
+            "allow_running_insecure_content": "",
+            "force_dark_mode_enabled": "",
+            "default_font_size": "",
+            "default_fixed_font_size": "",
+            "minimum_font_size": "",
+            "minimum_logical_font_size": "",
+            "javascript_enabled": "",
+            "loads_images_automatically": "",
+            "plugins_enabled": "",
+            "encrypted_media_enabled": ""
+        }
+    },
+    "Zyyy": "",
+    "ssl": {
+        "error_override_allowed": "",
+        "error_override_allowed_for_origins": "",
+        "rev_checking": {
+            "enabled": "",
+            "required_for_local_anchors": ""
+        },
+        "version_min": "",
+        "version_max": "",
+        "cipher_suites": {
+            "blacklist": ""
+        },
+        "client_certs": {
+            "h2_coalescing_hosts": ""
+        },
+        "post_quantum_enabled": "",
+        "ech_enabled": ""
+    },
+    "search": {
+        "suggest_enabled": ""
+    },
+    "download": {
+        "prompt_for_download": "",
+        "default_directory": "",
+        "directory_upgrade": "",
+        "extensions_to_open": "",
+        "extensions_to_open_by_policy": "",
+        "allowed_urls_for_open_by_policy": ""
+    },
+    "net": {
+        "quic_allowed": "",
+        "keep_whitespace_data_urls": "",
+        "network_qualities": "",
+        "easter_egg_high_score": "",
+        "network_prediction_options": "",
+        "max_connections_per_proxy": "",
+        "explicitly_allowed_network_ports": "",
+        "compression_dictionary_transport_enabled": "",
+        "zstd_content_encoding_enabled": "",
+        "ipv6_reachability_override_enabled": ""
+    },
+    "default_apps_install_state": "",
+    "browser": {
+        "show_home_button": "",
+        "show_forward_button": "",
+        "theme": {
+            "saved_local_theme": "",
+            "color_scheme": "",
+            "color_scheme2": "",
+            "user_color": "",
+            "user_color2": "",
+            "color_variant": "",
+            "color_variant2": "",
+            "follows_system_colors": "",
+            "is_grayscale": "",
+            "is_grayscale2": ""
+        },
+        "default_browser_infobar_last_declined": "",
+        "default_browser_infobar_last_declined_time": "",
+        "default_browser_infobar_declined_count": "",
+        "default_browser_app_menu_first_shown_time": "",
+        "default_browser_setting_enabled": "",
+        "has_seen_welcome_page": "",
+        "suppress_default_browser_prompt_for_version": "",
+        "default_browser_prompt_refresh_study_group": "",
+        "window_placement": "",
+        "window_placement_popup": "",
+        "app_window_placement": "",
+        "last_redirect_origin": "",
+        "dns_interception_checks_enabled": "",
+        "command_line_flag_security_warnings_enabled": "",
+        "promotions_enabled": "",
+        "suppress_unsupported_os_warning": "",
+        "web_app": {
+            "create_on_desktop": "",
+            "create_in_apps_menu": "",
+            "create_in_quick_launch_bar": ""
+        },
+        "disk_cache_dir": "",
+        "disk_cache_size": "",
+        "relaunch_notification": "",
+        "relaunch_notification_period": "",
+        "relaunch_window": "",
+        "attempted_to_enable_autoupdate": "",
+        "last_whats_new_version": "",
+        "hovercard": {
+            "image_previews_enabled": "",
+            "memory_usage_enabled": ""
+        }
+    },
+    "settings": {
+        "allowed_domains_for_apps": "",
+        "a11y": {
+            "enable_accessibility_image_labels": "",
+            "enable_accessibility_image_labels_opt_in_accepted": "",
+            "focus_highlight": "",
+            "enable_main_node_annotations": "",
+            "page_colors": "",
+            "apply_page_colors_only_on_increased_contrast": "",
+            "page_colors_block_list": "",
+            "prefers_default_scrollbar_styles": "",
+            "caretbrowsing": {
+                "enabled": "",
+                "show_dialog": ""
+            }
+        },
+        "toast": {
+            "alert_level": ""
+        }
+    },
+    "extensions": {
+        "theme": {
+            "pack": "",
+            "id": ""
+        },
+        "ui": {
+            "developer_mode": ""
+        },
+        "commands": "",
+        "disabled": ""
+    },
+    "autogenerated": {
+        "theme": {
+            "color": "",
+            "policy": {
+                "color": ""
+            }
+        }
+    },
+    "syncing_theme_prefs_migrated_to_non_syncing": "",
+    "should_read_incoming_syncing_theme_prefs": "",
+    "plugins": {
+        "always_open_pdf_externally": ""
+    },
+    "accessibility": {
+        "shown_api_type": ""
+    },
+    "partition": {
+        "default_zoom_level": "",
+        "per_host_zoom_levels": ""
+    },
+    "pinned_tabs": "",
+    "disable_3d_apis": "",
+    "enable_a_ping": "",
+    "enable_referrers": "",
+    "import_autofill_form_data": "",
+    "import_bookmarks": "",
+    "import_history": "",
+    "import_home_page": "",
+    "import_saved_passwords": "",
+    "import_search_engine": "",
+    "import_dialog_autofill_form_data": "",
+    "import_dialog_bookmarks": "",
+    "import_dialog_history": "",
+    "import_dialog_saved_passwords": "",
+    "import_dialog_search_engine": "",
+    "invert_notification_version_2_shown": "",
+    "printing": {
+        "printer_type_deny_list": "",
+        "print_header_footer": "",
+        "allowed_background_graphics_modes": "",
+        "background_graphics_default": "",
+        "paper_size_default": "",
+        "print_preview_disabled": "",
+        "default_destination_selection_rules": "",
+        "use_system_default_printer": "",
+        "print_preview_sticky_settings": ""
+    },
+    "downgrade": {
+        "snapshot_retention_limit": ""
+    },
+    "message_center": {
+        "disabled_extension_ids": ""
+    },
+    "fullscreen": {
+        "allowed": ""
+    },
+    "gcm": {
+        "push_messaging_application_id_map": "",
+        "product_category_for_subtypes": ""
+    },
+    "easy_unlock": {
+        "allowed": "",
+        "pairing": "",
+        "device_id": ""
+    },
+    "webrtc": {
+        "ip_handling_policy": "",
+        "ip_handling_url": "",
+        "udp_port_range": "",
+        "event_logs_collection": "",
+        "local_ips_allowed_urls": "",
+        "text_log_collection_allowed": ""
+    },
+    "suppress_different_origin_subframe_js_dialogs": "",
+    "user_agent_reduction": "",
+    "side_panel": {
+        "is_right_aligned": "",
+        "companion_pinned_to_toolbar": "",
+        "id_to_width": "",
+        "google_search_side_panel_enabled": ""
+    },
+    "tab_search": {
+        "is_right_aligned": ""
+    },
+    "managed_private_network_access_restrictions_enabled": "",
+    "chrome_data_region_setting": "",
+    "network_annotation_blocklist": "",
+    "enterprise_reporting": {
+        "reporting_endpoints": ""
+    },
+    "managed": {
+        "serial_allow_all_ports_for_urls": "",
+        "serial_allow_usb_devices_for_urls": "",
+        "web_hid_allow_all_devices_for_urls": "",
+        "web_hid_allow_devices_for_urls": "",
+        "web_hid_allow_devices_for_urls_on_login_screen": "",
+        "web_hid_allow_devices_with_hid_usages_for_urls": ""
+    },
+    "profiles": {
+        "profiles_deleted": ""
+    },
+    "user_experience_metrics": {
+        "stability": {
+            "other_user_crash_count": "",
+            "kernel_crash_count": "",
+            "system_unclean_shutdowns": ""
+        }
+    },
+    "task_manager": {
+        "window_placement": "",
+        "column_visibility": "",
+        "end_process_enabled": ""
+    },
+    "savefile": {
+        "default_directory": "",
+        "type": ""
+    },
+    "selectfile": {
+        "last_directory": ""
+    },
+    "select_file_dialogs": {
+        "allowed": ""
+    },
+    "filebrowser": {
+        "tasks": {
+            "default_by_mime_type": "",
+            "default_by_suffix": ""
+        }
+    },
+    "protocol_handler": {
+        "allowed_origin_protocol_pairs": "",
+        "policy": {
+            "auto_launch_protocols_from_origins": ""
+        }
+    },
+    "restart": {
+        "last": {
+            "session": {
+                "on": {
+                    "shutdown": ""
+                }
+            }
+        }
+    },
+    "was": {
+        "restarted": ""
+    },
+    "ntp": {
+        "collapsed_foreign_sessions": "",
+        "custom_background_dict": "",
+        "custom_background_dict2": "",
+        "custom_background_local_to_device": "",
+        "custom_background_local_to_device_id": "",
+        "custom_background_inspiration": "",
+        "promo_blocklist": "",
+        "promo_visible": "",
+        "wallpaper_search_history": ""
+    },
+    "NewTabPage": {
+        "CustomizeChromeButtonOpenCount": "",
+        "DisabledModules": "",
+        "ModulesOrder": "",
+        "ModulesVisible": "",
+        "ModulesLoadedCountDict": "",
+        "ModulesInteractedCountDict": "",
+        "OutlookCalendar": {
+            "RetryAfterTime": ""
+        },
+        "OutlookModuleVisible": "",
+        "SharepointModuleVisible": "",
+        "WallpaperSearchButtonShownCount": ""
+    },
+    "colorpicker": {
+        "SeedColorChangeCount": ""
+    },
+    "devtools": {
+        "adb_key": "",
+        "availability": "",
+        "last_open_timestamp": "",
+        "remote_debugging": {
+            "allowed": ""
+        },
+        "backgroundserviceexpiration": "",
+        "discover_usb_devices": "",
+        "edited_files": "",
+        "file_system_paths": "",
+        "port_forwarding_enabled": "",
+        "port_forwarding_default_set": "",
+        "port_forwarding_config": "",
+        "discover_tcp_targets": "",
+        "tcp_discovery_config": "",
+        "preferences": "",
+        "sync_preferences": "",
+        "synced_preferences_sync_enabled": "",
+        "synced_preferences_sync_disabled": "",
+        "gen_ai_settings": ""
+    },
+    "sync_promo": {
+        "user_menu_show_count": ""
+    },
+    "web_app": {
+        "app_id": {
+            "install_url": ""
+        }
+    },
+    "web_app_install_metrics": "",
+    "web_apps": {
+        "daily_metrics": "",
+        "daily_metrics_date": "",
+        "app_agnostic_iph_state": "",
+        "app_agnostic_ml_state": "",
+        "app_agnostic_iph_link_capturing_state": "",
+        "last_preinstall_synchronize_version": "",
+        "did_migrate_default_chrome_apps": "",
+        "uninstalled_default_chrome_apps": "",
+        "web_app_ids": ""
+    },
+    "media": {
+        "default_audio_capture_device": "",
+        "default_video_capture_Device": "",
+        "storage_id_salt": "",
+        "engagement": {
+            "schema_version": ""
+        },
+        "autoplay_allowed": "",
+        "autoplay_whitelist": "",
+        "block_autoplay": ""
+    },
+    "background_contents": {
+        "registered": ""
+    },
+    "total_memory_limit_mb": "",
+    "auth": {
+        "schemes": "",
+        "http_auth_allowed_for_origins": "",
+        "disable_negotiate_cname_lookup": "",
+        "enable_negotiate_port": "",
+        "server_allowlist": "",
+        "negotiate_delegate_whitelist": "",
+        "gssapi_library_name": "",
+        "android_negotiate_account_type": "",
+        "allow_cross_origin_prompt": "",
+        "globally_scoped_http_auth_cache_enabled": "",
+        "ambient_auth_in_private_modes": "",
+        "basic_over_http_enabled": ""
+    },
+    "hsts": {
+        "policy": {
+            "upgrade_bypass_list": ""
+        }
+    },
+    "async_dns": {
+        "enabled": "",
+        "additional_dns_query_types_enabled": ""
+    },
+    "dns_over_https": {
+        "mode": "",
+        "templates": ""
+    },
+    "hardware": {
+        "audio_capture_enabled": "",
+        "audio_capture_allowed_urls": "",
+        "video_capture_enabled": "",
+        "video_capture_allowed_urls": "",
+        "screen_capture_enabled": "",
+        "screen_capture_allowed_by_origins": "",
+        "window_capture_allowed_by_origins": "",
+        "tab_capture_allowed_by_origins": "",
+        "same_origin_tab_capture_allowed_by_origins": ""
+    },
+    "feedback": {
+        "performance_tracing_enabled": ""
+    },
+    "FactoryResetRequested": "",
+    "ForceFactoryReset": "",
+    "FactoryResetTPMFirmwareUpdateMode": "",
+    "DebuggingFeaturesRequested": "",
+    "EnableAdbSideloadingRequested": "",
+    "media_router": {
+        "enable_media_router": "",
+        "show_cast_icon_in_toolbar": ""
+    },
+    "qr_code_generator_enabled": "",
+    "internal_only_uis_enabled": "",
+    "cloud_print": {
+        "0": "",
+        "enabled": "",
+        "proxy_id": "",
+        "auth_token": "",
+        "email": "",
+        "print_system_settings": "",
+        "enable_job_poll": "",
+        "robot_refresh_token": "",
+        "robot_email": "",
+        "user_settings": {
+            "connectNewPrinters": "",
+            "0": "",
+            "printers": ""
+        },
+        "xmpp_ping_enabled": "",
+        "xmpp_ping_timeout_sec": ""
+    },
+    "background_mode": {
+        "enabled": ""
+    },
+    "hardware_acceleration_mode": {
+        "enabled": ""
+    },
+    "hardware_acceleration_mode_previous": "",
+    "policy": {
+        "device_refresh_rate": "",
+        "device_attributes_allowed_for_origins": "",
+        "lens_region_search_enabled": "",
+        "lens_desktop_ntp_search_enabled": ""
+    },
+    "media_galleries": {
+        "gallery_id": "",
+        "remembered_galleries": ""
+    },
+    "apps": {
+        "shortcuts_version": "",
+        "shortcuts_arch": ""
+    },
+    "proxy": {
+        "quick_check_enabled": ""
+    },
+    "signin": {
+        "interception_enabled": ""
+    },
+    "cryptauth": {
+        "instance_id": "",
+        "instance_id_token": ""
+    },
+    "recovery_component": {
+        "needs_elevation": ""
+    },
+    "allow_dinosaur_easter_egg": "",
+    "dse_geolocation_setting": "",
+    "dse_permissions_settings": "",
+    "dse_was_disabled_by_policy": "",
+    "tab_stats": {
+        "total_tab_count_max": "",
+        "max_tabs_per_window": "",
+        "window_count_max": "",
+        "last_daily_sample": "",
+        "discards_external": "",
+        "discards_urgent": "",
+        "discards_proactive": "",
+        "discards_suggested": "",
+        "discards_frozen": "",
+        "reloads_external": "",
+        "reloads_urgent": "",
+        "reloads_proactive": "",
+        "reloads_suggested": "",
+        "reloads_frozen": ""
+    },
+    "unsafely_treat_insecure_origin_as_secure": "",
+    "site_isolation": {
+        "isolate_origins": "",
+        "site_per_process": ""
+    },
+    "file_system": {
+        "file_or_directory_picker_without_allowed_for_origins": ""
+    },
+    "persistent_notifications": {
+        "next_id": "",
+        "next_trigger": ""
+    },
+    "tab_freezing_enabled": "",
+    "enterprise_hardware_platform_api": {
+        "enabled": ""
+    },
+    "web_package": {
+        "signed_exchange": {
+            "enabled": ""
+        }
+    },
+    "ca_certificate_management_allowed": "",
+    "hats": {
+        "survey_metadata": ""
+    },
+    "external_protocol_dialog": {
+        "show_always_open_checkbox": ""
+    },
+    "scroll_to_text_fragment_enabled": "",
+    "prompt_on_multiple_matching_certificates": "",
+    "fetch_keepalive_duration_on_shutdown": "",
+    "sharing_hub": {
+        "desktop_sharing_hub_enabled": ""
+    },
+    "lens": {
+        "lens_overlay_start_count": ""
+    },
+    "privacy_guide": {
+        "viewed": ""
+    },
+    "cors_non_wildcard_request_headers_support": "",
+    "origin_agent_cluster_default_enabled": "",
+    "sct_auditing": {
+        "hashdance_report_count": ""
+    },
+    "high_efficiency": {
+        "chip_expanded_count": "",
+        "last_chip_expanded_timestamp": ""
+    },
+    "performance_intervention": {
+        "background_cpu_message_count": "",
+        "background_cpu_rate_limited_count": "",
+        "last_daily_sample": ""
+    },
+    "should_show_price_track_fue_bubble_fue": "",
+    "strict_mime_type_check_for_worker_scripts_enabled": "",
+    "access_control_allow_methods_in_cors_preflight_spec_conformant": "",
+    "https_upgrades": {
+        "policy": {
+            "http_allowlist": "",
+            "upgrades_enabled": ""
+        }
+    },
+    "certificates": {
+        "ca_certificates": "",
+        "ca_certificates_with_constraints": "",
+        "ca_distrusted_certificates": "",
+        "ca_hint_certificates": "",
+        "ca_platform_integration_enabled": ""
+    },
+    "temporary_setting": {
+        "enterpise_badging": ""
+    },
+    "enterprise_logo": {
+        "url": {
+            "for_browser": "",
+            "for_profile": ""
+        }
+    },
+    "enterprise_label": {
+        "custom_value": {
+            "for_browser": "",
+            "for_profile": ""
+        }
+    },
+    "enterprise": {
+        "profile_badging": {
+            "toolbar_settings": ""
+        }
+    },
+    "web_audio_output_buffering_enabled": "",
+    "worker": {
+        "shared_worker_blob_url_fix_enabled": ""
+    }
+}</pre>
     </div>
   </section>
   <footer class="footer">
