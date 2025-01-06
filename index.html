@@ -56,7 +56,7 @@ TODO(crbug.com/40189625): Enable this feature.</pre></td><td>❌</td></tr><tr><t
 It allows us to remotely disable the feature, and get it to stop working even
 on sites that are in possession of a valid token. When that happens, all API
 calls gated by the killswitch will fail graceully.</pre></td><td>✅</td></tr><tr><td class="name">CapturedSurfaceControlStickyPermissions</td><td><pre>If enabled, CSC permissions are sticky - as all other permissions.
-If disabled, CSC permissions are scoped to the capture session's duration.</pre></td><td>✅</td></tr><tr><td class="name">ClearCrossSiteCrossBrowsingContextGroupWindowName</td><td><pre>Clear the window.name property for the top-level cross-site navigations that
+If disabled, CSC permissions are scoped to the capture session&#039;s duration.</pre></td><td>✅</td></tr><tr><td class="name">ClearCrossSiteCrossBrowsingContextGroupWindowName</td><td><pre>Clear the window.name property for the top-level cross-site navigations that
 swap BrowsingContextGroups(BrowsingInstances).</pre></td><td>❌</td></tr><tr><td class="name">CompositeBGColorAnimation</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CookieDeprecationFacilitatedTesting</td><td><pre>Gate access to cookie deprecation API which allows developers to opt in
 server side testing without cookies.
 (See <a href="https://developer.chrome.com/en/docs/privacy-sandbox/chrome-testing">https://developer.chrome.com/en/docs/privacy-sandbox/chrome-testing</a>)</pre></td><td>❌</td></tr><tr><td class="name">DevToolsPrivacyUI</td><td><pre>When enabled, the DevTools Privacy UI is displayed.</pre></td><td>❌</td></tr><tr><td class="name">CooperativeScheduling</td><td><pre>Enables Blink cooperative scheduling.</pre></td><td>❌</td></tr><tr><td class="name">DeferSpeculativeRFHCreation</td><td><pre>Enables deferring the creation of the speculative RFH when the navigation
@@ -99,7 +99,7 @@ preserving the already ongoing navigation.</pre></td><td>❌</td></tr><tr><td cl
 isolated web apps via the isolated-app:// scheme, and other advanced isolated
 app functionality. See <a href="https://github.com/reillyeon/isolated-web-apps">https://github.com/reillyeon/isolated-web-apps</a> for a
 general overview.
-Please don't use this feature flag directly to guard the IWA code.  Use
+Please don&#039;t use this feature flag directly to guard the IWA code.  Use
 IsolatedWebAppsPolicy::AreIsolatedWebAppsEnabled() in the browser process or
 check kEnableIsolatedWebAppsInRenderer command line flag in the renderer
 process.</pre></td><td>❌</td></tr><tr><td class="name">AutomaticFullscreenContentSetting</td><td><pre>Enables a new Automatic Fullscreen content setting that lets allowlisted
@@ -189,7 +189,7 @@ this preload response. If the fetch handler result is fallback, uses this
 preload request as a fallback network request.
 
 Unlike navigation preload, this preloading is applied to subresources. Also,
-it doesn't require a developer opt-in.
+it doesn&#039;t require a developer opt-in.
 
 crbug.com/1472634 for more details.</pre></td><td>❌</td></tr><tr><td class="name">ServiceWorkerStaticRouterRaceNetworkRequestPerformanceImprovement</td><td><pre>crbug.com/374606637: When this is enabled, race-network-and-fetch-hander will
 prioritize the response processing for the network request over the
@@ -230,8 +230,8 @@ features.
 TODO(bbudge): Remove when the deprecation is complete.
 <a href="https://developer.chrome.com/origintrials/#/view_trial/303992974847508481">https://developer.chrome.com/origintrials/#/view_trial/303992974847508481</a>
 <a href="https://crbug.com/1144104">https://crbug.com/1144104</a></pre></td><td>❌</td></tr><tr><td class="name">UseBrowserCalculatedOrigin</td><td><pre>Enable using browser-calculated origins on navigations, instead of
-renderer-calculated ones.</pre></td><td>✅</td></tr><tr><td class="name">VerifyDidCommitParams</td><td><pre>Enables comparing browser and renderer's DidCommitProvisionalLoadParams in
-RenderFrameHostImpl::VerifyThatBrowserAndRendererCalculatedDidCommitParamsMatch.</pre></td><td>✅</td></tr><tr><td class="name">V8VmFuture</td><td><pre>Enables future V8 VM features</pre></td><td>❌</td></tr><tr><td class="name">WebAppSystemMediaControls</td><td><pre>Enables per PWA System Media Controls. Only supported on Windows and macOS.</pre></td><td>❌</td></tr><tr><td class="name">WebAssemblyBaseline</td><td><pre>Enable WebAssembly baseline compilation (Liftoff).</pre></td><td>✅</td></tr><tr><td class="name">WebAssemblyExperimentalJSPI</td><td><pre>Enable WebAssembly JSPI.</pre></td><td>❌</td></tr><tr><td class="name">WebAssemblyLazyCompilation</td><td><pre>Enable WebAssembly lazy compilation (JIT on first call).</pre></td><td>✅</td></tr><tr><td class="name">WebAssemblyMemory64</td><td><pre>Enable WebAssembly Memory64.</pre></td><td>❌</td></tr><tr><td class="name">WebAssemblyTiering</td><td><pre>Enable WebAssembly tiering (Liftoff -&gt; TurboFan).</pre></td><td>✅</td></tr><tr><td class="name">WebAssemblyTrapHandler</td><td><pre>Enable WebAssembly trap handler.</pre></td><td>❌</td></tr><tr><td class="name">WebBluetooth</td><td><pre>Controls whether the Web Bluetooth API is enabled:
+renderer-calculated ones.</pre></td><td>✅</td></tr><tr><td class="name">VerifyDidCommitParams</td><td><pre>Enables comparing browser and renderer&#039;s DidCommitProvisionalLoadParams in
+RenderFrameHostImpl::VerifyThatBrowserAndRendererCalculatedDidCommitParamsMatch.</pre></td><td>✅</td></tr><tr><td class="name">V8VmFuture</td><td><pre>Enables future V8 VM features</pre></td><td>❌</td></tr><tr><td class="name">WebAppSystemMediaControls</td><td><pre>Enables per PWA System Media Controls. Only supported on Windows and macOS.</pre></td><td>❌</td></tr><tr><td class="name">WebAssemblyBaseline</td><td><pre>Enable WebAssembly baseline compilation (Liftoff).</pre></td><td>✅</td></tr><tr><td class="name">WebAssemblyExperimentalJSPI</td><td><pre>Enable WebAssembly JSPI.</pre></td><td>❌</td></tr><tr><td class="name">WebAssemblyLazyCompilation</td><td><pre>Enable WebAssembly lazy compilation (JIT on first call).</pre></td><td>✅</td></tr><tr><td class="name">WebAssemblyMemory64</td><td><pre>Enable WebAssembly Memory64.</pre></td><td>❌</td></tr><tr><td class="name">WebAssemblyTiering</td><td><pre>Enable WebAssembly tiering (Liftoff -&amp;gt; TurboFan).</pre></td><td>✅</td></tr><tr><td class="name">WebAssemblyTrapHandler</td><td><pre>Enable WebAssembly trap handler.</pre></td><td>❌</td></tr><tr><td class="name">WebBluetooth</td><td><pre>Controls whether the Web Bluetooth API is enabled:
 <a href="https://webbluetoothcg.github.io/web-bluetooth/">https://webbluetoothcg.github.io/web-bluetooth/</a></pre></td><td>❌</td></tr><tr><td class="name">WebBluetoothNewPermissionsBackend</td><td><pre>Controls whether Web Bluetooth should use the new permissions backend. The
 new permissions backend uses ObjectPermissionContextBase, which is used by
 other device APIs, such as WebUSB. When enabled,
@@ -309,7 +309,7 @@ adding an additional top level frame would take us over this limit the</pre></td
 WebAuthn and secure payment confirmation method in PaymentRequest API must
 use a user verifying platform authenticator. When enabled, this allows using</pre></td><td>✅</td></tr><tr><td class="name">FledgeBidderWorkletGroupByOriginContextsToKeep</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FledgeAlwaysReuseBidderContext</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FledgeAlwaysReuseSellerContext</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FledgePrepareBidderContextsInAdvance</td><td><pre>If enabled, GetUserMedia API will only work when the concerned tab is in
 focus</pre></td><td>❌</td></tr><tr><td class="name">FledgePrepareSellerContextsInAdvance</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FledgeEnforcePermissionPolicyContributeOnEvent</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FledgeNoWasmLazyCompilation</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FledgeEagerJSCompilation</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ForceHighPerformanceGPUForWebGL</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ForceInOrderScript</td><td><pre>Whether a utility process configured to use a &quot;UI&quot; message pump should also
-initialize COM.</pre></td><td>❌</td></tr><tr><td class="name">WebContentsForceDark</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FrequencyCappingForLargeStickyAdDetection</td><td><pre>This feature is for a reverse Origin Trial, enabling SharedArrayBuffer for</pre></td><td>✅</td></tr><tr><td class="name">FrequencyCappingForOverlayPopupDetection</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">GMSCoreEmoji</td><td><pre>Enable using browser-calculated origins on navigations, instead of</pre></td><td>✅</td></tr><tr><td class="name">GetUserMediaDeferredDeviceSettingsSelection</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">HiddenSelectionBounds</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ImageLoadingPrioritizationFix</td><td><pre>Enables comparing browser and renderer's DidCommitProvisionalLoadParams in</pre></td><td>❌</td></tr><tr><td class="name">IndexedDBCompressValuesWithSnappy</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">InputPredictorTypeChoice</td><td><pre>Windows enabled since 124.</pre></td><td>❌</td></tr><tr><td class="name">IntensiveWakeUpThrottling</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">InteractiveDetectorIgnoreFcp</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">InterestGroupStorage</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">IsolateSandboxedIframes</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">KalmanDirectionCutOff</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">KalmanHeuristics</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">KeepAliveInBrowserMigration</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">AttributionReportingInBrowserMigration</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">LCPCriticalPathPredictor</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">LCPScriptObserver</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">LCPTimingPredictorPrerender2</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">LCPPAutoPreconnectLcpOrigin</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">LCPPDeferUnusedPreload</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">LCPPFontURLPredictor</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">LCPPInitiatorOrigin</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">LCPPLazyLoadImagePreload</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">PreloadSystemFonts</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">LCPPMultipleKey</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">LCPPPrefetchSubresource</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">HttpDiskCachePrewarming</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">LegacyParsingOfXContentTypeOptions</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">LightweightNoStatePrefetch</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">LinkPreview</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">LoadingPhaseBufferTimeAfterFirstMeaningfulPaint</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">LoadingTasksUnfreezable</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">LogUnexpectedIPCPostedToBackForwardCachedDocuments</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">LowLatencyCanvas2dImageChromium</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">LowLatencyWebGLImageChromium</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">LowPriorityAsyncScriptExecution</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">AutoupgradeMixedContent</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">MemoryCacheStrongReference</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">MHTML_Improvements</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">NavigationPredictor</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">NavigationPredictorNewViewportFeatures</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">NoForcedFrameUpdatesForWebTests</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">NoThrottlingVisibleAgent</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">OpenAllUrlsOrFilesOnDrop</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">OptimizeLoadingDataUrls</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">OriginAgentClusterDefaultEnable</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">OriginTrialStateHostApplyFeatureDiff</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">PaintHolding</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">ParkableImagesToDisk</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">PartitionVisitedLinkDatabase</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">Path2DPaintCache</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">PlzDedicatedWorker</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">DedicatedWorkerAblationStudyEnabled</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">UseAncestorRenderFrameForWorker</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">PrecompileInlineScripts</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">PreferCompositingToLCDText</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">PrefetchPrivacyChanges</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">PreloadingHeuristicsMLModel</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">PreloadingViewportHeuristics</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">Prerender2InNewTab</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">Prerender2MainFrameNavigation</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">Prerender2MemoryControls</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">Prerender2EarlyDocumentLifecycleUpdate</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">Prerender2NoVarySearch</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">Prerender2WarmUpCompositor</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">PreviewsResourceLoadingHintsSpecificResourceTypes</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">PrivateAggregationApi</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">PrivateAggregationApiProtectedAudienceAdditionalExtensions</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">ProcessHtmlDataImmediately</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">ProduceCompileHints2</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">ForceProduceCompileHints</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">ConsumeCompileHints</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">LocalCompileHints</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">QuoteEmptySecChUaStringHeadersConsistently</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">ReducedReferrerGranularity</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">ReleaseResourceStrongReferencesOnMemoryPressure</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">ReleaseResourceDecodedDataOnMemoryPressure</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">RenderBlockingFonts</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">RenderSizeInScoreAdBrowserSignals</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">ResamplingInputEvents</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">ResamplingScrollEvents</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">ResourceFetcherStoresStrongReferences</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">RunTextInputUpdatePostLifecycle</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">SafelistFTPToRegisterProtocolHandler</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">SafelistPaytoToRegisterProtocolHandler</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">PausePagesPerBrowsingContextGroup</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">ShowHudDisplayForPausedPages</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">ScriptStreaming</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">ScriptStreamingForNonHTTP</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">SelectiveInOrderScript</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">SelectiveInOrderScriptTarget</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">SendCnameAliasesToSubresourceFilterFromRenderer</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">ServiceWorkerUpdateDelay</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">ServiceWorkerClientIdAlignedWithSpec</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">SetLowPriorityForBeacon</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">SetTimeoutWithoutClamp</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">SharedStorageAPI</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">SharedStorageWorkletSharedBackingThreadImplementation</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">SharedStorageCreateWorkletCustomDataOrigin</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">SharedStorageSelectURLSavedQueries</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">SharedStorageAPIEnableWALForDatabase</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">SimplifyLoadingTransparentPlaceholderImage</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">SpeculationRulesPrefetchFuture</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">SpeculativeImageDecodes</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">SpeculativeServiceWorkerWarmUp</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">ServiceWorkerStorageSuppressPostTask</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">BoostRenderProcessForLoading</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">stop-in-background</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">StreamlineRendererInit</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">SubSampleWindowProxyUsageMetrics</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">StylusRichGestures</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">ThreadedBodyLoader</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">ThreadedPreloadScanner</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">ThrottleInstallingServiceWorker</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">ThrottleUnimportantFrameTimers</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">TimedHTMLParserBudget</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">TreatHTTPExpiresHeaderValueZeroAsExpiredInBlink</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">UACHOverrideBlank</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">kEmulateLoadStartedForInspectorOncePerResource</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">BlinkSchedulerDiscreteInputMatchesResponsivenessMetrics</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">ThreadedScrollPreventRenderingStarvation</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">UnloadBlocklisted</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">UseImageInsteadOfStorageForStagingBuffer</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">UsePageViewportInLCP</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">UseSnappyForParkableStrings</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">UseZstdForParkableStrings</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">UseThreadPoolForMediaStreamVideoTaskRunner</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">VSyncDecoding</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">VSyncEncoding</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">WebRtcUseCaptureBeginTimestamp</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">WebRtcAudioSinkUseTimestampAligner</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">WebAppBorderless</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">WebAppEnableScopeExtensions</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">WebAppManifestLockScreen</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">WebAudioAllowDenormalInProcessing</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">WebFontsCacheAwareTimeoutAdaption</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">WebRtcCombinedNetworkAndWorkerThread</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">WebRtcHideLocalIpsWithMdns</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">WebRtcIgnoreUnspecifiedColorSpace</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">WebRtcUseMinMaxVEADimensions</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">kWebSQLAccess</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">kWebSQLWebViewAccess</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">WebUSBTransferSizeLimit</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">WebviewAccelerateSmallCanvases</td><td><pre>namespace features</pre></td><td>❌</td></tr>        </tbody>
+initialize COM.</pre></td><td>❌</td></tr><tr><td class="name">WebContentsForceDark</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FrequencyCappingForLargeStickyAdDetection</td><td><pre>This feature is for a reverse Origin Trial, enabling SharedArrayBuffer for</pre></td><td>✅</td></tr><tr><td class="name">FrequencyCappingForOverlayPopupDetection</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">GMSCoreEmoji</td><td><pre>Enable using browser-calculated origins on navigations, instead of</pre></td><td>✅</td></tr><tr><td class="name">GetUserMediaDeferredDeviceSettingsSelection</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">HiddenSelectionBounds</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ImageLoadingPrioritizationFix</td><td><pre>Enables comparing browser and renderer&#039;s DidCommitProvisionalLoadParams in</pre></td><td>❌</td></tr><tr><td class="name">IndexedDBCompressValuesWithSnappy</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">InputPredictorTypeChoice</td><td><pre>Windows enabled since 124.</pre></td><td>❌</td></tr><tr><td class="name">IntensiveWakeUpThrottling</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">InteractiveDetectorIgnoreFcp</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">InterestGroupStorage</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">IsolateSandboxedIframes</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">KalmanDirectionCutOff</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">KalmanHeuristics</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">KeepAliveInBrowserMigration</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">AttributionReportingInBrowserMigration</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">LCPCriticalPathPredictor</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">LCPScriptObserver</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">LCPTimingPredictorPrerender2</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">LCPPAutoPreconnectLcpOrigin</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">LCPPDeferUnusedPreload</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">LCPPFontURLPredictor</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">LCPPInitiatorOrigin</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">LCPPLazyLoadImagePreload</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">PreloadSystemFonts</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">LCPPMultipleKey</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">LCPPPrefetchSubresource</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">HttpDiskCachePrewarming</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">LegacyParsingOfXContentTypeOptions</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">LightweightNoStatePrefetch</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">LinkPreview</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">LoadingPhaseBufferTimeAfterFirstMeaningfulPaint</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">LoadingTasksUnfreezable</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">LogUnexpectedIPCPostedToBackForwardCachedDocuments</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">LowLatencyCanvas2dImageChromium</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">LowLatencyWebGLImageChromium</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">LowPriorityAsyncScriptExecution</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">AutoupgradeMixedContent</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">MemoryCacheStrongReference</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">MHTML_Improvements</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">NavigationPredictor</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">NavigationPredictorNewViewportFeatures</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">NoForcedFrameUpdatesForWebTests</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">NoThrottlingVisibleAgent</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">OpenAllUrlsOrFilesOnDrop</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">OptimizeLoadingDataUrls</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">OriginAgentClusterDefaultEnable</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">OriginTrialStateHostApplyFeatureDiff</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">PaintHolding</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">ParkableImagesToDisk</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">PartitionVisitedLinkDatabase</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">Path2DPaintCache</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">PlzDedicatedWorker</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">DedicatedWorkerAblationStudyEnabled</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">UseAncestorRenderFrameForWorker</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">PrecompileInlineScripts</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">PreferCompositingToLCDText</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">PrefetchPrivacyChanges</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">PreloadingHeuristicsMLModel</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">PreloadingViewportHeuristics</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">Prerender2InNewTab</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">Prerender2MainFrameNavigation</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">Prerender2MemoryControls</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">Prerender2EarlyDocumentLifecycleUpdate</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">Prerender2NoVarySearch</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">Prerender2WarmUpCompositor</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">PreviewsResourceLoadingHintsSpecificResourceTypes</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">PrivateAggregationApi</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">PrivateAggregationApiProtectedAudienceAdditionalExtensions</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">ProcessHtmlDataImmediately</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">ProduceCompileHints2</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">ForceProduceCompileHints</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">ConsumeCompileHints</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">LocalCompileHints</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">QuoteEmptySecChUaStringHeadersConsistently</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">ReducedReferrerGranularity</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">ReleaseResourceStrongReferencesOnMemoryPressure</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">ReleaseResourceDecodedDataOnMemoryPressure</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">RenderBlockingFonts</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">RenderSizeInScoreAdBrowserSignals</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">ResamplingInputEvents</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">ResamplingScrollEvents</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">ResourceFetcherStoresStrongReferences</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">RunTextInputUpdatePostLifecycle</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">SafelistFTPToRegisterProtocolHandler</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">SafelistPaytoToRegisterProtocolHandler</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">PausePagesPerBrowsingContextGroup</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">ShowHudDisplayForPausedPages</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">ScriptStreaming</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">ScriptStreamingForNonHTTP</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">SelectiveInOrderScript</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">SelectiveInOrderScriptTarget</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">SendCnameAliasesToSubresourceFilterFromRenderer</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">ServiceWorkerUpdateDelay</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">ServiceWorkerClientIdAlignedWithSpec</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">SetLowPriorityForBeacon</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">SetTimeoutWithoutClamp</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">SharedStorageAPI</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">SharedStorageWorkletSharedBackingThreadImplementation</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">SharedStorageCreateWorkletCustomDataOrigin</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">SharedStorageSelectURLSavedQueries</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">SharedStorageAPIEnableWALForDatabase</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">SimplifyLoadingTransparentPlaceholderImage</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">SpeculationRulesPrefetchFuture</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">SpeculativeImageDecodes</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">SpeculativeServiceWorkerWarmUp</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">ServiceWorkerStorageSuppressPostTask</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">BoostRenderProcessForLoading</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">stop-in-background</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">StreamlineRendererInit</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">SubSampleWindowProxyUsageMetrics</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">StylusRichGestures</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">ThreadedBodyLoader</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">ThreadedPreloadScanner</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">ThrottleInstallingServiceWorker</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">ThrottleUnimportantFrameTimers</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">TimedHTMLParserBudget</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">TreatHTTPExpiresHeaderValueZeroAsExpiredInBlink</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">UACHOverrideBlank</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">kEmulateLoadStartedForInspectorOncePerResource</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">BlinkSchedulerDiscreteInputMatchesResponsivenessMetrics</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">ThreadedScrollPreventRenderingStarvation</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">UnloadBlocklisted</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">UseImageInsteadOfStorageForStagingBuffer</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">UsePageViewportInLCP</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">UseSnappyForParkableStrings</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">UseZstdForParkableStrings</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">UseThreadPoolForMediaStreamVideoTaskRunner</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">VSyncDecoding</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">VSyncEncoding</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">WebRtcUseCaptureBeginTimestamp</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">WebRtcAudioSinkUseTimestampAligner</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">WebAppBorderless</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">WebAppEnableScopeExtensions</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">WebAppManifestLockScreen</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">WebAudioAllowDenormalInProcessing</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">WebFontsCacheAwareTimeoutAdaption</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">WebRtcCombinedNetworkAndWorkerThread</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">WebRtcHideLocalIpsWithMdns</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">WebRtcIgnoreUnspecifiedColorSpace</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">WebRtcUseMinMaxVEADimensions</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">kWebSQLAccess</td><td><pre>namespace features</pre></td><td>❌</td></tr><tr><td class="name">kWebSQLWebViewAccess</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">WebUSBTransferSizeLimit</td><td><pre>namespace features</pre></td><td>✅</td></tr><tr><td class="name">WebviewAccelerateSmallCanvases</td><td><pre>namespace features</pre></td><td>❌</td></tr>        </tbody>
       </table>
     </div>
     <div class="container is-fluid">
@@ -364,24 +364,24 @@ initialize COM.</pre></td><td>❌</td></tr><tr><td class="name">WebContentsForce
  not just -webkit-box-decoration-break with inlines at line breaks.</pre></td><td>✅</td></tr><tr><td class="name">BrowserVerifiedUserActivationKeyboard</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">BrowserVerifiedUserActivationMouse</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">BufferedBytesConsumerLimitSize</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">BuiltInAIAPI</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ButtonNoAlignItems</td><td><pre> crbug.com/40681980</pre></td><td>✅</td></tr><tr><td class="name">BypassPepcSecurityForTesting</td><td><pre> Bypasses the enforcement of the Page Embedded Permission Control
  security checks. This flag is disabled by default and should only be
  enabled in automated tests in order to allow them to avoid needing to
- wait until the PEPC is validated and also to use JS-initiated clicks.</pre></td><td>❌</td></tr><tr><td class="name">CacheStorageCodeCacheHint</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CalendarPickerMonthPopupButtonDisabledColor</td><td><pre> Increase disabled color on calendar picker's month-popup-button to 0.9.
+ wait until the PEPC is validated and also to use JS-initiated clicks.</pre></td><td>❌</td></tr><tr><td class="name">CacheStorageCodeCacheHint</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CalendarPickerMonthPopupButtonDisabledColor</td><td><pre> Increase disabled color on calendar picker&#039;s month-popup-button to 0.9.
  Enabled by default on M132. Remove flag on or after M135.</pre></td><td>✅</td></tr><tr><td class="name">CallExitNodeWithoutLayoutObject</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">Canvas2dCanvasFilter</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">Canvas2dGPUTransfer</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">Canvas2dImageChromium</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">Canvas2dLayers</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">Canvas2dLayersWithOptions</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">Canvas2dMesh</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">Canvas2dTextMetricsShaping</td><td><pre> This is a kill switch for shaping directly in TextMetrics when
  ctx.measureText() is called. Disabled after speedometer regression:
  <a href="https://crbug.com/362784008">https://crbug.com/362784008</a>.</pre></td><td>❌</td></tr><tr><td class="name">CanvasFloatingPoint</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CanvasHDR</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CanvasImageSmoothing</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CanvasInterventions</td><td><pre> <a href="https://crbug.com/377325952">https://crbug.com/377325952</a></pre></td><td>❌</td></tr><tr><td class="name">CanvasPlaceElement</td><td><pre> <a href="https://github.com/Igalia/explainers/blob/main/canvas-formatted-text/html-in-canvas.md">https://github.com/Igalia/explainers/blob/main/canvas-formatted-text/html-in-canvas.md</a></pre></td><td>❌</td></tr><tr><td class="name">CanvasUsesArcPaintOp</td><td><pre> Kill switch for <a href="https://crbug.com/330506337">https://crbug.com/330506337</a>.</pre></td><td>✅</td></tr><tr><td class="name">CapabilityDelegationDisplayCaptureRequest</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CaptureController</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CapturedMouseEvents</td><td><pre> TODO(crbug.com/1444712): Before enabling that flag by default,
  make sure MouseCursorOverlayController does not transmit mouse
- events to a CaptureController that don't have any
+ events to a CaptureController that don&#039;t have any
  capturedmousechange listener attached to it.
  See <a href="https://github.com/screen-share/mouse-events/issues/14">https://github.com/screen-share/mouse-events/issues/14</a></pre></td><td>❌</td></tr><tr><td class="name">CapturedSurfaceControl</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CaptureHandle</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CaretPositionFromPoint</td><td><pre> <a href="https://www.w3.org/TR/cssom-view-1/#dom-document-caretpositionfrompoint">https://www.w3.org/TR/cssom-view-1/#dom-document-caretpositionfrompoint</a></pre></td><td>✅</td></tr><tr><td class="name">CCTNewRFMPushBehavior</td><td><pre> Kill switch for changes to RenderFrameMetadataObserverImpl in connection with Engagement
  Signals. See <a href="https://crrev.com/c/4544201">https://crrev.com/c/4544201</a> and <a href="https://crbug.com/1458640">https://crbug.com/1458640</a>.</pre></td><td>❌</td></tr><tr><td class="name">CheckIfHighestRootContainsPositionAnchorNode</td><td><pre> crbug.com/40702380</pre></td><td>✅</td></tr><tr><td class="name">CheckVisibilityExtraProperties</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ClickToCapturedPointer</td><td><pre> crbug.com/40851596: Send click to the capture pointer target instead of
  the common ancestor of pointerdown and pointerup targets.</pre></td><td>❌</td></tr><tr><td class="name">ClipboardEventTargetCanBeFocusedElement</td><td><pre> This ensures that clipboard event fires on a target node which is
  focused in case no visible selection is present.
- crbug.com/40735783</pre></td><td>✅</td></tr><tr><td class="name">ClipboardItemWithDOMStringSupport</td><td><pre> Support ClipboardItemData of Promise<DOMString> type according to spec
+ crbug.com/40735783</pre></td><td>✅</td></tr><tr><td class="name">ClipboardItemWithDOMStringSupport</td><td><pre> Support ClipboardItemData of Promise&lt;DOMString&gt; type according to spec
  <a href="https://w3c.github.io/clipboard-apis/#typedefdef-clipboarditemdata">https://w3c.github.io/clipboard-apis/#typedefdef-clipboarditemdata</a></pre></td><td>✅</td></tr><tr><td class="name">ClipPathRejectEmptyPaths</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">CoalesceSelectionchangeEvent</td><td><pre> Avoid queuing a task to fire a selectionchange event when there is already a task scheduled
  to do that for the target according to the new spec:
  <a href="https://w3c.github.io/selection-api/#scheduling-selectionhange-event">https://w3c.github.io/selection-api/#scheduling-selectionhange-event</a></pre></td><td>✅</td></tr><tr><td class="name">CoepReflection</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CompositeBGColorAnimation</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CompositeBoxShadowAnimation</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CompositeClipPathAnimation</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CompositedAnimationsCancelledAsynchronously</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">CompositedSelectionUpdate</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CompositionForegroundMarkers</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CompressionDictionaryTransport</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CompressionDictionaryTransportBackend</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ComputedAccessibilityInfo</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ComputePressure</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ConcurrentViewTransitionsSPA</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ContactsManager</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ContactsManagerExtraProperties</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ContainerTypeNoLayoutContainment</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ContentIndex</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ContextMenu</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ContinueEventTimingRecordingWhenBufferIsFull</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ControlledFrame</td><td><pre> Enable support for Controlled Frame, providing the Controlled
  Frame tag to IWA apps and other contexts. See
  <a href="https://github.com/WICG/controlled-frame/blob/main/README.md">https://github.com/WICG/controlled-frame/blob/main/README.md</a> for more
- info.</pre></td><td>❌</td></tr><tr><td class="name">CookieDeprecationFacilitatedTesting</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CooperativeScheduling</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CoopRestrictProperties</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CorrectTemplateFormParsing</td><td><pre> Corrects the handling of <form> elements nested within <template> tags
+ info.</pre></td><td>❌</td></tr><tr><td class="name">CookieDeprecationFacilitatedTesting</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CooperativeScheduling</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CoopRestrictProperties</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CorrectTemplateFormParsing</td><td><pre> Corrects the handling of &lt;form&gt; elements nested within &lt;template&gt; tags
  in HTML parsing. See <a href="https://crbug.com/352896478">https://crbug.com/352896478</a> for details.</pre></td><td>❌</td></tr><tr><td class="name">CorsRFC1918</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CredentialManagerReport</td><td><pre> Allow WebAuthn relying parties to report information about existing
  credentials back to credential storage providers.
  Enabled by default on M132. Remove flag on or after M135.</pre></td><td>✅</td></tr><tr><td class="name">CSPReportHash</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">CSSAccentColorKeyword</td><td><pre> The AccentColor And AccentColorText CSS system color keywords</pre></td><td>❌</td></tr><tr><td class="name">CSSAdvancedAttrFunction</td><td><pre> CSS attr() function that accepts not only string types
@@ -391,8 +391,8 @@ initialize COM.</pre></td><td>❌</td></tr><tr><td class="name">WebContentsForce
  This means taking scroll offset into account, if an element is aligned
  to the default anchor at one edge, and at the actual containing block
  at the other edge.</pre></td><td>❌</td></tr><tr><td class="name">CSSAnchorScope</td><td><pre> Support for the anchor-scope property.
- <a href="https://drafts.csswg.org/css-anchor-position-1/#anchor-scope">https://drafts.csswg.org/css-anchor-position-1/#anchor-scope</a></pre></td><td>✅</td></tr><tr><td class="name">CSSAnchorSizeInsetsMargins</td><td><pre> Support anchor-size() values in inset and margin properties.</pre></td><td>✅</td></tr><tr><td class="name">CSSAtPropertyStringSyntax</td><td><pre> Support for <string> syntax in @property
- <a href="https://drafts.css-houdini.org/css-properties-values-api-1/#syntax-strings">https://drafts.css-houdini.org/css-properties-values-api-1/#syntax-strings</a></pre></td><td>✅</td></tr><tr><td class="name">CSSAtRuleCounterStyleImageSymbols</td><td><pre> Whether <image> values are allowed as counter style <symbol></pre></td><td>❌</td></tr><tr><td class="name">CSSAtRuleCounterStyleSpeakAsDescriptor</td><td><pre> <a href="https://drafts.csswg.org/css-counter-styles/#counter-style-speak-as">https://drafts.csswg.org/css-counter-styles/#counter-style-speak-as</a></pre></td><td>❌</td></tr><tr><td class="name">CSSBackgroundClipUnprefix</td><td><pre> <a href="https://chromestatus.com/feature/5125388091260928">https://chromestatus.com/feature/5125388091260928</a></pre></td><td>✅</td></tr><tr><td class="name">CSSCalcSimplificationAndSerialization</td><td><pre> Support CSS Values Level 4 calc simplification and serialization
+ <a href="https://drafts.csswg.org/css-anchor-position-1/#anchor-scope">https://drafts.csswg.org/css-anchor-position-1/#anchor-scope</a></pre></td><td>✅</td></tr><tr><td class="name">CSSAnchorSizeInsetsMargins</td><td><pre> Support anchor-size() values in inset and margin properties.</pre></td><td>✅</td></tr><tr><td class="name">CSSAtPropertyStringSyntax</td><td><pre> Support for &lt;string&gt; syntax in @property
+ <a href="https://drafts.css-houdini.org/css-properties-values-api-1/#syntax-strings">https://drafts.css-houdini.org/css-properties-values-api-1/#syntax-strings</a></pre></td><td>✅</td></tr><tr><td class="name">CSSAtRuleCounterStyleImageSymbols</td><td><pre> Whether &lt;image&gt; values are allowed as counter style &lt;symbol&gt;</pre></td><td>❌</td></tr><tr><td class="name">CSSAtRuleCounterStyleSpeakAsDescriptor</td><td><pre> <a href="https://drafts.csswg.org/css-counter-styles/#counter-style-speak-as">https://drafts.csswg.org/css-counter-styles/#counter-style-speak-as</a></pre></td><td>❌</td></tr><tr><td class="name">CSSBackgroundClipUnprefix</td><td><pre> <a href="https://chromestatus.com/feature/5125388091260928">https://chromestatus.com/feature/5125388091260928</a></pre></td><td>✅</td></tr><tr><td class="name">CSSCalcSimplificationAndSerialization</td><td><pre> Support CSS Values Level 4 calc simplification and serialization
  as specified in the specs below.
  <a href="https://drafts.csswg.org/css-values-4/#calc-simplification">https://drafts.csswg.org/css-values-4/#calc-simplification</a>
  <a href="https://drafts.csswg.org/css-values-4/#calc-serialize">https://drafts.csswg.org/css-values-4/#calc-serialize</a></pre></td><td>❌</td></tr><tr><td class="name">CSSCaretAnimation</td><td><pre> <a href="https://chromestatus.com/feature/5082469066604544">https://chromestatus.com/feature/5082469066604544</a></pre></td><td>❌</td></tr><tr><td class="name">CSSCaseSensitiveSelector</td><td><pre> Support case-sensitive attribute selector modifier
@@ -409,9 +409,9 @@ initialize COM.</pre></td><td>❌</td></tr><tr><td class="name">WebContentsForce
  or &quot;paused&quot;.
  <a href="https://www.w3.org/TR/selectors-4/#video-state">https://www.w3.org/TR/selectors-4/#video-state</a></pre></td><td>❌</td></tr><tr><td class="name">CSSPseudoScrollButtons</td><td><pre> For ::scroll-up-button and ::scroll-down-button pseudo elements for Carousel.
  <a href="https://github.com/flackr/carousel/tree/main/scroll-button">https://github.com/flackr/carousel/tree/main/scroll-button</a></pre></td><td>❌</td></tr><tr><td class="name">CSSPseudoScrollMarkers</td><td><pre> For ::scroll-marker and ::scroll-marker-group pseudo elements for Carousel.
- <a href="https://github.com/flackr/carousel/tree/main/scroll-marker">https://github.com/flackr/carousel/tree/main/scroll-marker</a></pre></td><td>❌</td></tr><tr><td class="name">CSSReadingFlow</td><td><pre> TODO(crbug.com/40932006): Non-standard 'reading-flow' keyword
+ <a href="https://github.com/flackr/carousel/tree/main/scroll-marker">https://github.com/flackr/carousel/tree/main/scroll-marker</a></pre></td><td>❌</td></tr><tr><td class="name">CSSReadingFlow</td><td><pre> TODO(crbug.com/40932006): Non-standard &#039;reading-flow&#039; keyword
  for reading of grid and flexbox items.
- <a href="https://drafts.csswg.org/css-display-4/#reading-flow">https://drafts.csswg.org/css-display-4/#reading-flow</a></pre></td><td>❌</td></tr><tr><td class="name">CSSRelativeColor</td><td><pre> <a href="https://drafts.csswg.org/css-color-5/#relative-colors">https://drafts.csswg.org/css-color-5/#relative-colors</a></pre></td><td>✅</td></tr><tr><td class="name">CSSRelativeColorLateResolveAlways</td><td><pre> crbug.com/359616070</pre></td><td>✅</td></tr><tr><td class="name">CSSRelativeColorPreserveNone</td><td><pre> crbug.com/365818844</pre></td><td>✅</td></tr><tr><td class="name">CSSRelativeColorSupportsCurrentcolor</td><td><pre> crbug.com/325309578</pre></td><td>✅</td></tr><tr><td class="name">CSSResizeAuto</td><td><pre> Non-standard 'auto' keyword for the CSS resize property. Used for
+ <a href="https://drafts.csswg.org/css-display-4/#reading-flow">https://drafts.csswg.org/css-display-4/#reading-flow</a></pre></td><td>❌</td></tr><tr><td class="name">CSSRelativeColor</td><td><pre> <a href="https://drafts.csswg.org/css-color-5/#relative-colors">https://drafts.csswg.org/css-color-5/#relative-colors</a></pre></td><td>✅</td></tr><tr><td class="name">CSSRelativeColorLateResolveAlways</td><td><pre> crbug.com/359616070</pre></td><td>✅</td></tr><tr><td class="name">CSSRelativeColorPreserveNone</td><td><pre> crbug.com/365818844</pre></td><td>✅</td></tr><tr><td class="name">CSSRelativeColorSupportsCurrentcolor</td><td><pre> crbug.com/325309578</pre></td><td>✅</td></tr><tr><td class="name">CSSResizeAuto</td><td><pre> Non-standard &#039;auto&#039; keyword for the CSS resize property. Used for
  selectively enable resize corner for textarea via UA stylesheet, but
  unintentionally exposed to author sheets. UA rule is now using
  -internal-textarea-auto instead.</pre></td><td>✅</td></tr><tr><td class="name">CSSScopeImport</td><td><pre> The &quot;@import scope(...)&quot; syntax.
@@ -420,12 +420,12 @@ initialize COM.</pre></td><td>❌</td></tr><tr><td class="name">WebContentsForce
  <a href="https://w3c.github.io/csswg-drafts/css-inline-3/#propdef-leading-trim">https://w3c.github.io/csswg-drafts/css-inline-3/#propdef-leading-trim</a></pre></td><td>✅</td></tr><tr><td class="name">CSSTextSpacing</td><td><pre> crbug.com/1463890, crbug.com/1463891: CSS <code>text-spacing</code> shorthand</pre></td><td>❌</td></tr><tr><td class="name">CSSTreeScopedTimelines</td><td><pre> Support for tree-scoped [1] timeline names (e.g. produced by
  scroll-timeline).
 
- [1] <a href="https://drafts.csswg.org/css-scoping-1/#shadow-names">https://drafts.csswg.org/css-scoping-1/#shadow-names</a></pre></td><td>❌</td></tr><tr><td class="name">CSSUserSelectContain</td><td><pre> Support for <code>user-select:contain</code>.</pre></td><td>❌</td></tr><tr><td class="name">CSSVideoDynamicRangeMediaQueries</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CSSViewTransitionAutoName</td><td><pre> <a href="https://chromestatus.com/feature/5064894363992064">https://chromestatus.com/feature/5064894363992064</a></pre></td><td>❌</td></tr><tr><td class="name">CSSViewTransitionMatchElement</td><td><pre> <a href="https://chromestatus.com/feature/5064894363992064">https://chromestatus.com/feature/5064894363992064</a></pre></td><td>❌</td></tr><tr><td class="name">CursorAnchorInfoMojoPipe</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CustomizableSelect</td><td><pre> Adds the appearance:base-select CSS value which makes <select>
+ [1] <a href="https://drafts.csswg.org/css-scoping-1/#shadow-names">https://drafts.csswg.org/css-scoping-1/#shadow-names</a></pre></td><td>❌</td></tr><tr><td class="name">CSSUserSelectContain</td><td><pre> Support for <code>user-select:contain</code>.</pre></td><td>❌</td></tr><tr><td class="name">CSSVideoDynamicRangeMediaQueries</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CSSViewTransitionAutoName</td><td><pre> <a href="https://chromestatus.com/feature/5064894363992064">https://chromestatus.com/feature/5064894363992064</a></pre></td><td>❌</td></tr><tr><td class="name">CSSViewTransitionMatchElement</td><td><pre> <a href="https://chromestatus.com/feature/5064894363992064">https://chromestatus.com/feature/5064894363992064</a></pre></td><td>❌</td></tr><tr><td class="name">CursorAnchorInfoMojoPipe</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CustomizableSelect</td><td><pre> Adds the appearance:base-select CSS value which makes &lt;select&gt;
  rendering using alternate content in the UA shadowroot which is
- customizable.</pre></td><td>❌</td></tr><tr><td class="name">CustomizableSelectElementAccessibilityIssues</td><td><pre> If a node within a customizable <select> doesn't obey the content model, an Issue is reported to DevTools so that web authors get more context on why this can impact the accessibility behavior of the <select>.</pre></td><td>❌</td></tr><tr><td class="name">Database</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DeprecateUnloadOptOut</td><td><pre> This allows pages to opt out of the unload deprecation. Enabling this
+ customizable.</pre></td><td>❌</td></tr><tr><td class="name">CustomizableSelectElementAccessibilityIssues</td><td><pre> If a node within a customizable &lt;select&gt; doesn&#039;t obey the content model, an Issue is reported to DevTools so that web authors get more context on why this can impact the accessibility behavior of the &lt;select&gt;.</pre></td><td>❌</td></tr><tr><td class="name">Database</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DeprecateUnloadOptOut</td><td><pre> This allows pages to opt out of the unload deprecation. Enabling this
  allows unload event handers to be used in the frame regardless of any
  Permissions-Policy setting.
- <a href="https://crbug.com/1432116">https://crbug.com/1432116</a></pre></td><td>❌</td></tr><tr><td class="name">DesktopCaptureDisableLocalEchoControl</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DesktopPWAsAdditionalWindowingControls</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DesktopPWAsSubApps</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DetailsStyling</td><td><pre> Enabled in M131.  Can be removed a bit after M131 reaches stable.</pre></td><td>✅</td></tr><tr><td class="name">DeviceAttributes</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DeviceOrientationRequestPermission</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DevicePosture</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">DialogCloseWhenOpenRemoved</td><td><pre> This feature makes the <dialog> element close properly when its &quot;open&quot;
+ <a href="https://crbug.com/1432116">https://crbug.com/1432116</a></pre></td><td>❌</td></tr><tr><td class="name">DesktopCaptureDisableLocalEchoControl</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DesktopPWAsAdditionalWindowingControls</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DesktopPWAsSubApps</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DetailsStyling</td><td><pre> Enabled in M131.  Can be removed a bit after M131 reaches stable.</pre></td><td>✅</td></tr><tr><td class="name">DeviceAttributes</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DeviceOrientationRequestPermission</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DevicePosture</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">DialogCloseWhenOpenRemoved</td><td><pre> This feature makes the &lt;dialog&gt; element close properly when its &quot;open&quot;
  attribute is removed. <a href="https://github.com/whatwg/html/issues/5802">https://github.com/whatwg/html/issues/5802</a> and
  <a href="https://github.com/whatwg/html/pull/10124">https://github.com/whatwg/html/pull/10124</a>.</pre></td><td>❌</td></tr><tr><td class="name">DialogElementToggleEvents</td><td><pre> This feature makes the dialog element fire beforetoggle and toggle
  events every time it is closed or opened.
@@ -461,8 +461,8 @@ initialize COM.</pre></td><td>❌</td></tr><tr><td class="name">WebContentsForce
  Fix for <a href="https://crbug.com/40895258">https://crbug.com/40895258</a>. This change is landing in M127 and
  the flag can be removed in M129 in case of no issues.</pre></td><td>✅</td></tr><tr><td class="name">DynamicSafeAreaInsets</td><td><pre> Dynamically change the safe area insets based on the bottom browser
  controls visibility.</pre></td><td>❌</td></tr><tr><td class="name">DynamicSafeAreaInsetsOnScroll</td><td><pre> Dynamically change the safe area insets as browser controls scrolls.</pre></td><td>❌</td></tr><tr><td class="name">EditableBoundaryAdjustment</td><td><pre> Fix for <a href="https://crbug.com/40821646">https://crbug.com/40821646</a>. When enabled, it prevents
- returning empty position when the position's anchor node is not
- a descendant of the anchor's highest editable root.</pre></td><td>✅</td></tr><tr><td class="name">ElementCapture</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ElementInnerTextHandleFirstLineStyle</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">EnforceAnonymityExposure</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">EscapeLtGtInAttributes</td><td><pre> Experiment with preventing some instances of mutation XSS
+ returning empty position when the position&#039;s anchor node is not
+ a descendant of the anchor&#039;s highest editable root.</pre></td><td>✅</td></tr><tr><td class="name">ElementCapture</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ElementInnerTextHandleFirstLineStyle</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">EnforceAnonymityExposure</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">EscapeLtGtInAttributes</td><td><pre> Experiment with preventing some instances of mutation XSS
  by escaping &quot;&lt;&quot; and &quot;&gt;&quot; in attribute values.
  See: crbug.com/1175016</pre></td><td>❌</td></tr><tr><td class="name">EventTimingHandleKeyboardEventSimulatedClick</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">EventTimingInteractionCount</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">EventTimingSelectionAutoScrollNoInteractionId</td><td><pre> Event Timings should not get interactionId assigned if the next paint
  was affected by autoscroll, i.e. from text selection.</pre></td><td>❌</td></tr><tr><td class="name">ExperimentalContentSecurityPolicyFeatures</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ExperimentalJSProfilerMarkers</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ExperimentalMachineLearningNeuralNetwork</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ExperimentalPolicies</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ExposeCoarsenedRenderTime</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ExposeRenderTimeNonTaoDelayedImage</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ExtendedTextMetrics</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">EyeDropperAPI</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FaceDetector</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FastNonCompositedScrollHitTest</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FastPathSingleSelectorExactMatch</td><td><pre> Kill switch.</pre></td><td>✅</td></tr><tr><td class="name">FastPositionIterator</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FedCm</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FedCmAuthz</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FedCmAutoSelectedFlag</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FedCmButtonMode</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FedCmDelegation</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FedCmDisconnect</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FedCmDomainHint</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FedCmError</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FedCmIdPRegistration</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FedCmIdpSigninStatus</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FedCmLightweightMode</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FedCmMultipleIdentityProviders</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FedCmSelectiveDisclosure</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FedCmWithStorageAccessAPI</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FencedFrames</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FencedFramesAPIChanges</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FencedFramesDefaultMode</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FencedFramesLocalUnpartitionedDataAccess</td><td><pre> Allows fenced frames to access unpartioned data via Shared Storage in
@@ -471,43 +471,43 @@ initialize COM.</pre></td><td>❌</td></tr><tr><td class="name">WebContentsForce
  unpartitioned data access requires browser and renderer process
  coordination, the value of this flag is strictly controlled by the
  base::Feature variant, and setting this flag does nothing.</pre></td><td>❌</td></tr><tr><td class="name">FetchBodyBytes</td><td><pre> Add Request.bytes() and Response.bytes()
- <a href="https://chromestatus.com/feature/5239268180754432">https://chromestatus.com/feature/5239268180754432</a></pre></td><td>✅</td></tr><tr><td class="name">FetchLaterAPI</td><td><pre> The Blink runtime-enabled feature name for the API's IDL.</pre></td><td>❌</td></tr><tr><td class="name">FetchUploadStreaming</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FileHandling</td><td><pre> Also enabled when blink::features::kFileHandlingAPI is overridden
+ <a href="https://chromestatus.com/feature/5239268180754432">https://chromestatus.com/feature/5239268180754432</a></pre></td><td>✅</td></tr><tr><td class="name">FetchLaterAPI</td><td><pre> The Blink runtime-enabled feature name for the API&#039;s IDL.</pre></td><td>❌</td></tr><tr><td class="name">FetchUploadStreaming</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FileHandling</td><td><pre> Also enabled when blink::features::kFileHandlingAPI is overridden
  on the command line (or via chrome://flags).</pre></td><td>❌</td></tr><tr><td class="name">FileHandlingIcons</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FileSystem</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FileSystemAccess</td><td><pre> Shared objects by OPFS and non-OPFS File System Access API.</pre></td><td>❌</td></tr><tr><td class="name">FileSystemAccessAPIExperimental</td><td><pre> In-development features for the File System Access API.</pre></td><td>❌</td></tr><tr><td class="name">FileSystemAccessGetCloudIdentifiers</td><td><pre> The FileSystemHandle.getCloudIdentifiers() method (see
  crbug.com/1443354).</pre></td><td>❌</td></tr><tr><td class="name">FileSystemAccessLocal</td><td><pre> Non-OPFS File System Access API.</pre></td><td>❌</td></tr><tr><td class="name">FileSystemAccessLockingScheme</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FileSystemAccessOriginPrivate</td><td><pre> OPFS File System Access API.</pre></td><td>✅</td></tr><tr><td class="name">FileSystemObserver</td><td><pre> The FileSystemObserver interface for the File System Access API.
  See <a href="https://crbug.com/1019297">https://crbug.com/1019297</a>.</pre></td><td>❌</td></tr><tr><td class="name">FileSystemObserverUnobserve</td><td><pre> The unobserve function of the FileSystemObserver.
- See <a href="https://crbug.com/321980469">https://crbug.com/321980469</a>.</pre></td><td>❌</td></tr><tr><td class="name">FindDecomposedInShortText</td><td><pre> crbug.com/369237322</pre></td><td>✅</td></tr><tr><td class="name">FindRubyInPage</td><td><pre> crbug.com/40755728</pre></td><td>✅</td></tr><tr><td class="name">FindTextInReadonlyTextInput</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FindTextSkipCollapsedText</td><td><pre> crbug.com/40755728</pre></td><td>✅</td></tr><tr><td class="name">Fledge</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FledgeAuctionDealSupport</td><td><pre> Enables deal support within auctions.</pre></td><td>❌</td></tr><tr><td class="name">FledgeBiddingAndAuctionServerAPI</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FledgeCustomMaxAuctionAdComponents</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FledgeDeprecatedRenderURLReplacements</td><td><pre> Enables using a 'deprecatedRenderURLReplacements' field within the
+ See <a href="https://crbug.com/321980469">https://crbug.com/321980469</a>.</pre></td><td>❌</td></tr><tr><td class="name">FindDecomposedInShortText</td><td><pre> crbug.com/369237322</pre></td><td>✅</td></tr><tr><td class="name">FindRubyInPage</td><td><pre> crbug.com/40755728</pre></td><td>✅</td></tr><tr><td class="name">FindTextInReadonlyTextInput</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FindTextSkipCollapsedText</td><td><pre> crbug.com/40755728</pre></td><td>✅</td></tr><tr><td class="name">Fledge</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FledgeAuctionDealSupport</td><td><pre> Enables deal support within auctions.</pre></td><td>❌</td></tr><tr><td class="name">FledgeBiddingAndAuctionServerAPI</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FledgeCustomMaxAuctionAdComponents</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FledgeDeprecatedRenderURLReplacements</td><td><pre> Enables using a &#039;deprecatedRenderURLReplacements&#039; field within the
  Protected Audience ad auction config.</pre></td><td>✅</td></tr><tr><td class="name">FledgeDirectFromSellerSignalsHeaderAdSlot</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FledgeDirectFromSellerSignalsWebBundles</td><td><pre> Feature flag to control removal, in case we run into unexpected
  breakage.
 
  TODO(crbug.com/384481095): Remove in a few milestones, along with the
  implementation code.</pre></td><td>❌</td></tr><tr><td class="name">FledgeMultiBid</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FledgePrivateModelTraining</td><td><pre> Enables the private model training API in Protected Audience.
  <a href="https://github.com/WICG/turtledove/blob/main/PA_private_model_training.md">https://github.com/WICG/turtledove/blob/main/PA_private_model_training.md</a></pre></td><td>❌</td></tr><tr><td class="name">FledgeRealTimeReporting</td><td><pre> Enables real time reporting API in Protected Audience.
- <a href="https://github.com/WICG/turtledove/blob/main/PA_real_time_monitoring.md">https://github.com/WICG/turtledove/blob/main/PA_real_time_monitoring.md</a></pre></td><td>✅</td></tr><tr><td class="name">FledgeReportingTimeout</td><td><pre> Enables using a 'reportingTimeout' field within the Protected Audience
+ <a href="https://github.com/WICG/turtledove/blob/main/PA_real_time_monitoring.md">https://github.com/WICG/turtledove/blob/main/PA_real_time_monitoring.md</a></pre></td><td>✅</td></tr><tr><td class="name">FledgeReportingTimeout</td><td><pre> Enables using a &#039;reportingTimeout&#039; field within the Protected Audience
  ad auction config.</pre></td><td>✅</td></tr><tr><td class="name">FledgeSellerNonce</td><td><pre> Enables the ability to set seller nonces on the header response and
  use bidNonce in bids.</pre></td><td>❌</td></tr><tr><td class="name">FledgeTrustedSignalsKVv1CreativeScanning</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FledgeTrustedSignalsKVv2Support</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FluentOverlayScrollbars</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FluentScrollbars</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FluentScrollbarUsesNinePatchTrack</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">Focusgroup</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FontAccess</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FontationsFontBackend</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FontationsForSelectedFormats</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FontFamilyPostscriptMatchingCTMigration</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FontFamilyStyleMatchingCTMigration</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FontPresentWin</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FontSrcLocalMatching</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FontSystemFallbackNotoCjk</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FontVariantEmoji</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FontVariationSequences</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ForcedColors</td><td><pre> TODO(crbug.com/1231644): This flag is being kept (even though the
  feature has shipped) until there are settings to allow users to
  customize the feature.</pre></td><td>✅</td></tr><tr><td class="name">ForceEagerMeasureMemory</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ForceReduceMotion</td><td><pre> <a href="https://github.com/flackr/reduce-motion/blob/main/explainer.md">https://github.com/flackr/reduce-motion/blob/main/explainer.md</a></pre></td><td>❌</td></tr><tr><td class="name">ForceTallerSelectPopup</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FormControlRestoreStateIfAutocompleteOff</td><td><pre> TODO(crbug.com/1419161): Remove this feature after M113 has been stable
  for a few weeks or more. This is a kill switch that, when enabled, goes
- back to the old behavior, which was to restore the state for <input>
- and <select> even when they had <code>autocomplete=off</code>.</pre></td><td>❌</td></tr><tr><td class="name">FormControlsVerticalWritingModeDirectionSupport</td><td><pre> TODO(crbug.com/1432009) Allow form controls with vertical writing mode
+ back to the old behavior, which was to restore the state for &lt;input&gt;
+ and &lt;select&gt; even when they had <code>autocomplete=off</code>.</pre></td><td>❌</td></tr><tr><td class="name">FormControlsVerticalWritingModeDirectionSupport</td><td><pre> TODO(crbug.com/1432009) Allow form controls with vertical writing mode
  to have direction affect the flow of the control.</pre></td><td>✅</td></tr><tr><td class="name">FractionalScrollOffsets</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FreezeFramesOnVisibility</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">GamepadMultitouch</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">GetAllScreensMedia</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">GetComputedStyleOutsideFlatTree</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">GetDisplayMedia</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">GetDisplayMediaRequiresUserActivation</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">GroupEffect</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">HandwritingRecognition</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">HangingWhitespaceDoesNotDependOnAlignment</td><td><pre> Updates the hanging behavior of preserved whitespace at the end of a
  line to not depend on text-align. This flag is to be used as a
  killswitch in case of any issues.
  <a href="https://github.com/w3c/csswg-drafts/issues/3440">https://github.com/w3c/csswg-drafts/issues/3440</a>
  crbug.com/1363901</pre></td><td>✅</td></tr><tr><td class="name">HasUAVisualTransition</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">HighlightInheritance</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">HighlightPointerEvents</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">HighlightsFromPoint</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">HitTestOpaqueness</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">HitTestOpaquenessOmitLineBox</td><td><pre> This is a kill switch for a fix that disables painting of line box hit
  test data with HitTestOpaqueness.</pre></td><td>✅</td></tr><tr><td class="name">HrefTranslate</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">HTMLAnchorAttribute</td><td><pre> The <code>anchor</code> attribute, supported by both anchor positioning and the
- popover API.</pre></td><td>❌</td></tr><tr><td class="name">HTMLDialogLightDismiss</td><td><pre> TODO(crbug.com/376516550): Enables dialog light dismiss functionality.</pre></td><td>❌</td></tr><tr><td class="name">HTMLEmbedElementNotForceLayout</td><td><pre> The <code>&lt;embed&gt;</code> should follow the specification, layout is not forced
+ popover API.</pre></td><td>❌</td></tr><tr><td class="name">HTMLDialogLightDismiss</td><td><pre> TODO(crbug.com/376516550): Enables dialog light dismiss functionality.</pre></td><td>❌</td></tr><tr><td class="name">HTMLEmbedElementNotForceLayout</td><td><pre> The <code>&amp;lt;embed&amp;gt;</code> should follow the specification, layout is not forced
  when the <code>type</code> attribute is set to <code>image</code>.
  <a href="https://html.spec.whatwg.org/C/#the-embed-element">https://html.spec.whatwg.org/C/#the-embed-element</a>
  This feature was shipped in M131, so this flag can be removed in M133.</pre></td><td>✅</td></tr><tr><td class="name">HTMLHRWidthAllowZero</td><td><pre> The width attribute on the hr element, previously converted 0 values to 1px.
  This will ship in M133, so should be safe to remove in M135.</pre></td><td>✅</td></tr><tr><td class="name">HTMLInterestTargetAttribute</td><td><pre> Adds support for the experimental <code>interesttarget</code>
  attributes, as specified in the open-ui &quot;Interest Invokers&quot; explainer.
- <a href="https://open-ui.org/components/interest-invokers.explainer/">https://open-ui.org/components/interest-invokers.explainer/</a></pre></td><td>❌</td></tr><tr><td class="name">HTMLInvokeActionsV2</td><td><pre> Additional default invoke actions that aren't part of v1 of invokers.
+ <a href="https://open-ui.org/components/interest-invokers.explainer/">https://open-ui.org/components/interest-invokers.explainer/</a></pre></td><td>❌</td></tr><tr><td class="name">HTMLInvokeActionsV2</td><td><pre> Additional default invoke actions that aren&#039;t part of v1 of invokers.
  When this flag is disabled only v1 actions (popover and dialog defaults) will work.</pre></td><td>❌</td></tr><tr><td class="name">HTMLInvokeTargetAttribute</td><td><pre> Adds support for the experimental <code>invoketarget</code> and <code>invokeaction</code>
  attributes, as specified in the open-ui &quot;Invokers&quot; explainer.
- <a href="https://open-ui.org/components/invokers.explainer/">https://open-ui.org/components/invokers.explainer/</a></pre></td><td>❌</td></tr><tr><td class="name">HTMLObjectElementFallbackDetachContentFrame</td><td><pre> The <code>&lt;object&gt;</code> should follow the specification:
- &gt; Fallback: The object element represents the element's children.
- &gt; This is the element's fallback content.
+ <a href="https://open-ui.org/components/invokers.explainer/">https://open-ui.org/components/invokers.explainer/</a></pre></td><td>❌</td></tr><tr><td class="name">HTMLObjectElementFallbackDetachContentFrame</td><td><pre> The <code>&amp;lt;object&amp;gt;</code> should follow the specification:
+ &gt; Fallback: The object element represents the element&#039;s children.
+ &gt; This is the element&#039;s fallback content.
  <a href="https://html.spec.whatwg.org/C/#the-object-element">https://html.spec.whatwg.org/C/#the-object-element</a>
  This feature was shipped in M131, so this flag can be removed in M133.</pre></td><td>✅</td></tr><tr><td class="name">HTMLParserYieldAndDelayOftenForTesting</td><td><pre> A flag, just for local testing to make the
  HTML parser yield more often and take longer to resume.
@@ -523,7 +523,7 @@ initialize COM.</pre></td><td>❌</td></tr><tr><td class="name">WebContentsForce
  increment the <code>viz::LocalSurfaceId</code> from the impl thread.</pre></td><td>❌</td></tr><tr><td class="name">IndexedDbGetAllRecords</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">InertElementNonEditable</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">InertElementNonSearchable</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">InfiniteCullRect</td><td><pre> If a painting bug no longer reproduces with this feature enabled, then
  the bug is caused by incorrect cull rects.</pre></td><td>❌</td></tr><tr><td class="name">InheritUserModifyWithoutContenteditable</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">InitialLetterRaiseBySpecified</td><td><pre> crbug.com/370217727</pre></td><td>✅</td></tr><tr><td class="name">InlineBlockInSameLine</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">InnerHTMLParserFastpathLogFailure</td><td><pre> If enabled, and the inner html parser is unable to successfully
  parse, it will log histograms of why it failed. The logging is
- non-trivial.</pre></td><td>❌</td></tr><tr><td class="name">InputClosesSelect</td><td><pre> Makes the HTML parser close <select> tags before inserting <input>
+ non-trivial.</pre></td><td>❌</td></tr><tr><td class="name">InputClosesSelect</td><td><pre> Makes the HTML parser close &lt;select&gt; tags before inserting &lt;input&gt;
  tags to match the old parser behavior in case we have compat issues
  launching SelectParserRelaxation. If SelectParserRelaxation stays
  stable in M131, then this flag can be removed in M133.</pre></td><td>❌</td></tr><tr><td class="name">InputEventConstructorThrows</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">InputMultipleFieldsUI</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">InsertBlockquoteBeforeOuterBlock</td><td><pre> Insert a blockquote before a outer block after creating the blockquote
@@ -540,11 +540,11 @@ initialize COM.</pre></td><td>❌</td></tr><tr><td class="name">WebContentsForce
  its init dictionary instead of a root margin.</pre></td><td>✅</td></tr><tr><td class="name">LimitThirdPartyCookies</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">LineBoxBelowLeadingFloats</td><td><pre> crbug.com/365814218</pre></td><td>✅</td></tr><tr><td class="name">ListItemWithCounterSetNotSetExplicitValue</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">LockedMode</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">LongAnimationFrameSourceCharPosition</td><td><pre> Enable sourceCharPosition for the invoke-type resolve-promise
  <a href="https://issues.chromium.org/issues/381529126">https://issues.chromium.org/issues/381529126</a></pre></td><td>❌</td></tr><tr><td class="name">LongPressLinkSelectText</td><td><pre> Long press on a link selects the link text instead of bringing up
  context menu. Enabled only on Android AuthView.</pre></td><td>❌</td></tr><tr><td class="name">LongTaskFromLongAnimationFrame</td><td><pre> Use LongAnimationFrameMonitor to emit longtask entries</pre></td><td>❌</td></tr><tr><td class="name">MachineLearningNeuralNetwork</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ManagedConfiguration</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">MeasureMemory</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">MediaCapabilitiesEncodingInfo</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MediaCapabilitiesSpatialAudio</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MediaCapture</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MediaCaptureBackgroundBlur</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MediaCaptureCameraControls</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MediaCaptureConfigurationChange</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MediaCaptureVoiceIsolation</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MediaCastOverlayButton</td><td><pre> Set to reflect the MediaCastOverlayButton feature.</pre></td><td>❌</td></tr><tr><td class="name">MediaControlsExpandGesture</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MediaControlsOverlayPlayButton</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MediaElementVolumeGreaterThanOne</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MediaEngagementBypassAutoplayPolicies</td><td><pre> Set to reflect the kMediaEngagementBypassAutoplayPolicies feature.</pre></td><td>❌</td></tr><tr><td class="name">MediaLatencyHint</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MediaPlaybackWhileNotVisiblePermissionPolicy</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MediaPreviewsOptOut</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MediaQueryNavigationControls</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MediaRecorderUseMediaVideoEncoder</td><td><pre> This uses media::VideoEncoder implementation in MediaRecorder API
- instead of using MediaRecorder own video encoder implementation.</pre></td><td>❌</td></tr><tr><td class="name">MediaSession</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">MediaSessionChapterInformation</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">MediaSessionEnterPictureInPicture</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">MediaSourceExperimental</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MediaSourceExtensionsForWebCodecs</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MediaSourceNewAbortAndDuration</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MediaStreamTrackTransfer</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MediaStreamTrackWebSpeech</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MessagePortCloseEvent</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MetaRefreshNoFractional</td><td><pre> This is a killswitch for <meta http-equiv="refresh"> no
+ instead of using MediaRecorder own video encoder implementation.</pre></td><td>❌</td></tr><tr><td class="name">MediaSession</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">MediaSessionChapterInformation</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">MediaSessionEnterPictureInPicture</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">MediaSourceExperimental</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MediaSourceExtensionsForWebCodecs</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MediaSourceNewAbortAndDuration</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MediaStreamTrackTransfer</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MediaStreamTrackWebSpeech</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MessagePortCloseEvent</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MetaRefreshNoFractional</td><td><pre> This is a killswitch for &lt;meta http-equiv=&quot;refresh&quot;&gt; no
  longer accepting fractions, landed around M125.
  It can be removed in M127 if there are no problems.</pre></td><td>✅</td></tr><tr><td class="name">MeterAppearanceNoneFallbackStyle</td><td><pre> If enabled, meter elements will render with a fallback style when
- appearance is set to none.</pre></td><td>✅</td></tr><tr><td class="name">MeterDevolveAppearance</td><td><pre> If enabled, the <meter> widget appearance will devolve based on user
- declared styles as defined in the css-ui-4 spec</pre></td><td>✅</td></tr><tr><td class="name">MiddleClickAutoscroll</td><td><pre> This is enabled by default on Windows only. The only part that's
+ appearance is set to none.</pre></td><td>✅</td></tr><tr><td class="name">MeterDevolveAppearance</td><td><pre> If enabled, the &lt;meter&gt; widget appearance will devolve based on user
+ declared styles as defined in the css-ui-4 spec</pre></td><td>✅</td></tr><tr><td class="name">MiddleClickAutoscroll</td><td><pre> This is enabled by default on Windows only. The only part that&#039;s
  &quot;experimental&quot; is the support on other platforms.</pre></td><td>❌</td></tr><tr><td class="name">MinimimalResourceRequestPrepBeforeCacheLookup</td><td><pre> Killswitch. Remove after 1 or 2 stable releases.</pre></td><td>✅</td></tr><tr><td class="name">MobileLayoutTheme</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ModifyParagraphCrossEditingoundary</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">MojoJS</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MojoJSTest</td><td><pre> MojoJSTest is used exclusively in testing environments, whereas MojoJS
  may also be used elsewhere.</pre></td><td>❌</td></tr><tr><td class="name">MouseFocusFlatTreeParent</td><td><pre> Fix HandleMouseFocus and FrameSelection to use FlatTree parent so
  correct fallback element receives focus.
@@ -556,8 +556,8 @@ initialize COM.</pre></td><td>❌</td></tr><tr><td class="name">WebContentsForce
  enabled <em>and</em> MutationEvents is disabled, then a special console error
  message is used to give more information.</pre></td><td>❌</td></tr><tr><td class="name">NavigateEventCommitBehavior</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">NavigateEventSourceElement</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">NavigationActivation</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">NavigationId</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">NavigatorContentUtils</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">NestedViewTransition</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">NetInfoConstantType</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">NetInfoDownlinkMax</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">NewGetFocusableAreaBehavior</td><td><pre> This is a killswitch for the behavior of Element::GetFocusableArea
  on delegatesFocus shadow hosts. This flag can be removed in M127 if
- things are stable.</pre></td><td>✅</td></tr><tr><td class="name">NoCollapseSpaceBeforeRuby</td><td><pre> crbug.com/376097115</pre></td><td>✅</td></tr><tr><td class="name">NoIdleEncodingForWebTests</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">NoIncreasingEndOffsetOnSplittingTextNodes</td><td><pre> Doesn't increase the end offset on getting the range for a new line
- character. See <a href="https://crbug.com/326888905">https://crbug.com/326888905</a></pre></td><td>✅</td></tr><tr><td class="name">NonEmptyBlockquotesOnOutdenting</td><td><pre> Doesn't insert empty blockquotes on outdenting a blockquote. See
+ things are stable.</pre></td><td>✅</td></tr><tr><td class="name">NoCollapseSpaceBeforeRuby</td><td><pre> crbug.com/376097115</pre></td><td>✅</td></tr><tr><td class="name">NoIdleEncodingForWebTests</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">NoIncreasingEndOffsetOnSplittingTextNodes</td><td><pre> Doesn&#039;t increase the end offset on getting the range for a new line
+ character. See <a href="https://crbug.com/326888905">https://crbug.com/326888905</a></pre></td><td>✅</td></tr><tr><td class="name">NonEmptyBlockquotesOnOutdenting</td><td><pre> Doesn&#039;t insert empty blockquotes on outdenting a blockquote. See
  <a href="https://crbug.com/323960902">https://crbug.com/323960902</a></pre></td><td>✅</td></tr><tr><td class="name">NonNullInputEventDataForTextArea</td><td><pre> Input event data for textarea should not be null for certain
  inputTypes.
  <a href="https://issues.chromium.org/issues/40737336">https://issues.chromium.org/issues/40737336</a></pre></td><td>✅</td></tr><tr><td class="name">NonStandardAppearanceValueSliderVertical</td><td><pre> TODO(crbug.com/1426629): This feature enables the deprecated value
@@ -584,7 +584,7 @@ initialize COM.</pre></td><td>❌</td></tr><tr><td class="name">WebContentsForce
  generate code used by the origin trials sample API implementation.</pre></td><td>❌</td></tr><tr><td class="name">OverscrollCustomization</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">PageFreezeOptIn</td><td><pre> The following are developer opt-outs and opt-ins for page freezing. If
  neither is specified then heuristics will be applied to determine whether
  the page is eligible.</pre></td><td>❌</td></tr><tr><td class="name">PageFreezeOptOut</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">PageMarginBoxes</td><td><pre> Support for page margin boxes.
- <a href="https://www.w3.org/TR/css-page-3/#margin-boxes">https://www.w3.org/TR/css-page-3/#margin-boxes</a></pre></td><td>✅</td></tr><tr><td class="name">PagePopup</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">PageRevealEvent</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PageSwapEvent</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PaintHighlightsForFirstLetter</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PaintHoldingForIframes</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PaintHoldingForLocalIframes</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PaintTimingMixin</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">PaintUnderInvalidationChecking</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">Parakeet</td><td><pre> PARAKEET ad serving runtime flag/JS API.</pre></td><td>❌</td></tr><tr><td class="name">PartitionedPopins</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">PartitionVisitedLinkDatabaseWithSelfLinks</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">PasswordReveal</td><td><pre> This is to add an option to enable the Reveal button on password inputs while waiting ::reveal gets standardized.</pre></td><td>❌</td></tr><tr><td class="name">PasteListItemOutsidePreviousListItem</td><td><pre> <a href="https://crbug.com/41247646">https://crbug.com/41247646</a></pre></td><td>✅</td></tr><tr><td class="name">PaymentApp</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">PaymentInstruments</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">PaymentLinkDetection</td><td><pre> <a href="https://chromestatus.com/feature/5198846820352000">https://chromestatus.com/feature/5198846820352000</a></pre></td><td>❌</td></tr><tr><td class="name">PaymentMethodChangeEvent</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PaymentRequest</td><td><pre> PaymentRequest is enabled by default on Android</pre></td><td>❌</td></tr><tr><td class="name">PerformanceManagerInstrumentation</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">PerformanceMarkFeatureUsage</td><td><pre> Enables performance.mark('mark_feature_usage'): crbug.com/1517170</pre></td><td>❌</td></tr><tr><td class="name">PerformanceNavigateSystemEntropy</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">PerformanceNavigationTimingConfidence</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">PeriodicBackgroundSync</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PerMethodCanMakePaymentQuota</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">PermissionElement</td><td><pre> Tracking bug for the implementation: <a href="https://crbug.com/1462930">https://crbug.com/1462930</a></pre></td><td>❌</td></tr><tr><td class="name">Permissions</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PermissionsRequestRevoke</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">PNaCl</td><td><pre> This is a reverse OT used for a phased deprecation.
+ <a href="https://www.w3.org/TR/css-page-3/#margin-boxes">https://www.w3.org/TR/css-page-3/#margin-boxes</a></pre></td><td>✅</td></tr><tr><td class="name">PagePopup</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">PageRevealEvent</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PageSwapEvent</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PaintHighlightsForFirstLetter</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PaintHoldingForIframes</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PaintHoldingForLocalIframes</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PaintTimingMixin</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">PaintUnderInvalidationChecking</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">Parakeet</td><td><pre> PARAKEET ad serving runtime flag/JS API.</pre></td><td>❌</td></tr><tr><td class="name">PartitionedPopins</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">PartitionVisitedLinkDatabaseWithSelfLinks</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">PasswordReveal</td><td><pre> This is to add an option to enable the Reveal button on password inputs while waiting ::reveal gets standardized.</pre></td><td>❌</td></tr><tr><td class="name">PasteListItemOutsidePreviousListItem</td><td><pre> <a href="https://crbug.com/41247646">https://crbug.com/41247646</a></pre></td><td>✅</td></tr><tr><td class="name">PaymentApp</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">PaymentInstruments</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">PaymentLinkDetection</td><td><pre> <a href="https://chromestatus.com/feature/5198846820352000">https://chromestatus.com/feature/5198846820352000</a></pre></td><td>❌</td></tr><tr><td class="name">PaymentMethodChangeEvent</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PaymentRequest</td><td><pre> PaymentRequest is enabled by default on Android</pre></td><td>❌</td></tr><tr><td class="name">PerformanceManagerInstrumentation</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">PerformanceMarkFeatureUsage</td><td><pre> Enables performance.mark(&#039;mark_feature_usage&#039;): crbug.com/1517170</pre></td><td>❌</td></tr><tr><td class="name">PerformanceNavigateSystemEntropy</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">PerformanceNavigationTimingConfidence</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">PeriodicBackgroundSync</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PerMethodCanMakePaymentQuota</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">PermissionElement</td><td><pre> Tracking bug for the implementation: <a href="https://crbug.com/1462930">https://crbug.com/1462930</a></pre></td><td>❌</td></tr><tr><td class="name">Permissions</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PermissionsRequestRevoke</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">PNaCl</td><td><pre> This is a reverse OT used for a phased deprecation.
  <a href="https://crbug.com/918374">https://crbug.com/918374</a></pre></td><td>❌</td></tr><tr><td class="name">PointerEventDeviceId</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PointerEventTargetsInEventLists</td><td><pre> Coalesced/predicted event targets in untrusted events.
  See <a href="https://crbug.com/353538500">https://crbug.com/353538500</a></pre></td><td>✅</td></tr><tr><td class="name">PopoverAnchorRelationships</td><td><pre> TODO(crbug.com/364669918) This enables these two new functionalities:
  1. add an imperative way to set invoker relationships between popovers.
@@ -615,7 +615,7 @@ initialize COM.</pre></td><td>❌</td></tr><tr><td class="name">WebContentsForce
  User-Agent string.</pre></td><td>❌</td></tr><tr><td class="name">ReduceUserAgentMinorVersion</td><td><pre> If enabled, the minor version of the User-Agent string will be reduced.
  This User-Agent Reduction feature has been enabled starting from M101,
  but we still keep this flag for future phase tests.</pre></td><td>✅</td></tr><tr><td class="name">ReduceUserAgentPlatformOsCpu</td><td><pre> If enabled, the platform and oscpu of the User-Agent string will be
- reduced.</pre></td><td>❌</td></tr><tr><td class="name">RegionCapture</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">RelOpenerBcgDependencyHint</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">RemotePlayback</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">RemotePlaybackBackend</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">RemoveCollapsedPlaceholder</td><td><pre> See <a href="https://issues.chromium.org/40805258">https://issues.chromium.org/40805258</a></pre></td><td>✅</td></tr><tr><td class="name">RemoveDanglingMarkupInTarget</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">RemoveDataUrlInSvgUse</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">RemoveNodeHavingChildrenIfFullySelected</td><td><pre> Remove a node if it's selected fully even though it has children. See
+ reduced.</pre></td><td>❌</td></tr><tr><td class="name">RegionCapture</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">RelOpenerBcgDependencyHint</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">RemotePlayback</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">RemotePlaybackBackend</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">RemoveCollapsedPlaceholder</td><td><pre> See <a href="https://issues.chromium.org/40805258">https://issues.chromium.org/40805258</a></pre></td><td>✅</td></tr><tr><td class="name">RemoveDanglingMarkupInTarget</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">RemoveDataUrlInSvgUse</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">RemoveNodeHavingChildrenIfFullySelected</td><td><pre> Remove a node if it&#039;s selected fully even though it has children. See
  <a href="https://crbug.com/331074432">https://crbug.com/331074432</a></pre></td><td>✅</td></tr><tr><td class="name">RemoveVisibleSelectionInDOMSelection</td><td><pre> See <a href="https://issues.chromium.org/issues/41311101">https://issues.chromium.org/issues/41311101</a></pre></td><td>❌</td></tr><tr><td class="name">RenderBlockingInlineModuleScript</td><td><pre> See <a href="https://github.com/whatwg/html/issues/10034">https://github.com/whatwg/html/issues/10034</a></pre></td><td>✅</td></tr><tr><td class="name">RenderBlockingStatus</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">RenderPriorityAttribute</td><td><pre> The renderpriority attribute feature.
  <a href="https://github.com/WICG/display-locking/blob/main/explainers/update-rendering.md">https://github.com/WICG/display-locking/blob/main/explainers/update-rendering.md</a></pre></td><td>❌</td></tr><tr><td class="name">ReportEventTimingAtVisibilityChange</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ReportFirstFrameTimeAsRenderTime</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ResetInputTypeToNoneBeforeCharacterInput</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ResourceTimingContentType</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ResourceTimingFinalResponseHeadersStart</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ResourceTimingUseCORSForBodySizes</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">RestrictGamepadAccess</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">RewindFloats</td><td><pre> New behavior when line breaker rewinds floats. crbug.com/1499290</pre></td><td>✅</td></tr><tr><td class="name">RootElementWithPlaceHolderAfterDeletingSelection</td><td><pre> When enabled, the root element will have a placeholder after all text is deleted.
  crbug.com/40702380</pre></td><td>✅</td></tr><tr><td class="name">RtcAudioJitterBufferMaxPackets</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">RTCDataChannelPriority</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">RTCEncodedAudioFrameAbsCaptureTime</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">RTCEncodedFrameSetMetadata</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">RTCEncodedVideoFrameAdditionalMetadata</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">RTCJitterBufferTarget</td><td><pre> Enables the use of jitterBufferTarget attribute in WebRTC.
@@ -625,22 +625,22 @@ initialize COM.</pre></td><td>❌</td></tr><tr><td class="name">WebContentsForce
  Spec: <a href="https://w3c.github.io/webrtc-svc/">https://w3c.github.io/webrtc-svc/</a></pre></td><td>✅</td></tr><tr><td class="name">RubyOverhangOverlapFix</td><td><pre> crbug.com/329776386</pre></td><td>✅</td></tr><tr><td class="name">RubyShortHeuristics</td><td><pre> crbug.com/324111880</pre></td><td>✅</td></tr><tr><td class="name">SanitizerAPI</td><td><pre> Spec: <a href="https://wicg.github.io/sanitizer-api/">https://wicg.github.io/sanitizer-api/</a>
  Tracking bug: crbug.com/356601280</pre></td><td>❌</td></tr><tr><td class="name">SchedulerYield</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ScheduleSelectionChangeOnBackspace</td><td><pre> See crbug.com/41321247</pre></td><td>✅</td></tr><tr><td class="name">ScopedCustomElementRegistry</td><td><pre> <a href="https://wicg.github.io/webcomponents/proposals/Scoped-Custom-Element-Registries">https://wicg.github.io/webcomponents/proposals/Scoped-Custom-Element-Registries</a></pre></td><td>❌</td></tr><tr><td class="name">ScriptedSpeechRecognition</td><td><pre> WebSpeech API with both speech recognition and synthesis functionality
  is not fully enabled on all platforms.</pre></td><td>✅</td></tr><tr><td class="name">ScriptedSpeechSynthesis</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ScriptRunIteratorCombiningMarks</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ScrollbarColor</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ScrollbarWidth</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ScrollEndEvents</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ScrollIntoViewRootFrameViewportBugFix</td><td><pre> TODO(355460994): Remove after M129.
- scroll into root frame didn't take scrollbar and borders into account,
+ scroll into root frame didn&#039;t take scrollbar and borders into account,
  while this is fixed, to avoid any web compat issues we have this killswitch.</pre></td><td>✅</td></tr><tr><td class="name">ScrollTimelineCurrentTime</td><td><pre> Separate flag for crbug.com/1426506 (getCurrentTime API change) which
  is expected to land after the initial launch of ScrollTimeline.</pre></td><td>❌</td></tr><tr><td class="name">ScrollTopLeftInterop</td><td><pre> Implements documentElement.scrollTop/Left and bodyElement.scrollTop/Left
  as per the spec, matching other Web engines.
 
- This flag can't be removed until the Android min SDK version is 28
- (i.e., 'P') or later.  See AWSettings.setScrollTopLeftInteropEnabled
+ This flag can&#039;t be removed until the Android min SDK version is 28
+ (i.e., &#039;P&#039;) or later.  See AWSettings.setScrollTopLeftInteropEnabled
  and its caller.</pre></td><td>✅</td></tr><tr><td class="name">SearchTextHighlightPseudo</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SecurePaymentConfirmation</td><td><pre> SecurePaymentConfirmation has shipped on some platforms, but its
  availability is controlled by the browser process (via the
  SecurePaymentConfirmationBrowser feature), as it requires browser
  support to function. See //content/public/common/content_features.cc
 
- The status is set to 'test' here to enable some WPT tests that only
+ The status is set to &#039;test&#039; here to enable some WPT tests that only
  require blink-side support to function.</pre></td><td>❌</td></tr><tr><td class="name">SecurePaymentConfirmationBrowserBoundKeys</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SecurePaymentConfirmationDebug</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SecurePaymentConfirmationNetworkAndIssuerIcons</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SecurePaymentConfirmationOptOut</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SelectAudioOutput</td><td><pre> SelectAudioOutput API
  <a href="https://chromestatus.com/feature/5164535504437248">https://chromestatus.com/feature/5164535504437248</a></pre></td><td>❌</td></tr><tr><td class="name">SelectedcontentelementAttribute</td><td><pre> The selectedcontentelement attribute is for connecting select elements
- to arbitrary <selectedcontent> elements.
+ to arbitrary &lt;selectedcontent&gt; elements.
  <a href="https://github.com/openui/open-ui/issues/1063">https://github.com/openui/open-ui/issues/1063</a></pre></td><td>❌</td></tr><tr><td class="name">SelectionAcrossShadowDOM</td><td><pre> Implement Selection API across shadow DOM
  See <a href="https://w3c.github.io/selection-api/">https://w3c.github.io/selection-api/</a></pre></td><td>❌</td></tr><tr><td class="name">SelectionIsCollapsedShadowDOMSupport</td><td><pre> selection.isCollapsed should return false if anchor and focus nodes
  are different, including in shadow tree.
@@ -652,20 +652,20 @@ initialize COM.</pre></td><td>❌</td></tr><tr><td class="name">WebContentsForce
  select with the multiple attribute or size &gt;1. This could be enabled
  in the case that SelectParserRelaxation causes a breaking change for
  websites which were relying on the parser throwing away tags which
- couldn't be slotted otherwise, like this:
- <select multiple>
-   <ul>
-     <option>hello</option>
+ couldn&#039;t be slotted otherwise, like this:
+ &lt;select multiple&gt;
+   &lt;ul&gt;
+     &lt;option&gt;hello&lt;/option&gt;
  When the SelectParserRelaxation flag is removed, then this flag can be
- safely removed as well.</pre></td><td>❌</td></tr><tr><td class="name">SelectOptionAccessibilityTargetSize</td><td><pre> Sets the minimum target size of <option> in <select> to 24x24 CSS
+ safely removed as well.</pre></td><td>❌</td></tr><tr><td class="name">SelectOptionAccessibilityTargetSize</td><td><pre> Sets the minimum target size of &lt;option&gt; in &lt;select&gt; to 24x24 CSS
  pixels to meet Accessibility standards.
- <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html</a></pre></td><td>✅</td></tr><tr><td class="name">SelectParserRelaxation</td><td><pre> Makes the HTML parser allow most tags inside of <select> instead of
- only <option>, <optgroup>, and <hr>.
+ <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html</a></pre></td><td>✅</td></tr><tr><td class="name">SelectParserRelaxation</td><td><pre> Makes the HTML parser allow most tags inside of &lt;select&gt; instead of
+ only &lt;option&gt;, &lt;optgroup&gt;, and &lt;hr&gt;.
  <a href="https://github.com/whatwg/html/issues/10310">https://github.com/whatwg/html/issues/10310</a></pre></td><td>❌</td></tr><tr><td class="name">SendBeaconThrowForBlobWithNonSimpleType</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SensorExtraClasses</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">Serial</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SerializeViewTransitionStateInSPA</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SerialPortConnected</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ServiceWorkerClientLifecycleState</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ServiceWorkerStaticRouterTimingInfo</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SetSequentialFocusStartingPoint</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ShadowRootReferenceTarget</td><td><pre> Reference Target allows IDREF attributes to refer inside Shadow DOM.
  crbug.com/346835896</pre></td><td>❌</td></tr><tr><td class="name">ShapeResultCachedPreviousSafeToBreakOffset</td><td><pre> crbug.com/329677645</pre></td><td>✅</td></tr><tr><td class="name">SharedArrayBuffer</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SharedArrayBufferUnrestrictedAccessAllowed</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SharedAutofill</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SharedStorageAPI</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SharedStorageWebLocks</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SharedWorker</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SidewaysWritingModes</td><td><pre> crbug.com/40501131</pre></td><td>✅</td></tr><tr><td class="name">SignatureBasedIntegrity</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SiteInitiatedMirroring</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SkipAd</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SkipCallbacksWhenDevToolsNotOpen</td><td><pre> If enabled, only call ResourceLoadObserver callbacks if the DevTools
  panel is open.</pre></td><td>❌</td></tr><tr><td class="name">SkipPreloadScanning</td><td><pre> If enabled, HTMLPreloadScanner will be skipped.</pre></td><td>❌</td></tr><tr><td class="name">SkipTemporaryDocumentFragment</td><td><pre> Added in M131, should be safe to remove after M131 ships.</pre></td><td>✅</td></tr><tr><td class="name">SkipTouchEventFilter</td><td><pre> Skips the browser touch event filter, ensuring that events that reach
  the queue and would otherwise be filtered out will instead be passed
- onto the renderer compositor process as long as the page hasn't timed
+ onto the renderer compositor process as long as the page hasn&#039;t timed
  out. If skip_filtering_process is browser_and_renderer, also skip the
  renderer cc touch event filter, ensuring that events will be passed
  onto the renderer main thread.</pre></td><td>✅</td></tr><tr><td class="name">SmartCard</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SmartZoom</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SmilAutoSuspendOnLag</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SoftNavigationDetection</td><td><pre> Used to enable the code for detecting soft navigations through task
@@ -681,8 +681,8 @@ initialize COM.</pre></td><td>❌</td></tr><tr><td class="name">WebContentsForce
  where a runtime-enabled feature name is required for correct IDL syntax.
  This is a global flag; do not change its status.</pre></td><td>✅</td></tr><tr><td class="name">StandardizedBrowserZoom</td><td><pre> See <a href="https://github.com/w3c/csswg-drafts/issues/9398">https://github.com/w3c/csswg-drafts/issues/9398</a></pre></td><td>✅</td></tr><tr><td class="name">StandardizedBrowserZoomOptOut</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">StaticAnimationOptimization</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">StorageAccessHeader</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">StorageBuckets</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">StorageBucketsDurability</td><td><pre> Gates the <code>durability()</code> method on a storage bucket and the property in
  the options struct.</pre></td><td>❌</td></tr><tr><td class="name">StorageBucketsLocks</td><td><pre> Gates the <code>locks()</code> method on a storage bucket.</pre></td><td>❌</td></tr><tr><td class="name">StrictMimeTypesForWorkers</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">StylusHandwriting</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SvgContextPaint</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SvgEagerPresAttrStyleUpdate</td><td><pre> Feature for updating SVG presentation attribute style eagerly. This is
- a kill switch in case we encounter issues with this optimization.</pre></td><td>✅</td></tr><tr><td class="name">SvgExternalResources</td><td><pre> Enables loading of external SVG resource documents for the 'clip-path',
- 'fill', 'stroke' and 'marker-*' properties.</pre></td><td>✅</td></tr><tr><td class="name">SvgFilterUserSpaceViewportForNonSvg</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SvgGradientColorInterpolationLinearRgbSupport</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SvgInlineRootPixelSnappingScaleAdjustment</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SvgNoPixelSnappingScaleAdjustment</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SvgTransformOptimization</td><td><pre> Feature for optimizing SVG transform changes. This is a kill switch in
+ a kill switch in case we encounter issues with this optimization.</pre></td><td>✅</td></tr><tr><td class="name">SvgExternalResources</td><td><pre> Enables loading of external SVG resource documents for the &#039;clip-path&#039;,
+ &#039;fill&#039;, &#039;stroke&#039; and &#039;marker-*&#039; properties.</pre></td><td>✅</td></tr><tr><td class="name">SvgFilterUserSpaceViewportForNonSvg</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SvgGradientColorInterpolationLinearRgbSupport</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SvgInlineRootPixelSnappingScaleAdjustment</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SvgNoPixelSnappingScaleAdjustment</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SvgTransformOptimization</td><td><pre> Feature for optimizing SVG transform changes. This is a kill switch in
  case we encounter issues with these optimizations.</pre></td><td>✅</td></tr><tr><td class="name">SvgTspanBboxCache</td><td><pre> crbug.com/40890818</pre></td><td>✅</td></tr><tr><td class="name">SynthesizedKeyboardEventsForAccessibilityActions</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SystemFallbackEmojiVSSupport</td><td><pre> This is used for emoji variation selectors support in system
  fallback matching. This is a workaround solution that helps to
  avoid incorrect font matching due to lack of cmap format 14
@@ -699,20 +699,20 @@ initialize COM.</pre></td><td>❌</td></tr><tr><td class="name">WebContentsForce
  disabling automatic size adjustments when non-auto values are used.
  See: <a href="https://crbug.com/340389272">https://crbug.com/340389272</a>.</pre></td><td>✅</td></tr><tr><td class="name">TextTransformAndSecurityFix</td><td><pre> crbug.com/379254069</pre></td><td>✅</td></tr><tr><td class="name">TimerThrottlingForBackgroundTabs</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">TimestampBasedCLSTracking</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">TimeZoneChangeEvent</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">TopicsAPI</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">TopicsDocumentAPI</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">TopicsImgAPI</td><td><pre> This feature allows calling the Topics API via an image
  attribute.</pre></td><td>❌</td></tr><tr><td class="name">TopLayerInactiveDocumentExceptions</td><td><pre> This is a killswitch for the behavior where popover.showPopover() and
- dialog.showModal() throw DOM exceptions if the document isn't active.
+ dialog.showModal() throw DOM exceptions if the document isn&#039;t active.
  This landed in M132, and can be removed in M134.</pre></td><td>✅</td></tr><tr><td class="name">TopLevelTpcd</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">TouchDragAndContextMenu</td><td><pre> This feature allows touch dragging and a context menu to occur
  simultaneously, with the assumption that the menu is non-modal.  Without
  this feature, a long-press touch gesture can start either a drag or a
  context-menu in Blink, not both (more precisely, a context menu is shown
  only if a drag cannot be started).</pre></td><td>❌</td></tr><tr><td class="name">TouchDragOnShortPress</td><td><pre> This feature makes touch dragging to occur at the short-press gesture,
  which occurs right before the long-press gesture.  This feature assumes
- that TouchDragAndContextMenu is enabled.</pre></td><td>❌</td></tr><tr><td class="name">TouchEventFeatureDetection</td><td><pre> Many websites disable mouse support when touch APIs are available.  We'd
- like to enable this always but can't until more websites fix this bug.
+ that TouchDragAndContextMenu is enabled.</pre></td><td>❌</td></tr><tr><td class="name">TouchEventFeatureDetection</td><td><pre> Many websites disable mouse support when touch APIs are available.  We&#039;d
+ like to enable this always but can&#039;t until more websites fix this bug.
  Chromium sets this conditionally (eg. based on the presence of a
  touchscreen) in ApplyWebPreferences. &quot;Touch events&quot; themselves are always
- enabled since they're a feature always supported by Chrome.</pre></td><td>✅</td></tr><tr><td class="name">TouchTextEditingRedesign</td><td><pre> Set to reflect the kTouchTextEditingRedesign feature.</pre></td><td>❌</td></tr><tr><td class="name">Tpcd</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">TransferableRTCDataChannel</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">TranslateService</td><td><pre> This is conditionally set if the platform supports translation.</pre></td><td>❌</td></tr><tr><td class="name">TranslationAPI</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">TranslationAPIEntryPoint</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">TrustedTypeBeforePolicyCreationEvent</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">TrustedTypesFromLiteral</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">TrustedTypesUseCodeLike</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">UnclosedFormControlIsInvalid</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">UnexposedTaskIds</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">UnifiedScrollableAreas</td><td><pre> Killswitch to be removed after M133 or M134 reaches stable.
+ enabled since they&#039;re a feature always supported by Chrome.</pre></td><td>✅</td></tr><tr><td class="name">TouchTextEditingRedesign</td><td><pre> Set to reflect the kTouchTextEditingRedesign feature.</pre></td><td>❌</td></tr><tr><td class="name">Tpcd</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">TransferableRTCDataChannel</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">TranslateService</td><td><pre> This is conditionally set if the platform supports translation.</pre></td><td>❌</td></tr><tr><td class="name">TranslationAPI</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">TranslationAPIEntryPoint</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">TrustedTypeBeforePolicyCreationEvent</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">TrustedTypesFromLiteral</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">TrustedTypesUseCodeLike</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">UnclosedFormControlIsInvalid</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">UnexposedTaskIds</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">UnifiedScrollableAreas</td><td><pre> Killswitch to be removed after M133 or M134 reaches stable.
  With it enabled, LocalFrameView::ScrollableAreas() includes all
- scrollable areas in the frame's document, otherwise only user scrollable
+ scrollable areas in the frame&#039;s document, otherwise only user scrollable
  ones.</pre></td><td>✅</td></tr><tr><td class="name">UnrestrictedMeasureUserAgentSpecificMemory</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">UnrestrictedSharedArrayBuffer</td><td><pre> This is a reverse OT used for a phased deprecation, on desktop
  <a href="https://crbug.com/1071424">https://crbug.com/1071424</a></pre></td><td>❌</td></tr><tr><td class="name">UnrestrictedUsb</td><td><pre> Enables using policy-controlled feature &quot;usb-unrestricted&quot; to allow
  isolated context to access protected USB interface classes and to
@@ -723,7 +723,7 @@ initialize COM.</pre></td><td>❌</td></tr><tr><td class="name">WebContentsForce
  the value on Android. See: <a href="https://crbug.com/374315986">https://crbug.com/374315986</a>.</pre></td><td>❌</td></tr><tr><td class="name">UserDefinedEntryPointTiming</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">UseSelectionFocusNodeForCaretNavigation</td><td><pre> Makes navigation APIs to use focus node for caret navigation instead
  of selection start.
  <a href="https://crbug.com/40658856">https://crbug.com/40658856</a></pre></td><td>✅</td></tr><tr><td class="name">UseUndoStepElementDispatchBeforeInput</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">V8IdleTasks</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">VideoAutoFullscreen</td><td><pre> Whether a video element should automatically play fullscreen unless
- 'playsinline' is set.</pre></td><td>❌</td></tr><tr><td class="name">VideoFrameMetadataBackgroundBlur</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">VideoFullscreenOrientationLock</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">VideoRotateToFullscreen</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">VideoTrackGenerator</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">VideoTrackGeneratorInWindow</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">VideoTrackGeneratorInWorker</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ViewportChangesUpdateTextAutosizing</td><td><pre> This is a kill switch for a fix where viewport changes did not update
+ &#039;playsinline&#039; is set.</pre></td><td>❌</td></tr><tr><td class="name">VideoFrameMetadataBackgroundBlur</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">VideoFullscreenOrientationLock</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">VideoRotateToFullscreen</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">VideoTrackGenerator</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">VideoTrackGeneratorInWindow</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">VideoTrackGeneratorInWorker</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ViewportChangesUpdateTextAutosizing</td><td><pre> This is a kill switch for a fix where viewport changes did not update
  the text autosizer, see: crbug.com/359910401.</pre></td><td>✅</td></tr><tr><td class="name">ViewportHeightClientHintHeader</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ViewportSegments</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ViewTransitionDisableSnapBrowserControlsOnHidden</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ViewTransitionLayeredCapture</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ViewTransitionLongCallbackTimeoutForTesting</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ViewTransitionOnNavigation</td><td><pre> If enabled, ViewTransition API is supported for navigations including
  cross-document transitions.
  See <a href="https://drafts.csswg.org/css-view-transitions-1/">https://drafts.csswg.org/css-view-transitions-1/</a>.</pre></td><td>✅</td></tr><tr><td class="name">ViewTransitionOnNavigationForIframes</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ViewTransitionOverflowRectFromSurface</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">VisibilityCollapseColumn</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">VisualViewportOnScrollEnd</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WakeLock</td><td><pre> The &quot;WakeLock&quot; feature was originally implied_by &quot;ScreenWakeLock&quot; and
@@ -795,737 +795,7 @@ initialize COM.</pre></td><td>❌</td></tr><tr><td class="name">WebContentsForce
       <p class="subtitle">
         The following JSON preferences can be modified in the <code>Preferences</code> file in the profile:
       </p>
-      <pre>{
-    "compact_mode": "",
-    "default_apps": "",
-    "safebrowsing_for_trusted_sources_enabled": "",
-    "disable_screenshots": "",
-    "download_bubble": {
-        "partial_view_enabled": "",
-        "partial_view_impressions": ""
-    },
-    "profile": {
-        "ephemeral_mode": "",
-        "creation_time": "",
-        "icon_version": "",
-        "icon_win11_format": "",
-        "exit_type": "",
-        "avatar_index": "",
-        "name": "",
-        "using_default_name": "",
-        "using_default_avatar": "",
-        "using_gaia_avatar": "",
-        "managed_users": "",
-        "managed_accounts": {
-            "restriction": {
-                "value": "",
-                "all_managed_accounts": ""
-            }
-        },
-        "enterprise_profile_creation": {
-            "keep_existing_data_by_default": ""
-        },
-        "content_settings": {
-            "had_three_consecutive_denies": {
-                "notifications": ""
-            },
-            "data_url_in_svg_use_enabled": ""
-        },
-        "last_used": "",
-        "last_active_profiles": "",
-        "profiles_created": "",
-        "created_by_version": "",
-        "info_cache": "",
-        "profiles_order": "",
-        "web_app": {
-            "install": {
-                "forcelist": ""
-            },
-            "policy_settings": ""
-        },
-        "managed_configuration": {
-            "list": "",
-            "last_hash": ""
-        },
-        "isolated_web_app": {
-            "install": {
-                "forcelist": "",
-                "pending_initialization_count": ""
-            }
-        },
-        "default_content_setting_values": {
-            "protected_media_identifier": ""
-        },
-        "extensions": {
-            "activity_log": {
-                "num_consumers_active": ""
-            }
-        },
-        "browser_guest_enabled": "",
-        "browser_guest_enforced": "",
-        "add_person_enabled": "",
-        "force_browser_signin": "",
-        "picker_availability_on_startup": "",
-        "picker_shown": "",
-        "show_picker_on_startup": "",
-        "web_share": {
-            "visited_targets": ""
-        },
-        "shared_array_buffer_unrestricted_access_allowed": "",
-        "sandbox_external_protocol_blocked": ""
-    },
-    "homepage_is_newtabpage": "",
-    "homepage": "",
-    "https_only_mode_enabled": "",
-    "https_first_balanced_mode_enabled": "",
-    "https_first_mode_incognito_enabled": "",
-    "https_only_mode_auto_enabled": "",
-    "https_upgrade_fallbacks": "",
-    "https_upgrade_navigations": "",
-    "important_sites_dialog": "",
-    "newtab_page_location_override": "",
-    "session": {
-        "restore_on_startup": "",
-        "startup_urls": ""
-    },
-    "feedback_allowed": "",
-    "intl": {
-        "charset_default": ""
-    },
-    "webkit": {
-        "webprefs": {
-            "fonts": {
-                "standard": {
-                    "Arab": "",
-                    "Jpan": "",
-                    "Hang": "",
-                    "Hans": "",
-                    "Hant": "",
-                    "Zyyy": ""
-                },
-                "serif": {
-                    "Arab": "",
-                    "Jpan": "",
-                    "Hang": "",
-                    "Hans": "",
-                    "Hant": "",
-                    "Zyyy": ""
-                },
-                "sansserif": {
-                    "Arab": "",
-                    "Jpan": "",
-                    "Hang": "",
-                    "Hans": "",
-                    "Hant": "",
-                    "Zyyy": ""
-                },
-                "fixed": {
-                    "Jpan": "",
-                    "Hang": "",
-                    "Hans": "",
-                    "Hant": "",
-                    "Zyyy": ""
-                },
-                "cursive": {
-                    "Zyyy": ""
-                },
-                "fantasy": {
-                    "Zyyy": ""
-                },
-                "math": {
-                    "Zyyy": ""
-                }
-            },
-            "web_security_enabled": "",
-            "dom_paste_enabled": "",
-            "text_areas_are_resizable": "",
-            "javascript_can_access_clipboard": "",
-            "tabs_to_links": "",
-            "allow_running_insecure_content": "",
-            "force_dark_mode_enabled": "",
-            "default_font_size": "",
-            "default_fixed_font_size": "",
-            "minimum_font_size": "",
-            "minimum_logical_font_size": "",
-            "javascript_enabled": "",
-            "loads_images_automatically": "",
-            "plugins_enabled": "",
-            "encrypted_media_enabled": ""
-        }
-    },
-    "Zyyy": "",
-    "ssl": {
-        "error_override_allowed": "",
-        "error_override_allowed_for_origins": "",
-        "rev_checking": {
-            "enabled": "",
-            "required_for_local_anchors": ""
-        },
-        "version_min": "",
-        "version_max": "",
-        "cipher_suites": {
-            "blacklist": ""
-        },
-        "client_certs": {
-            "h2_coalescing_hosts": ""
-        },
-        "post_quantum_enabled": "",
-        "ech_enabled": ""
-    },
-    "search": {
-        "suggest_enabled": ""
-    },
-    "download": {
-        "prompt_for_download": "",
-        "default_directory": "",
-        "directory_upgrade": "",
-        "extensions_to_open": "",
-        "extensions_to_open_by_policy": "",
-        "allowed_urls_for_open_by_policy": ""
-    },
-    "net": {
-        "quic_allowed": "",
-        "keep_whitespace_data_urls": "",
-        "network_qualities": "",
-        "easter_egg_high_score": "",
-        "network_prediction_options": "",
-        "max_connections_per_proxy": "",
-        "explicitly_allowed_network_ports": "",
-        "compression_dictionary_transport_enabled": "",
-        "zstd_content_encoding_enabled": "",
-        "ipv6_reachability_override_enabled": ""
-    },
-    "default_apps_install_state": "",
-    "browser": {
-        "show_home_button": "",
-        "show_forward_button": "",
-        "theme": {
-            "saved_local_theme": "",
-            "color_scheme": "",
-            "color_scheme2": "",
-            "user_color": "",
-            "user_color2": "",
-            "color_variant": "",
-            "color_variant2": "",
-            "follows_system_colors": "",
-            "is_grayscale": "",
-            "is_grayscale2": ""
-        },
-        "default_browser_infobar_last_declined": "",
-        "default_browser_infobar_last_declined_time": "",
-        "default_browser_infobar_declined_count": "",
-        "default_browser_app_menu_first_shown_time": "",
-        "default_browser_setting_enabled": "",
-        "has_seen_welcome_page": "",
-        "suppress_default_browser_prompt_for_version": "",
-        "default_browser_prompt_refresh_study_group": "",
-        "window_placement": "",
-        "window_placement_popup": "",
-        "app_window_placement": "",
-        "last_redirect_origin": "",
-        "dns_interception_checks_enabled": "",
-        "command_line_flag_security_warnings_enabled": "",
-        "promotions_enabled": "",
-        "suppress_unsupported_os_warning": "",
-        "web_app": {
-            "create_on_desktop": "",
-            "create_in_apps_menu": "",
-            "create_in_quick_launch_bar": ""
-        },
-        "disk_cache_dir": "",
-        "disk_cache_size": "",
-        "relaunch_notification": "",
-        "relaunch_notification_period": "",
-        "relaunch_window": "",
-        "attempted_to_enable_autoupdate": "",
-        "last_whats_new_version": "",
-        "hovercard": {
-            "image_previews_enabled": "",
-            "memory_usage_enabled": ""
-        }
-    },
-    "settings": {
-        "allowed_domains_for_apps": "",
-        "a11y": {
-            "enable_accessibility_image_labels": "",
-            "enable_accessibility_image_labels_opt_in_accepted": "",
-            "focus_highlight": "",
-            "enable_main_node_annotations": "",
-            "page_colors": "",
-            "apply_page_colors_only_on_increased_contrast": "",
-            "page_colors_block_list": "",
-            "prefers_default_scrollbar_styles": "",
-            "caretbrowsing": {
-                "enabled": "",
-                "show_dialog": ""
-            }
-        },
-        "toast": {
-            "alert_level": ""
-        }
-    },
-    "extensions": {
-        "theme": {
-            "pack": "",
-            "id": ""
-        },
-        "ui": {
-            "developer_mode": ""
-        },
-        "commands": "",
-        "disabled": ""
-    },
-    "autogenerated": {
-        "theme": {
-            "color": "",
-            "policy": {
-                "color": ""
-            }
-        }
-    },
-    "syncing_theme_prefs_migrated_to_non_syncing": "",
-    "should_read_incoming_syncing_theme_prefs": "",
-    "plugins": {
-        "always_open_pdf_externally": ""
-    },
-    "accessibility": {
-        "shown_api_type": ""
-    },
-    "partition": {
-        "default_zoom_level": "",
-        "per_host_zoom_levels": ""
-    },
-    "pinned_tabs": "",
-    "disable_3d_apis": "",
-    "enable_a_ping": "",
-    "enable_referrers": "",
-    "import_autofill_form_data": "",
-    "import_bookmarks": "",
-    "import_history": "",
-    "import_home_page": "",
-    "import_saved_passwords": "",
-    "import_search_engine": "",
-    "import_dialog_autofill_form_data": "",
-    "import_dialog_bookmarks": "",
-    "import_dialog_history": "",
-    "import_dialog_saved_passwords": "",
-    "import_dialog_search_engine": "",
-    "invert_notification_version_2_shown": "",
-    "printing": {
-        "printer_type_deny_list": "",
-        "print_header_footer": "",
-        "allowed_background_graphics_modes": "",
-        "background_graphics_default": "",
-        "paper_size_default": "",
-        "print_preview_disabled": "",
-        "default_destination_selection_rules": "",
-        "use_system_default_printer": "",
-        "print_preview_sticky_settings": ""
-    },
-    "downgrade": {
-        "snapshot_retention_limit": ""
-    },
-    "message_center": {
-        "disabled_extension_ids": ""
-    },
-    "fullscreen": {
-        "allowed": ""
-    },
-    "gcm": {
-        "push_messaging_application_id_map": "",
-        "product_category_for_subtypes": ""
-    },
-    "easy_unlock": {
-        "allowed": "",
-        "pairing": "",
-        "device_id": ""
-    },
-    "webrtc": {
-        "ip_handling_policy": "",
-        "ip_handling_url": "",
-        "udp_port_range": "",
-        "event_logs_collection": "",
-        "local_ips_allowed_urls": "",
-        "text_log_collection_allowed": ""
-    },
-    "suppress_different_origin_subframe_js_dialogs": "",
-    "user_agent_reduction": "",
-    "side_panel": {
-        "is_right_aligned": "",
-        "companion_pinned_to_toolbar": "",
-        "id_to_width": "",
-        "google_search_side_panel_enabled": ""
-    },
-    "tab_search": {
-        "is_right_aligned": ""
-    },
-    "managed_private_network_access_restrictions_enabled": "",
-    "chrome_data_region_setting": "",
-    "network_annotation_blocklist": "",
-    "enterprise_reporting": {
-        "reporting_endpoints": ""
-    },
-    "managed": {
-        "serial_allow_all_ports_for_urls": "",
-        "serial_allow_usb_devices_for_urls": "",
-        "web_hid_allow_all_devices_for_urls": "",
-        "web_hid_allow_devices_for_urls": "",
-        "web_hid_allow_devices_for_urls_on_login_screen": "",
-        "web_hid_allow_devices_with_hid_usages_for_urls": ""
-    },
-    "profiles": {
-        "profiles_deleted": ""
-    },
-    "user_experience_metrics": {
-        "stability": {
-            "other_user_crash_count": "",
-            "kernel_crash_count": "",
-            "system_unclean_shutdowns": ""
-        }
-    },
-    "task_manager": {
-        "window_placement": "",
-        "column_visibility": "",
-        "end_process_enabled": ""
-    },
-    "savefile": {
-        "default_directory": "",
-        "type": ""
-    },
-    "selectfile": {
-        "last_directory": ""
-    },
-    "select_file_dialogs": {
-        "allowed": ""
-    },
-    "filebrowser": {
-        "tasks": {
-            "default_by_mime_type": "",
-            "default_by_suffix": ""
-        }
-    },
-    "protocol_handler": {
-        "allowed_origin_protocol_pairs": "",
-        "policy": {
-            "auto_launch_protocols_from_origins": ""
-        }
-    },
-    "restart": {
-        "last": {
-            "session": {
-                "on": {
-                    "shutdown": ""
-                }
-            }
-        }
-    },
-    "was": {
-        "restarted": ""
-    },
-    "ntp": {
-        "collapsed_foreign_sessions": "",
-        "custom_background_dict": "",
-        "custom_background_dict2": "",
-        "custom_background_local_to_device": "",
-        "custom_background_local_to_device_id": "",
-        "custom_background_inspiration": "",
-        "promo_blocklist": "",
-        "promo_visible": "",
-        "wallpaper_search_history": ""
-    },
-    "NewTabPage": {
-        "CustomizeChromeButtonOpenCount": "",
-        "DisabledModules": "",
-        "ModulesOrder": "",
-        "ModulesVisible": "",
-        "ModulesLoadedCountDict": "",
-        "ModulesInteractedCountDict": "",
-        "OutlookCalendar": {
-            "RetryAfterTime": ""
-        },
-        "OutlookModuleVisible": "",
-        "SharepointModuleVisible": "",
-        "WallpaperSearchButtonShownCount": ""
-    },
-    "colorpicker": {
-        "SeedColorChangeCount": ""
-    },
-    "devtools": {
-        "adb_key": "",
-        "availability": "",
-        "last_open_timestamp": "",
-        "remote_debugging": {
-            "allowed": ""
-        },
-        "backgroundserviceexpiration": "",
-        "discover_usb_devices": "",
-        "edited_files": "",
-        "file_system_paths": "",
-        "port_forwarding_enabled": "",
-        "port_forwarding_default_set": "",
-        "port_forwarding_config": "",
-        "discover_tcp_targets": "",
-        "tcp_discovery_config": "",
-        "preferences": "",
-        "sync_preferences": "",
-        "synced_preferences_sync_enabled": "",
-        "synced_preferences_sync_disabled": "",
-        "gen_ai_settings": ""
-    },
-    "sync_promo": {
-        "user_menu_show_count": ""
-    },
-    "web_app": {
-        "app_id": {
-            "install_url": ""
-        }
-    },
-    "web_app_install_metrics": "",
-    "web_apps": {
-        "daily_metrics": "",
-        "daily_metrics_date": "",
-        "app_agnostic_iph_state": "",
-        "app_agnostic_ml_state": "",
-        "app_agnostic_iph_link_capturing_state": "",
-        "last_preinstall_synchronize_version": "",
-        "did_migrate_default_chrome_apps": "",
-        "uninstalled_default_chrome_apps": "",
-        "web_app_ids": ""
-    },
-    "media": {
-        "default_audio_capture_device": "",
-        "default_video_capture_Device": "",
-        "storage_id_salt": "",
-        "engagement": {
-            "schema_version": ""
-        },
-        "autoplay_allowed": "",
-        "autoplay_whitelist": "",
-        "block_autoplay": ""
-    },
-    "background_contents": {
-        "registered": ""
-    },
-    "total_memory_limit_mb": "",
-    "auth": {
-        "schemes": "",
-        "http_auth_allowed_for_origins": "",
-        "disable_negotiate_cname_lookup": "",
-        "enable_negotiate_port": "",
-        "server_allowlist": "",
-        "negotiate_delegate_whitelist": "",
-        "gssapi_library_name": "",
-        "android_negotiate_account_type": "",
-        "allow_cross_origin_prompt": "",
-        "globally_scoped_http_auth_cache_enabled": "",
-        "ambient_auth_in_private_modes": "",
-        "basic_over_http_enabled": ""
-    },
-    "hsts": {
-        "policy": {
-            "upgrade_bypass_list": ""
-        }
-    },
-    "async_dns": {
-        "enabled": "",
-        "additional_dns_query_types_enabled": ""
-    },
-    "dns_over_https": {
-        "mode": "",
-        "templates": ""
-    },
-    "hardware": {
-        "audio_capture_enabled": "",
-        "audio_capture_allowed_urls": "",
-        "video_capture_enabled": "",
-        "video_capture_allowed_urls": "",
-        "screen_capture_enabled": "",
-        "screen_capture_allowed_by_origins": "",
-        "window_capture_allowed_by_origins": "",
-        "tab_capture_allowed_by_origins": "",
-        "same_origin_tab_capture_allowed_by_origins": ""
-    },
-    "feedback": {
-        "performance_tracing_enabled": ""
-    },
-    "FactoryResetRequested": "",
-    "ForceFactoryReset": "",
-    "FactoryResetTPMFirmwareUpdateMode": "",
-    "DebuggingFeaturesRequested": "",
-    "EnableAdbSideloadingRequested": "",
-    "media_router": {
-        "enable_media_router": "",
-        "show_cast_icon_in_toolbar": ""
-    },
-    "qr_code_generator_enabled": "",
-    "internal_only_uis_enabled": "",
-    "cloud_print": {
-        "0": "",
-        "enabled": "",
-        "proxy_id": "",
-        "auth_token": "",
-        "email": "",
-        "print_system_settings": "",
-        "enable_job_poll": "",
-        "robot_refresh_token": "",
-        "robot_email": "",
-        "user_settings": {
-            "connectNewPrinters": "",
-            "0": "",
-            "printers": ""
-        },
-        "xmpp_ping_enabled": "",
-        "xmpp_ping_timeout_sec": ""
-    },
-    "background_mode": {
-        "enabled": ""
-    },
-    "hardware_acceleration_mode": {
-        "enabled": ""
-    },
-    "hardware_acceleration_mode_previous": "",
-    "policy": {
-        "device_refresh_rate": "",
-        "device_attributes_allowed_for_origins": "",
-        "lens_region_search_enabled": "",
-        "lens_desktop_ntp_search_enabled": ""
-    },
-    "media_galleries": {
-        "gallery_id": "",
-        "remembered_galleries": ""
-    },
-    "apps": {
-        "shortcuts_version": "",
-        "shortcuts_arch": ""
-    },
-    "proxy": {
-        "quick_check_enabled": ""
-    },
-    "signin": {
-        "interception_enabled": ""
-    },
-    "cryptauth": {
-        "instance_id": "",
-        "instance_id_token": ""
-    },
-    "recovery_component": {
-        "needs_elevation": ""
-    },
-    "allow_dinosaur_easter_egg": "",
-    "dse_geolocation_setting": "",
-    "dse_permissions_settings": "",
-    "dse_was_disabled_by_policy": "",
-    "tab_stats": {
-        "total_tab_count_max": "",
-        "max_tabs_per_window": "",
-        "window_count_max": "",
-        "last_daily_sample": "",
-        "discards_external": "",
-        "discards_urgent": "",
-        "discards_proactive": "",
-        "discards_suggested": "",
-        "discards_frozen": "",
-        "reloads_external": "",
-        "reloads_urgent": "",
-        "reloads_proactive": "",
-        "reloads_suggested": "",
-        "reloads_frozen": ""
-    },
-    "unsafely_treat_insecure_origin_as_secure": "",
-    "site_isolation": {
-        "isolate_origins": "",
-        "site_per_process": ""
-    },
-    "file_system": {
-        "file_or_directory_picker_without_allowed_for_origins": ""
-    },
-    "persistent_notifications": {
-        "next_id": "",
-        "next_trigger": ""
-    },
-    "tab_freezing_enabled": "",
-    "enterprise_hardware_platform_api": {
-        "enabled": ""
-    },
-    "web_package": {
-        "signed_exchange": {
-            "enabled": ""
-        }
-    },
-    "ca_certificate_management_allowed": "",
-    "hats": {
-        "survey_metadata": ""
-    },
-    "external_protocol_dialog": {
-        "show_always_open_checkbox": ""
-    },
-    "scroll_to_text_fragment_enabled": "",
-    "prompt_on_multiple_matching_certificates": "",
-    "fetch_keepalive_duration_on_shutdown": "",
-    "sharing_hub": {
-        "desktop_sharing_hub_enabled": ""
-    },
-    "lens": {
-        "lens_overlay_start_count": ""
-    },
-    "privacy_guide": {
-        "viewed": ""
-    },
-    "cors_non_wildcard_request_headers_support": "",
-    "origin_agent_cluster_default_enabled": "",
-    "sct_auditing": {
-        "hashdance_report_count": ""
-    },
-    "high_efficiency": {
-        "chip_expanded_count": "",
-        "last_chip_expanded_timestamp": ""
-    },
-    "performance_intervention": {
-        "background_cpu_message_count": "",
-        "background_cpu_rate_limited_count": "",
-        "last_daily_sample": ""
-    },
-    "should_show_price_track_fue_bubble_fue": "",
-    "strict_mime_type_check_for_worker_scripts_enabled": "",
-    "access_control_allow_methods_in_cors_preflight_spec_conformant": "",
-    "https_upgrades": {
-        "policy": {
-            "http_allowlist": "",
-            "upgrades_enabled": ""
-        }
-    },
-    "certificates": {
-        "ca_certificates": "",
-        "ca_certificates_with_constraints": "",
-        "ca_distrusted_certificates": "",
-        "ca_hint_certificates": "",
-        "ca_platform_integration_enabled": ""
-    },
-    "temporary_setting": {
-        "enterpise_badging": ""
-    },
-    "enterprise_logo": {
-        "url": {
-            "for_browser": "",
-            "for_profile": ""
-        }
-    },
-    "enterprise_label": {
-        "custom_value": {
-            "for_browser": "",
-            "for_profile": ""
-        }
-    },
-    "enterprise": {
-        "profile_badging": {
-            "toolbar_settings": ""
-        }
-    },
-    "web_audio_output_buffering_enabled": "",
-    "worker": {
-        "shared_worker_blob_url_fix_enabled": ""
-    }
-}</pre>
+      <pre>[]</pre>
     </div>
   </section>
   <footer class="footer">
@@ -1537,7 +807,7 @@ initialize COM.</pre></td><td>❌</td></tr><tr><td class="name">WebContentsForce
   </footer>
   <script>
     // Wait until the DOM is fully loaded
-    //document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function() {
       // Initialize List.js for each table
       var lists = [];
       document.querySelectorAll('table').forEach(t => {
@@ -1568,7 +838,7 @@ initialize COM.</pre></td><td>❌</td></tr><tr><td class="name">WebContentsForce
         document.querySelector('#search').value = url.searchParams.get('q');
         updateSearch();
       }
-    //});
+    });
   </script>
 </body>
 
