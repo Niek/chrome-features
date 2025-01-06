@@ -76,7 +76,7 @@ $prefs = [];
 
 foreach (simplexml_load_file('xml/namespaceprefs.xml')->compounddef->sectiondef as $i) {
   foreach ($i->memberdef as $j) {
-    if ($j->type == 'char') {
+    if ($j->type == 'char' || $j->type == 'constexpr char') { // Depends on doxygen version
       $f = $j->initializer[0];
       if (strpos($f, '"') !== false) {
         $name = explode('"', $f)[1];
