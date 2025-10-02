@@ -61,8 +61,8 @@ foreach (['xml/namespacefeatures.xml', 'xml/namespaceblink_1_1features.xml'] as 
   foreach (simplexml_load_file($file)->compounddef->sectiondef as $i) {
     foreach ($i->memberdef as $j) {
       if ($j->definition == 'features::BASE_FEATURE' || $j->definition == 'blink::features::BASE_FEATURE') {
-        $name = str_replace('"', '', $j->param[1]->type);
-        $enabled = $j->param[2]->type == 'base::FEATURE_ENABLED_BY_DEFAULT';
+        $name = str_replace('"', '', $j->param[0]->type);
+        $enabled = $j->param[1]->type == 'base::FEATURE_ENABLED_BY_DEFAULT';
         $line = intval($j->location->attributes()['line']);
         $description = getDescription($line);
         $features[] = ['name' => $name, 'enabled_default' => $enabled, 'line' => $line, 'description' => $description];
