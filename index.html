@@ -851,7 +851,9 @@ when a new renderer process is needed. Currently, only background renderer</pre>
  crbug.com/346835896</pre></td><td>❌</td></tr><tr><td class="name">ShadowRootReferenceTargetAriaOwns</td><td><pre> If enabled, Reference Target will support aria-owns.
  <a href="https://github.com/WICG/webcomponents/issues/1091">https://github.com/WICG/webcomponents/issues/1091</a></pre></td><td>❌</td></tr><tr><td class="name">SharedArrayBuffer</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SharedArrayBufferUnrestrictedAccessAllowed</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SharedAutofill</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SharedStorageAPI</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SharedStorageWebLocks</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SharedWorker</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SharedWorkerExtendedLifetime</td><td><pre> If enabled, SharedWorker supports extendedLifetime
  <a href="https://github.com/whatwg/html/issues/10997">https://github.com/whatwg/html/issues/10997</a></pre></td><td>❌</td></tr><tr><td class="name">SideRelativeBackgroundPosition</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SignatureBasedInlineIntegrity</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SignatureBasedIntegrity</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SkipAd</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SkipCallbacksWhenDevToolsNotOpen</td><td><pre> If enabled, only call ResourceLoadObserver callbacks if the DevTools
- panel is open.</pre></td><td>❌</td></tr><tr><td class="name">SkipOofItemForBreakCandidate</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SkipTouchEventFilter</td><td><pre> Skips the browser touch event filter, ensuring that events that reach
+ panel is open.</pre></td><td>❌</td></tr><tr><td class="name">SkipDateTimeFieldDisableChecks</td><td><pre> Skip field disabled checks in DateTimeEditElement.
+ This will be shipped in M143, and it can be removed in M145.
+ See <a href="https://issues.chromium.org/issues/442293382">https://issues.chromium.org/issues/442293382</a>.</pre></td><td>✅</td></tr><tr><td class="name">SkipOofItemForBreakCandidate</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SkipTouchEventFilter</td><td><pre> Skips the browser touch event filter, ensuring that events that reach
  the queue and would otherwise be filtered out will instead be passed
  onto the renderer compositor process as long as the page hasn&#039;t timed
  out. If skip_filtering_process is browser_and_renderer, also skip the
@@ -1779,7 +1781,7 @@ when a new renderer process is needed. Currently, only background renderer</pre>
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>Updated</strong>: 2025-10-18. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
+        <strong>Updated</strong>: 2025-10-19. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
       </p>
     </div>
   </footer>
