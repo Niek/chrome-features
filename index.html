@@ -929,6 +929,9 @@ This param holds the movement threshold in DIPs to consider drag an</pre></td><t
  no problems are encountered.</pre></td><td>❌</td></tr><tr><td class="name">WordSpacingWhiteSpacePre</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">XMLNoExternalEntities</td><td><pre> Moving to the Rust parser requires deprecation of the niche feature
  of synchronously including external entities.
  <a href="https://crbug.com/455813733">https://crbug.com/455813733</a></pre></td><td>❌</td></tr><tr><td class="name">XMLSerializerConsistentDefaultNsDeclMatching</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">XSLT</td><td><pre> A feature flag that controls whether XSLT is supported by the browser.
+ crbug.com/435623334.</pre></td><td>✅</td></tr><tr><td class="name">XSLTSpecialTrial</td><td><pre> A feature flag that will be used for a &quot;special trial&quot; of disabling
+ XSLT on pre-stable channels only. If <em>either</em> this flag is disabled,
+ <em>or</em> the main &quot;XSLT&quot; flag is disabled, then XSLT will be disabled.
  crbug.com/435623334.</pre></td><td>✅</td></tr><tr><td class="name">ZeroCopyTabCapture</td><td><pre> If enabled, the <code>getDisplayMedia()</code> family of APIs will ask for NV12
  frames, which should trigger a zero-copy path in the tab capture code.</pre></td><td>❌</td></tr>        </tbody>
       </table>
@@ -1755,7 +1758,7 @@ This param holds the movement threshold in DIPs to consider drag an</pre></td><t
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>Updated</strong>: 2025-11-01. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
+        <strong>Updated</strong>: 2025-11-02. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
       </p>
     </div>
   </footer>
