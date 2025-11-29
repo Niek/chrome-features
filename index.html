@@ -214,7 +214,7 @@ unrelated tabs.</pre></td><td>❌</td></tr><tr><td class="name">kSpareRendererFo
 spare renderer process around for the most recently requested BrowserContext.
 This feature is only consulted in site-per-process mode.</pre></td><td>✅</td></tr><tr><td class="name">kStrictOriginIsolation</td><td><pre>Controls whether site isolation should use origins instead of scheme and
 eTLD+1.</pre></td><td>❌</td></tr><tr><td class="name">kSubframePriorityContribution</td><td><pre>When enabled, RenderWidgetHost in BFCache doesn&#039;t contribute to the priority
-of the renderer process.</pre></td><td>❌</td></tr><tr><td class="name">kSuppressDifferentOriginSubframeJSDialogs</td><td><pre>Disallows window.{alert, prompt, confirm} if triggered inside a subframe that
+of the renderer process.</pre></td><td>✅</td></tr><tr><td class="name">kSuppressDifferentOriginSubframeJSDialogs</td><td><pre>Disallows window.{alert, prompt, confirm} if triggered inside a subframe that
 is not same origin with the main frame.</pre></td><td>❌</td></tr><tr><td class="name">kSyntheticPointerActions</td><td><pre>Dispatch touch events to &quot;SyntheticGestureController&quot; for events from
 Devtool Protocol Input.dispatchTouchEvent to simulate touch events close to
 real OS events.</pre></td><td>❌</td></tr><tr><td class="name">kTouchDragAndContextMenu</td><td><pre>This feature allows touch dragging and a context menu to occur
@@ -772,7 +772,7 @@ Default value, matching the original kSubframeProcessShutdownDelay.</pre></td><t
 
  This flag can&#039;t be removed until the Android min SDK version is 28
  (i.e., &#039;P&#039;) or later.  See AWSettings.setScrollTopLeftInteropEnabled
- and its caller.</pre></td><td>✅</td></tr><tr><td class="name">SearchTextHighlightPseudo</td><td><pre> Allows CSS styling of browser search results.
+ and its caller.</pre></td><td>✅</td></tr><tr><td class="name">ScrollToTextFragmentUniqueFragments</td><td><pre> Only consider unique case-insensitive scroll-to-text fragments.</pre></td><td>✅</td></tr><tr><td class="name">SearchTextHighlightPseudo</td><td><pre> Allows CSS styling of browser search results.
  <a href="https://issues.chromium.org/issues/339298411">https://issues.chromium.org/issues/339298411</a>
  <a href="https://chromestatus.com/feature/5195073796177920">https://chromestatus.com/feature/5195073796177920</a></pre></td><td>✅</td></tr><tr><td class="name">SecurePaymentConfirmation</td><td><pre> SecurePaymentConfirmation has shipped on some platforms, but its
  availability is controlled by the browser process (via the
@@ -1752,7 +1752,7 @@ Default value, matching the original kSubframeProcessShutdownDelay.</pre></td><t
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>Updated</strong>: 2025-11-28. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
+        <strong>Updated</strong>: 2025-11-29. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
       </p>
     </div>
   </footer>
