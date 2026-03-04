@@ -999,7 +999,7 @@ LIVE_REGION_NODE_CHANGED rather than TYPE_ANNOUNCEMENT.</pre></td><td>❌</td></
  on a worker thread.</pre></td><td>❌</td></tr><tr><td class="name">WebUSB</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebUSBOnDedicatedWorkers</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebUSBOnServiceWorkers</td><td><pre> It is only enabled in extension environment for now.</pre></td><td>❌</td></tr><tr><td class="name">WebVTTRegions</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebXR</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebXREnabledFeatures</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebXRFrameRate</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebXRFrontFacing</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebXRGPUBinding</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebXRHitTestEntityTypes</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebXRImageTracking</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebXRLayers</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebXRLayersCommon</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebXRPlaneDetection</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebXRPoseMotionData</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebXRSpecParity</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebXRVisibilityMask</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WidthAndHeightAsPresentationAttributesOnNestedSvg</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WidthAndHeightStylePropertiesOnUseAndSymbol</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WindowControlsOverlay</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WindowDefaultStatus</td><td><pre> If enabled, window.default[Ss]tatus will be supported. This is disabled
  by default, and is here to allow this behavior to be re-enabled via Finch
  in case of problems. This flag should be removed by Q1 2023, assuming
- no problems are encountered.</pre></td><td>❌</td></tr><tr><td class="name">WordSpacingWhiteSpacePre</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">XMLNoExternalEntities</td><td><pre> Moving to the Rust parser requires deprecation of the niche feature
+ no problems are encountered.</pre></td><td>❌</td></tr><tr><td class="name">WordSkipSpacesPunctuationFix</td><td><pre> Fixes an issue where Ctrl+Right Arrow skips punctuation before a newline.</pre></td><td>✅</td></tr><tr><td class="name">WordSpacingWhiteSpacePre</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">XMLNoExternalEntities</td><td><pre> Moving to the Rust parser requires deprecation of the niche feature
  of synchronously including external entities.
  <a href="https://crbug.com/455813733">https://crbug.com/455813733</a></pre></td><td>✅</td></tr><tr><td class="name">XMLParsingRust</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">XMLRustForNonXslt</td><td><pre> Enables the Rust XML parser for situations where we know
  no XSLT processing will be required. This covers usage of
@@ -1666,9 +1666,6 @@ LIVE_REGION_NODE_CHANGED rather than TYPE_ANNOUNCEMENT.</pre></td><td>❌</td></
     "feedback": {
         "performance_tracing_enabled": ""
     },
-    "FactoryResetRequested": "",
-    "ForceFactoryReset": "",
-    "FactoryResetTPMFirmwareUpdateMode": "",
     "DebuggingFeaturesRequested": "",
     "EnableAdbSideloadingRequested": "",
     "media_router": {
@@ -1834,7 +1831,7 @@ LIVE_REGION_NODE_CHANGED rather than TYPE_ANNOUNCEMENT.</pre></td><td>❌</td></
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>Updated</strong>: 2026-03-03. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
+        <strong>Updated</strong>: 2026-03-04. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
       </p>
     </div>
   </footer>
