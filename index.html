@@ -352,7 +352,7 @@ this event should cause a nodes&#039;s children to be rerendered if there&#039;v
  paragraph is updated while moving the paragraph. See
  <a href="https://crbug.com/329121649">https://crbug.com/329121649</a></pre></td><td>✅</td></tr><tr><td class="name">AdTagging</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">AIClassifierAPI</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">AIPageContentBuildOnLoadForTesting</td><td><pre> Whether to automatically build an APC content_extraction tree on load.</pre></td><td>❌</td></tr><tr><td class="name">AIPageContentCheckGeometry</td><td><pre> Whether to enforce geometry invariants in AIPageContentAgent.
  Only supported for DCHECK-enabled builds.</pre></td><td>❌</td></tr><tr><td class="name">AIPageContentConvertNodeTextToUtf8</td><td><pre> Ensures that text content extracted from DOM nodes are valid UTF-8 Before
- providing them to consumers of AIPageContent.</pre></td><td>✅</td></tr><tr><td class="name">AIPageContentIncludeSVGSubtree</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">AIPageContentOuterBoxMapToAncestorSpace</td><td><pre> Use MapToVisualRectInAncestorSpace for outer bounding boxes, for
+ providing them to consumers of AIPageContent.</pre></td><td>✅</td></tr><tr><td class="name">AIPageContentElementCSSRedaction</td><td><pre> When enabled, redact elements with --webkit-text-security.</pre></td><td>✅</td></tr><tr><td class="name">AIPageContentIncludeSVGSubtree</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">AIPageContentOuterBoxMapToAncestorSpace</td><td><pre> Use MapToVisualRectInAncestorSpace for outer bounding boxes, for
  math consistent with visual bounding boxes.</pre></td><td>❌</td></tr><tr><td class="name">AIPageContentPaidContentAnnotation</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">AIPageContentVisualViewportClamp</td><td><pre> Clamp AIPageContent visible bounding boxes to the local-root viewport
  after visual-viewport mapping to normalize viewport-relative geometry.</pre></td><td>✅</td></tr><tr><td class="name">AIPromptAPI</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">AIPromptAPIForExtension</td><td><pre> Extension access to &quot;AIPromptAPI&quot;.</pre></td><td>❌</td></tr><tr><td class="name">AIPromptAPIForWorkers</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">AIPromptAPILegacyIdentifiers</td><td><pre> Gates access to legacy aliases of renamed &quot;AIPromptAPI&quot; identifiers.
  TODO(crbug.com/498228550): Remove after extension context usage drops.</pre></td><td>❌</td></tr><tr><td class="name">AIPromptAPILegacyParams</td><td><pre> Gates access to legacy sampling parameter surfaces for &quot;AIPromptAPI&quot;.
@@ -956,7 +956,8 @@ this event should cause a nodes&#039;s children to be rerendered if there&#039;v
  This should be eventually removed when the custom emoji font
  is shipped with Chrome or when system emoji fonts will have
  cmap format 14 subtable.</pre></td><td>✅</td></tr><tr><td class="name">SystemWakeLock</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">TableBorderColorNoImplicitBorder</td><td><pre> Don&#039;t trigger table border rendering with only bordercolor attribute.
- This shipped in M146 and can be removed in M148.</pre></td><td>✅</td></tr><tr><td class="name">TableIsAutoFixedLayout</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">TabSizeAncestor</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">TabSizeWithSpacing</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">TargetInShadowDeterminedBeforeListener</td><td><pre> When checking the shadow tree during invoke(),
+ This shipped in M146 and can be removed in M148.</pre></td><td>✅</td></tr><tr><td class="name">TableDefaultBorderColorCurrentColor</td><td><pre> Remove &lt;table&gt;&#039;s explicit <code>border-color: gray</code> UA stylesheet rule, since
+ it is non-standard. This was shipped in M149 and can be removed in M151.</pre></td><td>❌</td></tr><tr><td class="name">TableIsAutoFixedLayout</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">TabSizeAncestor</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">TabSizeWithSpacing</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">TargetInShadowDeterminedBeforeListener</td><td><pre> When checking the shadow tree during invoke(),
  use the invocationTargetInShadowTree saved before
  calling the listener.
  This was added in M142 and can be removed after M147.
@@ -1893,7 +1894,7 @@ this event should cause a nodes&#039;s children to be rerendered if there&#039;v
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>Updated</strong>: 2026-04-03. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
+        <strong>Updated</strong>: 2026-04-04. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
       </p>
     </div>
   </footer>
