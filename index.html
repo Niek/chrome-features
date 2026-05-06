@@ -547,7 +547,7 @@ path is more efficient and results in fewer artifacts.</pre></td><td>❌</td></t
  selectively enable resize corner for textarea via UA stylesheet, but
  unintentionally exposed to author sheets. UA rule is now using
  -internal-textarea-auto instead.</pre></td><td>✅</td></tr><tr><td class="name">CSSResourceIntegrityEnforcement</td><td><pre> Kill switch for integrity() enforcement on CSS image and SVG
- document resources. See also: CSSURLRequestModifiers</pre></td><td>✅</td></tr><tr><td class="name">CSSRevertRule</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">CSSRubyOverhang</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CSSSafePrintableInset</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CSSScopeifiedParentPseudoClass</td><td><pre> The &#039;&amp;&#039; pseudo-class effectively behaves like :where(:scope)
+ document resources. See also: CSSURLRequestModifiers</pre></td><td>✅</td></tr><tr><td class="name">CSSRevertRule</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">CSSRubyOverhang</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CSSSafePrintableInset</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">CSSScopeifiedParentPseudoClass</td><td><pre> The &#039;&amp;&#039; pseudo-class effectively behaves like :where(:scope)
  when used in @scope rules.</pre></td><td>✅</td></tr><tr><td class="name">CSSScopeImport</td><td><pre> The &quot;@import scope(...)&quot; syntax.
  <a href="https://github.com/w3c/csswg-drafts/issues/7348">https://github.com/w3c/csswg-drafts/issues/7348</a></pre></td><td>❌</td></tr><tr><td class="name">CSSScrolledContainerQueries</td><td><pre> <a href="https://drafts.csswg.org/css-conditional-5/#scrolled">https://drafts.csswg.org/css-conditional-5/#scrolled</a></pre></td><td>✅</td></tr><tr><td class="name">CSSScrollInitialTarget</td><td><pre> <a href="https://drafts.csswg.org/css-scroll-snap-2#scroll-initial-target">https://drafts.csswg.org/css-scroll-snap-2#scroll-initial-target</a></pre></td><td>✅</td></tr><tr><td class="name">CSSScrollMarkerGroupModes</td><td><pre> <a href="https://github.com/w3c/csswg-drafts/issues/12122">https://github.com/w3c/csswg-drafts/issues/12122</a></pre></td><td>❌</td></tr><tr><td class="name">CSSScrollMarkerTargetBeforeAfter</td><td><pre> <a href="https://drafts.csswg.org/css-overflow-5/#active-before-after-scroll-markers">https://drafts.csswg.org/css-overflow-5/#active-before-after-scroll-markers</a>
  :target-before and :target-after pseudo classes for scroll markers.</pre></td><td>✅</td></tr><tr><td class="name">CSSScrollSnapChangeEvent</td><td><pre> <a href="https://drafts.csswg.org/css-scroll-snap-2/#scrollsnapchange">https://drafts.csswg.org/css-scroll-snap-2/#scrollsnapchange</a></pre></td><td>✅</td></tr><tr><td class="name">CSSScrollSnapChangingEvent</td><td><pre> <a href="https://drafts.csswg.org/css-scroll-snap-2/#scrollsnapchanging">https://drafts.csswg.org/css-scroll-snap-2/#scrollsnapchanging</a></pre></td><td>✅</td></tr><tr><td class="name">CSSScrollSnapEventConstructorExposed</td><td><pre> <a href="https://drafts.csswg.org/css-scroll-snap-2/#snapevent-interface">https://drafts.csswg.org/css-scroll-snap-2/#snapevent-interface</a></pre></td><td>❌</td></tr><tr><td class="name">CSSScrollSnapEvents</td><td><pre> <a href="https://drafts.csswg.org/css-scroll-snap-2/#snap-events">https://drafts.csswg.org/css-scroll-snap-2/#snap-events</a></pre></td><td>✅</td></tr><tr><td class="name">CSSScrollTargetGroup</td><td><pre> scroll-target-group property
@@ -866,8 +866,7 @@ path is more efficient and results in fewer artifacts.</pre></td><td>❌</td></t
  clipboard read operation, implementing lazy loading for clipboard data.</pre></td><td>❌</td></tr><tr><td class="name">ReadingFlowWithSlots</td><td><pre> Enables correct reading-flow ordering when slots are involved.
  This will be shipped in M148, and it can be removed in M150.
  See <a href="https://issues.chromium.org/issues/452981723">https://issues.chromium.org/issues/452981723</a>.</pre></td><td>✅</td></tr><tr><td class="name">RecheckParentDuringNodeVectorInsertion</td><td><pre> Shipping in M148, so should be removed around M150.</pre></td><td>✅</td></tr><tr><td class="name">RecordSameDocumentPresentationTimeOnce</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ReduceAcceptLanguage</td><td><pre> If enabled, both Accept-Language HTTP header and JavaScript getter will
- be reduced.</pre></td><td>❌</td></tr><tr><td class="name">ReduceUserAgentDataLinuxPlatformVersion</td><td><pre> If enabled, the platform version in User-Agent Data will be removed.
- This feature is limited to Linux only.</pre></td><td>❌</td></tr><tr><td class="name">ReduceUserAgentMinorVersion</td><td><pre> If enabled, the minor version of the User-Agent string will be reduced.
+ be reduced.</pre></td><td>❌</td></tr><tr><td class="name">ReduceUserAgentMinorVersion</td><td><pre> If enabled, the minor version of the User-Agent string will be reduced.
  This User-Agent Reduction feature has been enabled starting from M101,
  but we still keep this flag for future phase tests.</pre></td><td>✅</td></tr><tr><td class="name">RegionCapture</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">RelatedWebsitePartitionAPI</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">RelOpenerBcgDependencyHint</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">RemotePlayback</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">RemotePlaybackBackend</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">RemoveCharsetAutoDetectionForISO2022JP</td><td><pre> This feature acts as a kill switch for ISO-2022-JP auto-detection.
  This will be shipped in M139, and it can be removed in M141.
@@ -1356,6 +1355,7 @@ path is more efficient and results in fewer artifacts.</pre></td><td>❌</td></t
         "network_service_failed_launch_major_version": "",
         "max_connections_per_proxy": "",
         "max_connections_per_proxy_for_websocket": "",
+        "allow_socket_pool_size_randomization_for_proxies": "",
         "explicitly_allowed_network_ports": "",
         "compression_dictionary_transport_enabled": "",
         "happy_eyeballs_v3_enabled": "",
@@ -1947,7 +1947,7 @@ path is more efficient and results in fewer artifacts.</pre></td><td>❌</td></t
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>Updated</strong>: 2026-05-05. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
+        <strong>Updated</strong>: 2026-05-06. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
       </p>
     </div>
   </footer>
