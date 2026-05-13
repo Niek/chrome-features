@@ -29,69 +29,134 @@ foreach (file('src/third_party_blink_renderer_platform_runtime_enabled_features.
   }
 }
 
-// Parse Chrome features
+// Parse Chrome features and prefs
 $features = [];
+$prefs = [];
 
-$lines = simplexml_load_file('xml/content__public__common__content__features_8cc.xml')->compounddef->programlisting->codeline;
-function getDescription($line)
+function getFileXmlPath($sourceFile)
 {
-  global $lines;
-  $description = [];
+  static $files = null;
+  if ($files === null) {
+    $files = [];
+    foreach (simplexml_load_file('xml/index.xml')->compound as $compound) {
+      if ((string)$compound->attributes()['kind'] !== 'file') continue;
+      $name = (string)$compound->name;
+      $path = 'xml/' . (string)$compound->attributes()['refid'] . '.xml';
+      $files[$name] = $path;
+      $files['src/' . $name] = $path;
+    }
+  }
 
-  // Count down from line
-  while (true) {
-    if ($line-- < 1) break;
+  return $files[$sourceFile] ?? $files[basename($sourceFile)] ?? null;
+}
 
-    foreach ($lines as $l) {
-      if ($l->attributes()['lineno'] == $line) {
-        if (isset($l->highlight[1]) && $l->highlight[1]->attributes()['class'] == 'comment') {
-          $comment = strip_tags($l->highlight[1]->asXml(), ['sp']);
-          $comment = str_replace('<sp/>', ' ', $comment);
-          $comment = preg_replace('/^\/\//', '', $comment);
-          $description[] = trim($comment);
-        } else break 2;
+function getCommentBefore($sourceFile, $line)
+{
+  static $cache = [];
+
+  if (!isset($cache[$sourceFile])) {
+    $xmlPath = getFileXmlPath($sourceFile);
+    $cache[$sourceFile] = [];
+    if ($xmlPath !== null && file_exists($xmlPath)) {
+      foreach (simplexml_load_file($xmlPath)->compounddef->programlisting->codeline as $codeLine) {
+        $cache[$sourceFile][(int)$codeLine->attributes()['lineno']] = $codeLine;
       }
     }
+  }
+
+  $description = [];
+  while (--$line > 0) {
+    if (!isset($cache[$sourceFile][$line])) continue;
+
+    $comment = '';
+    foreach ($cache[$sourceFile][$line]->highlight as $highlight) {
+      $text = trim(html_entity_decode(str_replace('<sp/>', ' ', strip_tags($highlight->asXml(), ['sp'])), ENT_QUOTES | ENT_XML1));
+      if ($text === '') continue;
+      if ((string)$highlight->attributes()['class'] !== 'comment') break 2;
+      $comment .= ' ' . $text;
+    }
+
+    if (trim($comment) === '') break;
+    $comment = preg_replace(['/^\s*\/\//', '/^\s*\/\*+/', '/\*+\/\s*$/', '/^\s*\*\s?/'], ['', '', '', ''], trim($comment));
+    $description[] = $comment;
   }
 
   return array_reverse($description);
 }
 
-foreach (['xml/namespacefeatures.xml', 'xml/namespaceblink_1_1features.xml'] as $file) {
-  foreach (simplexml_load_file($file)->compounddef->sectiondef as $i) {
-    foreach ($i->memberdef as $j) {
-      if ($j->definition == 'features::BASE_FEATURE' || $j->definition == 'blink::features::BASE_FEATURE') {
-        $name = str_replace('"', '', $j->param[0]->type);
-        $enabled = $j->param[1]->type == 'base::FEATURE_ENABLED_BY_DEFAULT';
-        $line = intval($j->location->attributes()['line']);
-        $description = getDescription($line);
-        $features[] = ['name' => $name, 'enabled_default' => $enabled, 'line' => $line, 'description' => $description];
-      }
-    }
+function getParamTypes($member)
+{
+  $params = [];
+  foreach ($member->param as $param) {
+    $params[] = trim((string)$param->type);
+  }
+  return $params;
+}
+
+function getFeatureName($params)
+{
+  if (!isset($params[0])) return null;
+  foreach (array_slice($params, 1) as $param) {
+    if (preg_match('/^"([^"]+)"$/', $param, $matches)) return $matches[1];
+  }
+  $name = str_replace('"', '', $params[0]);
+  return preg_replace('/^k(?=[A-Z])/', '', $name);
+}
+
+function isPrefFile($sourceFile)
+{
+  return preg_match('/(^|_)(pref_names|.*_pref_names|.*_prefs)\.(cc|h)$/', $sourceFile);
+}
+
+function addPreference(&$node, $name)
+{
+  foreach (explode('.', $name) as $key) {
+    if (!isset($node[$key]) || !is_array($node[$key])) $node[$key] = [];
+    $node = &$node[$key];
+  }
+  if ($node === []) $node = '';
+}
+
+function sortTree(&$value)
+{
+  if (!is_array($value)) return;
+  ksort($value, SORT_NATURAL | SORT_FLAG_CASE);
+  foreach ($value as &$child) {
+    sortTree($child);
   }
 }
 
-// Parse Chrome prefs
-$prefs = [];
+$seenFeatures = [];
+foreach (glob('xml/namespace*.xml') as $file) {
+  foreach (simplexml_load_file($file)->compounddef->sectiondef as $section) {
+    foreach ($section->memberdef as $member) {
+      $sourceFile = (string)$member->location->attributes()['file'];
 
-foreach (simplexml_load_file('xml/namespaceprefs.xml')->compounddef->sectiondef as $i) {
-  foreach ($i->memberdef as $j) {
-    if ($j->type == 'char' || $j->type == 'constexpr char') { // Depends on doxygen version
-      $f = $j->initializer[0];
-      if (strpos($f, '"') !== false) {
-        $name = explode('"', $f)[1];
-        $keys = explode('.', $name);
-        $val = '';               //holds next value to add to array
-        $localArray = [];          //holds the array for this input line
-        for ($i = count($keys) - 1; $i >= 0; $i--) { //go through input line in reverse order
-          $localArray = [$keys[$i] => $val]; //store previous value in array
-          $val = $localArray;           //store the array we just built. it will be the value in the next loop
+      if ((string)$member->name === 'BASE_FEATURE') {
+        $params = getParamTypes($member);
+        $name = getFeatureName($params);
+        if ($name !== null && !isset($seenFeatures[$name])) {
+          $features[] = [
+            'name' => $name,
+            'enabled_default' => in_array('base::FEATURE_ENABLED_BY_DEFAULT', $params, true),
+            'description' => getCommentBefore($sourceFile, (int)$member->location->attributes()['line']),
+          ];
+          $seenFeatures[$name] = true;
         }
-        $prefs = array_merge_recursive($prefs, $localArray);
+      }
+
+      if (isPrefFile($sourceFile) && strpos((string)$member->type, 'char') !== false && preg_match('/"([^"]+)"/', (string)$member->initializer[0], $matches)) {
+        $name = $matches[1];
+        if (strpos($name, '.') !== false || !preg_match('/(Key|Name|Option|Options|Value|Values)$/', (string)$member->name)) {
+          addPreference($prefs, $name);
+        }
       }
     }
   }
 }
+
+usort($features, fn($a, $b) => strcasecmp($a['name'], $b['name']));
+sortTree($prefs);
 
 ?>
 <!DOCTYPE html>

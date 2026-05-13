@@ -1,6 +1,6 @@
 {
     "require": {
-        "colinodell/json5": "^2.2",
-        "erusev/parsedown": "^1.7"
+        "colinodell/json5": "^3.0",
+        "erusev/parsedown": "^1.8"
     }
 }
