@@ -249,7 +249,8 @@
  <code>kAutofillCrossOriginAutofill</code>.
  TODO(crbug.com/40178859): Enable this feature.</pre></td><td>❌</td></tr><tr><td class="name">AutofillPopupCheckHtmlFormPopupOverlap</td><td><pre> If the feature is enabled, Autofill popups perform additional check to
  detect if they are obscured by top-level HTML form popups (e.g color picker).
- If so, Autofill Popup won&#039;t be shown.</pre></td><td>❌</td></tr><tr><td class="name">AutofillPopupDontAcceptNonVisibleEnoughSuggestion</td><td><pre> If the feature is enabled, before triggering suggestion acceptance, the row
+ If so, Autofill Popup won&#039;t be shown.
+ TODO(crbug.com/417052041): Remove when launched.</pre></td><td>✅</td></tr><tr><td class="name">AutofillPopupDontAcceptNonVisibleEnoughSuggestion</td><td><pre> If the feature is enabled, before triggering suggestion acceptance, the row
  view checks that a substantial portion of its content was visible for some
  minimum required period.
  TODO(crbug.com/337222641): During cleaning up, in the popup row view remove
@@ -1326,7 +1327,7 @@
  See <a href="https://issues.chromium.org/issues/444065314">https://issues.chromium.org/issues/444065314</a>.</pre></td><td>✅</td></tr><tr><td class="name">NormalizeNbspRichTextOnly</td><td><pre> Preserve NBSP in plain-text editing contexts. Only normalize NBSP for
  paste/drop in rich-text editing contexts.
  See <a href="https://issues.chromium.org/issues/513279004">https://issues.chromium.org/issues/513279004</a>.</pre></td><td>✅</td></tr><tr><td class="name">NotificationConstructor</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">NotificationContentImage</td><td><pre> NotificationContentImage is not available in all platforms
- The Notification Center on Mac OS X does not support content images.</pre></td><td>❌</td></tr><tr><td class="name">Notifications</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">NotificationTriggers</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">NumberInputFullWidthChars</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">OffMainThreadCSSPaint</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">OffscreenCanvasGetContextAttributes</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">OffsetPathTransformUpdateFix</td><td><pre> Kill switch for a fix to offset-path transform invalidation for
+ The Notification Center on Mac OS X does not support content images.</pre></td><td>❌</td></tr><tr><td class="name">Notifications</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">NotificationTriggers</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">NumberInputFullWidthChars</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">OffMainThreadCSSPaint</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">OffscreenCanvasGetContextAttributes</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">OffsetMappingReuseFullWidthSpaceFix</td><td><pre>See crbug.com/512385682</pre></td><td>✅</td></tr><tr><td class="name">OffsetPathTransformUpdateFix</td><td><pre> Kill switch for a fix to offset-path transform invalidation for
  <a href="https://crbug.com/463409688">https://crbug.com/463409688</a>.</pre></td><td>✅</td></tr><tr><td class="name">OmitBlurEventOnElementRemoval</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">OnDeviceWebSpeechAvailable</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">OnDeviceWebSpeechQuality</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">OpaqueRange</td><td><pre> The OpaqueRange interface provides a live AbstractRange subtype
  for encapsulated content within &lt;textarea&gt; and &lt;input&gt; elements.
  crbug.com/421421332</pre></td><td>❌</td></tr><tr><td class="name">OpenPopoverInvokerRestrictToSameTreeScope</td><td><pre> Restrict popover invoker lookup to the same TreeScope as the element.
@@ -1475,7 +1476,7 @@
  See <a href="https://crbug.com/412578722">https://crbug.com/412578722</a></pre></td><td>✅</td></tr><tr><td class="name">SelectionUpdateToInitialSelectionInListify</td><td><pre> See <a href="https://crbug.com/395544401">https://crbug.com/395544401</a></pre></td><td>✅</td></tr><tr><td class="name">SelectiveClipboardFormatRead</td><td><pre> See <a href="https://chromestatus.com/feature/5203433409871872">https://chromestatus.com/feature/5203433409871872</a></pre></td><td>❌</td></tr><tr><td class="name">SelectivePermissionsIntervention</td><td><pre> See <a href="https://chromestatus.com/feature/4811835974615040">https://chromestatus.com/feature/4811835974615040</a></pre></td><td>✅</td></tr><tr><td class="name">SelectRemoveOverflowHidden</td><td><pre> Removes the forced overflow:hidden rules on the select element&#039;s
  InnerElement unless the author specifies text-overflow:ellipsis. May
  cause text to overlap with the dropdown indicator.
- <a href="https://issues.chromium.org/issues/40805967">https://issues.chromium.org/issues/40805967</a></pre></td><td>✅</td></tr><tr><td class="name">SendBeaconThrowForBlobWithNonSimpleType</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SendSlotChangeSignalAfterNodeInserted</td><td><pre> SlotChange signal is sent after node insertion is complete,
+ <a href="https://issues.chromium.org/issues/40805967">https://issues.chromium.org/issues/40805967</a></pre></td><td>✅</td></tr><tr><td class="name">SendBeaconThrowForBlobWithNonSimpleType</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SendEarlyLastBeginMainFrame</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SendSlotChangeSignalAfterNodeInserted</td><td><pre> SlotChange signal is sent after node insertion is complete,
  ensuring that slot fallback content is handled correctly.
  This was added in M145 and can be removed after M147.
  <a href="https://issues.chromium.org/issues/40150299">https://issues.chromium.org/issues/40150299</a></pre></td><td>✅</td></tr><tr><td class="name">SensorExtraClasses</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SeparateDeferModuleScriptTasks</td><td><pre> Separate defer and module script execution into individual tasks
@@ -2601,6 +2602,7 @@
         "lens_region_search_enabled": "",
         "local_network_access_permissions_policy_default_enabled": "",
         "native_window_occlusion_enabled": "",
+        "restrict_background_fetch_from_service_worker_enabled": "",
         "safe_sites_filter_behavior": "",
         "select_parser_relaxation_enabled": "",
         "standardized_browser_zoom_enabled": "",
@@ -3468,7 +3470,7 @@
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>Updated</strong>: 2026-05-25. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
+        <strong>Updated</strong>: 2026-05-26. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
       </p>
     </div>
   </footer>
