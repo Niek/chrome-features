@@ -37,7 +37,7 @@
  happens. When true, the subframe is simply skipped but the rest of APC
  generation is unaffected.</pre></td><td>✅</td></tr><tr><td class="name">AllowDatapipeDrainedAsBytesConsumerInBFCache</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">AllowDevToolsMainThreadDebuggerForMultipleMainFrames</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">AllowURNsInIframes</td><td><pre> Enables URN URLs like those produced by Protected Audience auctions to be
  displayed by iframes (instead of requiring fenced frames).</pre></td><td>✅</td></tr><tr><td class="name">AndroidBlockGrammarSuggestionSpanInCompositionMode</td><td><pre> Blocks the grammar suggestion span in composition mode.</pre></td><td>❌</td></tr><tr><td class="name">AndroidBlockMisspellingSuggestionSpanInCompositionMode</td><td><pre> Blocks the misspelling suggestion span in composition mode.</pre></td><td>❌</td></tr><tr><td class="name">AndroidCaptureKeyEvents</td><td><pre> Capture Android key event objects to send them to the web contents when the
- IME sends composition texts.</pre></td><td>❌</td></tr><tr><td class="name">AndroidCaretBrowsing</td><td><pre> Enables the caret browsing a11y feature - can use arrow keys to navigate
+ IME sends composition texts.</pre></td><td>✅</td></tr><tr><td class="name">AndroidCaretBrowsing</td><td><pre> Enables the caret browsing a11y feature - can use arrow keys to navigate
  through web pages.</pre></td><td>✅</td></tr><tr><td class="name">AndroidDevToolsFrontend</td><td><pre> DevTools frontend for Android.</pre></td><td>❌</td></tr><tr><td class="name">AndroidEnableBackgroundMediaLargeFormFactors</td><td><pre> Enables media to continue playing in the background.</pre></td><td>✅</td></tr><tr><td class="name">AndroidFallbackToNextSlot</td><td><pre> Fallback to next named service slot if launching a privileged service process
  hangs. In practice, this means if GPU launch hanges, then retry it once.</pre></td><td>✅</td></tr><tr><td class="name">AndroidForceTextInputStateUpdateUponFocus</td><td><pre> Forces an active text input state update calculation and push from the
  renderer process to browser whenever an editable view container gains focus.</pre></td><td>✅</td></tr><tr><td class="name">AndroidMediaInsertion</td><td><pre> Enables IMEs to insert media content such as images, gifs and stickers.</pre></td><td>❌</td></tr><tr><td class="name">AndroidNavigationBlurTransitionAnimation</td><td><pre> Enables a blur animation of the current page when navigating away from it.</pre></td><td>❌</td></tr><tr><td class="name">AndroidOpenIncognitoAsWindow</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">AndroidPkAutocorrectUnderline</td><td><pre> Enables the physical keyboard autocorrect underline feature.</pre></td><td>❌</td></tr><tr><td class="name">AndroidPkAutocorrectUnderlineV2</td><td><pre> Enables the physical keyboard autocorrect underline feature V2.</pre></td><td>❌</td></tr><tr><td class="name">AndroidWarmUpSpareRendererWithTimeout</td><td><pre> Warm up a spare renderer after each navigation on Android.</pre></td><td>❌</td></tr><tr><td class="name">AomVpxUsePresentationThreadType</td><td><pre> Controls whether AOM/VPX decoders should use the presentation thread type.</pre></td><td>❌</td></tr><tr><td class="name">ApproximateGeolocationPermission</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">AttachUnownedInnerWebContents</td><td><pre> Whether to allow attaching an inner WebContents not owned by the outer
@@ -143,8 +143,7 @@
  either the label or the placeholder, depending on how high quality the label
  is. If no matche is found, local heuristics fall back to the other value.
  This feature can be thought of as &quot;lightweight&quot; multi-label support.
- TODO(crbug.com/320965828): Remove when launched.</pre></td><td>❌</td></tr><tr><td class="name">AutofillConsiderAutocompleteUnrecognizedFieldsInMetrics</td><td><pre> If enabled, our <code>FormEventLogger</code> will start emitting events for fields
- annotated with an unrecognized HTML &quot;autocomplete&quot; attribute.</pre></td><td>✅</td></tr><tr><td class="name">AutofillCreditCardUserPerceptionSurvey</td><td><pre> Same as <code>kAutofillAddressUserPerceptionSurvey</code> but for credit card forms.</pre></td><td>❌</td></tr><tr><td class="name">AutofillDelayApcForPredictions</td><td><pre> If enabled, <code>FormParsingTracker</code> will wait up to 1 second
+ TODO(crbug.com/320965828): Remove when launched.</pre></td><td>❌</td></tr><tr><td class="name">AutofillCreditCardUserPerceptionSurvey</td><td><pre> Same as <code>kAutofillAddressUserPerceptionSurvey</code> but for credit card forms.</pre></td><td>❌</td></tr><tr><td class="name">AutofillDelayApcForPredictions</td><td><pre> If enabled, <code>FormParsingTracker</code> will wait up to 1 second
  for Autofill to finish parsing forms pesent on a given tab before capturing
  APC. For more context see: go/autofill-actor-mode-implementation
  TODO(crbug.com/479794574): Convert to killswitch if no regressions are
@@ -227,10 +226,7 @@
  will take care of this logic.</pre></td><td>❌</td></tr><tr><td class="name">AutofillNewAugmentedPhoneCountryCodeRegex</td><td><pre> Improves the regex for matching augmented country code select options by
  supporting cases like +1 (234).</pre></td><td>✅</td></tr><tr><td class="name">AutofillNewRegexForPhoneCountryCode</td><td><pre> If enabled, more patterns are added to the PHONE_COUNTRY_CODE regex.
  TODO(crbug.com/479503511): Remove once launched.</pre></td><td>✅</td></tr><tr><td class="name">AutofillNewSuggestionGeneration</td><td><pre> If enabled, the new suggestion generation logic is used.
- TODO(crbug.com/409962888): Remove once launched.</pre></td><td>❌</td></tr><tr><td class="name">AutofillOptimizeCacheUpdates</td><td><pre> When enabled, cache form updates will happen in place instead of creating a
- new form and moving it back to the cache, which reduces the number of members
- that are copied.
- TODO(crbug.com/456719060): Remove once launched.</pre></td><td>✅</td></tr><tr><td class="name">AutofillOptimizeIsNormalizedNameVariantOf</td><td><pre> When enabled, <code>IsNormalizedNameVariantOf()</code> uses a linear-time greedy
+ TODO(crbug.com/409962888): Remove once launched.</pre></td><td>❌</td></tr><tr><td class="name">AutofillOptimizeIsNormalizedNameVariantOf</td><td><pre> When enabled, <code>IsNormalizedNameVariantOf()</code> uses a linear-time greedy
  algorithm instead of an exponential one that generates all name variants.
  TODO(crbug.com/479905438) Remove once launched.</pre></td><td>❌</td></tr><tr><td class="name">AutofillOverwriteCountryCallingCodes</td><td><pre> If enabled, prefilled country calling codes like &quot;+49&quot; do not prevent
  autofilling.
@@ -495,7 +491,7 @@
  from the intervention feature so it does not interfere with field trial
  activation, as this blocklist is created for every user, and noise is decided
  prior to seeing a heavy ad.</pre></td><td>✅</td></tr><tr><td class="name">HttpDiskCachePrewarming</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">IdbSqliteBackingStore</td><td><pre> This flag unconditionally enables the SQLite backing store. Used for
- about:flags.</pre></td><td>❌</td></tr><tr><td class="name">IgnoreDuplicateNavs</td><td><pre> Controls whether we ignore duplicate navigations or not, in favor of
+ about:flags.</pre></td><td>❌</td></tr><tr><td class="name">IdbSqliteOnDiskRollout</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">IgnoreDuplicateNavs</td><td><pre> Controls whether we ignore duplicate navigations or not, in favor of
  preserving the already ongoing navigation.</pre></td><td>❌</td></tr><tr><td class="name">IgnoreInputWhileHidden</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ImageLoadingPrioritizationFix</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ImageReplacement</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">IndexedDBCompressValuesWithSnappy</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">InitialWebUI</td><td><pre> Enables rendering the top chrome in WebUI. This is a central flag to enable
  the WebUI implementation of top chrome. Individual features will be
  additionally gated by this flag.</pre></td><td>❌</td></tr><tr><td class="name">InitialWebUISurfaceSync</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">InitialWebUISyncNavStartToCommit</td><td><pre> Whether initial WebUI navigations should synchronously go from navigation
@@ -792,8 +788,9 @@
  restored bounds for PiP windows, rather than the window bounds.  If this
  feature is enabled (the default), then we&#039;ll use the window bounds.</pre></td><td>✅</td></tr><tr><td class="name">UseZstdForParkableStrings</td><td><pre> Use the zstd compression algorithm for ParkableString compression.</pre></td><td>✅</td></tr><tr><td class="name">V8VmFuture</td><td><pre> Enables future V8 VM features</pre></td><td>❌</td></tr><tr><td class="name">VaapiLowPowerEncoderGen9x</td><td><pre> Enable VA-API hardware low power encoder for all codecs on intel Gen9x gpu.</pre></td><td>✅</td></tr><tr><td class="name">VaapiOnNvidiaGPUs</td><td><pre> NVIDIA VA-API drivers do not support Chromium and can sometimes cause
  crashes, disable VA-API on NVIDIA GPUs by default. See crbug.com/1492880.
- NVIDIA has committed to helping support hardware acceleration for ARM64
- linux devices, so on those devices we should enable this by default.</pre></td><td>❌</td></tr><tr><td class="name">VaapiVideoMinResolutionForPerformance</td><td><pre> Ensure the advertised minimum supported resolution is larger than or equal to
+ NVIDIA has been considering possibly supporting for an improved driver for
+ hardware acceleration for ARM64 linux devices, so we have separated out the
+ feature flag on that architecture.</pre></td><td>❌</td></tr><tr><td class="name">VaapiVideoMinResolutionForPerformance</td><td><pre> Ensure the advertised minimum supported resolution is larger than or equal to
  a given one (likely QVGA + 1) for certain codecs/modes and platforms, for
  performance reasons. This does not affect JPEG decoding.
 
@@ -951,7 +948,9 @@
  <a href="https://crbug.com/42050325">https://crbug.com/42050325</a></pre></td><td>❌</td></tr><tr><td class="name">CacheStorageCodeCacheHint</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CacheStyleAdjuster</td><td><pre> For emergency flag flips in case we discover bad bugs.</pre></td><td>✅</td></tr><tr><td class="name">CallExitNodeWithoutLayoutObject</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">Canvas2dCanvasFilter</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">Canvas2dLayers</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">Canvas2dLayersWithOptions</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">Canvas2dMesh</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CanvasDrawElement</td><td><pre> <a href="https://github.com/WICG/html-in-canvas/blob/main/README.md">https://github.com/WICG/html-in-canvas/blob/main/README.md</a>
  Note the API name has changed to <code>drawElementImage</code>.</pre></td><td>❌</td></tr><tr><td class="name">CanvasFloatingPoint</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">CanvasGlobalHDRHeadroom</td><td><pre> Canvas2D API for specifying HDR headroom for drawing operations.
  https:/crbug.com/428575083, <a href="https://github.com/whatwg/html/issues/11165">https://github.com/whatwg/html/issues/11165</a></pre></td><td>❌</td></tr><tr><td class="name">CanvasGradientCSSColor4</td><td><pre> <a href="https://crbug.com/394052224">https://crbug.com/394052224</a></pre></td><td>❌</td></tr><tr><td class="name">CanvasHDR</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CanvasTextMetricsPreciseBounds</td><td><pre> <a href="https://crbug.com/479240778">https://crbug.com/479240778</a></pre></td><td>❌</td></tr><tr><td class="name">CanvasToneMapping</td><td><pre> Canvas2D API for specifying HDR tone mapping behavior.
- https:/crbug.com/448552449, <a href="https://github.com/whatwg/html/issues/11424">https://github.com/whatwg/html/issues/11424</a></pre></td><td>❌</td></tr><tr><td class="name">CanvasUsesArcPaintOp</td><td><pre> Kill switch for <a href="https://crbug.com/330506337">https://crbug.com/330506337</a>.</pre></td><td>✅</td></tr><tr><td class="name">CapabilityDelegationDisplayCaptureRequest</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CaptureController</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CapturedMouseEvents</td><td><pre> TODO(crbug.com/1444712): Before enabling that flag by default,
+ https:/crbug.com/448552449, <a href="https://github.com/whatwg/html/issues/11424">https://github.com/whatwg/html/issues/11424</a></pre></td><td>❌</td></tr><tr><td class="name">CanvasUsesArcPaintOp</td><td><pre> Kill switch for <a href="https://crbug.com/330506337">https://crbug.com/330506337</a>.</pre></td><td>✅</td></tr><tr><td class="name">CapabilityDelegationDigitalCredentials</td><td><pre> Enables capability delegation for the Digital Credentials API (both
+ create and get requests).
+ <a href="https://crbug.com/512747131">https://crbug.com/512747131</a></pre></td><td>❌</td></tr><tr><td class="name">CapabilityDelegationDisplayCaptureRequest</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CaptureController</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CapturedMouseEvents</td><td><pre> TODO(crbug.com/1444712): Before enabling that flag by default,
  make sure MouseCursorOverlayController does not transmit mouse
  events to a CaptureController that don&#039;t have any
  capturedmousechange listener attached to it.
@@ -1104,7 +1103,8 @@
 
  <a href="https://drafts.csswg.org/selectors-4/#user-valid-pseudo">https://drafts.csswg.org/selectors-4/#user-valid-pseudo</a></pre></td><td>✅</td></tr><tr><td class="name">CSSVideoDynamicRangeMediaQueries</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CSSViewTransitionAutoName</td><td><pre> <a href="https://chromestatus.com/feature/4850737974345728">https://chromestatus.com/feature/4850737974345728</a></pre></td><td>❌</td></tr><tr><td class="name">CSSZoomAnimation</td><td><pre> CSSWG resolution to make the <code>zoom</code> property continuously
  interpolatable. <a href="https://github.com/w3c/csswg-drafts/issues/10872">https://github.com/w3c/csswg-drafts/issues/10872</a>
- ChromeStatus: <a href="https://chromestatus.com/feature/5183671737909248">https://chromestatus.com/feature/5183671737909248</a></pre></td><td>❌</td></tr><tr><td class="name">CustomElementsDisableFormattingFixups</td><td><pre> Shipping in M148 (or backported earlier), can be removed in M150.</pre></td><td>✅</td></tr><tr><td class="name">CustomizableCombobox</td><td><pre> appearance:base for the &lt;datalist&gt; element when it is invoked as a
+ Ship in M150, should be removed in M152.
+ ChromeStatus: <a href="https://chromestatus.com/feature/5183671737909248">https://chromestatus.com/feature/5183671737909248</a></pre></td><td>✅</td></tr><tr><td class="name">CustomElementsDisableFormattingFixups</td><td><pre> Shipping in M148 (or backported earlier), can be removed in M150.</pre></td><td>✅</td></tr><tr><td class="name">CustomizableCombobox</td><td><pre> appearance:base for the &lt;datalist&gt; element when it is invoked as a
  picker from an &lt;input type=text&gt;.
  <a href="https://issues.chromium.org/issues/453705243">https://issues.chromium.org/issues/453705243</a>
  <a href="https://chromestatus.com/feature/5067156794507264">https://chromestatus.com/feature/5067156794507264</a></pre></td><td>❌</td></tr><tr><td class="name">CustomizableSelectMultiplePopup</td><td><pre> appearance:base-select for &lt;select multiple size=1&gt; with a picker.</pre></td><td>❌</td></tr><tr><td class="name">CustomScrollbarApplyMinimumThumbLength</td><td><pre> see crbug.com/341313078</pre></td><td>✅</td></tr><tr><td class="name">Database</td><td><pre> <a href="https://chromestatus.com/feature/5134293578285056">https://chromestatus.com/feature/5134293578285056</a></pre></td><td>❌</td></tr><tr><td class="name">DateTimeInputTypeEarlyAdvanceFix</td><td><pre> <a href="https://crbug.com/473454959">https://crbug.com/473454959</a></pre></td><td>✅</td></tr><tr><td class="name">DeclarativeCSSModules</td><td><pre> <a href="https://crbug.com/448174611">https://crbug.com/448174611</a></pre></td><td>❌</td></tr><tr><td class="name">DeclarativeCSSModulesStyleTag</td><td><pre> <a href="https://crbug.com/448174611">https://crbug.com/448174611</a></pre></td><td>❌</td></tr><tr><td class="name">DecoupleComputedBorderWidthFromStyle</td><td><pre> <a href="https://chromestatus.com/feature/5133099851317248">https://chromestatus.com/feature/5133099851317248</a></pre></td><td>✅</td></tr><tr><td class="name">DecoupleResolvedColumnRuleWidthFromStyle</td><td><pre> <a href="https://chromestatus.com/feature/5133099851317248">https://chromestatus.com/feature/5133099851317248</a></pre></td><td>✅</td></tr><tr><td class="name">DelegatesFocusTextControlInputFix</td><td><pre> Killswitch for <a href="https://crbug.com/400317114">https://crbug.com/400317114</a> fix.
@@ -1467,7 +1467,11 @@
 
  The status is set to &#039;test&#039; here to enable some WPT tests that only
  require blink-side support to function.</pre></td><td>❌</td></tr><tr><td class="name">SecurePaymentConfirmationAvailabilityAPI</td><td><pre> SecurePaymentConfirmationAvailabilityAPI needs to be kept as a runtime
- flag in order to disable the API in WebView.</pre></td><td>✅</td></tr><tr><td class="name">SecurePaymentConfirmationCapabilities</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SecurePaymentConfirmationDebug</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SecurePaymentConfirmationOptOut</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SelectAudioOutput</td><td><pre> SelectAudioOutput API
+ flag in order to disable the API in WebView.</pre></td><td>✅</td></tr><tr><td class="name">SecurePaymentConfirmationCapabilities</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SecurePaymentConfirmationDebug</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SecurePaymentConfirmationOptOut</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SelectAnchorInViewport</td><td><pre> Make select popup anchor stay within web contents to prevent
+ overlapping browser UI.
+ TODO(<a href="https://issues.chromium.org/issues/511869411">https://issues.chromium.org/issues/511869411</a>): Remove this flag
+ after it has been shipped for long enough.
+ Shipped in M150, safe to remove in M152.</pre></td><td>✅</td></tr><tr><td class="name">SelectAudioOutput</td><td><pre> SelectAudioOutput API
  <a href="https://chromestatus.com/feature/5164535504437248">https://chromestatus.com/feature/5164535504437248</a></pre></td><td>❌</td></tr><tr><td class="name">SelectedcontentelementAttribute</td><td><pre> The selectedcontentelement attribute is for connecting select elements
  to arbitrary &lt;selectedcontent&gt; elements.
  <a href="https://github.com/openui/open-ui/issues/1063">https://github.com/openui/open-ui/issues/1063</a>
@@ -1487,7 +1491,10 @@
  See <a href="https://crbug.com/412578722">https://crbug.com/412578722</a></pre></td><td>✅</td></tr><tr><td class="name">SelectionUpdateToInitialSelectionInListify</td><td><pre> See <a href="https://crbug.com/395544401">https://crbug.com/395544401</a></pre></td><td>✅</td></tr><tr><td class="name">SelectiveClipboardFormatRead</td><td><pre> See <a href="https://chromestatus.com/feature/5203433409871872">https://chromestatus.com/feature/5203433409871872</a></pre></td><td>❌</td></tr><tr><td class="name">SelectivePermissionsIntervention</td><td><pre> See <a href="https://chromestatus.com/feature/4811835974615040">https://chromestatus.com/feature/4811835974615040</a></pre></td><td>✅</td></tr><tr><td class="name">SelectRemoveOverflowHidden</td><td><pre> Removes the forced overflow:hidden rules on the select element&#039;s
  InnerElement unless the author specifies text-overflow:ellipsis. May
  cause text to overlap with the dropdown indicator.
- <a href="https://issues.chromium.org/issues/40805967">https://issues.chromium.org/issues/40805967</a></pre></td><td>✅</td></tr><tr><td class="name">SendBeaconThrowForBlobWithNonSimpleType</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SendEarlyLastBeginMainFrame</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SendSlotChangeSignalAfterNodeInserted</td><td><pre> SlotChange signal is sent after node insertion is complete,
+ <a href="https://issues.chromium.org/issues/40805967">https://issues.chromium.org/issues/40805967</a></pre></td><td>✅</td></tr><tr><td class="name">SelectWebViewUntrustedEventRemoval</td><td><pre> Removes a hack which allows select elements to be opened with a script
+ dispatched mousedown event on WebView, as opposed to a real user
+ click.
+ <a href="https://issues.chromium.org/issues/41273490">https://issues.chromium.org/issues/41273490</a></pre></td><td>❌</td></tr><tr><td class="name">SendBeaconThrowForBlobWithNonSimpleType</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SendEarlyLastBeginMainFrame</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SendSlotChangeSignalAfterNodeInserted</td><td><pre> SlotChange signal is sent after node insertion is complete,
  ensuring that slot fallback content is handled correctly.
  This was added in M145 and can be removed after M147.
  <a href="https://issues.chromium.org/issues/40150299">https://issues.chromium.org/issues/40150299</a></pre></td><td>✅</td></tr><tr><td class="name">SensorExtraClasses</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SeparateDeferModuleScriptTasks</td><td><pre> Separate defer and module script execution into individual tasks
@@ -2309,6 +2316,7 @@
         }
     },
     "https_first_balanced_mode_enabled": "",
+    "https_first_mode_bundle_toast_queued": "",
     "https_first_mode_incognito_enabled": "",
     "https_only_mode_auto_enabled": "",
     "https_only_mode_enabled": "",
@@ -3006,6 +3014,7 @@
         "initial_animation_shown": ""
     },
     "session": {
+        "pre_smart_restart_session_state": "",
         "restore_on_startup": "",
         "startup_urls": ""
     },
@@ -3487,7 +3496,7 @@
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>Updated</strong>: 2026-06-01. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
+        <strong>Updated</strong>: 2026-06-02. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
       </p>
     </div>
   </footer>
