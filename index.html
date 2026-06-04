@@ -40,7 +40,8 @@
  IME sends composition texts.</pre></td><td>✅</td></tr><tr><td class="name">AndroidCaretBrowsing</td><td><pre> Enables the caret browsing a11y feature - can use arrow keys to navigate
  through web pages.</pre></td><td>✅</td></tr><tr><td class="name">AndroidDevToolsFrontend</td><td><pre> DevTools frontend for Android.</pre></td><td>❌</td></tr><tr><td class="name">AndroidEnableBackgroundMediaLargeFormFactors</td><td><pre> Enables media to continue playing in the background.</pre></td><td>✅</td></tr><tr><td class="name">AndroidFallbackToNextSlot</td><td><pre> Fallback to next named service slot if launching a privileged service process
  hangs. In practice, this means if GPU launch hanges, then retry it once.</pre></td><td>✅</td></tr><tr><td class="name">AndroidForceTextInputStateUpdateUponFocus</td><td><pre> Forces an active text input state update calculation and push from the
- renderer process to browser whenever an editable view container gains focus.</pre></td><td>✅</td></tr><tr><td class="name">AndroidMediaInsertion</td><td><pre> Enables IMEs to insert media content such as images, gifs and stickers.</pre></td><td>❌</td></tr><tr><td class="name">AndroidNavigationBlurTransitionAnimation</td><td><pre> Enables a blur animation of the current page when navigating away from it.</pre></td><td>❌</td></tr><tr><td class="name">AndroidOpenIncognitoAsWindow</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">AndroidPkAutocorrectUnderline</td><td><pre> Enables the physical keyboard autocorrect underline feature.</pre></td><td>❌</td></tr><tr><td class="name">AndroidPkAutocorrectUnderlineV2</td><td><pre> Enables the physical keyboard autocorrect underline feature V2.</pre></td><td>❌</td></tr><tr><td class="name">AndroidWarmUpSpareRendererWithTimeout</td><td><pre> Warm up a spare renderer after each navigation on Android.</pre></td><td>❌</td></tr><tr><td class="name">AomVpxUsePresentationThreadType</td><td><pre> Controls whether AOM/VPX decoders should use the presentation thread type.</pre></td><td>❌</td></tr><tr><td class="name">ApproximateGeolocationPermission</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">AttachUnownedInnerWebContents</td><td><pre> Whether to allow attaching an inner WebContents not owned by the outer
+ renderer process to browser whenever an editable view container gains focus.</pre></td><td>✅</td></tr><tr><td class="name">AndroidMediaInsertion</td><td><pre> Enables IMEs to insert media content such as images, gifs and stickers.</pre></td><td>❌</td></tr><tr><td class="name">AndroidNavigationBlurTransitionAnimation</td><td><pre> Enables a blur animation of the current page when navigating away from it.</pre></td><td>❌</td></tr><tr><td class="name">AndroidOpenIncognitoAsWindow</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">AndroidPkAutocorrectUnderline</td><td><pre> Enables the physical keyboard autocorrect underline feature.</pre></td><td>❌</td></tr><tr><td class="name">AndroidPkAutocorrectUnderlineV2</td><td><pre> Enables the physical keyboard autocorrect underline feature V2.</pre></td><td>❌</td></tr><tr><td class="name">AndroidWarmUpSpareRendererWithTimeout</td><td><pre> Warm up a spare renderer after each navigation on Android.</pre></td><td>❌</td></tr><tr><td class="name">AomVpxUsePresentationThreadType</td><td><pre> Controls whether AOM/VPX decoders should use the presentation thread type.</pre></td><td>❌</td></tr><tr><td class="name">ApproximateGeolocationPermission</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ArtificialUIDelay</td><td><pre> Used to add an artificial delay for UI rendering during testing and
+ debugging.</pre></td><td>❌</td></tr><tr><td class="name">AttachUnownedInnerWebContents</td><td><pre> Whether to allow attaching an inner WebContents not owned by the outer
  WebContents. This is for prototyping purposes and should not be enabled in
  production.</pre></td><td>❌</td></tr><tr><td class="name">AudioDucking</td><td><pre> Enables audio ducking.</pre></td><td>✅</td></tr><tr><td class="name">AudioFocusDuckFlash</td><td><pre> Enables flash to be ducked by audio focus. This is enabled on Chrome OS which
  has audio focus enabled.</pre></td><td>❌</td></tr><tr><td class="name">AudioServiceLaunchOnStartup</td><td><pre> Launches the audio service on the browser startup.</pre></td><td>❌</td></tr><tr><td class="name">AudioServiceOutOfProcess</td><td><pre> Runs the audio service in a separate process.</pre></td><td>❌</td></tr><tr><td class="name">AudioServiceSandbox</td><td><pre> Enables the audio-service sandbox. This feature has an effect only when the
@@ -173,8 +174,7 @@
  field that has autocomplete=unrecognized attribute.</pre></td><td>✅</td></tr><tr><td class="name">AutofillEnableStreetAddressMergeModes</td><td><pre> If enabled, the missing merge modes will be re-enabled on nodes. To do that,
  MergeMode::kMergeChildrenAndReformatIfNeeded will be also added to all the
  nodes where required.
- TODO(crbug.com/447111009): Remove when launched.</pre></td><td>❌</td></tr><tr><td class="name">AutofillEnableSupportForHomeAndWork</td><td><pre> When enabled, chrome will support home and work addresses from account.
- TODO: crbug.com/354706653 - Clean up when launched.</pre></td><td>✅</td></tr><tr><td class="name">AutofillEnableSupportForNameAndEmail</td><td><pre> When enabled, chrome will support name and email address profile.
+ TODO(crbug.com/447111009): Remove when launched.</pre></td><td>❌</td></tr><tr><td class="name">AutofillEnableSupportForNameAndEmail</td><td><pre> When enabled, chrome will support name and email address profile.
  TODO(crbug.com/356845298): Clean up when launched.</pre></td><td>✅</td></tr><tr><td class="name">AutofillExtendZipCodeValidation</td><td><pre> Enables extended zip code validation.
  TODO(crbug.com/434140055): Clean up when launched.</pre></td><td>❌</td></tr><tr><td class="name">AutofillExtractOnlyNonAdFrames</td><td><pre> If enabled, only non-ad frames are extracted.
  Otherwise, non-ad frames as well as <em>visible</em> ad frames are extracted.
@@ -220,9 +220,7 @@
  the cache is full before the parsing even starts.
  TODO(crbug.com/484285907): Clean up after April 10, 2026 (M148 branch point).</pre></td><td>✅</td></tr><tr><td class="name">AutofillModelPredictions</td><td><pre> When enabled, all behaviours related to the on-device machine learning
  model for field type predictions will be guarded.
- TODO(crbug.com/40276177): Remove when launched.</pre></td><td>❌</td></tr><tr><td class="name">AutofillMoreProminentPopup</td><td><pre> Controls autofill popup style, if enabled it becomes more prominent,
- i.e. its shadow becomes more emphasized, position is also updated.
- TODO(crbug.com/40235454): Remove once the experiment is over.</pre></td><td>❌</td></tr><tr><td class="name">AutofillMoveSmallFormLogicToClient</td><td><pre> When Enabled Autofill server will stop applying small form rule and Chrome
+ TODO(crbug.com/40276177): Remove when launched.</pre></td><td>❌</td></tr><tr><td class="name">AutofillMoveSmallFormLogicToClient</td><td><pre> When Enabled Autofill server will stop applying small form rule and Chrome
  will take care of this logic.</pre></td><td>❌</td></tr><tr><td class="name">AutofillNewAugmentedPhoneCountryCodeRegex</td><td><pre> Improves the regex for matching augmented country code select options by
  supporting cases like +1 (234).</pre></td><td>✅</td></tr><tr><td class="name">AutofillNewRegexForPhoneCountryCode</td><td><pre> If enabled, more patterns are added to the PHONE_COUNTRY_CODE regex.
  TODO(crbug.com/479503511): Remove once launched.</pre></td><td>✅</td></tr><tr><td class="name">AutofillNewSuggestionGeneration</td><td><pre> If enabled, the new suggestion generation logic is used.
@@ -346,8 +344,9 @@
  NOTE: this is the default codec for Cast Streaming. Be careful when
  disabling.</pre></td><td>✅</td></tr><tr><td class="name">CastStreamingVp9</td><td><pre> Controls whether mirroring negotiations will include the VP9 codec for video
  encoding.</pre></td><td>✅</td></tr><tr><td class="name">CastVideoEncoderFrameDrop</td><td><pre> A video encoder is allowed to drop a frame in cast mirroring.</pre></td><td>❌</td></tr><tr><td class="name">CdmHostVerification</td><td><pre> CDM host verification is enabled by default. Can be disabled for testing.
- Has no effect if ENABLE_CDM_HOST_VERIFICATION buildflag is false.</pre></td><td>✅</td></tr><tr><td class="name">CdmProcessPriorityElevation</td><td><pre> If enabled, the browser process will launch the CDM service process
- with higher priority to improve playback performance.</pre></td><td>❌</td></tr><tr><td class="name">ChildProcessSecurityPolicyRust</td><td><pre> Enables the experimental Rust implementation of
+ Has no effect if ENABLE_CDM_HOST_VERIFICATION buildflag is false.</pre></td><td>✅</td></tr><tr><td class="name">CdmProcessPriorityElevation</td><td><pre> Elevates the CDM service process&#039; priority to improve media playback
+ performance.</pre></td><td>❌</td></tr><tr><td class="name">CdmThreadPriorityElevation</td><td><pre> Elevates the CDM service process&#039; main thread priority to improve media
+ playback performance.</pre></td><td>❌</td></tr><tr><td class="name">ChildProcessSecurityPolicyRust</td><td><pre> Enables the experimental Rust implementation of
  ChildProcessSecurityPolicy. See <a href="https://crbug.com/482216433">https://crbug.com/482216433</a>.</pre></td><td>❌</td></tr><tr><td class="name">ClearCrossSiteCrossBrowsingContextGroupWindowName</td><td><pre> Clear the window.name property for the top-level cross-site navigations that
  swap BrowsingContextGroups(BrowsingInstances).</pre></td><td>❌</td></tr><tr><td class="name">ClearPipCachedBoundsWhenPermissionPromptVisible</td><td><pre> Safety switch to allow us to revert to the previous behavior of using the
  cached bounds when the permission prompt is visible. If this feature is
@@ -895,7 +894,7 @@
  this, then add status: test.</pre></td><td>❌</td></tr><tr><td class="name">AccessibilitySerializationSizeMetrics</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">AccessibilityUseAXPositionForDocumentMarkers</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">AccessKeyLabel</td><td><pre> <a href="https://chromestatus.com/feature/5113389252739072">https://chromestatus.com/feature/5113389252739072</a>
  <a href="https://issues.chromium.org/issues/41119923">https://issues.chromium.org/issues/41119923</a></pre></td><td>❌</td></tr><tr><td class="name">AddressSpace</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">AdInterestGroupAPI</td><td><pre> Interest Group JS API/runtimeflag.</pre></td><td>✅</td></tr><tr><td class="name">AdjustDOMOffsetToLayoutOffsetForSecureText</td><td><pre> Fix for crbug.com/403358869</pre></td><td>✅</td></tr><tr><td class="name">AdjustEndOfNextParagraphIfMovedParagraphIsUpdated</td><td><pre> Adjust the end of the next paragraph if the end position for the
  paragraph is updated while moving the paragraph. See
- <a href="https://crbug.com/329121649">https://crbug.com/329121649</a></pre></td><td>✅</td></tr><tr><td class="name">AdTagging</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">AIClassifierAPI</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">AIPageContentAnchoredFixedOffscreenNonActionability</td><td><pre> Strip actionability from content that is positioned offscreen
+ <a href="https://crbug.com/329121649">https://crbug.com/329121649</a></pre></td><td>✅</td></tr><tr><td class="name">AdTagging</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">AIClassifierAPI</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">AIEmbeddingsAPI</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">AIEmbeddingsAPIForWorkers</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">AIPageContentAnchoredFixedOffscreenNonActionability</td><td><pre> Strip actionability from content that is positioned offscreen
  via position:fixed and cannot be reached by scrolling.</pre></td><td>✅</td></tr><tr><td class="name">AIPageContentAnchoredNonFixedOffscreenNonActionability</td><td><pre> Strip actionability from content that is positioned offscreen via
  absolute/relative/static positioning and cannot be reached by scrolling.</pre></td><td>✅</td></tr><tr><td class="name">AIPageContentBuildOnLoadForTesting</td><td><pre> Whether to automatically build an APC content_extraction tree on load.</pre></td><td>❌</td></tr><tr><td class="name">AIPageContentCheckGeometry</td><td><pre> Whether to enforce geometry invariants in AIPageContentAgent.
  Only supported for DCHECK-enabled builds.</pre></td><td>❌</td></tr><tr><td class="name">AIPageContentConvertNodeTextToUtf8</td><td><pre> Ensures that text content extracted from DOM nodes are valid UTF-8 Before
@@ -1641,11 +1640,13 @@
  features&quot;.</pre></td><td>❌</td></tr><tr><td class="name">WebGPUCompatibilityMode</td><td><pre> Launch feature flag for WebGPU Compatibility Mode
  <a href="https://chromestatus.com/feature/6436406437871616">https://chromestatus.com/feature/6436406437871616</a></pre></td><td>✅</td></tr><tr><td class="name">WebGPUDeveloperFeatures</td><td><pre> WebGPU developer features are deliberately not enabled by experimental
  web platform features.</pre></td><td>❌</td></tr><tr><td class="name">WebGPUExperimentalFeatures</td><td><pre> WebGPU experimental features are meant for features that would
- eventually land in the WebGPU spec.</pre></td><td>❌</td></tr><tr><td class="name">WebGPUImmediatesFeature</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebGPUMapSyncOnWorkers</td><td><pre> Enables GPUBuffer::mapSync for WebGPU.</pre></td><td>❌</td></tr><tr><td class="name">WebGPUMultithreadDawnWireOnWorkers</td><td><pre> Allows handling of WebGPU related commands from the GPU process to
+ eventually land in the WebGPU spec.</pre></td><td>❌</td></tr><tr><td class="name">WebGPUImmediatesFeature</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebGPUMapSyncOnWorkers</td><td><pre> Enables GPUBuffer::mapSync for WebGPU.</pre></td><td>❌</td></tr><tr><td class="name">WebGPUMultithreadDawnWireOnWorkers</td><td><pre> Allows handling of WebGPU related commands from the GPU process to
  happen on a separate thread. This is a pre-requisite for emulation of
  serialized asynchronous APIs, i.e. mapSync.</pre></td><td>❌</td></tr><tr><td class="name">WebGPUTransientAttachment</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebHID</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebHIDOnServiceWorkers</td><td><pre> It is only enabled in extension environment for now.</pre></td><td>❌</td></tr><tr><td class="name">WebIdentityDigitalCredentials</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebIdentityDigitalCredentialsCreation</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebIDLBigIntUsesToBigInt</td><td><pre> Kill switch for making BigInt handling in WebIDL use ToBigInt.</pre></td><td>✅</td></tr><tr><td class="name">WebMCP</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebMCPDeclarativeFileInput</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebMCPFormAssociatedCustomElements</td><td><pre> Support for form-associated custom elements in declarative
  WebMCP tools.</pre></td><td>❌</td></tr><tr><td class="name">WebMCPTesting</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebNFC</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebOTP</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebOTPAssertionFeaturePolicy</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebPreferences</td><td><pre> <a href="https://wicg.github.io/web-preferences-api/">https://wicg.github.io/web-preferences-api/</a></pre></td><td>❌</td></tr><tr><td class="name">WebPrinting</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebRtcSctpSnap</td><td><pre> Experimental implementation of
- <a href="https://www.ietf.org/archive/id/draft-hancke-tsvwg-snap-00.html">https://www.ietf.org/archive/id/draft-hancke-tsvwg-snap-00.html</a></pre></td><td>❌</td></tr><tr><td class="name">WebShare</td><td><pre> WebShare is enabled by default on Android (non-WebView), Win, ChromeOS, and Mac.
+ <a href="https://www.ietf.org/archive/id/draft-hancke-tsvwg-snap-00.html">https://www.ietf.org/archive/id/draft-hancke-tsvwg-snap-00.html</a></pre></td><td>❌</td></tr><tr><td class="name">WebSerialWorldIsolatedCache</td><td><pre> Restricts the sharing of SerialPort instances across different V8
+ worlds (e.g., main world and isolated worlds) to prevent cross-world
+ leaks.</pre></td><td>✅</td></tr><tr><td class="name">WebShare</td><td><pre> WebShare is enabled by default on Android (non-WebView), Win, ChromeOS, and Mac.
  This is done in chrome/renderer/chrome_content_renderer_client.cc to prevent
  making the API available to Linux and WebView. Ideally we would set the status
  below to &quot;stable&quot; once we can do so without significant test expectation duplication.</pre></td><td>❌</td></tr><tr><td class="name">WebSocketStream</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebSocketStreamStandardBinaryChunkType</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebSpeechRecognitionContext</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebSpeechUnspokenPunctuation</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebTransportApplicationProtocol</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebTransportCongestionControl</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebTransportCustomCertificates</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebTransportReceiveStream</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebTransportSendGroup</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebTransportStats</td><td><pre> Note: enabling this without setting WebTransportCongestionControl to
@@ -1849,22 +1850,18 @@
         "clear_data": {
             "browsing_data_lifetime": "",
             "browsing_history": "",
-            "browsing_history_basic": "",
             "cache": "",
-            "cache_basic": "",
             "clear_on_exit": "",
             "clear_on_exit_pending": "",
             "close_tabs": "",
             "cookies": "",
-            "cookies_basic": "",
             "download_history": "",
             "form_data": "",
             "history_notice_shown_times": "",
             "hosted_apps_data": "",
             "passwords": "",
             "site_settings": "",
-            "time_period": "",
-            "time_period_basic": ""
+            "time_period": ""
         },
         "click_to_call_enabled": "",
         "command_line_flag_security_warnings_enabled": "",
@@ -1889,7 +1886,6 @@
             "memory_usage_enabled": ""
         },
         "intranet_redirect_behavior": "",
-        "last_clear_browsing_data_tab": "",
         "last_clear_browsing_data_time": "",
         "last_redirect_origin": "",
         "last_whats_new_version": "",
@@ -2613,7 +2609,6 @@
         "cloud_management_enrollment_mandatory": "",
         "copy_prevention_settings": "",
         "css_custom_state_deprecated_syntax_enabled": "",
-        "device_refresh_rate": "",
         "dlp_clipboard_check_size_limit": "",
         "dlp_reporting_enabled": "",
         "dlp_rules_list": "",
@@ -2955,6 +2950,9 @@
     "qr_code_generator_enabled": "",
     "reading_list": {
         "desktop_first_use_experience_shown": ""
+    },
+    "realbox": {
+        "context_menu_animation_state": ""
     },
     "recovery_component": {
         "unpack_path": "",
@@ -3496,7 +3494,7 @@
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>Updated</strong>: 2026-06-03. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
+        <strong>Updated</strong>: 2026-06-04. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
       </p>
     </div>
   </footer>
