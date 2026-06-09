@@ -119,7 +119,7 @@
  Wallet.</pre></td><td>❌</td></tr><tr><td class="name">AutofillAiWalletPassBranding2026</td><td><pre> Enables the 2026 Autofill AI Wallet Pass Branding Updates.</pre></td><td>❌</td></tr><tr><td class="name">AutofillAiWalletPrivatePasses</td><td><pre> If enabled, AutofillAi supports private passes entities from Google Wallet.</pre></td><td>❌</td></tr><tr><td class="name">AutofillAiWalletPrivatePassesDeepLink</td><td><pre> If enabled, Wallet private pass entries in settings link to their pass
  details page rather than the generic pass overview page.</pre></td><td>❌</td></tr><tr><td class="name">AutofillAiWalletShopping</td><td><pre> If enabled, Autofill AI Shopping entities are surfaced from Google Wallet.</pre></td><td>❌</td></tr><tr><td class="name">AutofillAiWalletVehicleRegistration</td><td><pre> If enabled, AutofillAi supports vehicle registration entities from Google
  Wallet.</pre></td><td>❌</td></tr><tr><td class="name">AutofillAiWithDataSchema</td><td><pre> Enables the second iteration AutofillAI.</pre></td><td>❌</td></tr><tr><td class="name">AutofillAllowFillingModifiedInitialValues</td><td><pre> When enabled, autofill will fill not skip filling fields that had an initial
- value which was modified.</pre></td><td>❌</td></tr><tr><td class="name">AutofillAmbientAutofill</td><td><pre> When enabled, the ambient autofill experience is enabled in Chrome.</pre></td><td>❌</td></tr><tr><td class="name">AutofillAndroidDesktopKeyboardAccessoryRevamp</td><td><pre> If enabled, on Android desktop, the Autofill keyboard accessory will have a
+ value which was modified.</pre></td><td>✅</td></tr><tr><td class="name">AutofillAmbientAutofill</td><td><pre> When enabled, the ambient autofill experience is enabled in Chrome.</pre></td><td>❌</td></tr><tr><td class="name">AutofillAndroidDesktopKeyboardAccessoryRevamp</td><td><pre> If enabled, on Android desktop, the Autofill keyboard accessory will have a
  new behavior and design.
  TODO(crbug.com/438125774): Remove when launched.</pre></td><td>❌</td></tr><tr><td class="name">AutofillAndroidDesktopSuppressAccessoryOnEmpty</td><td><pre> If enabled, on Android desktop, Autofill keyboard accessory will be
  suppressed when there are no autofill suggestions.</pre></td><td>❌</td></tr><tr><td class="name">AutofillAndroidDisableSuggestionsOnJSFocus</td><td><pre> Controls whether user tap on an element is needed to show autofill
@@ -193,8 +193,7 @@
  weeks on canary.</pre></td><td>✅</td></tr><tr><td class="name">AutofillFixFormTracking</td><td><pre> Removes logic that resets form submission tracking data upon receiving a
  FORM_SUBMISSION or PROBABLE_FORM_SUBMISSION signal. Also, fixes submission
  deduplication so that it ignores submissions that PWM doesn&#039;t act upon.
- TODO(crbug.com/40281981): Remove when launched.</pre></td><td>✅</td></tr><tr><td class="name">AutofillFixIsAutofilled</td><td><pre> Enables the new implementation of <code>FormFieldData::is_autofilled</code>.
- TODO(crbug.com/393114125): Remove when launched.</pre></td><td>✅</td></tr><tr><td class="name">AutofillFixRewriterRules</td><td><pre> When enabled, the rewriter uses updated rewrite rules.
+ TODO(crbug.com/40281981): Remove when launched.</pre></td><td>✅</td></tr><tr><td class="name">AutofillFixRewriterRules</td><td><pre> When enabled, the rewriter uses updated rewrite rules.
  TODO(crbug.com/445863287): Cleanup when launched.</pre></td><td>❌</td></tr><tr><td class="name">AutofillFixStateCountryMisclassification</td><td><pre> When enabled, the rationalization engine will fix misclassifications where
  a field is detected as a COUNTRY when it should be a STATE or vice versa.
  TODO(crbug.com/444180493): Cleanup when launched.</pre></td><td>❌</td></tr><tr><td class="name">AutofillGreekRegexes</td><td><pre> When enabled, Greek regexes are used for parsing in branded builds.</pre></td><td>✅</td></tr><tr><td class="name">AutofillIgnoreCheckableElements</td><td><pre> LINT.IfChange(autofill_ignore_checkable_elements)
@@ -954,7 +953,7 @@
  from appearing in the previous line when typing at the start
  of a wrapped line. See <a href="https://crbug.com/40677155">https://crbug.com/40677155</a></pre></td><td>✅</td></tr><tr><td class="name">CCTNewRFMPushBehavior</td><td><pre> Kill switch for changes to RenderFrameMetadataObserverImpl in connection with Engagement
  Signals. See <a href="https://crrev.com/c/4544201">https://crrev.com/c/4544201</a> and <a href="https://crbug.com/1458640">https://crbug.com/1458640</a>.</pre></td><td>❌</td></tr><tr><td class="name">CheckableInputTypeLayoutInline</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">CheckForCanonicalPositionInIdleSpellCheck</td><td><pre> If focus is not at canonical position then spellcheck should be deactivated.
- crbug.com/396485529</pre></td><td>✅</td></tr><tr><td class="name">CheckVisibilityExtraProperties</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ClampWordBoundaryToContentEditableScope</td><td><pre> Clamps word boundary detection to the contenteditable scope when
+ crbug.com/396485529</pre></td><td>✅</td></tr><tr><td class="name">CheckVisibilityExtraProperties</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ClampUnfocusedSelectionCache</td><td><pre> crbug.com/517429018</pre></td><td>✅</td></tr><tr><td class="name">ClampWordBoundaryToContentEditableScope</td><td><pre> Clamps word boundary detection to the contenteditable scope when
  adjacent contenteditable spans have no whitespace between them.
  See <a href="https://crbug.com/40848794">https://crbug.com/40848794</a>.</pre></td><td>✅</td></tr><tr><td class="name">ClearCurrentTargetAfterDispatch</td><td><pre> Set currentTarget to null after dispatch for EventTarget.
  This was added in M142 and can be removed after M144.
@@ -3494,7 +3493,7 @@
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>Updated</strong>: 2026-06-08. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
+        <strong>Updated</strong>: 2026-06-09. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
       </p>
     </div>
   </footer>
