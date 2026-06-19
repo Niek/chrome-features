@@ -155,7 +155,8 @@
  TODO(crbug.com/440039204): Remove when launched.</pre></td><td>❌</td></tr><tr><td class="name">AutofillDoNotUpdateAutofillAvailabilityOnFocusEvents</td><td><pre> If enabled, autofill availability event will not be updated in
  BrowserAutofillManager::OnFocusOnFormField().</pre></td><td>✅</td></tr><tr><td class="name">AutofillEnableAblationStudy</td><td><pre> Controls an ablation study in which autofill for addresses and payment data
  can be suppressed.</pre></td><td>❌</td></tr><tr><td class="name">AutofillEnableAddressFieldParserNG</td><td><pre> Enables a new implementation for address field parsing that is based on
- backtracking.</pre></td><td>❌</td></tr><tr><td class="name">AutofillEnableCacheForRegexMatching</td><td><pre> When enabled, FormFieldParser::MatchesRegexWithCache tries to avoid
+ backtracking.</pre></td><td>❌</td></tr><tr><td class="name">AutofillEnableAutofillSettingsEnterprisePolicy</td><td><pre> When enabled, Autofill will support per domain and per data type enterprise
+ policy.</pre></td><td>❌</td></tr><tr><td class="name">AutofillEnableCacheForRegexMatching</td><td><pre> When enabled, FormFieldParser::MatchesRegexWithCache tries to avoid
  re-computing whether a regex matches an input string by caching the result.
  The result size is controlled by
  kAutofillEnableCacheForRegexMatchingCacheSizeParam.</pre></td><td>✅</td></tr><tr><td class="name">AutofillEnableDeduplicationOnBackgroundThread</td><td><pre> Controls whether the deduplication process for Autofill profiles is run on a
@@ -760,7 +761,7 @@
  features.
  TODO(bbudge): Remove when the deprecation is complete.
  <a href="https://developer.chrome.com/origintrials/#/view_trial/303992974847508481">https://developer.chrome.com/origintrials/#/view_trial/303992974847508481</a>
- <a href="https://crbug.com/1144104">https://crbug.com/1144104</a></pre></td><td>❌</td></tr><tr><td class="name">UnrestrictSpellingAndGrammarForTesting</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">UnthrottleAsyncTouchMoves</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">UpdatedDeviceMemoryLimitsFor2026</td><td><pre> Fix for <a href="https://crbug.com/454354290">https://crbug.com/454354290</a>.</pre></td><td>✅</td></tr><tr><td class="name">UrgentMainFrameForInput</td><td><pre> When BeginMainFrame() is throttled, whether input-related BeginMainFrame()s
+ <a href="https://crbug.com/1144104">https://crbug.com/1144104</a></pre></td><td>❌</td></tr><tr><td class="name">UnrestrictSpellingAndGrammarForTesting</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">UnthrottleAsyncTouchMoves</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">UpdatedDeviceMemoryLimitsFor2026</td><td><pre> Fix for <a href="https://crbug.com/454354290">https://crbug.com/454354290</a>.</pre></td><td>✅</td></tr><tr><td class="name">UrgentMainFrameForInput</td><td><pre> When BeginMainFrame() is throttled, whether input-related BeginMainFrame()s
  are marked urgent, and thus unthtrottled.
 
  Enabled on Android, since a field trial showed benefits.</pre></td><td>❌</td></tr><tr><td class="name">URLPatternDummyURLCanonicalization</td><td><pre> If enabled, URLPattern will use standard defined dummy URL canonicalization
@@ -1171,7 +1172,8 @@
  This landed partly in M146 and more in M150 and can be removed in M152.</pre></td><td>✅</td></tr><tr><td class="name">DragAndDropJSFileObjects</td><td><pre> Enables JS-constructed File objects (e.g. new File([bytes], &#039;photo.jpg&#039;))
  to carry their blob contents through the drag-and-drop pipeline.
  When disabled, only the filename is sent as text/plain (legacy behavior).</pre></td><td>❌</td></tr><tr><td class="name">DumpForAbsentKeyframeSnapshots</td><td><pre> See: crrev.com/c/7874048
- Diagnostic flag to gather data for a case when compositable animations lack snapshots without a known reason.</pre></td><td>❌</td></tr><tr><td class="name">EditContextAssignmentAsPerSpec</td><td><pre> See <a href="https://crbug.com/443612843">https://crbug.com/443612843</a></pre></td><td>❌</td></tr><tr><td class="name">EditContextHandleTextOrSelectionUpdateDuringComposition</td><td><pre> See <a href="https://crbug.com/379170477">https://crbug.com/379170477</a></pre></td><td>❌</td></tr><tr><td class="name">EditingLineMovementWithRubyFix</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">EditingUseDomPositionApi</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ElasticOverscrollUseEventDeltaForAxisSelection</td><td><pre> Uses the original event delta to choose the initial elastic overscroll
+ Diagnostic flag to gather data for a case when compositable animations lack snapshots without a known reason.</pre></td><td>❌</td></tr><tr><td class="name">EditContextAssignmentAsPerSpec</td><td><pre> See <a href="https://crbug.com/443612843">https://crbug.com/443612843</a></pre></td><td>❌</td></tr><tr><td class="name">EditContextHandleTextOrSelectionUpdateDuringComposition</td><td><pre> See <a href="https://crbug.com/379170477">https://crbug.com/379170477</a></pre></td><td>❌</td></tr><tr><td class="name">EditingLineMovementWithRubyFix</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">EditingUseDomPositionApi</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ElasticOverscrollBackgroundPaintLocationFix</td><td><pre> Elastic overscroll requires even solid color background to be painted
+ in the border box space to ensure they aren&#039;t shifted away.</pre></td><td>✅</td></tr><tr><td class="name">ElasticOverscrollUseEventDeltaForAxisSelection</td><td><pre> Uses the original event delta to choose the initial elastic overscroll
  axis.</pre></td><td>✅</td></tr><tr><td class="name">ElementCapture</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ElementInnerTextHandleFirstLineStyle</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ElementInternalsBehaviors</td><td><pre> ElementInternals.behaviors allows web authors to attach
  platform-provided behaviors to custom elements, enabling
  them to adopt native behaviors without extending native
@@ -1180,7 +1182,8 @@
  <a href="https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/main/PlatformProvidedBehaviors/explainer.md">https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/main/PlatformProvidedBehaviors/explainer.md</a></pre></td><td>❌</td></tr><tr><td class="name">ElementMatchContainer</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ElementSpecificReadOnlyConstraintValidation</td><td><pre> When enabled, the readonly attribute will prevent constraint validation
  only in some cases, depending on the element.
  This was added in M147 and can be removed after M149.
- <a href="https://issues.chromium.org/issues/486228104">https://issues.chromium.org/issues/486228104</a></pre></td><td>✅</td></tr><tr><td class="name">EmailVerificationProtocol</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">EmojiMonochromeRendering</td><td><pre> crbug.com/420857717</pre></td><td>✅</td></tr><tr><td class="name">EndpointInclusiveCommitStyles</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">EnforceAnonymityExposure</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">EnterInOpenShadowRoots</td><td><pre> See: crbug.com/40771555</pre></td><td>✅</td></tr><tr><td class="name">EntropyIgnoredForFirstVideoFrameLCP</td><td><pre> When enabled, the LCP algorithm ignores image entropy for the first
+ <a href="https://issues.chromium.org/issues/486228104">https://issues.chromium.org/issues/486228104</a></pre></td><td>✅</td></tr><tr><td class="name">EmailVerificationProtocol</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">EmbeddedContentCenterAlignBaseline</td><td><pre> This was added in M151 and can be removed after M153.
+ <a href="https://issues.chromium.org/issues/525074815">https://issues.chromium.org/issues/525074815</a></pre></td><td>✅</td></tr><tr><td class="name">EmojiMonochromeRendering</td><td><pre> crbug.com/420857717</pre></td><td>✅</td></tr><tr><td class="name">EndpointInclusiveCommitStyles</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">EnforceAnonymityExposure</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">EnterInOpenShadowRoots</td><td><pre> See: crbug.com/40771555</pre></td><td>✅</td></tr><tr><td class="name">EntropyIgnoredForFirstVideoFrameLCP</td><td><pre> When enabled, the LCP algorithm ignores image entropy for the first
  video frame. See crbug.com/434659232.</pre></td><td>❌</td></tr><tr><td class="name">EventPseudoTargetProperty</td><td><pre> <code>event.pseudoTarget</code> property to represent pseudo-elements in events. Returns <code>CSSPseudoElement</code> or null.</pre></td><td>✅</td></tr><tr><td class="name">EventTimingInteractionCount</td><td><pre> Kill-switch for <a href="https://chromestatus.com/feature/5153386492198912">https://chromestatus.com/feature/5153386492198912</a>
  Added in M144, can be removed in M146.</pre></td><td>✅</td></tr><tr><td class="name">EventTimingTargetSelector</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">EventTrigger</td><td><pre> <a href="https://drafts.csswg.org/web-animations-2/#triggers">https://drafts.csswg.org/web-animations-2/#triggers</a></pre></td><td>❌</td></tr><tr><td class="name">ExperimentalContentSecurityPolicyFeatures</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ExperimentalJSProfilerMarkers</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ExperimentalMachineLearningNeuralNetwork</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ExperimentalPolicies</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ExposeCSSFontFeatureValuesRule</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ExposeRenderTimeNonTaoDelayedImage</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ExtendedTextMetrics</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ExternalPopupMenuClickEvent</td><td><pre> Kill-switch for crbug.com/40434449.
  Added in M139, and it can be removed in M141.</pre></td><td>✅</td></tr><tr><td class="name">EyeDropperAPI</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FaceDetector</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FastPositionIterator</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FedCm</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FedCmAutofill</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FedCmDelegation</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FedCmErrorAttribute</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FedCmIdPRegistration</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FedCmLightweightMode</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FedCmMultipleIdentityProviders</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FedCmNavigationInterception</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FedCmNonStringToken</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FencedFrames</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FencedFramesAPIChanges</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FencedFramesDefaultMode</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FencedFramesLocalUnpartitionedDataAccess</td><td><pre> Allows fenced frames to access unpartioned data via Shared Storage in
@@ -1500,7 +1503,8 @@
  cloning the contents for each option which is selected into the
  &lt;selectedcontent&gt; element.
  <a href="https://issues.chromium.org/issues/483769482">https://issues.chromium.org/issues/483769482</a></pre></td><td>❌</td></tr><tr><td class="name">SelectedcontentSpec</td><td><pre> Aligns the implementation of the &lt;selectedcontent&gt; element with the
- HTML spec. <a href="https://issues.chromium.org/issues/458113204">https://issues.chromium.org/issues/458113204</a></pre></td><td>❌</td></tr><tr><td class="name">SelectionAndFocusedVisiblePositionMatch</td><td><pre> See <a href="https://crbug.com/40664519">https://crbug.com/40664519</a>
+ HTML spec. <a href="https://issues.chromium.org/issues/458113204">https://issues.chromium.org/issues/458113204</a>
+ Enabled in M151, safe to remove in M153.</pre></td><td>✅</td></tr><tr><td class="name">SelectionAndFocusedVisiblePositionMatch</td><td><pre> See <a href="https://crbug.com/40664519">https://crbug.com/40664519</a>
  Disabled due to UI freeze issues, see <a href="https://crbug.com/448833953">https://crbug.com/448833953</a>.</pre></td><td>❌</td></tr><tr><td class="name">SelectionCollapsedDirectionNone</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SelectionFocusAffinity</td><td><pre> Fixes selection focus affinity at soft wrap boundaries. When the focus
  of a range selection is at a soft wrap boundary (a DOM offset shared by
  two visual lines), this ensures the correct affinity is used based on
@@ -1659,7 +1663,7 @@
  supporting APIs, see runtime_features.cc.</pre></td><td>✅</td></tr><tr><td class="name">WebAuthAuthenticatorAttachment</td><td><pre> When enabled adds the authenticator attachment used for registration and
  authentication to the public key credential response.</pre></td><td>❌</td></tr><tr><td class="name">WebAuthenticationAmbient</td><td><pre> Prototyping <a href="https://github.com/w3c/webauthn/issues/2144">https://github.com/w3c/webauthn/issues/2144</a></pre></td><td>❌</td></tr><tr><td class="name">WebAuthenticationAttestationFormats</td><td><pre> <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-attestationformats">https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-attestationformats</a></pre></td><td>❌</td></tr><tr><td class="name">WebAuthenticationCmtgKey</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebAuthenticationCrossDeviceFallbackUrl</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebAuthenticationImmediateGet</td><td><pre> Enables <code>uiMode</code> enumeration field in CredentialRequestOptions struct.
  and <code>get()</code> requests with <code>uiMode: &amp;#039;immediate&amp;#039;</code>.
- See <a href="https://github.com/w3c/webauthn/issues/2228">https://github.com/w3c/webauthn/issues/2228</a>.</pre></td><td>❌</td></tr><tr><td class="name">WebAuthenticationRemoteDesktopSupport</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebAuthenticationSupplementalPubKeys</td><td><pre> <a href="https://w3c.github.io/webauthn/#sctn-supplemental-public-keys-extension">https://w3c.github.io/webauthn/#sctn-supplemental-public-keys-extension</a></pre></td><td>❌</td></tr><tr><td class="name">WebBluetooth</td><td><pre> WebBluetooth is enabled by default on Android, ChromeOS, iOS, macOS and
+ See <a href="https://github.com/w3c/webauthn/issues/2228">https://github.com/w3c/webauthn/issues/2228</a>.</pre></td><td>❌</td></tr><tr><td class="name">WebAuthenticationRemoteDesktopSupport</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebBluetooth</td><td><pre> WebBluetooth is enabled by default on Android, ChromeOS, iOS, macOS and
  Windows.</pre></td><td>❌</td></tr><tr><td class="name">WebBluetoothGetDevices</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebBluetoothScanning</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebBluetoothWatchAdvertisements</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebCodecsVideoEncoderBuffers</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebCryptoPQC</td><td><pre> Adding post-quantum algorithms (ML-DSA, ML-KEM) to WebCrypto.
  Also adding ChaCha20-Poly1305 while we&#039;re at it.
 
@@ -3245,10 +3249,7 @@
     },
     "tab_group_saves_ui_update_migrated": "",
     "tab_search": {
-        "is_right_aligned": "",
-        "pinned_to_tabstrip": "",
-        "pinned_to_tabstrip_migration_complete": "",
-        "pinned_to_tabstrip_migration_complete_2": ""
+        "pinned_to_tabstrip": ""
     },
     "tab_stats": {
         "discards_external": "",
@@ -3283,8 +3284,7 @@
         "pinned_cast_migration_complete": "",
         "pinned_chrome_labs_migration_complete": "",
         "pinned_search_companion_migration_complete": "",
-        "tabs_from_other_devices_auto_pinned_migration": "",
-        "tab_search_migration_complete": ""
+        "tabs_from_other_devices_auto_pinned_migration": ""
     },
     "total_memory_limit_mb": "",
     "total_passwords_available_for_account": "",
@@ -3534,7 +3534,7 @@
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>Updated</strong>: 2026-06-18. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
+        <strong>Updated</strong>: 2026-06-19. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
       </p>
     </div>
   </footer>
