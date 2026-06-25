@@ -336,7 +336,7 @@
  TODO(crbug.com/40246079): hardware AV1 encoding should be added.</pre></td><td>❌</td></tr><tr><td class="name">CastStreamingExponentialVideoBitrateAlgorithm</td><td><pre> Controls whether the new exponential bitrate calculate logic is used, or
  the legacy linear algorithm.
  TODO(crbug.com/302584587): This is the V2 implementation of this experiment,
- following the failure of the initial experiment.</pre></td><td>❌</td></tr><tr><td class="name">CastStreamingHardwareHevc</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CastStreamingPerformanceOverlay</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CastStreamingVp8</td><td><pre> Controls whether mirroring negotiations will include the VP9 codec for video
+ following the failure of the initial experiment.</pre></td><td>❌</td></tr><tr><td class="name">CastStreamingHardwareHevc</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CastStreamingMaxVideoBitrate</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">CastStreamingPerformanceOverlay</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CastStreamingVp8</td><td><pre> Controls whether mirroring negotiations will include the VP9 codec for video
  encoding.
 
  NOTE: this is the default codec for Cast Streaming. Be careful when
@@ -855,7 +855,7 @@
  <a href="http://crbug.com/878465">http://crbug.com/878465</a></pre></td><td>✅</td></tr><tr><td class="name">WebRtcIgnoreUnspecifiedColorSpace</td><td><pre> Causes WebRTC to not set the color space of video frames on the receive side
  in case it&#039;s unspecified. Otherwise we will guess that the color space is
  BT709. <a href="http://crbug.com/1129243">http://crbug.com/1129243</a></pre></td><td>❌</td></tr><tr><td class="name">WebrtcMediaCapabilitiesParameters</td><td><pre> Used to set a few tunable parameters for the WebRTC Media Capabilities
- implementation.</pre></td><td>✅</td></tr><tr><td class="name">WebRtcPqcForDtls</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebRtcUseCaptureBeginTimestamp</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebRtcUseMediaThreadTypes</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebRtcUseMinMaxVEADimensions</td><td><pre> Instructs WebRTC to honor the Min/Max Video Encode Accelerator dimensions.</pre></td><td>❌</td></tr><tr><td class="name">WebUIBundledCodeCache</td><td><pre> Enables build-time generated resource-bundled code caches for WebUI pages.
+ implementation.</pre></td><td>✅</td></tr><tr><td class="name">WebRtcPqcForDtls</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebRtcUseCaptureBeginTimestamp</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebRtcUseMediaThreadTypes</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebRtcUseMinMaxVEADimensions</td><td><pre> Instructs WebRTC to honor the Min/Max Video Encode Accelerator dimensions.</pre></td><td>❌</td></tr><tr><td class="name">WebRtcVoiceIsolationDenoiser</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebUIBundledCodeCache</td><td><pre> Enables build-time generated resource-bundled code caches for WebUI pages.
  See crbug.com/375509504 for details.</pre></td><td>❌</td></tr><tr><td class="name">WebUICodeCache</td><td><pre> Enables code caching for scripts used on WebUI pages.</pre></td><td>❌</td></tr><tr><td class="name">WebUIInProcessResourceLoadingV2</td><td><pre> If enabled, WebUI will optimize resources loading by piping a dictionary of
  URL paths to materialized WebUI resource content to the renderer via
  LocalResourceLoaderConfig.
@@ -940,7 +940,9 @@
  <a href="https://html.spec.whatwg.org/multipage/interaction.html#autocorrection">https://html.spec.whatwg.org/multipage/interaction.html#autocorrection</a></pre></td><td>❌</td></tr><tr><td class="name">AutoDarkMode</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">AutoDarkModeSkipImages</td><td><pre> When enabled, the dark mode filter (Auto Dark / force-dark) skips
  applying dark mode to images entirely; all images are kept untouched
  as if they are in light mode.
- P.N. <code>AutoDarkMode</code> needs to be applied separately.</pre></td><td>❌</td></tr><tr><td class="name">Autofill</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">AutofillEvent</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">AutomationControlled</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">AutoPictureInPictureVideoHeuristics</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">AutoSizeUsesScrollWidthForOverflow</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">AvoidMergingStyledSpanWithSiblings</td><td><pre> Fix for <a href="https://crbug.com/471876082">https://crbug.com/471876082</a></pre></td><td>✅</td></tr><tr><td class="name">AvoidNormalizingVisiblePositionsWhenStartEqualsEnd</td><td><pre> If the start and end positions are the same in MoveParagraph,
+ P.N. <code>AutoDarkMode</code> needs to be applied separately.</pre></td><td>❌</td></tr><tr><td class="name">Autofill</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">AutofillEvent</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">AutofillPreviewGenericFontFamily</td><td><pre> Pins a generic font-family on the autofill preview pseudo-elements so
+ an author @font-face cannot oracle the previewed text.
+ crbug.com/517710554.</pre></td><td>✅</td></tr><tr><td class="name">AutomationControlled</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">AutoPictureInPictureVideoHeuristics</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">AutoSizeUsesScrollWidthForOverflow</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">AvoidMergingStyledSpanWithSiblings</td><td><pre> Fix for <a href="https://crbug.com/471876082">https://crbug.com/471876082</a></pre></td><td>✅</td></tr><tr><td class="name">AvoidNormalizingVisiblePositionsWhenStartEqualsEnd</td><td><pre> If the start and end positions are the same in MoveParagraph,
  there is no need to collapse the whitespace between them.
  <a href="https://crbug.com/406053617">https://crbug.com/406053617</a></pre></td><td>✅</td></tr><tr><td class="name">BackfaceVisibilityInterop</td><td><pre> When enabled, enforces new interoperable semantics for 3D transforms.
  See crbug.com/1008483.</pre></td><td>❌</td></tr><tr><td class="name">BackForwardCache</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">BackForwardCacheExperimentHTTPHeader</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">BackForwardCacheNotRestoredReasons</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">BackForwardCacheRestorationPerformanceEntry</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">BackForwardCacheUpdateNotRestoredReasonsName</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">BackgroundClipTextDecoration</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">BackgroundFetch</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">BackgroundPageFreezeOptOut</td><td><pre> A developer opt-out for background page freezing.</pre></td><td>❌</td></tr><tr><td class="name">BarcodeDetector</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">BaseAppearanceInlineSizing</td><td><pre> Removes special layout code from customizable select which was
@@ -1014,7 +1016,7 @@
  dispatching.
  This was added in M142 and can be removed after M144.
  <a href="https://issues.chromium.org/issues/444932649">https://issues.chromium.org/issues/444932649</a>
- <a href="https://issues.chromium.org/issues/346766786">https://issues.chromium.org/issues/346766786</a></pre></td><td>✅</td></tr><tr><td class="name">CompositeBGColorAnimation</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">CompositeBoxShadowAnimation</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CompositeClipPathAnimation</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CompositedAnimationsCancelledAsynchronously</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">CompositedSelectionUpdate</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CompositingDecisionAtAnimationPhaseBoundaries</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CompositionForegroundMarkers</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CompositorEventTrigger</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CompositorTimelineTrigger</td><td><pre> When enabled, TimelineTriggers[1] will function via cc::TimelineTrigger
+ <a href="https://issues.chromium.org/issues/346766786">https://issues.chromium.org/issues/346766786</a></pre></td><td>✅</td></tr><tr><td class="name">CompositeBGColorAnimation</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">CompositeBoxShadowAnimation</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CompositeClipPathAnimation</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CompositedSelectionUpdate</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CompositingDecisionAtAnimationPhaseBoundaries</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CompositionForegroundMarkers</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CompositorEventTrigger</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CompositorTimelineTrigger</td><td><pre> When enabled, TimelineTriggers[1] will function via cc::TimelineTrigger
  objects that live on the compositor thread.
  [1] <a href="https://drafts.csswg.org/css-animations-2/#timeline-triggers">https://drafts.csswg.org/css-animations-2/#timeline-triggers</a></pre></td><td>✅</td></tr><tr><td class="name">CompressionDictionaryTransport</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ComputedAccessibilityInfo</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ComputeInlineContentsSafeRetarget</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ComputePressure</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ConcurrentNativePaintWorklets</td><td><pre> If enabled, allow concurrent animations via native paint worklets to
  run on the compositor thread.</pre></td><td>❌</td></tr><tr><td class="name">ConnectionAllowlist</td><td><pre> When enabled, providing developers control over the resources loaded
@@ -1303,7 +1305,11 @@
  inside &lt;select&gt; but only if there is another open tag in between the
  &lt;input&gt; and the &lt;select&gt;, like &lt;select&gt;&lt;div&gt;&lt;input&gt;.
  For now, this flag also makes &lt;input&gt; close &lt;select&gt; like it used to
- when the &lt;input&gt; is put directly within an &lt;option&gt; or &lt;optgroup&gt;.</pre></td><td>❌</td></tr><tr><td class="name">InputMultipleFieldsUI</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">InsertBlockquoteBeforeOuterBlock</td><td><pre> Insert a blockquote before a outer block after creating the blockquote
+ when the &lt;input&gt; is put directly within an &lt;option&gt; or &lt;optgroup&gt;.</pre></td><td>❌</td></tr><tr><td class="name">InputMultipleFieldsUI</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">InputTypeColorEnhancements</td><td><pre> Enables the <code>alpha</code> and <code>colorspace</code> content/IDL attributes on
+ &lt;input type=color&gt;, allowing alpha and Display P3 color values.
+ <a href="https://html.spec.whatwg.org/multipage/input.html#dom-input-colorspace">https://html.spec.whatwg.org/multipage/input.html#dom-input-colorspace</a>
+ <a href="https://html.spec.whatwg.org/multipage/input.html#dom-input-alpha">https://html.spec.whatwg.org/multipage/input.html#dom-input-alpha</a>
+ <a href="https://chromestatus.com/feature/5736024861966336">https://chromestatus.com/feature/5736024861966336</a></pre></td><td>❌</td></tr><tr><td class="name">InsertBlockquoteBeforeOuterBlock</td><td><pre> Insert a blockquote before a outer block after creating the blockquote
  when indenting a node whose outer block is a blockquote. See
  <a href="https://crbug.com/327665597">https://crbug.com/327665597</a></pre></td><td>✅</td></tr><tr><td class="name">InstalledApp</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">InstallElement</td><td><pre> <a href="https://chromestatus.com/feature/5152834368700416">https://chromestatus.com/feature/5152834368700416</a></pre></td><td>❌</td></tr><tr><td class="name">InstallOnDeviceSpeechRecognition</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">IntegrityPolicyScript</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">InterestEventsNonComposed</td><td><pre> Fixes a bug in the implementation of <code>interest</code> and <code>loseinterest</code>
  events - they should not be composed events.
@@ -1329,10 +1335,7 @@
  bugs for touch inputs.
  <a href="https://issues.chromium.org/issues/408010435">https://issues.chromium.org/issues/408010435</a></pre></td><td>❌</td></tr><tr><td class="name">LineBreakAfterSpaceBeforeOpenTag</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ListOwnerMustHaveCSSBox</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">LocalNetworkAccessNonSecureContextAllowed</td><td><pre> Reverse origin trial allowing Local Network Access requests on
  non-secure contexts (but still requiring a permission grant from the
- user).</pre></td><td>❌</td></tr><tr><td class="name">LocalNetworkAccessPermissionPolicy</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">LocalNetworkAccessWebRTC</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">LockedMode</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">LogicalStartOfLineBlockFallback</td><td><pre> When the start-of-line position cannot be determined (e.g., because
- the caret is in an empty inline element with no layout information),
- fall back to the start of the enclosing block rather than the start
- of the entire editable root. See <a href="https://crbug.com/41053053">https://crbug.com/41053053</a>.</pre></td><td>✅</td></tr><tr><td class="name">LoginElement</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">LongAnimationFrameSourceCharPosition</td><td><pre> Enable sourceCharPosition for the invoke-type resolve-promise
+ user).</pre></td><td>❌</td></tr><tr><td class="name">LocalNetworkAccessPermissionPolicy</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">LocalNetworkAccessWebRTC</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">LockedMode</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">LoginElement</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">LongAnimationFrameSourceCharPosition</td><td><pre> Enable sourceCharPosition for the invoke-type resolve-promise
  <a href="https://issues.chromium.org/issues/381529126">https://issues.chromium.org/issues/381529126</a></pre></td><td>✅</td></tr><tr><td class="name">LongAnimationFrameSourceLineColumn</td><td><pre> Enable retrieving sourceLine and sourceColumn in LoAF implementation.
  <a href="https://issues.chromium.org/issues/391417815">https://issues.chromium.org/issues/391417815</a></pre></td><td>❌</td></tr><tr><td class="name">LongAnimationFrameSourceLineColumnInterface</td><td><pre> Add sourceLine and sourceColumn to PerformanceScriptTiming
  <a href="https://issues.chromium.org/issues/391417815">https://issues.chromium.org/issues/391417815</a></pre></td><td>❌</td></tr><tr><td class="name">LongAnimationFrameStyleDuration</td><td><pre> Add styleDuration and layoutDuration to
@@ -1555,11 +1558,7 @@
  getting stuck or moving into the non-editable content.</pre></td><td>✅</td></tr><tr><td class="name">SkipOofItemForBreakCandidate</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SkipParagraphSplitForInlineInsertHTML</td><td><pre> Skips paragraph split in insertHTML when the fragment contains only
  inline content, preventing inline elements from being inserted
  outside their containing block.
- See <a href="https://crbug.com/41024699">https://crbug.com/41024699</a>.</pre></td><td>✅</td></tr><tr><td class="name">SkipPseudoOnlyLinesInLineNavigation</td><td><pre> Skip lines that contain only pseudo-element content (like ::before
- or ::after) when determining valid caret positions for line
- navigation. Pseudo-elements don&#039;t have DOM nodes for caret positioning,
- so including them caused incorrect selection behavior.
- See crbug.com/357889508</pre></td><td>✅</td></tr><tr><td class="name">SkipTouchEventFilter</td><td><pre> Skips the browser touch event filter, ensuring that events that reach
+ See <a href="https://crbug.com/41024699">https://crbug.com/41024699</a>.</pre></td><td>✅</td></tr><tr><td class="name">SkipTouchEventFilter</td><td><pre> Skips the browser touch event filter, ensuring that events that reach
  the queue and would otherwise be filtered out will instead be passed
  onto the renderer compositor process as long as the page hasn&#039;t timed
  out. If skip_filtering_process is browser_and_renderer, also skip the
@@ -1598,7 +1597,7 @@
  subtable in system emoji fonts on various platforms.
  This should be eventually removed when the custom emoji font
  is shipped with Chrome or when system emoji fonts will have
- cmap format 14 subtable.</pre></td><td>✅</td></tr><tr><td class="name">SystemWakeLock</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">TableBorderColorNoImplicitBorder</td><td><pre> Don&#039;t trigger table border rendering with only bordercolor attribute.
+ cmap format 14 subtable.</pre></td><td>✅</td></tr><tr><td class="name">SystemWakeLock</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">TabAlignmentWithFloats</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">TableBorderColorNoImplicitBorder</td><td><pre> Don&#039;t trigger table border rendering with only bordercolor attribute.
  This shipped in M146 and can be removed in M148.</pre></td><td>✅</td></tr><tr><td class="name">TableDefaultBorderColorCurrentColor</td><td><pre> Remove &lt;table&gt;&#039;s explicit <code>border-color: gray</code> UA stylesheet rule,
  since it is non-standard. See crbug.com/494554835.
  This shipped in M149, and can be removed in M151.</pre></td><td>✅</td></tr><tr><td class="name">TableIsAutoFixedLayout</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">TabSizeAncestor</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">TabSizeWithSpacing</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">TargetInShadowDeterminedBeforeListener</td><td><pre> When checking the shadow tree during invoke(),
@@ -1609,7 +1608,8 @@
  This is for testing copied_from_base_feature_if.
  This is set in base/test/test_suite.cc.</pre></td><td>❌</td></tr><tr><td class="name">TestFeature</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">TestFeatureDependent</td><td><pre> For unit tests.</pre></td><td>❌</td></tr><tr><td class="name">TestFeatureForBrowserProcessReadWriteAccessOriginTrial</td><td><pre> This is a feature used for testing what happens when an origin trial
  feature has browser-process read/write access. It should never be used
- in production code.</pre></td><td>❌</td></tr><tr><td class="name">TestFeatureImplied</td><td><pre> For unit tests.</pre></td><td>❌</td></tr><tr><td class="name">TestFeatureProtected</td><td><pre> For unit tests.</pre></td><td>❌</td></tr><tr><td class="name">TestFeatureProtectedDependent</td><td><pre> For unit tests.</pre></td><td>❌</td></tr><tr><td class="name">TestFeatureProtectedImplied</td><td><pre> For unit tests.</pre></td><td>❌</td></tr><tr><td class="name">TestFeatureStable</td><td><pre> For unit tests.</pre></td><td>✅</td></tr><tr><td class="name">TextAreaEmptyPlaceholderBreak</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">TextAreaScrollTopPreview</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">TextBoxTrimForNestedList</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">TextDetector</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">TextEmphasisAsRuby</td><td><pre> crbug.com/522298908</pre></td><td>❌</td></tr><tr><td class="name">TextEmphasisLetterSpacing</td><td><pre> crbug.com/40812040</pre></td><td>✅</td></tr><tr><td class="name">TextEmphasisPositionAuto</td><td><pre> crbug.com/368657256</pre></td><td>❌</td></tr><tr><td class="name">TextEmphasisPunctuationExceptions</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">TextEmphasisWithRuby</td><td><pre> crbug.com/442481227</pre></td><td>✅</td></tr><tr><td class="name">TextFragmentAPI</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">TextFragmentIdentifiers</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">TextFragmentTapOpensContextMenu</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">TextMetricsBaselines</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">TextOverflowClipWithSelection</td><td><pre> When enabled, text-overflow ellipsis is clipped when
+ in production code.</pre></td><td>❌</td></tr><tr><td class="name">TestFeatureImplied</td><td><pre> For unit tests.</pre></td><td>❌</td></tr><tr><td class="name">TestFeatureProtected</td><td><pre> For unit tests.</pre></td><td>❌</td></tr><tr><td class="name">TestFeatureProtectedDependent</td><td><pre> For unit tests.</pre></td><td>❌</td></tr><tr><td class="name">TestFeatureProtectedImplied</td><td><pre> For unit tests.</pre></td><td>❌</td></tr><tr><td class="name">TestFeatureStable</td><td><pre> For unit tests.</pre></td><td>✅</td></tr><tr><td class="name">TextAreaEmptyPlaceholderBreak</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">TextAreaScrollTopPreview</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">TextAutoSpaceIgnoreRubyAnnotation</td><td><pre> crbug.com/523134883: Ignore ruby annotation text when computing
+ text-autospace boundaries.</pre></td><td>✅</td></tr><tr><td class="name">TextBoxTrimForNestedList</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">TextDetector</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">TextEmphasisAsRuby</td><td><pre> crbug.com/488458870, crbug.com/522298908, and crbug.com/522298908</pre></td><td>✅</td></tr><tr><td class="name">TextEmphasisLetterSpacing</td><td><pre> crbug.com/40812040</pre></td><td>✅</td></tr><tr><td class="name">TextEmphasisPositionAuto</td><td><pre> crbug.com/368657256</pre></td><td>❌</td></tr><tr><td class="name">TextEmphasisPunctuationExceptions</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">TextEmphasisWithRuby</td><td><pre> crbug.com/442481227</pre></td><td>✅</td></tr><tr><td class="name">TextFragmentAPI</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">TextFragmentIdentifiers</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">TextFragmentTapOpensContextMenu</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">TextMetricsBaselines</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">TextOverflowClipWithSelection</td><td><pre> When enabled, text-overflow ellipsis is clipped when
  selection focus is inside the element, revealing the full text content.
  See <a href="https://crbug.com/40731275">https://crbug.com/40731275</a></pre></td><td>❌</td></tr><tr><td class="name">TextOverflowString</td><td><pre> <a href="https://crbug.com/41492459">https://crbug.com/41492459</a></pre></td><td>❌</td></tr><tr><td class="name">TextScaleMetaTag</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">TextSpacingTrimFallback</td><td><pre> crbug.com/431660829</pre></td><td>✅</td></tr><tr><td class="name">TextSpacingTrimFallback2</td><td><pre> crbug.com/431660829</pre></td><td>❌</td></tr><tr><td class="name">TextSpacingTrimFallbackChws</td><td><pre> crbug.com/440947112</pre></td><td>✅</td></tr><tr><td class="name">TextStreamMethod</td><td><pre> crbug.com/514448226</pre></td><td>✅</td></tr><tr><td class="name">ThrottledHistoryAPIThrowsSecurityError</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">TimelineTrigger</td><td><pre> <a href="https://drafts.csswg.org/web-animations-2/#triggers">https://drafts.csswg.org/web-animations-2/#triggers</a></pre></td><td>✅</td></tr><tr><td class="name">TimerThrottlingForBackgroundTabs</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">TimestampBasedCLSTracking</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">TimeZoneChangeEvent</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">TopicsAPI</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">TopicsDocumentAPI</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">TopicsImgAPI</td><td><pre> This feature allows calling the Topics API via an image
  attribute.</pre></td><td>❌</td></tr><tr><td class="name">TouchDragAndContextMenu</td><td><pre> This feature allows touch dragging and a context menu to occur
@@ -1707,7 +1707,7 @@
  on a worker thread.</pre></td><td>❌</td></tr><tr><td class="name">WebUSB</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebUSBOnDedicatedWorkers</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebUSBOnServiceWorkers</td><td><pre> It is only enabled in extension environment for now.</pre></td><td>❌</td></tr><tr><td class="name">WebViewEnvReorderFix</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebVTTRegions</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebXR</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebXREnabledFeatures</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebXRFrameRate</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebXRFrontFacing</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebXRGPUBinding</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebXRHitTestEntityTypes</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebXRImageTracking</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebXRLayers</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebXRLayersCommon</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebXRMediaBinding</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebXRMeshDetection</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebXRPlaneDetection</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebXRPoseMotionData</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebXRSpecParity</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebXRVisibilityMask</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WheelEventMomentum</td><td><pre> Expose the momentum field in mouse wheel events that indicates whether an
  event is synthesized by the platform to simulate scroll inertia after the
  user has ended the physical scroll interaction.
- <a href="https://crbug.com/40704952">https://crbug.com/40704952</a></pre></td><td>❌</td></tr><tr><td class="name">WindowDefaultStatus</td><td><pre> If enabled, window.default[Ss]tatus will be supported. This is disabled
+ <a href="https://crbug.com/40704952">https://crbug.com/40704952</a></pre></td><td>✅</td></tr><tr><td class="name">WindowDefaultStatus</td><td><pre> If enabled, window.default[Ss]tatus will be supported. This is disabled
  by default, and is here to allow this behavior to be re-enabled via Finch
  in case of problems. This flag should be removed by Q1 2023, assuming
  no problems are encountered.</pre></td><td>❌</td></tr><tr><td class="name">WordSkipSpacesPunctuationFix</td><td><pre> Fixes an issue where Ctrl+Right Arrow skips punctuation before a newline.</pre></td><td>✅</td></tr><tr><td class="name">WordSpacingWhiteSpacePre</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">XMLNoExternalEntities</td><td><pre> Moving to the Rust parser requires deprecation of the niche feature
@@ -1716,7 +1716,7 @@
  no XSLT processing will be required. This covers usage of
  JS DOMParser API to parse XML, and usage of XMLHttpRequest
  with its responseXML document.
- <a href="https://crbug.com/466303347">https://crbug.com/466303347</a></pre></td><td>✅</td></tr><tr><td class="name">XMLSerializerConsistentDefaultNsDeclMatching</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">XPathShadowDOMSupport</td><td><pre> Support XPath evaluation within Shadow DOM.
+ <a href="https://crbug.com/466303347">https://crbug.com/466303347</a></pre></td><td>✅</td></tr><tr><td class="name">XMLSerializerConsistentDefaultNsDeclMatching</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">XMLViewerForIframes</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">XPathShadowDOMSupport</td><td><pre> Support XPath evaluation within Shadow DOM.
  This was added in M146 and can be removed after M148.</pre></td><td>✅</td></tr><tr><td class="name">XSLT</td><td><pre> A feature flag that controls whether XSLT is supported by the browser.
  The current default state is XSLT-enabled. Note that there is a Finch
  trial underway that sets this flag to false for pre-stable channels.
@@ -1839,6 +1839,10 @@
         "email_verification_enabled": "",
         "email_verification_state": "",
         "enabled": "",
+        "gmail_otp_filling": {
+            "activation_dismissal_timestamp": "",
+            "enabled": ""
+        },
         "has_seen_bnpl": "",
         "has_seen_iban": "",
         "home_metadata": "",
@@ -2475,8 +2479,7 @@
         "user_consent": "",
         "user_id": "",
         "user_metrics_logs": "",
-        "user_metrics_logs_metadata": "",
-        "user_reporting_level": ""
+        "user_metrics_logs_metadata": ""
     },
     "native_messaging": {
         "allowlist": "",
@@ -2599,7 +2602,8 @@
         "shown_count_history_scope_promo": "",
         "show_ai_mode_omnibox_button": "",
         "show_google_lens_shortcut": "",
-        "show_search_tools": ""
+        "show_search_tools": "",
+        "third_party_ai_chat_settings": ""
     },
     "on_device_translation": {
         "translate_kit_binary_path": "",
@@ -3554,7 +3558,7 @@
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>Updated</strong>: 2026-06-24. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
+        <strong>Updated</strong>: 2026-06-25. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
       </p>
     </div>
   </footer>
