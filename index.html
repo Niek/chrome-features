@@ -62,10 +62,7 @@
  context see: go/autofill-actor-mode-implementation</pre></td><td>✅</td></tr><tr><td class="name">AutofillActorRewriteCreditCardTriggerField</td><td><pre> Controls whether to rewrite the credit card trigger field to the first
  credit card number field in the same section.</pre></td><td>✅</td></tr><tr><td class="name">AutofillActorSuppressImport</td><td><pre> Controls whether all import tasks are suppressed when an Actor task is
  active on the tab in question. This also suppresses silent updates and
- saving to Autocomplete.</pre></td><td>❌</td></tr><tr><td class="name">AutofillAddOtherDatatypesPref</td><td><pre> When enabled, other Autofill AI data types are controlled by the
- autofillOtherDatatypesEnabled policy and extension API. Previously, these
- were controlled by autofillAddressesEnabled; consequently, Autofill AI no
- longer depends on address-based Autofill being enabled.</pre></td><td>❌</td></tr><tr><td class="name">AutofillAddressSuggestionsOnTyping</td><td><pre> Feature flag to control displaying of Autofill suggestions on
+ saving to Autocomplete.</pre></td><td>❌</td></tr><tr><td class="name">AutofillAddressSuggestionsOnTyping</td><td><pre> Feature flag to control displaying of Autofill suggestions on
  unclassified fields based on prefix matching. These suggestions are displayed
  after the user typed a certain number of characters that match some data
  stored in the user&#039;s profile.
@@ -201,10 +198,7 @@
  If enabled, checkboxes and radio buttons aren&#039;t extracted anymore.
  TODO(crbug.com/40283901): Remove once launched. Also remove
  - autofill::FormControlType::kInputCheckbox
- - autofill::FormControlType::kInputRadio</pre></td><td>✅</td></tr><tr><td class="name">AutofillImproveAddressFieldSwapping</td><td><pre> When enabled, address field swapping suggestions will not include a
- suggestion matching the field&#039;s current value. This decreases noises in the
- suggestion UI.
- TODO(crbug.com/381531027): Remove when launched.</pre></td><td>✅</td></tr><tr><td class="name">AutofillImprovePhoneFieldParser</td><td><pre> When enabled, a new grammar for phone numbers is considered and we get
+ - autofill::FormControlType::kInputRadio</pre></td><td>✅</td></tr><tr><td class="name">AutofillImprovePhoneFieldParser</td><td><pre> When enabled, a new grammar for phone numbers is considered and we get
  slightly better at detecting cases where the generic regex for
  PHONE_COUNTRY_CODE matches a field that should not actually be classified as
  such.</pre></td><td>✅</td></tr><tr><td class="name">AutofillImprovePhoneNumberRationalization</td><td><pre> When enabled, <code>(PHONE_HOME_COUNTRY_CODE, PHONE_HOME_WHOLE_NUMBER)</code> are
@@ -360,7 +354,7 @@
  createImageBitmap, which ignores the image orientation metadata of the source
  and renders the image as encoded.</pre></td><td>❌</td></tr><tr><td class="name">CSSFontComparisonFix</td><td><pre> Fix for CSS font comparison logic.</pre></td><td>✅</td></tr><tr><td class="name">D3D11VideoDecoderForceSingleTexture</td><td><pre> Forces D3D11VideoDecoder to use one decoder texture per picture buffer.
  Owner: media-gpu-team@chromium.org
- Expiry: When no longer needed for decode texture selection experiments.</pre></td><td>❌</td></tr><tr><td class="name">D3D11VideoDecoderUseSharedHandle</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DataURIMemoryCache</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">DataUrlWorkerOpaqueOrigin</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">DeclarativeCSSModulesUseDataURI</td><td><pre> When enabled, Declarative CSS Modules will generate a DataURI instead of a
+ Expiry: When no longer needed for decode texture selection experiments.</pre></td><td>❌</td></tr><tr><td class="name">D3D11VideoDecoderUseSharedHandle</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DataURIMemoryCache</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">DataUrlWorkerOpaqueOrigin</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">DebugTopChromeWebUI</td><td><pre> Allows loading Top Chrome Webium.</pre></td><td>❌</td></tr><tr><td class="name">DeclarativeCSSModulesUseDataURI</td><td><pre> When enabled, Declarative CSS Modules will generate a DataURI instead of a
  Blob URL in the generated Import Map.</pre></td><td>❌</td></tr><tr><td class="name">DedicatedMediaServiceThread</td><td><pre> Runs the media service in the GPU process on a dedicated thread.</pre></td><td>✅</td></tr><tr><td class="name">DedicatedWorkerAblationStudyEnabled</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DefaultSiteInstanceGroups</td><td><pre> When enabled, puts non-isolated sites in separate SiteInstances in a default
  SiteInstanceGroup (per BrowsingInstance), rather than sharing a default
  SiteInstance.</pre></td><td>✅</td></tr><tr><td class="name">DeferAudioFocusUntilAudible</td><td><pre> Defer requesting persistent audio focus until the WebContents is audible.
@@ -774,7 +768,7 @@
  that |kOverlayFullscreenVideo| is true, else it is ignored.</pre></td><td>❌</td></tr><tr><td class="name">UsePersistentCacheForCodeCache</td><td><pre> Use PersistentCache on either side of blink.mojom.CodeCacheHost. This feature
  is dependent on net::HttpCache::IsSplitCacheEnabled() being true. Always use
  IsPersistentCacheForCodeCacheEnabled() rather than querying this feature
- directly.</pre></td><td>❌</td></tr><tr><td class="name">UserBypassFeedback</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">UserBypassUI</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">UserBypassUxSimplification</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">UserMediaCaptureOnFocus</td><td><pre> If enabled, GetUserMedia API will only work when the concerned tab is in
+ directly.</pre></td><td>❌</td></tr><tr><td class="name">UserMediaCaptureOnFocus</td><td><pre> If enabled, GetUserMedia API will only work when the concerned tab is in
  focus</pre></td><td>❌</td></tr><tr><td class="name">UseSandboxTokenForOriginDerivation</td><td><pre> Enable deriving sandboxed frame origins from browser-generated tokens
  instead of renderer-calculated opaque origins.</pre></td><td>✅</td></tr><tr><td class="name">UseSequencedTaskRunnerForMediaService</td><td><pre> Use SequencedTaskRunner for MediaService.</pre></td><td>❌</td></tr><tr><td class="name">UseSequencedTaskRunnerForMojoVEAProvider</td><td><pre> Use SequencedTaskRunner for MojoVideoEncodeAcceleratorProvider.</pre></td><td>❌</td></tr><tr><td class="name">UseSettingsAddressEditorInPaymentsRequest</td><td><pre> When enabled, the address add/edit editor in the payments request would be
  removed and instead, the address editor from the settings will be used.
@@ -1414,11 +1408,11 @@
  result in the same behavior. Added in M147, should be safe to remove
  in M150.</pre></td><td>✅</td></tr><tr><td class="name">OverlayProperty</td><td><pre> Enables the CSS overlay property. When this flag is disabled, top
  layer exit animations will work without the need for using the overlay
- property.</pre></td><td>✅</td></tr><tr><td class="name">OverscrollGestures</td><td><pre> <a href="https://chromestatus.com/feature/5261280285949952">https://chromestatus.com/feature/5261280285949952</a></pre></td><td>❌</td></tr><tr><td class="name">PagePopup</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">PagePopupCopyPaste</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PageRevealEvent</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PageSwapEvent</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PaintCaretAfterInnerEditorPaint</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PaintHoldingForIframes</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PaintTimingMixin</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PaintUnderInvalidationChecking</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">Parakeet</td><td><pre> PARAKEET ad serving runtime flag/JS API.</pre></td><td>❌</td></tr><tr><td class="name">PartialCompletionNotAllowedInMoveParagraphs</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PartitionVisitedLinkDatabaseWithSelfLinks</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">PasswordReveal</td><td><pre> This is to add an option to enable the Reveal button on password inputs while waiting ::reveal gets standardized.</pre></td><td>❌</td></tr><tr><td class="name">PaymentApp</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">PaymentLinkDetection</td><td><pre> <a href="https://chromestatus.com/feature/5198846820352000">https://chromestatus.com/feature/5198846820352000</a></pre></td><td>✅</td></tr><tr><td class="name">PaymentMethodChangeEvent</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PaymentRequest</td><td><pre> PaymentRequest is enabled by default on Android</pre></td><td>❌</td></tr><tr><td class="name">PerformanceManagerInstrumentation</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">PerformanceMarkCustomUserTimingFromSubframe</td><td><pre> Sends custom user timing events in subframes to the browser process.
+ property.</pre></td><td>✅</td></tr><tr><td class="name">OverscrollGestures</td><td><pre> <a href="https://chromestatus.com/feature/5261280285949952">https://chromestatus.com/feature/5261280285949952</a></pre></td><td>❌</td></tr><tr><td class="name">PagePopup</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">PagePopupCopyPaste</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PageSwapEvent</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PaintCaretAfterInnerEditorPaint</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PaintHoldingForIframes</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PaintTimingMixin</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PaintUnderInvalidationChecking</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">Parakeet</td><td><pre> PARAKEET ad serving runtime flag/JS API.</pre></td><td>❌</td></tr><tr><td class="name">PartialCompletionNotAllowedInMoveParagraphs</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PartitionVisitedLinkDatabaseWithSelfLinks</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">PasswordReveal</td><td><pre> This is to add an option to enable the Reveal button on password inputs while waiting ::reveal gets standardized.</pre></td><td>❌</td></tr><tr><td class="name">PaymentApp</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">PaymentLinkDetection</td><td><pre> <a href="https://chromestatus.com/feature/5198846820352000">https://chromestatus.com/feature/5198846820352000</a></pre></td><td>✅</td></tr><tr><td class="name">PaymentMethodChangeEvent</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PaymentRequest</td><td><pre> PaymentRequest is enabled by default on Android</pre></td><td>❌</td></tr><tr><td class="name">PaymentRequestNonFullyActiveDocumentCheckInvalidStateError</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PerformanceManagerInstrumentation</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">PerformanceMarkCustomUserTimingFromSubframe</td><td><pre> Sends custom user timing events in subframes to the browser process.
  crbug.com/467177770 for more details.</pre></td><td>❌</td></tr><tr><td class="name">PerformanceMarkFeatureUsage</td><td><pre> Enables performance.mark(&#039;mark_feature_usage&#039;): crbug.com/1517170</pre></td><td>❌</td></tr><tr><td class="name">PerformanceNavigationTimingConfidence</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PeriodicBackgroundSync</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PerMethodCanMakePaymentQuota</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">PermissionsRequestRevoke</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">PlaceholderVisibility</td><td><pre> crbug.com/398955086</pre></td><td>✅</td></tr><tr><td class="name">PNaCl</td><td><pre> This is a reverse OT used for a phased deprecation.
  <a href="https://crbug.com/918374">https://crbug.com/918374</a></pre></td><td>❌</td></tr><tr><td class="name">PointerEventDeviceId</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PointerLockOnAndroid</td><td><pre> Flag for enabling the pointer lock API on Android</pre></td><td>✅</td></tr><tr><td class="name">PointerRawUpdateOnlyInSecureContext</td><td><pre> <a href="https://crbug.com/404479704">https://crbug.com/404479704</a></pre></td><td>✅</td></tr><tr><td class="name">PopoverHintNewBehavior</td><td><pre> Simplifies the behavior and stacking interactions of popover=hint and
  popover=auto. See <a href="https://crbug.com/499019927">https://crbug.com/499019927</a>.
- This shipped in M150 and can be removed in M152.</pre></td><td>✅</td></tr><tr><td class="name">PositionOutsideTabSpanCheckSiblingNode</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PositionVisibilityIgnoreNonClipAncestors</td><td><pre> Kill switch for <a href="https://crbug.com/448173938">https://crbug.com/448173938</a> which changes position
+ This shipped in M150 and can be removed in M152.</pre></td><td>❌</td></tr><tr><td class="name">PositionOutsideTabSpanCheckSiblingNode</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PositionVisibilityIgnoreNonClipAncestors</td><td><pre> Kill switch for <a href="https://crbug.com/448173938">https://crbug.com/448173938</a> which changes position
  visibility to ignore non-clipping ancestors.</pre></td><td>✅</td></tr><tr><td class="name">PotentialPermissionsPolicyReporting</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PreciseMemoryInfo</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">PreferDefaultScrollbarStyles</td><td><pre> Adds a web setting to disable CSS ScrollbarColor, ScrollbarWidth, and
  legacy ::-webkit-scrollbar* pseudo-element styling.</pre></td><td>❌</td></tr><tr><td class="name">PreferNonCompositedScrolling</td><td><pre> Prefer not using composited scrolling. Composited scrolling will still
  be used if there are other reasons forcing compositing. For consistency,
@@ -1572,7 +1566,9 @@
  onto the renderer compositor process as long as the page hasn&#039;t timed
  out. If skip_filtering_process is browser_and_renderer, also skip the
  renderer cc touch event filter, ensuring that events will be passed
- onto the renderer main thread.</pre></td><td>✅</td></tr><tr><td class="name">SkipUnselectableContentInSerialization</td><td><pre> Fix for crbug.com/41393366</pre></td><td>✅</td></tr><tr><td class="name">SkipUnselectableElementsInParagraphBoundary</td><td><pre> See crbug.com/446113738.</pre></td><td>✅</td></tr><tr><td class="name">SkipViewTransitionSnapshotResumeRendering</td><td><pre> See crbug.com/502616235.</pre></td><td>✅</td></tr><tr><td class="name">SmallerViewportUnits</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SmartCard</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SmartZoom</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SnapshotScrollTimelinesPostLayout</td><td><pre> Snapshot scroll-timelines post layout only. See
+ onto the renderer main thread.</pre></td><td>✅</td></tr><tr><td class="name">SkipUnselectableContentInSerialization</td><td><pre> Fix for crbug.com/41393366</pre></td><td>✅</td></tr><tr><td class="name">SkipUnselectableElementsInParagraphBoundary</td><td><pre> See crbug.com/446113738.</pre></td><td>✅</td></tr><tr><td class="name">SkipViewTransitionSnapshotResumeRendering</td><td><pre> See crbug.com/502616235.</pre></td><td>✅</td></tr><tr><td class="name">SlotAssignNotifyDifferentShadowRoots</td><td><pre> Fix for notifying changed slots in different shadow roots during
+ manual assignment. crbug.com/517322978
+ Enabled in M151, safe to remove in M153.</pre></td><td>✅</td></tr><tr><td class="name">SmallerViewportUnits</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SmartCard</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SmartZoom</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SnapshotScrollTimelinesPostLayout</td><td><pre> Snapshot scroll-timelines post layout only. See
  RunSnapshotPostLayoutStateSteps flag.</pre></td><td>❌</td></tr><tr><td class="name">SoftNavigationDetection</td><td><pre> Used to enable the code for detecting soft navigations through task
  attribution. Set to stable as this generates an enabled-by-default
  base::Feature for a field-trial remote shutoff. Needs to be a runtime
@@ -1651,7 +1647,7 @@
  loading replaces the initial empty document with a new committed
  document that has an opaque origin.
 
- This feature acts as a kill switch for <a href="https://crbug.com/40580002">https://crbug.com/40580002</a>.</pre></td><td>✅</td></tr><tr><td class="name">TrustedTypesCreateParserOptions</td><td><pre> When enabled, trusted types can be used to enforce sanitization &amp;
+ This feature acts as a kill switch for <a href="https://crbug.com/40580002">https://crbug.com/40580002</a>.</pre></td><td>✅</td></tr><tr><td class="name">TreeRubyPlacement</td><td><pre> crbug.com/451651633</pre></td><td>❌</td></tr><tr><td class="name">TrustedTypesCreateParserOptions</td><td><pre> When enabled, trusted types can be used to enforce sanitization &amp;
  script running rules.
  For example, it can enforce that any HTML setter would go through a
  sanitizer. See <a href="https://github.com/w3c/trusted-types/issues/594">https://github.com/w3c/trusted-types/issues/594</a></pre></td><td>❌</td></tr><tr><td class="name">TrustedTypesFromLiteral</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">TrustedTypesHTML</td><td><pre> Adapt Trusted Types to its new spec, as part of HTML.
@@ -1839,7 +1835,6 @@
             "identity_entities_enabled": "",
             "opt_in_status": "",
             "shopping_entities_enabled": "",
-            "synced_opt_in_status": "",
             "travel_entities_enabled": ""
         },
         "bnpl_enabled": "",
@@ -2035,7 +2030,7 @@
     },
     "content_settings": "",
     "contextual_search": {
-        "drive_disclaimer_accepted": "",
+        "drive_consent_state": "",
         "search_content_sharing_settings": ""
     },
     "contextual_tasks": {
@@ -3568,7 +3563,7 @@
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>Updated</strong>: 2026-06-30. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
+        <strong>Updated</strong>: 2026-07-01. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
       </p>
     </div>
   </footer>
