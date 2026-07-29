@@ -818,8 +818,7 @@
  leaks.</pre></td><td>✅</td></tr><tr><td class="name">WebviewAccelerateSmallCanvases</td><td><pre> Enables small accelerated canvases for webview (crbug.com/1004304)</pre></td><td>❌</td></tr><tr><td class="name">WebViewAsyncDrawOnly</td><td><pre> Trial to disable synchronous draw for synchronous compositor (ie Android
  WebView).</pre></td><td>✅</td></tr><tr><td class="name">WebViewPrefetchHighestPrefetchPriority</td><td><pre> Apply <code>PrefetchPriority::kHighest</code> for Webview Prefetch API.</pre></td><td>✅</td></tr><tr><td class="name">WebXR</td><td><pre> Controls whether the WebXR Device API is enabled.</pre></td><td>✅</td></tr><tr><td class="name">WideScreenFeedForFoldables</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WidevinePersistentLicenseSupport</td><td><pre> Controls the persistent license support for protected media that uses
  widevine.</pre></td><td>✅</td></tr><tr><td class="name">WorkerThreadRespectTermRequest</td><td><pre> WorkerThread termination respects the current thread termination request.</pre></td><td>✅</td></tr><tr><td class="name">XrDevice</td><td><pre> Indicates that renderer is running on an Android XR (AR/VR) device.
- Enables certain features which are not needed on other platforms.</pre></td><td>❌</td></tr><tr><td class="name">XsurfaceMetricsReporting</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">YourSavedInfoSettingsPage</td><td><pre> Defines if the &quot;Your Saved Info&quot; page is eligible to be shown in Chrome
- settings.</pre></td><td>✅</td></tr><tr><td class="name">ZeroCopyDesktopCapture</td><td><pre> Gated behind feature flag to allow safe rollback of zero-copy capture.</pre></td><td>❌</td></tr>        </tbody>
+ Enables certain features which are not needed on other platforms.</pre></td><td>❌</td></tr><tr><td class="name">XsurfaceMetricsReporting</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ZeroCopyDesktopCapture</td><td><pre> Gated behind feature flag to allow safe rollback of zero-copy capture.</pre></td><td>❌</td></tr>        </tbody>
       </table>
     </div>
     <div class="container is-fluid">
@@ -886,7 +885,7 @@
  P.N. <code>AutoDarkMode</code> needs to be applied separately.</pre></td><td>❌</td></tr><tr><td class="name">AutoDarkModeSVGSizeThreshold</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">Autofill</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">AutofillEvent</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">AutofillPreviewGenericFontFamily</td><td><pre> Pins a generic font-family on the autofill preview pseudo-elements so
  an author @font-face cannot oracle the previewed text.
  crbug.com/517710554.</pre></td><td>✅</td></tr><tr><td class="name">AutofillPreviewIgnoreAuthorFont</td><td><pre> Makes form control elements have a hard coded font when they are in
- their autofill previewed state.</pre></td><td>✅</td></tr><tr><td class="name">AutomationControlled</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">AutoPictureInPictureVideoHeuristics</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">AutoSizeUsesScrollWidthForOverflow</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">AvoidMergingStyledSpanWithSiblings</td><td><pre> Fix for <a href="https://crbug.com/471876082">https://crbug.com/471876082</a></pre></td><td>✅</td></tr><tr><td class="name">AvoidNormalizingVisiblePositionsWhenStartEqualsEnd</td><td><pre> If the start and end positions are the same in MoveParagraph,
+ their autofill previewed state.</pre></td><td>✅</td></tr><tr><td class="name">AutomationControlled</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">AutoPictureInPictureVideoHeuristics</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">AutoSizeUsesScrollWidthForOverflow</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">AvoidEmbeddedContentViewLocation</td><td><pre> Killswitch M153.</pre></td><td>✅</td></tr><tr><td class="name">AvoidMergingStyledSpanWithSiblings</td><td><pre> Fix for <a href="https://crbug.com/471876082">https://crbug.com/471876082</a></pre></td><td>✅</td></tr><tr><td class="name">AvoidNormalizingVisiblePositionsWhenStartEqualsEnd</td><td><pre> If the start and end positions are the same in MoveParagraph,
  there is no need to collapse the whitespace between them.
  <a href="https://crbug.com/406053617">https://crbug.com/406053617</a></pre></td><td>✅</td></tr><tr><td class="name">AvoidSynchronousBlurOnDisabledAttributeChange</td><td><pre> Disables the synchronous focus blur behavior when a focused form control
  is disabled.</pre></td><td>✅</td></tr><tr><td class="name">BackfaceVisibilityInterop</td><td><pre> When enabled, enforces new interoperable semantics for 3D transforms.
@@ -1339,7 +1338,7 @@
  <a href="https://crbug.com/441933555">https://crbug.com/441933555</a></pre></td><td>✅</td></tr><tr><td class="name">ModulePreloadStyleJson</td><td><pre> <a href="https://crbug.com/466888680">https://crbug.com/466888680</a></pre></td><td>✅</td></tr><tr><td class="name">MojoJS</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MojoJSTest</td><td><pre> MojoJSTest is used exclusively in testing environments, whereas MojoJS
  may also be used elsewhere.</pre></td><td>❌</td></tr><tr><td class="name">MoveEndingSelectionToListChild</td><td><pre> Move the selection to the last position in the list item. See
  <a href="https://crbug.com/331841851">https://crbug.com/331841851</a></pre></td><td>✅</td></tr><tr><td class="name">MoveParagraphsPreserveInlineStructure</td><td><pre> <a href="https://issues.chromium.org/issues/41015847">https://issues.chromium.org/issues/41015847</a>
- This will be shipped in M151, and it can be removed in M153.</pre></td><td>✅</td></tr><tr><td class="name">NavigateEventDeferCrossDocumentCommit</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">NavigationEventTiming</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">NavigationId</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">NavigationTimingRedirectTimingViaTAO</td><td><pre> Exposes navigation redirect timing (redirectCount, redirectStart and
+ This will be shipped in M151, and it can be removed in M153.</pre></td><td>✅</td></tr><tr><td class="name">NavigateEventDeferCrossDocumentCommit</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">NavigationEventTiming</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">NavigationId</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">NavigationState</td><td><pre> NavigationState class and the :nav-source CSS pseudo-class.</pre></td><td>❌</td></tr><tr><td class="name">NavigationTimingRedirectTimingViaTAO</td><td><pre> Exposes navigation redirect timing (redirectCount, redirectStart and
  redirectEnd) for cross-origin redirect chains when every redirect opts
  in to the navigation&#039;s destination origin via Timing-Allow-Origin and
  the navigation is not a no-referrer navigation.
@@ -1516,7 +1515,10 @@
  <a href="https://issues.chromium.org/issues/483769482">https://issues.chromium.org/issues/483769482</a></pre></td><td>❌</td></tr><tr><td class="name">SelectedcontentSpec</td><td><pre> Aligns the implementation of the &lt;selectedcontent&gt; element with the
  HTML spec. <a href="https://issues.chromium.org/issues/458113204">https://issues.chromium.org/issues/458113204</a>
  Enabled in M151, safe to remove in M153.</pre></td><td>✅</td></tr><tr><td class="name">SelectionAndFocusedVisiblePositionMatch</td><td><pre> See <a href="https://crbug.com/40664519">https://crbug.com/40664519</a>
- Disabled due to UI freeze issues, see <a href="https://crbug.com/448833953">https://crbug.com/448833953</a>.</pre></td><td>❌</td></tr><tr><td class="name">SelectionCollapsedDirectionNone</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SelectionFocusAffinity</td><td><pre> Fixes selection focus affinity at soft wrap boundaries. When the focus
+ Disabled due to UI freeze issues, see <a href="https://crbug.com/448833953">https://crbug.com/448833953</a>.</pre></td><td>❌</td></tr><tr><td class="name">SelectionCollapsedDirectionNone</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SelectionEditingBoundarySlottedContent</td><td><pre> Allows a selection to extend into the light-DOM content assigned to a
+ &lt;slot&gt;, e.g. the content of an open &lt;details&gt;, instead of clamping the
+ focus at the slot&#039;s shadow host in EditingBoundaryAdjuster.
+ See <a href="https://crbug.com/477613569">https://crbug.com/477613569</a></pre></td><td>✅</td></tr><tr><td class="name">SelectionFocusAffinity</td><td><pre> Fixes selection focus affinity at soft wrap boundaries. When the focus
  of a range selection is at a soft wrap boundary (a DOM offset shared by
  two visual lines), this ensures the correct affinity is used based on
  the selection direction.
@@ -1537,7 +1539,8 @@
  <a href="https://issues.chromium.org/issues/40150299">https://issues.chromium.org/issues/40150299</a></pre></td><td>✅</td></tr><tr><td class="name">SensorExtraClasses</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SeparateDeferModuleScriptTasks</td><td><pre> Separate defer and module script execution into individual tasks
  to comply with HTML spec requirement to &quot;spin the event loop&quot; between
  each script execution. This prevents long tasks and improves responsiveness.
- <a href="https://crbug.com/40894694">https://crbug.com/40894694</a></pre></td><td>✅</td></tr><tr><td class="name">Serial</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SerializeViewTransitionStateInSPA</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SerialPortConnected</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ServiceWorkerBackgroundSyncInDedicatedWorker</td><td><pre> Support for Service Worker background sync APIs in Dedicated Workers.
+ <a href="https://crbug.com/40894694">https://crbug.com/40894694</a></pre></td><td>✅</td></tr><tr><td class="name">Serial</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SerializeInvalidSelectorsInForgivingSelectorList</td><td><pre> Serialize invalid selector text in the forgiving selector list.
+ <a href="https://github.com/w3c/csswg-drafts/issues/8356">https://github.com/w3c/csswg-drafts/issues/8356</a></pre></td><td>❌</td></tr><tr><td class="name">SerializeViewTransitionStateInSPA</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SerialPortConnected</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ServiceWorkerBackgroundSyncInDedicatedWorker</td><td><pre> Support for Service Worker background sync APIs in Dedicated Workers.
  See <a href="https://chromestatus.com/feature/6497653025931264">https://chromestatus.com/feature/6497653025931264</a>
  See <a href="https://issues.chromium.org/issues/40364838">https://issues.chromium.org/issues/40364838</a></pre></td><td>❌</td></tr><tr><td class="name">ServiceWorkerClientLifecycleState</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ServiceWorkerInDedicatedWorker</td><td><pre> Support for Service Worker APIs in Dedicated Workers.
  See <a href="https://chromestatus.com/feature/6497653025931264">https://chromestatus.com/feature/6497653025931264</a>
@@ -1725,7 +1728,11 @@
  in case of problems. This flag should be removed by Q1 2023, assuming
  no problems are encountered.</pre></td><td>❌</td></tr><tr><td class="name">WordSkipSpacesPunctuationFix</td><td><pre> Fixes an issue where Ctrl+Right Arrow skips punctuation before a newline.</pre></td><td>✅</td></tr><tr><td class="name">WordSpacingWhiteSpacePre</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">XMLNoExternalEntities</td><td><pre> Moving to the Rust parser requires deprecation of the niche feature
  of synchronously including external entities.
- <a href="https://crbug.com/455813733">https://crbug.com/455813733</a></pre></td><td>✅</td></tr><tr><td class="name">XMLParsingRust</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">XMLRustForNonXslt</td><td><pre> Enables the Rust XML parser for situations where we know
+ <a href="https://crbug.com/455813733">https://crbug.com/455813733</a></pre></td><td>✅</td></tr><tr><td class="name">XMLParserReplaceLoneSurrogates</td><td><pre> Replaces lone surrogates in the XML source with U+FFFD so that the
+ parser makes a best-effort parse instead of rejecting the whole
+ document. This feature acts as a kill switch for
+ <a href="https://crbug.com/40814739">https://crbug.com/40814739</a>. This flag was shipped in M153, and can be
+ removed in M155.</pre></td><td>✅</td></tr><tr><td class="name">XMLParsingRust</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">XMLRustForNonXslt</td><td><pre> Enables the Rust XML parser for situations where we know
  no XSLT processing will be required. This covers usage of
  JS DOMParser API to parse XML, and usage of XMLHttpRequest
  with its responseXML document.
@@ -3573,7 +3580,7 @@
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>Updated</strong>: 2026-07-28. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
+        <strong>Updated</strong>: 2026-07-29. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
       </p>
     </div>
   </footer>
