@@ -135,9 +135,9 @@
  focused field. It works only for large form factor devices like tablets or
  desktops.
  TODO(crbug.com/438125774): Remove when launched.</pre></td><td>❌</td></tr><tr><td class="name">AutofillAtMemory</td><td><pre> Feature flag for kAutofillAtMemory.</pre></td><td>❌</td></tr><tr><td class="name">AutofillAtMemoryInactivityNudge</td><td><pre> Controls whether the Autosuggest nudging logic is used. If enabled, user are
- encouraged to use the AtMemory feature.</pre></td><td>❌</td></tr><tr><td class="name">AutofillAtMemoryPreviouslyFilled</td><td><pre> Controls whether the previously filled suggestions from AtMemory are shown.</pre></td><td>❌</td></tr><tr><td class="name">AutofillAtMemorySupportContenteditableOnAndroid</td><td><pre> Controls whether contenteditable fields on Android are supported for
+ encouraged to use the AtMemory feature.</pre></td><td>❌</td></tr><tr><td class="name">AutofillAtMemoryPreviouslyFilled</td><td><pre> Controls whether the previously filled suggestions from AtMemory are shown.</pre></td><td>❌</td></tr><tr><td class="name">AutofillAtMemorySearchStatefulness</td><td><pre> Enables search statefulness for AtMemory.</pre></td><td>❌</td></tr><tr><td class="name">AutofillAtMemorySupportContenteditableOnAndroid</td><td><pre> Controls whether contenteditable fields on Android are supported for
  AtMemory.</pre></td><td>❌</td></tr><tr><td class="name">AutofillAtMemoryTriggerShortcut</td><td><pre> If enabled, AtMemory can be triggered with a keyboard shortcut like
- Ctrl+Space.</pre></td><td>❌</td></tr><tr><td class="name">AutofillAtMemoryTypedFetchPlan</td><td><pre> Controls whether AtMemory uses the strongly-typed AutofillFetchPlan.</pre></td><td>✅</td></tr><tr><td class="name">AutofillBetterLocalHeuristicPlaceholderSupport</td><td><pre> When enabled, the placeholder is not considered a label fallback on the
+ Ctrl+Space.</pre></td><td>❌</td></tr><tr><td class="name">AutofillBetterLocalHeuristicPlaceholderSupport</td><td><pre> When enabled, the placeholder is not considered a label fallback on the
  renderer side anymore. Instead, local heuristic will match regexes against
  either the label or the placeholder, depending on how high quality the label
  is. If no matche is found, local heuristics fall back to the other value.
@@ -230,9 +230,7 @@
  view checks that a substantial portion of its content was visible for some
  minimum required period.
  TODO(crbug.com/337222641): During cleaning up, in the popup row view remove
- emitting of &quot;Autofill.AcceptedSuggestionDesktopRowViewVisibleEnough&quot;.</pre></td><td>❌</td></tr><tr><td class="name">AutofillPreventAutofillFromSavingToAutocomplete</td><td><pre> Kill switch. When enabled, fields populated by standard Autofill or Autofill
- AI products are not saved to the Autocomplete database at form submission.
- TODO(crbug.com/533411686): Remove in M154.</pre></td><td>✅</td></tr><tr><td class="name">AutofillReplaceFormElementObserver</td><td><pre> Replaces blink::WebFormElementObserver usage in FormTracker by updated logic
+ emitting of &quot;Autofill.AcceptedSuggestionDesktopRowViewVisibleEnough&quot;.</pre></td><td>❌</td></tr><tr><td class="name">AutofillReplaceFormElementObserver</td><td><pre> Replaces blink::WebFormElementObserver usage in FormTracker by updated logic
  for tracking the disappearance of forms as well as other submission
  triggering events.
  TODO(crbug.com/40281981): Remove when launched.</pre></td><td>❌</td></tr><tr><td class="name">AutofillRestrictOtpToSameTldPlusOne</td><td><pre> Restricts OTP fields detection and fetching to forms that are in a frame
@@ -330,7 +328,7 @@
  to be downloaded.</pre></td><td>❌</td></tr><tr><td class="name">ContextMenuCopyVideoFrame</td><td><pre> Enables the &quot;Copy Video Frame&quot; context menu item.</pre></td><td>✅</td></tr><tr><td class="name">ContextMenuSaveVideoFrameAs</td><td><pre> Enables the &quot;Save Video Frame As&quot; context menu item.
  On Android, this is &quot;Download Video Frame&quot; context menu item.</pre></td><td>✅</td></tr><tr><td class="name">ContextMenuSearchForVideoFrame</td><td><pre> Enables the &quot;Search Video Frame with &lt;Search Provider&gt;&quot; context menu item.</pre></td><td>✅</td></tr><tr><td class="name">CrashReportingAPIMoreContextData</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">CreateImageBitmapOrientationNone</td><td><pre> When enabled, add a new option, {imageOrientation: &#039;none&#039;}, to
  createImageBitmap, which ignores the image orientation metadata of the source
- and renders the image as encoded.</pre></td><td>❌</td></tr><tr><td class="name">CSSFontComparisonFix</td><td><pre> Fix for CSS font comparison logic.</pre></td><td>✅</td></tr><tr><td class="name">D3D11VideoDecoderForceSingleTexture</td><td><pre> Forces D3D11VideoDecoder to use one decoder texture per picture buffer.
+ and renders the image as encoded.</pre></td><td>❌</td></tr><tr><td class="name">CSSFontComparisonFix</td><td><pre> Fix for CSS font comparison logic.</pre></td><td>✅</td></tr><tr><td class="name">D3D11VideoDecoderForceSingleTexture</td><td><pre> Forces D3DVideoDecoder to use one decoder texture per picture buffer.
  Owner: media-gpu-team@chromium.org
  Expiry: When no longer needed for decode texture selection experiments.</pre></td><td>❌</td></tr><tr><td class="name">D3D11VideoDecoderUseSharedHandle</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DataURIMemoryCache</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">DataUrlWorkerOpaqueOrigin</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">DebugTopChromeWebUI</td><td><pre> Allows loading Top Chrome Webium.</pre></td><td>❌</td></tr><tr><td class="name">DeclarativeCSSModulesUseDataURI</td><td><pre> When enabled, Declarative CSS Modules will generate a DataURI instead of a
  Blob URL in the generated Import Map.</pre></td><td>❌</td></tr><tr><td class="name">DecodeScriptsInBlink</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DedicatedMediaServiceThread</td><td><pre> Runs the media service in the GPU process on a dedicated thread.</pre></td><td>✅</td></tr><tr><td class="name">DedicatedWorkerAblationStudyEnabled</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DefaultSiteInstanceGroups</td><td><pre> When enabled, puts non-isolated sites in separate SiteInstances in a default
@@ -1141,7 +1139,9 @@
  prevent activation behavior of parent elements when it doesn&#039;t bubble.
  crbug.com/41431966</pre></td><td>✅</td></tr><tr><td class="name">DOMParserXmlScriptAlreadyStarted</td><td><pre> Kill switch for marking scripts parsed by DOMParser in XML documents as
  &quot;already started&quot; so they stay inert when cloned or imported.
- <a href="https://crbug.com/542115030">https://crbug.com/542115030</a></pre></td><td>✅</td></tr><tr><td class="name">DragAndDropJSFileObjects</td><td><pre> Enables JS-constructed File objects (e.g. new File([bytes], &#039;photo.jpg&#039;))
+ <a href="https://crbug.com/542115030">https://crbug.com/542115030</a></pre></td><td>✅</td></tr><tr><td class="name">DragAndDropDownloadURLList</td><td><pre> <a href="https://chromestatus.com/feature/4909387902746624">https://chromestatus.com/feature/4909387902746624</a>
+ Enables dragging multiple files out of a web page via the
+ DownloadURL-list drag type.</pre></td><td>❌</td></tr><tr><td class="name">DragAndDropJSFileObjects</td><td><pre> Enables JS-constructed File objects (e.g. new File([bytes], &#039;photo.jpg&#039;))
  to carry their blob contents through the drag-and-drop pipeline.
  When disabled, only the filename is sent as text/plain (legacy behavior).</pre></td><td>❌</td></tr><tr><td class="name">DragImageForLargeImages</td><td><pre> When enabled, drag image previews are generated for images regardless
  of their intrinsic size (the output is still clamped to
@@ -1589,7 +1589,11 @@
  use the invocationTargetInShadowTree saved before
  calling the listener.
  This was added in M142 and can be removed after M147.
- <a href="https://issues.chromium.org/issues/41408360">https://issues.chromium.org/issues/41408360</a></pre></td><td>✅</td></tr><tr><td class="name">TestBlinkFeatureDefault</td><td><pre> For unit tests.
+ <a href="https://issues.chromium.org/issues/41408360">https://issues.chromium.org/issues/41408360</a></pre></td><td>✅</td></tr><tr><td class="name">TargetRangesForBackwardDeletionUnit</td><td><pre> Makes getTargetRanges() of a deleteContentBackward beforeinput event
+ cover only the code points that are actually deleted, instead of the
+ whole grapheme cluster behind the caret.
+ Enabled in M153, safe to remove in M155.
+ <a href="https://issues.chromium.org/issues/539754135">https://issues.chromium.org/issues/539754135</a></pre></td><td>✅</td></tr><tr><td class="name">TestBlinkFeatureDefault</td><td><pre> For unit tests.
  This is for testing copied_from_base_feature_if.
  This is set in base/test/test_suite.cc.</pre></td><td>❌</td></tr><tr><td class="name">TestFeature</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">TestFeatureDependent</td><td><pre> For unit tests.</pre></td><td>❌</td></tr><tr><td class="name">TestFeatureForBrowserProcessReadWriteAccessOriginTrial</td><td><pre> This is a feature used for testing what happens when an origin trial
  feature has browser-process read/write access. It should never be used
@@ -1863,6 +1867,7 @@
         "upload_encoding_seed": "",
         "upload_events": "",
         "upload_events_last_reset_timestamp": "",
+        "wallet_reminder_notice_shown": "",
         "was_name_and_email_profile_used": "",
         "work_metadata": ""
     },
@@ -3263,6 +3268,9 @@
         }
     },
     "tab_group_saves_ui_update_migrated": "",
+    "tab_scroll_buttons": {
+        "pinned_to_tabstrip": ""
+    },
     "tab_search": {
         "pinned_to_tabstrip": ""
     },
@@ -3542,7 +3550,7 @@
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>Updated</strong>: 2026-08-19. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
+        <strong>Updated</strong>: 2026-08-20. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
       </p>
     </div>
   </footer>
