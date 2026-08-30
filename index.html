@@ -1333,7 +1333,7 @@
  removed. crbug.com/421421332</pre></td><td>✅</td></tr><tr><td class="name">LightDismissFromClick</td><td><pre> Makes light dismiss for popovers and dialogs use the click event
  instead of pointerdown and pointerup in order to fix light dismiss
  bugs for touch inputs.
- <a href="https://issues.chromium.org/issues/408010435">https://issues.chromium.org/issues/408010435</a></pre></td><td>❌</td></tr><tr><td class="name">LineBreakAfterSpaceBeforeOpenTag</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">LineBreakerHanKerningEnd</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ListOwnerMustHaveCSSBox</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">LocalNetworkAccessForWebRTCOptOut</td><td><pre> Reverse origin trial allowing sites to opt out of Local Network Access
+ <a href="https://issues.chromium.org/issues/408010435">https://issues.chromium.org/issues/408010435</a></pre></td><td>✅</td></tr><tr><td class="name">LineBreakAfterSpaceBeforeOpenTag</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">LineBreakerHanKerningEnd</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ListOwnerMustHaveCSSBox</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">LocalNetworkAccessForWebRTCOptOut</td><td><pre> Reverse origin trial allowing sites to opt out of Local Network Access
  restrictions for WebRTC.</pre></td><td>❌</td></tr><tr><td class="name">LocalNetworkAccessPermissionPolicy</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">LocalNetworkAccessWebRTC</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">LocalNetworkAccessWebSocketsTargetAddressSpace</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">LockedMode</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">LoginElement</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">LongAnimationFrameSourceCharPosition</td><td><pre> Enable sourceCharPosition for the invoke-type resolve-promise
  <a href="https://issues.chromium.org/issues/381529126">https://issues.chromium.org/issues/381529126</a></pre></td><td>✅</td></tr><tr><td class="name">LongAnimationFrameSourceLineColumn</td><td><pre> Enable retrieving sourceLine and sourceColumn in LoAF implementation.
  <a href="https://issues.chromium.org/issues/391417815">https://issues.chromium.org/issues/391417815</a></pre></td><td>❌</td></tr><tr><td class="name">LongAnimationFrameSourceLineColumnInterface</td><td><pre> Add sourceLine and sourceColumn to PerformanceScriptTiming
@@ -1383,7 +1383,9 @@
  The Notification Center on Mac OS X does not support content images.</pre></td><td>❌</td></tr><tr><td class="name">Notifications</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">NotificationTriggers</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">NotifySelectionControllerOnUnchangedSelection</td><td><pre> Notify selection controller of selection changes even when the new
  selection matches the old selection, keeping the selection state in
  sync. This flag ships in M151 and can be removed in M153.</pre></td><td>✅</td></tr><tr><td class="name">NumberInputFullWidthChars</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">OffscreenCanvasGetContextAttributes</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">OffsetMappingReuseFullWidthSpaceFix</td><td><pre>See crbug.com/512385682</pre></td><td>✅</td></tr><tr><td class="name">OffsetPathTransformUpdateFix</td><td><pre> Kill switch for a fix to offset-path transform invalidation for
- <a href="https://crbug.com/463409688">https://crbug.com/463409688</a>.</pre></td><td>✅</td></tr><tr><td class="name">OmitBlurEventOnElementRemoval</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">OnDeviceWebSpeechAvailable</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">OnDeviceWebSpeechQuality</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">OpaqueRange</td><td><pre> The OpaqueRange interface provides a live AbstractRange subtype
+ <a href="https://crbug.com/463409688">https://crbug.com/463409688</a>.</pre></td><td>✅</td></tr><tr><td class="name">OmitBlurEventOnElementRemoval</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">OmitSubframeDetachmentEventsOnRemoval</td><td><pre> iframes send pagehide/unload/visibilitychange when removed.
+ This not spec-compliant, but might have web-compat consequences.
+ This flag omits firing those events on element removal.</pre></td><td>❌</td></tr><tr><td class="name">OnDeviceWebSpeechAvailable</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">OnDeviceWebSpeechQuality</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">OpaqueRange</td><td><pre> The OpaqueRange interface provides a live AbstractRange subtype
  for encapsulated content within &lt;textarea&gt; and &lt;input&gt; elements.
  &quot;This can be removed in M155. crbug.com/421421332</pre></td><td>✅</td></tr><tr><td class="name">OpenPopoverInvokerRestrictToSameTreeScope</td><td><pre> Restrict popover invoker lookup to the same TreeScope as the element.
  This will be shipped in M142, and it can be removed in M144.
@@ -3559,7 +3561,7 @@
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>Updated</strong>: 2026-08-29. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
+        <strong>Updated</strong>: 2026-08-30. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
       </p>
     </div>
   </footer>
