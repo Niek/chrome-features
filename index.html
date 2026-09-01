@@ -356,7 +356,7 @@
  &quot;max_interval&quot;. The &quot;initial_interval&quot; is the delay introduced after the
  first flush and is increased by &quot;multiplier&quot; for each subsequent flushes.
  See <a href="https://crbug.com/500385603">https://crbug.com/500385603</a> for more context and how the numbers were
- selected.</pre></td><td>✅</td></tr><tr><td class="name">DelayAsyncScriptExecution</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DelayLayerTreeViewDeletionOnLocalSwap</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">DetectJSFrameworksOnWorker</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">DetectZhVariants</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">DeviceBoundSessionTerminationEvictBackForwardCache</td><td><pre> When a device bound session
+ selected.</pre></td><td>✅</td></tr><tr><td class="name">DelayAsyncScriptExecution</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DelayLayerTreeViewDeletionOnLocalSwap</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">DetectJSFrameworksOnWorker</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">DeviceBoundSessionTerminationEvictBackForwardCache</td><td><pre> When a device bound session
  (<a href="https://github.com/w3c/webappsec-dbsc/blob/main/README.md">https://github.com/w3c/webappsec-dbsc/blob/main/README.md</a>) is
  terminated, evict pages with cache-control:no-store from the
  BFCache. Note that if <code>kCacheControlNoStoreEnterBackForwardCache</code> is
@@ -684,7 +684,9 @@
 
  crbug.com/1472634 for more details.</pre></td><td>✅</td></tr><tr><td class="name">ServiceWorkerBackgroundUpdateForRegisteredStorageKeys</td><td><pre> If enabled, UI thread tasks can check ServiceWorker registration information
  from the thread pool without waiting for running the receiving task. Please
- see crbug.com/421530699 for more details.</pre></td><td>✅</td></tr><tr><td class="name">ServiceWorkerInterceptDownloads</td><td><pre> crbug.com/40410035: When enabled, download requests (&quot;Save link as&quot;,
+ see crbug.com/421530699 for more details.</pre></td><td>✅</td></tr><tr><td class="name">ServiceWorkerDatabaseDoomOnMissingNextId</td><td><pre> (crbug.com/539155958): When enabled, ServiceWorkerDatabase treats missing
+ next available ID metadata as database corruption if registrations exist on
+ disk, triggering database doom and clean recovery.</pre></td><td>❌</td></tr><tr><td class="name">ServiceWorkerInterceptDownloads</td><td><pre> crbug.com/40410035: When enabled, download requests (&quot;Save link as&quot;,
  &quot;Save image as&quot;, &lt;a download&gt;) are intercepted by service workers, allowing
  the service worker&#039;s fetch event handler to provide a response.</pre></td><td>❌</td></tr><tr><td class="name">ServiceWorkerPaymentApps</td><td><pre> Service worker based payment apps as defined by w3c here:
  <a href="https://w3c.github.io/webpayments-payment-apps-api/">https://w3c.github.io/webpayments-payment-apps-api/</a>
@@ -958,7 +960,7 @@
  destination string.</pre></td><td>❌</td></tr><tr><td class="name">CDTNewReferrerAndReferrerPolicyHandling</td><td><pre> Compression Dictionary Transport: Align handling of referrerpolicy
  attribute and referrer on the spec.</pre></td><td>❌</td></tr><tr><td class="name">CheckableInputTypeLayoutInline</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">CheckVisibilityExtraProperties</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ClampUnfocusedSelectionCache</td><td><pre> crbug.com/517429018</pre></td><td>✅</td></tr><tr><td class="name">ClearCurrentTargetAfterDispatch</td><td><pre> Set currentTarget to null after dispatch for EventTarget.
  This was added in M142 and can be removed after M144.
- <a href="https://issues.chromium.org/issues/346766786">https://issues.chromium.org/issues/346766786</a></pre></td><td>✅</td></tr><tr><td class="name">ClearFocusWithinOnSubtreeRemoval</td><td><pre> Fixes a bug where ancestor elements retain a stale :focus-within
+ <a href="https://issues.chromium.org/issues/346766786">https://issues.chromium.org/issues/346766786</a></pre></td><td>✅</td></tr><tr><td class="name">ClearDisplayLockPrePaintFlags</td><td><pre> Killswitch crbug.com/547894783</pre></td><td>✅</td></tr><tr><td class="name">ClearFocusWithinOnSubtreeRemoval</td><td><pre> Fixes a bug where ancestor elements retain a stale :focus-within
  state if the focused element&#039;s subtree is removed during blur
  or focusout events.
  This was added in M147 and can be removed after M149.
@@ -1151,9 +1153,7 @@
  ExpectNoLinkedResources.</pre></td><td>✅</td></tr><tr><td class="name">DocumentPolicyIncludeJSCallStacksInCrashReports</td><td><pre> Enables the ability to use Document Policy header to control feature
  IncludeJSCallStacksInCrashReports. <a href="https://chromestatus.com/feature/4731248572628992">https://chromestatus.com/feature/4731248572628992</a></pre></td><td>✅</td></tr><tr><td class="name">DocumentPolicyInDedicatedWorker</td><td><pre> Enables Document Policy for DedicatedWorkers.</pre></td><td>❌</td></tr><tr><td class="name">DocumentPolicyJSProfilingMode</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DocumentPolicyNegotiation</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DocumentPolicyNetworkEfficiencyGuardrails</td><td><pre> Enables the ability to use Document Policy header to control feature
  NetworkEfficiencyGuardrails. <a href="https://chromestatus.com/feature/5156240166223872">https://chromestatus.com/feature/5156240166223872</a></pre></td><td>❌</td></tr><tr><td class="name">DocumentPolicySyncXHR</td><td><pre> Enables the ability to use Document Policy header to control feature
- SyncXHR.</pre></td><td>❌</td></tr><tr><td class="name">DocumentWrite</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DOMActivateBubblesInheritance</td><td><pre> DOMActivate event inherits bubbles from the underlying event to
- prevent activation behavior of parent elements when it doesn&#039;t bubble.
- crbug.com/41431966</pre></td><td>✅</td></tr><tr><td class="name">DOMParserXmlScriptAlreadyStarted</td><td><pre> Kill switch for marking scripts parsed by DOMParser in XML documents as
+ SyncXHR.</pre></td><td>❌</td></tr><tr><td class="name">DocumentWrite</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DOMParserXmlScriptAlreadyStarted</td><td><pre> Kill switch for marking scripts parsed by DOMParser in XML documents as
  &quot;already started&quot; so they stay inert when cloned or imported.
  <a href="https://crbug.com/542115030">https://crbug.com/542115030</a></pre></td><td>✅</td></tr><tr><td class="name">DragAndDropDownloadURLList</td><td><pre> <a href="https://chromestatus.com/feature/4909387902746624">https://chromestatus.com/feature/4909387902746624</a>
  Enables dragging multiple files out of a web page via the
@@ -1439,9 +1439,10 @@
  <a href="https://chromestatus.com/feature/5112398709129216">https://chromestatus.com/feature/5112398709129216</a>
  <a href="https://crbug.com/440387014">https://crbug.com/440387014</a></pre></td><td>❌</td></tr><tr><td class="name">PrerenderActivationByFormSubmission</td><td><pre> Used to allow prerender activation by form submission.
  See <a href="https://crbug.com/346555939">https://crbug.com/346555939</a>.</pre></td><td>✅</td></tr><tr><td class="name">PrerenderUntilScript</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">Presentation</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PreserveHtmlEquivalentTagsInTypingStyle</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PreserveUnfocusedSelectionCache</td><td><pre> When enabled, a text control&#039;s cached selection is preserved while the
- control is not focused instead of being refreshed from the live DOM
- selection. Kill switch for <a href="https://crbug.com/40884623">https://crbug.com/40884623</a>. This feature
- ships in M153 and can be removed in M155.</pre></td><td>✅</td></tr><tr><td class="name">PreventTextSelectionJump</td><td><pre> When enabled, fixes selection jumping when drag-selecting out of
+ control is not focused or has a post-layout selection restore pending,
+ instead of being refreshed from the live DOM selection. Kill switch
+ for <a href="https://crbug.com/40884623">https://crbug.com/40884623</a>. This feature ships in M154 and can be
+ removed in M156.</pre></td><td>✅</td></tr><tr><td class="name">PreventTextSelectionJump</td><td><pre> When enabled, fixes selection jumping when drag-selecting out of
  a float box boundary.
  See <a href="https://crbug.com/41340914">https://crbug.com/41340914</a></pre></td><td>✅</td></tr><tr><td class="name">PrivateNetworkAccessNullIpAddress</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">PrivateStateTokens</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PrivateStateTokensAlwaysAllowIssuance</td><td><pre> Always allow trust token issuance (so long as the base::Feature
  is enabled). Used for testing; circumvents a runtime check that,
@@ -1601,7 +1602,7 @@
  events would now fire after a mouse drag start, matching the spec&#039;s
  definition of &quot;pointer stream suppression&quot;. See:
  <a href="https://github.com/w3c/pointerevents/issues/555">https://github.com/w3c/pointerevents/issues/555</a></pre></td><td>✅</td></tr><tr><td class="name">SvgAnimateMotionDiscreteCalcMode</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SvgAvoidResettingFilterQualityForTiledPattern</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SVGEmbeddedAsReplacedElement</td><td><pre> Treat SVG documents in &lt;object&gt;/&lt;embed&gt; as replaced elements
- <a href="https://issues.chromium.org/41302806">https://issues.chromium.org/41302806</a></pre></td><td>❌</td></tr><tr><td class="name">SvgEnableTextDecorationCssStyling</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SvgFallBackToContainerSize</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SvgFeImageEXIFOrientation</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SvgFeImageSkipHiddenContainerViewportDependence</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SvgFilterPaintsForHiddenContent</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SvgFilterUserSpaceViewportForSvg</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SvgIgnoreNegativeEllipseRadii</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SvgImageAnimationReset</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SvgImageNonUniformScalingFix</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SvgInlineRootPixelSnappingScaleAdjustment</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SvgLengthResolveUnparsedValue</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SvgNewZoom</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SVGPathDataAPI</td><td><pre> Structured access to SVG path segments via getPathData/setPathData.
+ <a href="https://issues.chromium.org/41302806">https://issues.chromium.org/41302806</a></pre></td><td>❌</td></tr><tr><td class="name">SvgEnableTextDecorationCssStyling</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SvgFallBackToContainerSize</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SvgFeImageEXIFOrientation</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SvgFeImageSkipHiddenContainerViewportDependence</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SvgFilterPaintsForHiddenContent</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SvgFilterUserSpaceViewportForSvg</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SvgIgnoreNegativeEllipseRadii</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SvgIgnoreOuterTransforms</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SvgImageAnimationReset</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SvgImageNonUniformScalingFix</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SvgInlineRootPixelSnappingScaleAdjustment</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SvgLengthResolveUnparsedValue</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SvgNewZoom</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SVGPathDataAPI</td><td><pre> Structured access to SVG path segments via getPathData/setPathData.
  <a href="https://issues.chromium.org/40441025">https://issues.chromium.org/40441025</a></pre></td><td>❌</td></tr><tr><td class="name">SvgPathLengthCssProperty</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SvgScriptElementAsyncAttribute</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SvgScriptFragmentAlreadyStarted</td><td><pre> Kill switch for marking fragment-parsed SVG &lt;script&gt; elements
  &quot;already started&quot; so they stay inert when cloned. crbug.com/538197148</pre></td><td>✅</td></tr><tr><td class="name">SvgSizingWithPreserveAspectRatioNone</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SvgStyleElementReflectTypeAndMedia</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SvgSupportMediaFragments</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SVGTextPathSideAttribute</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SvgUseNestedResourceDocuments</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SvgUseNestedResourceDocumentsDelayLoad</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SynthesizedKeyboardEventsForAccessibilityActions</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SyntheticMouseHoverOverInactivePage</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SystemWakeLock</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">TabAlignmentWithFloats</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">TableCellBorderColorInherit</td><td><pre> When enabled (the legacy behavior), interior cell borders from the
  <code>border</code>/<code>rules</code> attributes inherit the table&#039;s border-color. Disable
@@ -1622,7 +1623,7 @@
  This is for testing copied_from_base_feature_if.
  This is set in base/test/test_suite.cc.</pre></td><td>❌</td></tr><tr><td class="name">TestFeature</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">TestFeatureDependent</td><td><pre> For unit tests.</pre></td><td>❌</td></tr><tr><td class="name">TestFeatureForBrowserProcessReadWriteAccessOriginTrial</td><td><pre> This is a feature used for testing what happens when an origin trial
  feature has browser-process read/write access. It should never be used
- in production code.</pre></td><td>❌</td></tr><tr><td class="name">TestFeatureImplied</td><td><pre> For unit tests.</pre></td><td>❌</td></tr><tr><td class="name">TestFeatureProtected</td><td><pre> For unit tests.</pre></td><td>❌</td></tr><tr><td class="name">TestFeatureProtectedDependent</td><td><pre> For unit tests.</pre></td><td>❌</td></tr><tr><td class="name">TestFeatureProtectedImplied</td><td><pre> For unit tests.</pre></td><td>❌</td></tr><tr><td class="name">TestFeatureStable</td><td><pre> For unit tests.</pre></td><td>✅</td></tr><tr><td class="name">TextAreaEmptyPlaceholderBreak</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">TextAreaResizerFixedSize</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">TextAutoSpaceIgnoreRubyAnnotation</td><td><pre> crbug.com/523134883: Ignore ruby annotation text when computing
+ in production code.</pre></td><td>❌</td></tr><tr><td class="name">TestFeatureImplied</td><td><pre> For unit tests.</pre></td><td>❌</td></tr><tr><td class="name">TestFeatureProtected</td><td><pre> For unit tests.</pre></td><td>❌</td></tr><tr><td class="name">TestFeatureProtectedDependent</td><td><pre> For unit tests.</pre></td><td>❌</td></tr><tr><td class="name">TestFeatureProtectedImplied</td><td><pre> For unit tests.</pre></td><td>❌</td></tr><tr><td class="name">TestFeatureStable</td><td><pre> For unit tests.</pre></td><td>✅</td></tr><tr><td class="name">TextAreaResizerFixedSize</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">TextAutoSpaceIgnoreRubyAnnotation</td><td><pre> crbug.com/523134883: Ignore ruby annotation text when computing
  text-autospace boundaries.</pre></td><td>✅</td></tr><tr><td class="name">TextBoxTrimForNestedList</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">TextBoxTrimOnInlineBox</td><td><pre> Kill switch for crbug.com/514953511.</pre></td><td>✅</td></tr><tr><td class="name">TextDetector</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">TextEmphasisAsRuby</td><td><pre> crbug.com/488458870, crbug.com/522298908, and crbug.com/522298908</pre></td><td>✅</td></tr><tr><td class="name">TextEmphasisLetterSpacing</td><td><pre> crbug.com/40812040</pre></td><td>✅</td></tr><tr><td class="name">TextEmphasisPositionAuto</td><td><pre> crbug.com/368657256</pre></td><td>❌</td></tr><tr><td class="name">TextEmphasisPunctuationExceptions</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">TextEmphasisWithRuby</td><td><pre> crbug.com/442481227</pre></td><td>✅</td></tr><tr><td class="name">TextFragmentAPI</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">TextFragmentIdentifiers</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">TextFragmentTapOpensContextMenu</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">TextMetricsBaselines</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">TextOverflowClipWithSelection</td><td><pre> When enabled, text-overflow ellipsis is clipped when
  selection focus is inside the element, revealing the full text content.
  See <a href="https://crbug.com/40731275">https://crbug.com/40731275</a></pre></td><td>✅</td></tr><tr><td class="name">TextOverflowString</td><td><pre> <a href="https://crbug.com/41492459">https://crbug.com/41492459</a></pre></td><td>❌</td></tr><tr><td class="name">TextScaleMetaTag</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">TextSpacingTrimFallback</td><td><pre> crbug.com/431660829</pre></td><td>✅</td></tr><tr><td class="name">TextSpacingTrimFallback2</td><td><pre> crbug.com/431660829</pre></td><td>❌</td></tr><tr><td class="name">TextSpacingTrimFallbackChws</td><td><pre> crbug.com/440947112</pre></td><td>✅</td></tr><tr><td class="name">TextStreamMethod</td><td><pre> crbug.com/514448226</pre></td><td>✅</td></tr><tr><td class="name">TimelineTrigger</td><td><pre> <a href="https://drafts.csswg.org/web-animations-2/#triggers">https://drafts.csswg.org/web-animations-2/#triggers</a></pre></td><td>✅</td></tr><tr><td class="name">TimerThrottlingForBackgroundTabs</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">TimestampBasedCLSTracking</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">TimeZoneChangeEvent</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">TopicsAPI</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">TouchDragAndContextMenu</td><td><pre> This feature allows touch dragging and a context menu to occur
@@ -2581,7 +2582,6 @@
         "most_visited_tile_navigation_count": "",
         "num_personal_suggestions": "",
         "personal_shortcuts_visible": "",
-        "promo_blocklist": "",
         "promo_visible": "",
         "shortcust_visible": "",
         "shortcuts_auto_removal_disabled": "",
@@ -2673,6 +2673,7 @@
         "account_store_migrated_to_os_crypt_async": "",
         "clearing_undecryptable_passwords": "",
         "last_negative_password_change_timestamp": "",
+        "password_change_with_private_inference_notice_agreement": "",
         "password_promo_cards_list": "",
         "password_sharing_enabled": "",
         "profile_store_backup_password_cleaning_last_timestamp": "",
@@ -3138,6 +3139,9 @@
         "is_right_aligned": ""
     },
     "signin": {
+        "account_preview": {
+            "selection_heuristic_scores_last_recorded": ""
+        },
         "account_preview_data_last_429_time": "",
         "account_preview_data_last_fetch_accounts": "",
         "account_preview_data_last_update": "",
@@ -3562,7 +3566,7 @@
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>Updated</strong>: 2026-08-31. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
+        <strong>Updated</strong>: 2026-09-01. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
       </p>
     </div>
   </footer>
