@@ -125,7 +125,6 @@ files=(
   "components/ukm/ukm_pref_names.h"
   "components/unified_consent/pref_names.cc"
   "components/unified_consent/pref_names.h"
-  "components/variations/pref_names.cc"
   "components/variations/pref_names.h"
   "components/web_resource/web_resource_pref_names.cc"
   "components/web_resource/web_resource_pref_names.h"
@@ -147,7 +146,7 @@ for file in "${files[@]}"; do
   printf '%s\0' "${file}" >>"${download_list}"
 done
 xargs -0 -n1 -P8 bash -c \
-  'file="$1"; curl -sf "https://raw.githubusercontent.com/chromium/chromium/main/${file}" -o "src/${file//\//_}"' \
+  'file="$1"; curl -fsS "https://raw.githubusercontent.com/chromium/chromium/main/${file}" -o "src/${file//\//_}" || { echo "Failed to download ${file}" >&2; exit 1; }' \
   _ <"${download_list}"
 
 # Generate doxygen output
