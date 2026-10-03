@@ -924,7 +924,14 @@
  via position:fixed and cannot be reached by scrolling.</pre></td><td>✅</td></tr><tr><td class="name">AIPageContentAnchoredNonFixedOffscreenNonActionability</td><td><pre> Strip actionability from content that is positioned offscreen via
  absolute/relative/static positioning and cannot be reached by scrolling.</pre></td><td>✅</td></tr><tr><td class="name">AIPageContentBuildOnLoadForTesting</td><td><pre> Whether to automatically build an APC content_extraction tree on load.</pre></td><td>❌</td></tr><tr><td class="name">AIPageContentCheckGeometry</td><td><pre> Whether to enforce geometry invariants in AIPageContentAgent.
  Only supported for DCHECK-enabled builds.</pre></td><td>❌</td></tr><tr><td class="name">AIPageContentConvertNodeTextToUtf8</td><td><pre> Ensures that text content extracted from DOM nodes are valid UTF-8 Before
- providing them to consumers of AIPageContent.</pre></td><td>✅</td></tr><tr><td class="name">AIPageContentElementCSSRedaction</td><td><pre> When enabled, redact elements with --webkit-text-security.</pre></td><td>✅</td></tr><tr><td class="name">AIPageContentIncludeSVGSubtree</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">AIPageContentOuterBoxMapToAncestorSpace</td><td><pre> Use MapToVisualRectInAncestorSpace for outer bounding boxes, for
+ providing them to consumers of AIPageContent.</pre></td><td>✅</td></tr><tr><td class="name">AIPageContentElementCSSRedaction</td><td><pre> When enabled, redact elements with --webkit-text-security.</pre></td><td>✅</td></tr><tr><td class="name">AIPageContentIncludeSVGSubtree</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">AIPageContentLabelExpandFallbackSources</td><td><pre> Add label sources in actionable APC.</pre></td><td>✅</td></tr><tr><td class="name">AIPageContentLabelRemoveRedundant</td><td><pre> Remove labels that duplicate extracted text in any node in its subtree
+ or its image caption. Remove SVG root text when extracted child nodes
+ already contain it.</pre></td><td>❌</td></tr><tr><td class="name">AIPageContentLabelRemoveRedundantWholeWordMatching</td><td><pre> Match labels to whole words or phrases in extracted text in any node in
+ its subtree or its image caption, ignoring case. For example:
+ - &quot;Password&quot; matches &quot;Enter your password&quot;.
+ - &quot;lock&quot; does not match &quot;unlock&quot;.
+ Exact matching still occurs when this is disabled, provided
+ AIPageContentLabelRemoveRedundant is enabled.</pre></td><td>❌</td></tr><tr><td class="name">AIPageContentOuterBoxMapToAncestorSpace</td><td><pre> Use MapToVisualRectInAncestorSpace for outer bounding boxes, for
  math consistent with visual bounding boxes.</pre></td><td>✅</td></tr><tr><td class="name">AIPageContentPaidContentAnnotation</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">AIPageContentSkipUnclickableFixedOverlays</td><td><pre> Let fixed wrappers with pointer-events: none use normal APC container
  skipping instead of preserving them automatically.</pre></td><td>✅</td></tr><tr><td class="name">AIPageContentTrackedElementsIframe</td><td><pre> When enabled, iframe element coordinates will be tracked using the
  Element::SetTrackedElementSubRect() method.</pre></td><td>✅</td></tr><tr><td class="name">AIPageContentTrackedElementsPassword</td><td><pre> When enabled, native or heuristics password element coordinates will be
@@ -1206,7 +1213,10 @@
  of eliding transitions between the two hidden states, including to
  internal observers.  This behavior causes problems with capture and
  picture-in-picture, but is preserved as a safe fallback.</pre></td><td>✅</td></tr><tr><td class="name">DispatchSelectionchangeEventPerElement</td><td><pre> Dispatch selectionchange event per element according to the new spec:
- <a href="https://w3c.github.io/selection-api/#selectionchange-event">https://w3c.github.io/selection-api/#selectionchange-event</a></pre></td><td>✅</td></tr><tr><td class="name">DisplayContentsFocusable</td><td><pre> Allowing elements with display:contents to have focus.
+ <a href="https://w3c.github.io/selection-api/#selectionchange-event">https://w3c.github.io/selection-api/#selectionchange-event</a></pre></td><td>✅</td></tr><tr><td class="name">DispatchWorkerCSPViolationEventForModuleGraphFetching</td><td><pre> Dispatches a securitypolicyviolation event for CSP violations
+ detected while fetching a worker&#039;s or worklet&#039;s module graph
+ (top-level script, redirects, and nested static imports).
+ See <a href="https://crbug.com/40612680">https://crbug.com/40612680</a></pre></td><td>❌</td></tr><tr><td class="name">DisplayContentsFocusable</td><td><pre> Allowing elements with display:contents to have focus.
  See <a href="https://crbug.com/1366037">https://crbug.com/1366037</a></pre></td><td>❌</td></tr><tr><td class="name">DisplayCutoutAPI</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DocumentCookie</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DocumentDomain</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DocumentIsolationPolicy</td><td><pre> Enables DocumentIsolationPolicy.
  See <a href="https://https://github.com/WICG/document-isolation-policy">https://https://github.com/WICG/document-isolation-policy</a>.</pre></td><td>❌</td></tr><tr><td class="name">DocumentNamedPropertiesIgnoreExposedness</td><td><pre> Kill switch for including non-exposed &lt;object&gt; and &lt;embed&gt; elements in
  document named properties. crbug.com/551807991
@@ -1232,7 +1242,10 @@
  kMaxOriginalImageArea produce no drag preview (legacy behavior). Acts
  as a kill switch for the removal of that cap. See
  <a href="https://crbug.com/518266739">https://crbug.com/518266739</a></pre></td><td>✅</td></tr><tr><td class="name">DumpForAbsentKeyframeSnapshots</td><td><pre> See: crrev.com/c/7874048
- Diagnostic flag to gather data for a case when compositable animations lack snapshots without a known reason.</pre></td><td>❌</td></tr><tr><td class="name">EditContextAssignmentAsPerSpec</td><td><pre> See <a href="https://crbug.com/443612843">https://crbug.com/443612843</a></pre></td><td>❌</td></tr><tr><td class="name">EditContextCodePointDeletion</td><td><pre> Support code point-based deletion calculations in
+ Diagnostic flag to gather data for a case when compositable animations lack snapshots without a known reason.</pre></td><td>❌</td></tr><tr><td class="name">EditContextAssignmentAsPerSpec</td><td><pre> See <a href="https://crbug.com/443612843">https://crbug.com/443612843</a></pre></td><td>❌</td></tr><tr><td class="name">EditContextBoundsUpdateSchedulesFrame</td><td><pre> Schedule a main frame when EditContext.updateControlBounds() or
+ updateSelectionBounds() changes the bounds of the active EditContext,
+ so the new bounds are sent to the browser in TextInputStateChanged even
+ when called from an async task that doesn&#039;t otherwise cause a frame.</pre></td><td>✅</td></tr><tr><td class="name">EditContextCodePointDeletion</td><td><pre> Support code point-based deletion calculations in
  DeleteSurroundingTextInCodePoints() for EditContext.</pre></td><td>✅</td></tr><tr><td class="name">EditContextHandleTextOrSelectionUpdateDuringComposition</td><td><pre> See <a href="https://crbug.com/379170477">https://crbug.com/379170477</a></pre></td><td>❌</td></tr><tr><td class="name">EditContextSelectionUpdateBeforeTextUpdateEvent</td><td><pre> Update EditContext selectionStart/End before TextUpdateEvent while
  handling deletion. See <a href="https://crbug.com/529413105">https://crbug.com/529413105</a></pre></td><td>✅</td></tr><tr><td class="name">EditingUseDomPositionApi</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ElasticOverscrollBackgroundPaintLocationFix</td><td><pre> Elastic overscroll requires even solid color background to be painted
  in the border box space to ensure they aren&#039;t shifted away.</pre></td><td>✅</td></tr><tr><td class="name">ElasticOverscrollUseEventDeltaForAxisSelection</td><td><pre> Uses the original event delta to choose the initial elastic overscroll
@@ -1245,7 +1258,7 @@
  only in some cases, depending on the element.
  This was added in M147 and can be removed after M149.
  <a href="https://issues.chromium.org/issues/486228104">https://issues.chromium.org/issues/486228104</a></pre></td><td>✅</td></tr><tr><td class="name">EmailVerificationProtocol</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">EmbeddedContentCenterAlignBaseline</td><td><pre> This was added in M151 and can be removed after M153.
- <a href="https://issues.chromium.org/issues/525074815">https://issues.chromium.org/issues/525074815</a></pre></td><td>✅</td></tr><tr><td class="name">EnableXSLTForCAPAlerts</td><td><pre> Controls whether XSLT processing is selectively re-enabled for
+ <a href="https://issues.chromium.org/issues/525074815">https://issues.chromium.org/issues/525074815</a></pre></td><td>✅</td></tr><tr><td class="name">EmojiZWJVerticalOrientation</td><td><pre> Kill switch for <a href="https://crbug.com/41384307">https://crbug.com/41384307</a>.</pre></td><td>✅</td></tr><tr><td class="name">EnableXSLTForCAPAlerts</td><td><pre> Controls whether XSLT processing is selectively re-enabled for
  Common Alerting Protocol (CAP) alert XML documents when native XSLT
  is otherwise disabled.
  crbug.com/435623334.</pre></td><td>✅</td></tr><tr><td class="name">EndpointInclusiveCommitStyles</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">EnforceAnonymityExposure</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">EntropyIgnoredForFirstVideoFrameLCP</td><td><pre> When enabled, the LCP algorithm ignores image entropy for the first
@@ -1378,8 +1391,7 @@
  when the &lt;input&gt; is put directly within an &lt;option&gt; or &lt;optgroup&gt;.</pre></td><td>❌</td></tr><tr><td class="name">InputMultipleFieldsUI</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">InputMultipleFieldsUIWithPointerChecks</td><td><pre> Enables InputMultipleFieldsUI on all platforms by tweaking the inner
  fields to be non-focusable and making the whole input element
  focusable for coarse input devices. When this flag is removed, the
- InputMultipleFieldsUI flag can also be removed. Enabled in M154, safe
- to remove in M158.</pre></td><td>✅</td></tr><tr><td class="name">InputTypeColorEnhancements</td><td><pre> Enables the <code>alpha</code> and <code>colorspace</code> content/IDL attributes on
+ InputMultipleFieldsUI flag can also be removed.</pre></td><td>❌</td></tr><tr><td class="name">InputTypeColorEnhancements</td><td><pre> Enables the <code>alpha</code> and <code>colorspace</code> content/IDL attributes on
  &lt;input type=color&gt;, allowing alpha and Display P3 color values.
  <a href="https://html.spec.whatwg.org/multipage/input.html#dom-input-colorspace">https://html.spec.whatwg.org/multipage/input.html#dom-input-colorspace</a>
  <a href="https://html.spec.whatwg.org/multipage/input.html#dom-input-alpha">https://html.spec.whatwg.org/multipage/input.html#dom-input-alpha</a>
@@ -1421,7 +1433,9 @@
  explainer: <a href="https://github.com/WICG/delayed-message-timing">https://github.com/WICG/delayed-message-timing</a></pre></td><td>❌</td></tr><tr><td class="name">LongPressLinkSelectText</td><td><pre> Long press on a link selects the link text instead of bringing up
  context menu. Enabled only on Android AuthView.</pre></td><td>❌</td></tr><tr><td class="name">LongPressReleasesActiveState</td><td><pre> Kill-switch for releasing the :active state when a touch long-press is
  lifted, and for making context-menu focus hit tests read-only.
- <a href="https://crbug.com/358393574">https://crbug.com/358393574</a></pre></td><td>✅</td></tr><tr><td class="name">LongTaskFromLongAnimationFrame</td><td><pre> Use LongAnimationFrameMonitor to emit longtask entries</pre></td><td>✅</td></tr><tr><td class="name">MacCharacterFallbackCache</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">MacDisableCtrlHomeEnd</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">MachineLearningNeuralNetwork</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ManagedConfiguration</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ManualText</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MarginTrim</td><td><pre> CSS margin-trim property: <a href="https://drafts.csswg.org/css-box-4/#margin-trim">https://drafts.csswg.org/css-box-4/#margin-trim</a></pre></td><td>✅</td></tr><tr><td class="name">MaskDeserializationTimeForCrossOriginMessages</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">MaskWaitForAllImages</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">MathMLAnchorElement</td><td><pre> Enables MathMLAnchorElement</pre></td><td>❌</td></tr><tr><td class="name">MathMLOperatorRTLMirroring</td><td><pre> Enables mirroring for stretchy and large MathML operators when
+ <a href="https://crbug.com/358393574">https://crbug.com/358393574</a></pre></td><td>✅</td></tr><tr><td class="name">LongTaskFromLongAnimationFrame</td><td><pre> Use LongAnimationFrameMonitor to emit longtask entries</pre></td><td>✅</td></tr><tr><td class="name">MacCharacterFallbackCache</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">MacDisableCtrlHomeEnd</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">MacFontWeightFromOS2</td><td><pre> Read font weight from the OpenType OS/2 table first during macOS font
+ family style matching, falling back to AppKit/CoreText weights if the
+ OS/2 table is unavailable. See <a href="https://crbug.com/543243014">https://crbug.com/543243014</a>.</pre></td><td>❌</td></tr><tr><td class="name">MachineLearningNeuralNetwork</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ManagedConfiguration</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ManualText</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MarginTrim</td><td><pre> CSS margin-trim property: <a href="https://drafts.csswg.org/css-box-4/#margin-trim">https://drafts.csswg.org/css-box-4/#margin-trim</a></pre></td><td>✅</td></tr><tr><td class="name">MaskDeserializationTimeForCrossOriginMessages</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">MaskWaitForAllImages</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">MathMLAnchorElement</td><td><pre> Enables MathMLAnchorElement</pre></td><td>❌</td></tr><tr><td class="name">MathMLOperatorRTLMirroring</td><td><pre> Enables mirroring for stretchy and large MathML operators when
  the text direction is right to left.</pre></td><td>✅</td></tr><tr><td class="name">MeasureMemory</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">MediaCapabilitiesEncodingInfo</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MediaCapabilitiesSpatialAudio</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MediaCaptionSettingsButton</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MediaCapture</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MediaCaptureBackgroundBlur</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MediaCaptureCameraControls</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MediaCaptureConfigurationChange</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MediaCaptureVoiceIsolation</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MediaControlsExpandGesture</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MediaControlsOverlayPlayButton</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MediaElementMutedDefaultState</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MediaElementVolumeGreaterThanOne</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MediaEngagementBypassAutoplayPolicies</td><td><pre> Set to reflect the kMediaEngagementBypassAutoplayPolicies feature.</pre></td><td>❌</td></tr><tr><td class="name">MediaLatencyHint</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MediaPlaybackWhileNotVisiblePermissionPolicy</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">MediaQueryNavigationControls</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MediaSession</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">MediaSessionChapterInformation</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">MediaSourceExperimental</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MediaSourceExtensionsForWebCodecs</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MediaStreamTrackProcessorStats</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">MediaStreamTrackTransfer</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MediaStreamTrackWebSpeech</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MemoryConsumerForNGShapeCache</td><td><pre> This feature helps to add memory consumer to NGShapeCache, so that
  the cached shape results would be cleared once exceeding the memory limit.</pre></td><td>❌</td></tr><tr><td class="name">MenuElements</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MergeStickyLayers</td><td><pre> Killswitch M149. Functionality changed in M151.</pre></td><td>✅</td></tr><tr><td class="name">MessagePortCloseEvent</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MiddleClickAutoscroll</td><td><pre> This is enabled by default on Windows only. The only part that&#039;s
  &quot;experimental&quot; is the support on other platforms.</pre></td><td>❌</td></tr><tr><td class="name">MixedContentAutoupgradesUseIsMixedContentRestrictedInFrame</td><td><pre> Killswitch for crbug.com/40062462 fix.</pre></td><td>✅</td></tr><tr><td class="name">MobileLayoutTheme</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ModifyParagraphCrossEditingoundary</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ModuleMapDoNotCacheFailedFetch</td><td><pre> Stops caching failed module fetches (network error, non-ok status, or
@@ -1467,7 +1481,7 @@
  See <a href="https://github.com/whatwg/html/issues/337">https://github.com/whatwg/html/issues/337</a></pre></td><td>❌</td></tr><tr><td class="name">NotificationConstructor</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">NotificationContentImage</td><td><pre> NotificationContentImage is not available in all platforms
  The Notification Center on Mac OS X does not support content images.</pre></td><td>❌</td></tr><tr><td class="name">Notifications</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">NotificationTriggers</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">NotifySelectionControllerOnUnchangedSelection</td><td><pre> Notify selection controller of selection changes even when the new
  selection matches the old selection, keeping the selection state in
- sync. This flag ships in M151 and can be removed in M153.</pre></td><td>✅</td></tr><tr><td class="name">NumberInputFullWidthChars</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">OffscreenCanvasGetContextAttributes</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">OffsetMappingReuseFullWidthSpaceFix</td><td><pre>See crbug.com/512385682</pre></td><td>✅</td></tr><tr><td class="name">OffsetPathTransformUpdateFix</td><td><pre> Kill switch for a fix to offset-path transform invalidation for
+ sync. This flag ships in M151 and can be removed in M153.</pre></td><td>✅</td></tr><tr><td class="name">NumberInputFullWidthChars</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">OfflineAudioContextIncrementalRendering</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">OffscreenCanvasGetContextAttributes</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">OffsetMappingReuseFullWidthSpaceFix</td><td><pre>See crbug.com/512385682</pre></td><td>✅</td></tr><tr><td class="name">OffsetPathTransformUpdateFix</td><td><pre> Kill switch for a fix to offset-path transform invalidation for
  <a href="https://crbug.com/463409688">https://crbug.com/463409688</a>.</pre></td><td>✅</td></tr><tr><td class="name">OmitBlurEventOnElementRemoval</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">OmitSubframeDetachmentEventsOnRemoval</td><td><pre> iframes send pagehide/unload/visibilitychange when removed.
  This not spec-compliant, but might have web-compat consequences.
  This flag omits firing those events on element removal.</pre></td><td>❌</td></tr><tr><td class="name">OnDeviceWebSpeechAvailable</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">OnDeviceWebSpeechQuality</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">OofLayoutRequiresSideEffects</td><td><pre> Skip layout of all out-of-flow positioned elements if side-effects are
@@ -1977,7 +1991,8 @@
         "amount_extraction_ai_terms_seen": "",
         "at_memory": {
             "double_ctrl_trigger_enabled": "",
-            "shortcut": ""
+            "shortcut": "",
+            "shortcut_promo_impression_count": ""
         },
         "autocomplete": {
             "label_sensitive_migration_generation": ""
@@ -2379,6 +2394,7 @@
         },
         "extended_background_lifetime_urls": "",
         "extension_install_type_blocklist": "",
+        "force_install_with_search_or_new_tab_overrides_enabled": "",
         "global_shortcuts": {
             "uuid": ""
         },
@@ -2775,13 +2791,7 @@
             "hosts_successfully_fetched": "",
             "last_fetch_attempt": ""
         },
-        "model_cache_key_mapping": "",
-        "model_store_metadata": "",
         "pending_hints_processing_version": "",
-        "predictionmodelfetcher": {
-            "last_fetch_attempt": "",
-            "last_fetch_success": ""
-        },
         "previously_registered_optimization_types": "",
         "previous_optimization_types_with_filter": "",
         "store_file_paths_to_delete": ""
@@ -3697,7 +3707,7 @@
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>Updated</strong>: 2026-10-02. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
+        <strong>Updated</strong>: 2026-10-03. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
       </p>
     </div>
   </footer>
