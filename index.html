@@ -197,9 +197,7 @@
  DidEndTextFieldEditing(), which Blink only sends for &lt;input&gt; elements, so
  suggestions shown for &lt;textarea&gt; or contenteditable elements leak into the
  keyboard accessory after the user taps away.
- TODO(crbug.com/570488818): Remove once the experiment is over.</pre></td><td>❌</td></tr><tr><td class="name">AutofillIgnoreUnchangedFrameResizes</td><td><pre> Controls whether <code>AutofillPopupHideHelper</code> ignores frame resize events
- when the <code>WebContents</code> size is unchanged.
- TODO(crbug.com/545556982): Remove after confirming there is no regression.</pre></td><td>✅</td></tr><tr><td class="name">AutofillImproveClassificationForTwoWordLastNames</td><td><pre> When enabled, corrects missclassification of NAME_LAST as NAME_LAST_SECOND in
+ TODO(crbug.com/570488818): Remove once the experiment is over.</pre></td><td>❌</td></tr><tr><td class="name">AutofillImproveClassificationForTwoWordLastNames</td><td><pre> When enabled, corrects missclassification of NAME_LAST as NAME_LAST_SECOND in
  an absence of NAME_LAST_FIRST.
  TODO(crbug.com/400995432): Clean-up when launched.</pre></td><td>❌</td></tr><tr><td class="name">AutofillIntroduceGlobalEmptyValueRewriterRules</td><td><pre> If enabled, global rules are applied to rewrite empty string values like
  &quot;null&quot; to an empty string. These rules are applied for all types during
@@ -230,10 +228,7 @@
  frames.
  This feature lives in Autofill code because of its close relationship to
  <code>kAutofillCrossOriginAutofill</code>.
- TODO(crbug.com/40178859): Enable this feature.</pre></td><td>❌</td></tr><tr><td class="name">AutofillPopupCheckHtmlFormPopupOverlap</td><td><pre> If the feature is enabled, Autofill popups perform additional check to
- detect if they are obscured by top-level HTML form popups (e.g color picker).
- If so, Autofill Popup won&#039;t be shown.
- TODO(crbug.com/417052041): Remove when launched.</pre></td><td>✅</td></tr><tr><td class="name">AutofillPopupDontAcceptNonVisibleEnoughSuggestion</td><td><pre> If the feature is enabled, before triggering suggestion acceptance, the row
+ TODO(crbug.com/40178859): Enable this feature.</pre></td><td>❌</td></tr><tr><td class="name">AutofillPopupDontAcceptNonVisibleEnoughSuggestion</td><td><pre> If the feature is enabled, before triggering suggestion acceptance, the row
  view checks that a substantial portion of its content was visible for some
  minimum required period.
  TODO(crbug.com/337222641): During cleaning up, in the popup row view remove
@@ -356,9 +351,7 @@
  to be downloaded.</pre></td><td>❌</td></tr><tr><td class="name">ContextMenuCopyVideoFrame</td><td><pre> Enables the &quot;Copy Video Frame&quot; context menu item.</pre></td><td>✅</td></tr><tr><td class="name">ContextMenuSaveVideoFrameAs</td><td><pre> Enables the &quot;Save Video Frame As&quot; context menu item.
  On Android, this is &quot;Download Video Frame&quot; context menu item.</pre></td><td>✅</td></tr><tr><td class="name">ContextMenuSearchForVideoFrame</td><td><pre> Enables the &quot;Search Video Frame with &lt;Search Provider&gt;&quot; context menu item.</pre></td><td>✅</td></tr><tr><td class="name">CrashReportingAPIMoreContextData</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">CreateImageBitmapOrientationNone</td><td><pre> When enabled, add a new option, {imageOrientation: &#039;none&#039;}, to
  createImageBitmap, which ignores the image orientation metadata of the source
- and renders the image as encoded.</pre></td><td>❌</td></tr><tr><td class="name">D3D11VideoDecoderForceSingleTexture</td><td><pre> Forces D3DVideoDecoder to use one decoder texture per picture buffer.
- Owner: media-gpu-team@chromium.org
- Expiry: When no longer needed for decode texture selection experiments.</pre></td><td>❌</td></tr><tr><td class="name">D3D11VideoDecoderUseSharedHandle</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DataURIMemoryCache</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">DataUrlWorkerOpaqueOrigin</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">DebugTopChromeWebUI</td><td><pre> Allows loading Top Chrome Webium.</pre></td><td>❌</td></tr><tr><td class="name">DeclarativeCSSModulesUseDataURI</td><td><pre> When enabled, Declarative CSS Modules will generate a DataURI instead of a
+ and renders the image as encoded.</pre></td><td>❌</td></tr><tr><td class="name">D3D11VideoDecoderUseSharedHandle</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DataURIMemoryCache</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">DataUrlWorkerOpaqueOrigin</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">DebugTopChromeWebUI</td><td><pre> Allows loading Top Chrome Webium.</pre></td><td>❌</td></tr><tr><td class="name">DeclarativeCSSModulesUseDataURI</td><td><pre> When enabled, Declarative CSS Modules will generate a DataURI instead of a
  Blob URL in the generated Import Map.</pre></td><td>❌</td></tr><tr><td class="name">DecodeScriptsInBlink</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">DedicatedMediaServiceThread</td><td><pre> Runs the media service in the GPU process on a dedicated thread.</pre></td><td>✅</td></tr><tr><td class="name">DedicatedWorkerAblationStudyEnabled</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DefaultSiteInstanceGroups</td><td><pre> When enabled, puts non-isolated sites in separate SiteInstances in a default
  SiteInstanceGroup (per BrowsingInstance), rather than sharing a default
  SiteInstance.</pre></td><td>✅</td></tr><tr><td class="name">DeferAudioFocusUntilAudible</td><td><pre> Defer requesting persistent audio focus until the WebContents is audible.
@@ -439,7 +432,7 @@
  files when client_metadata is used. When enabled, accounts_endpoint and
  login_url must be present in .well-known/web-identity for privacy validation.</pre></td><td>❌</td></tr><tr><td class="name">FedCmWithoutWellKnownEnforcement</td><td><pre> Enables bypassing the well-known file enforcement.</pre></td><td>❌</td></tr><tr><td class="name">FeedAudioOverviews</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FeedContainment</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FeedImageMemoryCacheSizePercentage</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FeedLoadingPlaceholder</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FeedNoViewCache</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FeedNullItemAnimatorOnScrollRestore</td><td><pre> TODO(b/517926260): Remove this feature flag once the change has made it
  through a stable channel revision.
- See b/517926260.</pre></td><td>✅</td></tr><tr><td class="name">FeedPerformanceStudy</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FeedRecyclerBinderUnmountOnDetach</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FeedSignedOutViewDemotion</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FeedStreaming</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FeedSyntheticCapabilities</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FencedFrames</td><td><pre> Enable the &lt;fencedframe&gt; element; see crbug.com/1123606. Note that enabling
+ See b/517926260.</pre></td><td>❌</td></tr><tr><td class="name">FeedPerformanceStudy</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FeedRecyclerBinderUnmountOnDetach</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FeedSignedOutViewDemotion</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FeedStreaming</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FeedSyntheticCapabilities</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FencedFrames</td><td><pre> Enable the &lt;fencedframe&gt; element; see crbug.com/1123606. Note that enabling
  this feature does not automatically expose this element to the web, it only
  allows the element to be enabled by the runtime enabled feature, for origin
  trials.</pre></td><td>✅</td></tr><tr><td class="name">FencedFramesAutomaticBeaconCredentials</td><td><pre> Temporarily un-disable credentials on fenced frame automatic beacons until
@@ -645,7 +638,7 @@
  content/, and this work has finished and the old implementation was deleted.
  Now this flag is just for injecting parameters through field trials as an
  umbrella feature.</pre></td><td>✅</td></tr><tr><td class="name">PreloadingEagerHoverHeuristics</td><td><pre> Launch mouse hover feature only on Desktop. Note that Android Desktop mode is
- currently out of scope.</pre></td><td>❌</td></tr><tr><td class="name">PreloadingEagerViewportHeuristics</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PreloadingEligibilityCheckOnRenderer</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">PreloadingHeuristicsMLModel</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">PreloadingModerateViewportHeuristics</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PreloadingRespectUserAgentOverride</td><td><pre> Killswitch for UA override issue fix (crbug.com/441612842) in preloading.</pre></td><td>❌</td></tr><tr><td class="name">PreloadMediaEngagementData</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PreloadSystemFonts</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">Prerender2EarlyDocumentLifecycleUpdate</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">Prerender2FallbackPrefetchSpecRules</td><td><pre> Triggers prefetch ahead of prerender for Speculation Rules.
+ currently out of scope.</pre></td><td>❌</td></tr><tr><td class="name">PreloadingEagerViewportHeuristics</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PreloadingEligibilityCheckOnRenderer</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">PreloadingModerateViewportHeuristics</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PreloadingRespectUserAgentOverride</td><td><pre> Killswitch for UA override issue fix (crbug.com/441612842) in preloading.</pre></td><td>❌</td></tr><tr><td class="name">PreloadMediaEngagementData</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">PreloadSystemFonts</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">Prerender2EarlyDocumentLifecycleUpdate</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">Prerender2FallbackPrefetchSpecRules</td><td><pre> Triggers prefetch ahead of prerender for Speculation Rules.
  See <a href="https://crbug.com/342089123">https://crbug.com/342089123</a> for more details.
 
  Enabled except for Android WebView.</pre></td><td>✅</td></tr><tr><td class="name">Prerender2MemoryControls</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">Prerender2ReuseHost</td><td><pre> If enabled, the feature allows the prerender host to be reused for the
@@ -706,7 +699,7 @@
  (MSE-in-workers), where there could be significant delay between the worker
  thread creation of the object URL and the main thread usage of the object URL
  for starting attachment to HTMLME.</pre></td><td>✅</td></tr><tr><td class="name">RunVideoCaptureServiceInBrowserProcess</td><td><pre> Run video capture service in the Browser process as opposed to a dedicated
- utility process.</pre></td><td>❌</td></tr><tr><td class="name">RustMpegAudioDataParser</td><td><pre> Enables Rust version of MPEG parser (MP3/ADTS). Remove after M152 stable.</pre></td><td>✅</td></tr><tr><td class="name">RustyIcoFeature</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SafelistPaytoToRegisterProtocolHandler</td><td><pre> <a href="https://html.spec.whatwg.org/multipage/system-state.html#safelisted-scheme">https://html.spec.whatwg.org/multipage/system-state.html#safelisted-scheme</a></pre></td><td>❌</td></tr><tr><td class="name">SafetyCheckUnusedSitePermissions</td><td><pre> Enables unused site permission module in Safety Check.</pre></td><td>✅</td></tr><tr><td class="name">SchedQoSOnResourcedForChrome</td><td><pre> Update scheduler settings using resourced on ChromeOS.</pre></td><td>❌</td></tr><tr><td class="name">ScriptStreaming</td><td><pre> Controls script streaming for http and https scripts.</pre></td><td>✅</td></tr><tr><td class="name">ScriptStreamingForNonHTTP</td><td><pre> Enables script streaming for non-http scripts.</pre></td><td>✅</td></tr><tr><td class="name">ScrollPredictorFilteringBypassOnSynthetic</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ScrollPredictorRefinedHasPrediction</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ScrollPredictorSyntheticKalman</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SecPurposePrefetchHeaderNoStatePrefetch</td><td><pre> Enables sending Sec-Purpose: &quot;prefetch&quot; header for
+ utility process.</pre></td><td>❌</td></tr><tr><td class="name">RustyIcoFeature</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SafelistPaytoToRegisterProtocolHandler</td><td><pre> <a href="https://html.spec.whatwg.org/multipage/system-state.html#safelisted-scheme">https://html.spec.whatwg.org/multipage/system-state.html#safelisted-scheme</a></pre></td><td>❌</td></tr><tr><td class="name">SafetyCheckUnusedSitePermissions</td><td><pre> Enables unused site permission module in Safety Check.</pre></td><td>✅</td></tr><tr><td class="name">SchedQoSOnResourcedForChrome</td><td><pre> Update scheduler settings using resourced on ChromeOS.</pre></td><td>❌</td></tr><tr><td class="name">ScriptStreaming</td><td><pre> Controls script streaming for http and https scripts.</pre></td><td>✅</td></tr><tr><td class="name">ScriptStreamingForNonHTTP</td><td><pre> Enables script streaming for non-http scripts.</pre></td><td>✅</td></tr><tr><td class="name">ScrollPredictorFilteringBypassOnSynthetic</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ScrollPredictorRefinedHasPrediction</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ScrollPredictorSyntheticKalman</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SecPurposePrefetchHeaderNoStatePrefetch</td><td><pre> Enables sending Sec-Purpose: &quot;prefetch&quot; header for
  NoStatePrefetchURLLoaderThrottle.</pre></td><td>✅</td></tr><tr><td class="name">SecPurposePrefetchHeaderRelPrefetch</td><td><pre> Enables sending Sec-Purpose: &quot;prefetch&quot; header for rel=&quot;prefetch&quot;.</pre></td><td>✅</td></tr><tr><td class="name">SecurePaymentConfirmationBrowser</td><td><pre> Browser-side feature flag for Secure Payment Confirmation (SPC) that also
  controls the render side feature state. SPC is not currently available on
  Linux or ChromeOS, as it requires platform authenticator support.</pre></td><td>❌</td></tr><tr><td class="name">SecurePaymentConfirmationDebug</td><td><pre> Used to control whether to remove the restriction that PaymentCredential in
@@ -1004,7 +997,7 @@
  &quot;inherit&quot;) instead of always resolving it to &quot;ltr&quot;/&quot;rtl&quot;.</pre></td><td>✅</td></tr><tr><td class="name">CanvasTextMetricsPreciseBounds</td><td><pre> <a href="https://crbug.com/479240778">https://crbug.com/479240778</a></pre></td><td>❌</td></tr><tr><td class="name">CanvasToneMapping</td><td><pre> Canvas2D API for specifying HDR tone mapping behavior.
  https:/crbug.com/448552449, <a href="https://github.com/whatwg/html/issues/11424">https://github.com/whatwg/html/issues/11424</a></pre></td><td>❌</td></tr><tr><td class="name">CanvasUsesArcPaintOp</td><td><pre> Kill switch for <a href="https://crbug.com/330506337">https://crbug.com/330506337</a>.</pre></td><td>✅</td></tr><tr><td class="name">CapabilityDelegationDigitalCredentials</td><td><pre> Enables capability delegation for the Digital Credentials API (both
  create and get requests).
- <a href="https://crbug.com/512747131">https://crbug.com/512747131</a></pre></td><td>❌</td></tr><tr><td class="name">CapabilityDelegationDisplayCaptureRequest</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CapabilityElementIconOnlyMode</td><td><pre> Enables icon-only mode for capability elements.
+ <a href="https://crbug.com/512747131">https://crbug.com/512747131</a></pre></td><td>❌</td></tr><tr><td class="name">CapabilityDelegationDisplayCaptureRequest</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CapabilityDelegationPopup</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CapabilityElementIconOnlyMode</td><td><pre> Enables icon-only mode for capability elements.
  <a href="https://issues.chromium.org/issues/514564817">https://issues.chromium.org/issues/514564817</a></pre></td><td>❌</td></tr><tr><td class="name">CapitalizeAfterSupplementaryCharacterFix</td><td><pre> Considers the full previous code point (not one UTF-16 code unit) for
  text-transform: capitalize word boundaries. Kill switch for
  crbug.com/501115609.</pre></td><td>✅</td></tr><tr><td class="name">CaptureController</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CapturedMouseEvents</td><td><pre> TODO(crbug.com/1444712): Before enabling that flag by default,
@@ -1403,7 +1396,7 @@
  x-descriptors.
  <a href="https://crbug.com/41385706">https://crbug.com/41385706</a></pre></td><td>✅</td></tr><tr><td class="name">ImplicitRootScroller</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">IncomingCallNotifications</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">IncrementalFontTransfer</td><td><pre> Support for <a href="https://www.w3.org/TR/IFT/">https://www.w3.org/TR/IFT/</a>. Tracked at
  <a href="https://chromestatus.com/feature/5135917565214720">https://chromestatus.com/feature/5135917565214720</a>.</pre></td><td>❌</td></tr><tr><td class="name">InertElementNonEditable</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">InfiniteCullRect</td><td><pre> If a painting bug no longer reproduces with this feature enabled, then
- the bug is caused by incorrect cull rects.</pre></td><td>❌</td></tr><tr><td class="name">InheritUserModifyWithoutContenteditable</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">InlineBlockLineNavigation</td><td><pre> See crbug.com/40695399</pre></td><td>✅</td></tr><tr><td class="name">InlineContainingBlockSkipOpaque</td><td><pre> See crbug.com/40910996</pre></td><td>✅</td></tr><tr><td class="name">InlineCursorSkipNonIfc</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">InlineScriptCacheHint</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">InnerHTMLParserFastpathLogFailure</td><td><pre> If enabled, and the inner html parser is unable to successfully
+ the bug is caused by incorrect cull rects.</pre></td><td>❌</td></tr><tr><td class="name">InheritUserModifyWithoutContenteditable</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">InlineBlockLineNavigation</td><td><pre> See crbug.com/40695399</pre></td><td>✅</td></tr><tr><td class="name">InlineContainingBlockSkipOpaque</td><td><pre> See crbug.com/40910996 crbug.com/569803503</pre></td><td>❌</td></tr><tr><td class="name">InlineCursorSkipNonIfc</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">InlineScriptCacheHint</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">InnerHTMLParserFastpathLogFailure</td><td><pre> If enabled, and the inner html parser is unable to successfully
  parse, it will log histograms of why it failed. The logging is
  non-trivial.</pre></td><td>❌</td></tr><tr><td class="name">InputClientRectWithoutInlinePadding</td><td><pre> Text fields leave the inline padding out of their client rect and
  scroll size, matching where they clip their text. Kill switch.
@@ -1688,6 +1681,9 @@
  each script execution. This prevents long tasks and improves responsiveness.
  <a href="https://crbug.com/40894694">https://crbug.com/40894694</a></pre></td><td>✅</td></tr><tr><td class="name">SequentialFocusPrimitives</td><td><pre> Exposes the Focusable interface, DocumentOrShadowRoot.activeFocusable,
  CSSPseudoElement.focus(), and sequential focus navigation primitives.
+ <a href="https://crbug.com/565786176">https://crbug.com/565786176</a></pre></td><td>❌</td></tr><tr><td class="name">SequentialFocusPrimitivesShadowRoots</td><td><pre> Adds the <code>shadowRoots</code> option to the Focusable constructors (and the
+ constructor that takes a Focusable), which exposes focusable items
+ inside those shadow trees.
  <a href="https://crbug.com/565786176">https://crbug.com/565786176</a></pre></td><td>❌</td></tr><tr><td class="name">Serial</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SerializeInvalidSelectorsInForgivingSelectorList</td><td><pre> Serialize invalid selector text in the forgiving selector list.
  <a href="https://github.com/w3c/csswg-drafts/issues/8356">https://github.com/w3c/csswg-drafts/issues/8356</a></pre></td><td>❌</td></tr><tr><td class="name">SerializeViewTransitionStateInSPA</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SerialPortConnected</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ServiceWorkerBackgroundSyncInDedicatedWorker</td><td><pre> Support for Service Worker background sync APIs in Dedicated Workers.
  See <a href="https://chromestatus.com/feature/6497653025931264">https://chromestatus.com/feature/6497653025931264</a>
@@ -3159,7 +3155,6 @@
         "picker_shown": "",
         "profiles_created": "",
         "profiles_order": "",
-        "reduce_accept_language_enabled": "",
         "sandbox_external_protocol_blocked": "",
         "shared_array_buffer_unrestricted_access_allowed": "",
         "show_picker_on_startup": "",
@@ -3262,6 +3257,7 @@
         "allowed": ""
     },
     "session": {
+        "pre_smart_restart_profile_counts": "",
         "pre_smart_restart_session_state": "",
         "restore_on_startup": "",
         "startup_urls": ""
@@ -3429,7 +3425,8 @@
         "tabs": "",
         "themes": "",
         "transport_data_per_account": "",
-        "typed_urls": ""
+        "typed_urls": "",
+        "wiped_apps_and_app_settings_data": ""
     },
     "syncing_theme_prefs_migrated_to_non_syncing": "",
     "sync_promo": {
@@ -3734,7 +3731,7 @@
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>Updated</strong>: 2026-10-08. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
+        <strong>Updated</strong>: 2026-10-09. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
       </p>
     </div>
   </footer>
