@@ -29,7 +29,7 @@
           </tr>
         </thead>
         <tbody class="list">
-          <tr><td class="name">ActiveContentSettingExpiry</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ActorFormFillingServiceEnableAddress</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ActorFormFillingServiceEnableCreditCard</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">AIPageContentIncludePopupWindows</td><td><pre> Controls whether to include information about the page&#039;s open popup in
+          <tr><td class="name">ActiveContentSettingExpiry</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ActorFormFillingServiceEnableAddress</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ActorFormFillingServiceEnableCreditCard</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">AIPageContentIncludePopupWindows</td><td><pre> Controls whether to include information about the page&#039;s open popup in
  AIPageContent.</pre></td><td>✅</td></tr><tr><td class="name">AIPageContentMissingSubframesFailSilently</td><td><pre> Controls whether a missing subframe while generating the APC proto is
  silently dropped. If false, the entire APC is considered failed when this
  happens. When true, the subframe is simply skipped but the rest of APC
@@ -134,7 +134,10 @@
  suggestions when the popup is dismissed, restoring them if the user reopens
  suggestions on the same field. State is reset once a suggestion is accepted
  or a different field is focused.</pre></td><td>❌</td></tr><tr><td class="name">AutofillAtMemorySupportContenteditableOnAndroid</td><td><pre> Controls whether contenteditable fields on Android are supported for
- AtMemory.</pre></td><td>❌</td></tr><tr><td class="name">AutofillAtMemoryTriggerShortcut</td><td><pre> If enabled, AtMemory can be triggered with a keyboard shortcut like
+ AtMemory.</pre></td><td>❌</td></tr><tr><td class="name">AutofillAtMemorySupportTextAreaOnAndroid</td><td><pre> Controls whether &lt;textarea&gt; fields on Android are supported for AtMemory.
+ When enabled, the keyboard accessory is shown on textareas with only the
+ AtMemory entry point, and regular Autofill suggestions are not generated
+ for them.</pre></td><td>❌</td></tr><tr><td class="name">AutofillAtMemoryTriggerShortcut</td><td><pre> If enabled, AtMemory can be triggered with a keyboard shortcut like
  Ctrl+Space.</pre></td><td>❌</td></tr><tr><td class="name">AutofillAtMemoryTriggerString</td><td><pre> If enabled, AtMemory can be triggered by typing the trigger string like &quot;@@&quot;.</pre></td><td>✅</td></tr><tr><td class="name">AutofillBetterLocalHeuristicPlaceholderSupport</td><td><pre> When enabled, the placeholder is not considered a label fallback on the
  renderer side anymore. Instead, local heuristic will match regexes against
  either the label or the placeholder, depending on how high quality the label
@@ -447,7 +450,8 @@
  the reportEvent() endpoints.</pre></td><td>✅</td></tr><tr><td class="name">FencedFramesEnforceFocus</td><td><pre> Enables browser-side focus verification when crossing fenced boundaries.</pre></td><td>❌</td></tr><tr><td class="name">FencedFramesLocalUnpartitionedDataAccess</td><td><pre> Controls functionality related to network revocation/local unpartitioned
  data access in fenced frames.</pre></td><td>❌</td></tr><tr><td class="name">FencedFramesReportEventHeaderChanges</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FencedFramesSrcPermissionsPolicy</td><td><pre> Enables a bug fix that allows a &#039;src&#039; allowlist in the |allow| parameter of a
  &lt;fencedframe&gt; or &lt;iframe&gt; loaded with a FencedFrameConfig to behave as
- expected. See: <a href="https://crbug.com/349080952">https://crbug.com/349080952</a></pre></td><td>✅</td></tr><tr><td class="name">FFmpegDemuxerIT35MetadataTrack</td><td><pre> Controls whether FFmpegDemuxer attaches the HDR metadata carried by ITU-T
+ expected. See: <a href="https://crbug.com/349080952">https://crbug.com/349080952</a></pre></td><td>✅</td></tr><tr><td class="name">FetchErrorCategoryLogging</td><td><pre> Controls whether category-keyed UKM (FetchRequest.WithCategory) is logged
+ when a fetch() request reaches a terminal state.</pre></td><td>✅</td></tr><tr><td class="name">FFmpegDemuxerIT35MetadataTrack</td><td><pre> Controls whether FFmpegDemuxer attaches the HDR metadata carried by ITU-T
  T.35 timed metadata tracks to the video tracks that reference them.</pre></td><td>✅</td></tr><tr><td class="name">FieldClassificationModelCaching</td><td><pre> When enabled, the field classification model uses runtime caching to not run
  models on the same inputs multiple times.
  TODO(crbug.com/371933424). Clean up when launched, if not used for Autofill
@@ -1054,7 +1058,7 @@
  dispatching.
  This was added in M142 and can be removed after M144.
  <a href="https://issues.chromium.org/issues/444932649">https://issues.chromium.org/issues/444932649</a>
- <a href="https://issues.chromium.org/issues/346766786">https://issues.chromium.org/issues/346766786</a></pre></td><td>✅</td></tr><tr><td class="name">CompositeBoxShadowAnimation</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CompositeClipPathAnimation</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">CompositedSelectionUpdate</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CompositingDecisionAtAnimationPhaseBoundaries</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CompositionForegroundMarkers</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CompositorEventTrigger</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CompositorTimelineTrigger</td><td><pre> When enabled, TimelineTriggers[1] will function via cc::TimelineTrigger
+ <a href="https://issues.chromium.org/issues/346766786">https://issues.chromium.org/issues/346766786</a></pre></td><td>✅</td></tr><tr><td class="name">CompositeClipPathAnimation</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">CompositedSelectionUpdate</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CompositingDecisionAtAnimationPhaseBoundaries</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CompositionForegroundMarkers</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CompositorEventTrigger</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CompositorTimelineTrigger</td><td><pre> When enabled, TimelineTriggers[1] will function via cc::TimelineTrigger
  objects that live on the compositor thread.
  [1] <a href="https://drafts.csswg.org/css-animations-2/#timeline-triggers">https://drafts.csswg.org/css-animations-2/#timeline-triggers</a></pre></td><td>✅</td></tr><tr><td class="name">CompressionDictionaryTransport</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ComputedAccessibilityInfo</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ComputePressure</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ConcurrentNativePaintWorklets</td><td><pre> If enabled, allow concurrent animations via native paint worklets to
  run on the compositor thread.</pre></td><td>❌</td></tr><tr><td class="name">ConditionalTracingLoAF</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ConnectionAllowlistEmbeddedEnforcement</td><td><pre> Connection-Allowlist embedded enforcement: the <code>connectionallowlist</code>
@@ -1292,7 +1296,7 @@
  video frame. See crbug.com/434659232.</pre></td><td>❌</td></tr><tr><td class="name">EventPseudoTargetProperty</td><td><pre> <code>event.pseudoTarget</code> property to represent pseudo-elements in events. Returns <code>CSSPseudoElement</code> or null.</pre></td><td>✅</td></tr><tr><td class="name">EventPseudoTargetViewTransitionName</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">EventTimingInteractionCount</td><td><pre> Kill-switch for <a href="https://chromestatus.com/feature/5153386492198912">https://chromestatus.com/feature/5153386492198912</a>
  Added in M144, can be removed in M146.</pre></td><td>✅</td></tr><tr><td class="name">EventTimingMatchingHTML</td><td><pre> Interoperable dispatch timing for transitionrun and media query events.
  <a href="https://chromestatus.com/feature/6312504658624512">https://chromestatus.com/feature/6312504658624512</a></pre></td><td>✅</td></tr><tr><td class="name">EventTimingTargetSelector</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">EventTrigger</td><td><pre> <a href="https://drafts.csswg.org/web-animations-2/#triggers">https://drafts.csswg.org/web-animations-2/#triggers</a></pre></td><td>❌</td></tr><tr><td class="name">ExperimentalContentSecurityPolicyFeatures</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ExperimentalJSProfilerMarkers</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ExperimentalMachineLearningNeuralNetwork</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ExperimentalPolicies</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ExposeCSSFontFeatureValuesRule</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ExposeRenderTimeNonTaoDelayedImage</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ExtendedTextMetrics</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ExtensionScriptTagging</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ExtensionScriptTaggingTestingAPI</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ExternalPopupMenuClickEvent</td><td><pre> Kill-switch for crbug.com/40434449.
- Added in M139, and it can be removed in M141.</pre></td><td>✅</td></tr><tr><td class="name">EyeDropperAPI</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FaceDetector</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FastPositionIterator</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FedCm</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FedCmActiveModeMultipleIdentityProviders</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FedCmAutofill</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FedCmDelegation</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FedCmIdentityHandler</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FedCmIdPRegistration</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FedCmLightweightMode</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FedCmMultipleIdentityProviders</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FedCmMultipleRequests</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FedCmNavigationInterception</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FencedFrames</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FencedFramesAPIChanges</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FencedFramesLocalUnpartitionedDataAccess</td><td><pre> Allows fenced frames to access unpartioned data via Shared Storage in
+ Added in M139, and it can be removed in M141.</pre></td><td>✅</td></tr><tr><td class="name">EyeDropperAPI</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FaceDetector</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FastCompositionCharacterBounds</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FastPositionIterator</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FedCm</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FedCmActiveModeMultipleIdentityProviders</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FedCmAutofill</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FedCmDelegation</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FedCmIdentityHandler</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FedCmIdPRegistration</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FedCmLightweightMode</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FedCmMultipleIdentityProviders</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FedCmMultipleRequests</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FedCmNavigationInterception</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FencedFrames</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FencedFramesAPIChanges</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FencedFramesLocalUnpartitionedDataAccess</td><td><pre> Allows fenced frames to access unpartioned data via Shared Storage in
  exchange for disabling untrusted network access. This is the Blink
  counterpart of the base::Feature with the same name. Because local
  unpartitioned data access requires browser and renderer process
@@ -1619,7 +1623,7 @@
  <a href="https://chromestatus.com/feature/5095987863486464">https://chromestatus.com/feature/5095987863486464</a>
  <a href="https://issues.chromium.org/issues/41228793">https://issues.chromium.org/issues/41228793</a></pre></td><td>✅</td></tr><tr><td class="name">RemoveScrollNodeWorkaround</td><td><pre> See <a href="https://issues.chromium.org/issues/40779139">https://issues.chromium.org/issues/40779139</a></pre></td><td>✅</td></tr><tr><td class="name">RemoveVisibleSelectionInDOMSelection</td><td><pre> See <a href="https://issues.chromium.org/issues/41311101">https://issues.chromium.org/issues/41311101</a></pre></td><td>❌</td></tr><tr><td class="name">RenderPriorityAttribute</td><td><pre> The renderpriority attribute feature.
  <a href="https://github.com/WICG/display-locking/blob/main/explainers/update-rendering.md">https://github.com/WICG/display-locking/blob/main/explainers/update-rendering.md</a></pre></td><td>❌</td></tr><tr><td class="name">ReplaceChildrenWithFragmentFastPath</td><td><pre> When enabled, avoids calling RemoveChildren() in
- ReplaceChildrenWithFragment() if the container is already empty.</pre></td><td>✅</td></tr><tr><td class="name">ReplacedNormalFlowStackingInlinePaint</td><td><pre> Kill switch for painting non-SVG replaced normal-flow stacking
+ ReplaceChildrenWithFragment() if the container is already empty.</pre></td><td>✅</td></tr><tr><td class="name">ReplaceCompositionActualInsertedLength</td><td><pre> <a href="https://crbug.com/567626030">https://crbug.com/567626030</a></pre></td><td>✅</td></tr><tr><td class="name">ReplacedNormalFlowStackingInlinePaint</td><td><pre> Kill switch for painting non-SVG replaced normal-flow stacking
  contexts inline with their siblings.
  This was set to experimental due to crbug.com/532229489.</pre></td><td>❌</td></tr><tr><td class="name">ReportFirstFrameTimeAsRenderTime</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ReportLayoutShiftRectsInCssPixels</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">RequestIsReloadNavigation</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ResourceTimingInitiator</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ResourceTimingUseCORSForBodySizes</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">RespectOverscrollBehaviorForScrollBubbling</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ResponsiveIframes</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">RestrictGamepadAccess</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">RestrictOwnAudio</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">RootScrollbarFollowsBrowserTheme</td><td><pre> If enabled, makes the root scrollbars&#039; foreground elements follow the
  browser</pre></td><td>❌</td></tr><tr><td class="name">RouteMatching</td><td><pre> Route matching, @route CSS rule.
@@ -1845,7 +1849,10 @@
  implementations).</pre></td><td>❌</td></tr><tr><td class="name">UseShadowHostStyleCheckEditable</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">UseUndoStepElementDispatchBeforeInput</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">V8IdleTasks</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">VariableSystemFontSupportOnWindows</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">VideoAutoFullscreen</td><td><pre> Whether a video element should automatically play fullscreen unless
  &#039;playsinline&#039; is set.</pre></td><td>❌</td></tr><tr><td class="name">VideoFrameMetadataBackgroundBlur</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">VideoFrameMetadataRtpTimestamp</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">VideoFullscreenOrientationLock</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">VideoRotateToFullscreen</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">VideoTrackGenerator</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">VideoTrackGeneratorInWindow</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">VideoTrackGeneratorInWorker</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ViewportHeightClientHintHeader</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ViewportSegments</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ViewTransitionLongCallbackTimeoutForTesting</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ViewTransitionPreventSvgFilterPaint</td><td><pre> Kill switch for <a href="https://crbug.com/568974861">https://crbug.com/568974861</a>, which prevents painting
  view transition content (which may contain cross-origin frames) under
- SVG reference filters.</pre></td><td>✅</td></tr><tr><td class="name">ViewTransitionSkipZeroHeightControlsSnap</td><td><pre> Kill switch for <a href="https://crbug.com/569098933">https://crbug.com/569098933</a>. Doesn&#039;t snap the browser
+ SVG reference filters.</pre></td><td>✅</td></tr><tr><td class="name">ViewTransitionSkipPseudoTreeForNavigationCapture</td><td><pre> Kill switch. Doesn&#039;t generate the ::view-transition pseudo-element
+ tree when capturing the outgoing document of a cross-document view
+ transition, since the animation runs on the new document. This avoids
+ extra style and layout passes in the capture frame.</pre></td><td>✅</td></tr><tr><td class="name">ViewTransitionSkipZeroHeightControlsSnap</td><td><pre> Kill switch for <a href="https://crbug.com/569098933">https://crbug.com/569098933</a>. Doesn&#039;t snap the browser
  controls to fully shown when capturing the outgoing document of a
  cross-document view transition if the browser controls have zero
  height, since that would force a new LocalSurfaceId for the capture.</pre></td><td>✅</td></tr><tr><td class="name">VisibilityCollapseColumn</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">VisualRectMappingFixForExpansion</td><td><pre> Guards the removal of legacy visual rect inflation when mapping through
@@ -1893,7 +1900,7 @@
  serialized asynchronous APIs, i.e. mapSync.</pre></td><td>❌</td></tr><tr><td class="name">WebHaptics</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebHID</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebHIDOnServiceWorkers</td><td><pre> It is only enabled in extension environment for now.</pre></td><td>❌</td></tr><tr><td class="name">WebHIDWorldIsolatedCache</td><td><pre> Restricts the sharing of HIDDevice instances across different V8
  worlds (e.g., main world and isolated worlds) to prevent cross-world
  leaks.</pre></td><td>✅</td></tr><tr><td class="name">WebIdentityDigitalCredentials</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebIdentityDigitalCredentialsCreation</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebIDLBigIntUsesToBigInt</td><td><pre> Kill switch for making BigInt handling in WebIDL use ToBigInt.</pre></td><td>✅</td></tr><tr><td class="name">WebMCP</td><td><pre> Imperative WebMCP: <code>document.modelContext</code> and its tool
- registration/execution APIs. See also <code>DeclarativeWebMCP</code>.</pre></td><td>❌</td></tr><tr><td class="name">WebMCPDeclarativeFileInput</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebMCPFormAssociatedCustomElements</td><td><pre> Support for form-associated custom elements in declarative
+ registration/execution APIs. See also <code>DeclarativeWebMCP</code>.</pre></td><td>❌</td></tr><tr><td class="name">WebMCPContinuations</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebMCPDeclarativeFileInput</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebMCPFormAssociatedCustomElements</td><td><pre> Support for form-associated custom elements in declarative
  WebMCP tools.</pre></td><td>❌</td></tr><tr><td class="name">WebNFC</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebOTP</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebOTPAssertionFeaturePolicy</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebPreferences</td><td><pre> <a href="https://wicg.github.io/web-preferences-api/">https://wicg.github.io/web-preferences-api/</a></pre></td><td>❌</td></tr><tr><td class="name">WebPrinting</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebRtcSctpSnap</td><td><pre> Experimental implementation of
  <a href="https://www.ietf.org/archive/id/draft-hancke-tsvwg-snap-00.html">https://www.ietf.org/archive/id/draft-hancke-tsvwg-snap-00.html</a></pre></td><td>❌</td></tr><tr><td class="name">WebSerialWorldIsolatedCache</td><td><pre> Restricts the sharing of SerialPort instances across different V8
  worlds (e.g., main world and isolated worlds) to prevent cross-world
@@ -2270,16 +2277,6 @@
             "registered_protocol_handlers": ""
         },
         "registered_protocol_handlers": ""
-    },
-    "custom_links": {
-        "ai_mode_tile_index": "",
-        "initialized": "",
-        "list": "",
-        "preinstalledremoved": ""
-    },
-    "custom_links_mobile": {
-        "initialized": "",
-        "list": ""
     },
     "data_sharing": {
         "eligible_for_version_out_of_date_instant_message": "",
@@ -2782,7 +2779,6 @@
         "module_staleness_count_dict": "",
         "most_visited_tile_hover_count": "",
         "most_visited_tile_navigation_count": "",
-        "num_personal_suggestions": "",
         "personal_shortcuts_visible": "",
         "shortcust_visible": "",
         "shortcuts_auto_removal_disabled": "",
@@ -2917,14 +2913,6 @@
         "xslt_enabled": ""
     },
     "policy_test_page_enabled": "",
-    "popular_sites": {
-        "override_country": "",
-        "override_directory": "",
-        "override_url": "",
-        "override_version": ""
-    },
-    "popular_sites_last_download": "",
-    "popular_sites_url": "",
     "preferences": "",
     "prefetch": {
         "search_prefetch": {
@@ -3397,8 +3385,6 @@
     "subresource_filter": {
         "highlight_ads": ""
     },
-    "suggested_sites_json": "",
-    "suggested_sites_version": "",
     "supervised_user": {
         "metrics": {
             "day_id": ""
@@ -3747,7 +3733,7 @@
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>Updated</strong>: 2026-10-14. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
+        <strong>Updated</strong>: 2026-10-15. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
       </p>
     </div>
   </footer>
