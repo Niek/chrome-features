@@ -29,7 +29,8 @@
           </tr>
         </thead>
         <tbody class="list">
-          <tr><td class="name">ActiveContentSettingExpiry</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ActorFormFillingServiceEnableAddress</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ActorFormFillingServiceEnableCreditCard</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">AIPageContentIncludePopupWindows</td><td><pre> Controls whether to include information about the page&#039;s open popup in
+          <tr><td class="name">ActiveContentSettingExpiry</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ActorFormFillingServiceEnableAddress</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ActorFormFillingServiceEnableCreditCard</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">AdHighlightLabel</td><td><pre> Controls whether the ad highlight is annotated with a label describing the
+ type of ad such as popup, sticky, or video.</pre></td><td>❌</td></tr><tr><td class="name">AIPageContentIncludePopupWindows</td><td><pre> Controls whether to include information about the page&#039;s open popup in
  AIPageContent.</pre></td><td>✅</td></tr><tr><td class="name">AIPageContentMissingSubframesFailSilently</td><td><pre> Controls whether a missing subframe while generating the APC proto is
  silently dropped. If false, the entire APC is considered failed when this
  happens. When true, the subframe is simply skipped but the rest of APC
@@ -190,7 +191,7 @@
  (analogous to form control ownership) rather than the closest ancestor form
  (analogous to form control association).
  TODO(crbug.com/536963555): Clean up when launched.</pre></td><td>❌</td></tr><tr><td class="name">AutofillFixLabelGenerationForStreetAddress</td><td><pre> Prioritizes ADDRESS_HOME_STREET_ADDRESS over postal code in inferred labels.
- See crbug.com/540151895.</pre></td><td>❌</td></tr><tr><td class="name">AutofillFixRewriterRules</td><td><pre> When enabled, the rewriter uses updated rewrite rules.
+ See crbug.com/540151895.</pre></td><td>✅</td></tr><tr><td class="name">AutofillFixRewriterRules</td><td><pre> When enabled, the rewriter uses updated rewrite rules.
  TODO(crbug.com/445863287): Cleanup when launched.</pre></td><td>✅</td></tr><tr><td class="name">AutofillFixStateCountryMisclassification</td><td><pre> When enabled, the rationalization engine will fix misclassifications where
  a field is detected as a COUNTRY when it should be a STATE or vice versa.
  TODO(crbug.com/444180493): Cleanup when launched.</pre></td><td>✅</td></tr><tr><td class="name">AutofillGmailOtpPreLaunchMetrics</td><td><pre> Enables pre-launch metrics for one-time passwords (OTPs) received in Gmail.</pre></td><td>❌</td></tr><tr><td class="name">AutofillGreekRegexes</td><td><pre> When enabled, Greek regexes are used for parsing in branded builds.</pre></td><td>✅</td></tr><tr><td class="name">AutofillHideSuggestionsOnFocusChange</td><td><pre> When enabled, <code>BrowserAutofillManager</code> hides suggestions as soon as the
@@ -276,7 +277,10 @@
  AutofillExternalDelegate::Did{Select,Accept}Suggestion() instead of
  <code>last_query_</code>.</pre></td><td>✅</td></tr><tr><td class="name">AutofillUseStructuralSignatureInsteadOfSecondary</td><td><pre> Replaces the secondary signature with the structural signature for Uploads.
  For Queries still only the secondary (alternative) signature is used.
- TODO(crbug.com/431737839): Clean up when roll out finishes successfully.</pre></td><td>✅</td></tr><tr><td class="name">AutoPictureInPictureOnWindowOccluded</td><td><pre> Allows the AutoPictureInPictureTabHelper to automatically enter
+ TODO(crbug.com/431737839): Clean up when roll out finishes successfully.</pre></td><td>✅</td></tr><tr><td class="name">AutofillWipeInvalidNameStructure</td><td><pre> When enabled, <code>FinalizeNameAddressComponent()</code> wipes invalid name
+ substructures regardless of the root node&#039;s verification status, and
+ <code>NameInfo::SetRawInfoWithVerificationStatus()</code> invalidates child nodes when
+ overwriting a non-empty full name with a non-token-equivalent value.</pre></td><td>❌</td></tr><tr><td class="name">AutoPictureInPictureOnWindowOccluded</td><td><pre> Allows the AutoPictureInPictureTabHelper to automatically enter
  picture-in-picture when a webpage is occluded by another window.</pre></td><td>❌</td></tr><tr><td class="name">AutoPictureInPicturePageInfoDetails</td><td><pre> Enables showing auto picture-in-picture permission details in page info.</pre></td><td>✅</td></tr><tr><td class="name">AutoPictureInPictureSurveys</td><td><pre> Enables Happiness Tracking Surveys for Auto Picture-in-Picture.</pre></td><td>❌</td></tr><tr><td class="name">AutoplayBypassForMicCamera</td><td><pre> Allows media to autoplay without a user gesture if the site has been
  granted microphone or camera permissions.</pre></td><td>✅</td></tr><tr><td class="name">AutoplayDisableSettings</td><td><pre> Whether we should show a setting to disable autoplay policy.</pre></td><td>❌</td></tr><tr><td class="name">AutoplayPoliciesAndroid</td><td><pre> Enables the Enterprise Autoplay policies (AutoplayAllowed and
  AutoplayAllowlist) on Android.</pre></td><td>✅</td></tr><tr><td class="name">AutoSpeculationRules</td><td><pre> <a href="https://crbug.com/1472970">https://crbug.com/1472970</a></pre></td><td>❌</td></tr><tr><td class="name">AutoupgradeMixedContent</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">AVDColorSpaceChanges</td><td><pre> Whether we should allow color space changes to flush AcceleratedVideoDecoder.</pre></td><td>✅</td></tr><tr><td class="name">AvoidTrustedParamsCopies</td><td><pre> Avoids copying ResourceRequest::TrustedParams when possible.</pre></td><td>✅</td></tr><tr><td class="name">BackForwardCache</td><td><pre> Enable using the BackForwardCache.</pre></td><td>✅</td></tr><tr><td class="name">BackForwardCacheCCNSAllowlist</td><td><pre> When enabled, JavaScript network requests with &quot;Cache-Control: no-store&quot;
@@ -934,7 +938,7 @@
  via position:fixed and cannot be reached by scrolling.</pre></td><td>✅</td></tr><tr><td class="name">AIPageContentAnchoredNonFixedOffscreenNonActionability</td><td><pre> Strip actionability from content that is positioned offscreen via
  absolute/relative/static positioning and cannot be reached by scrolling.</pre></td><td>✅</td></tr><tr><td class="name">AIPageContentBuildOnLoadForTesting</td><td><pre> Whether to automatically build an APC content_extraction tree on load.</pre></td><td>❌</td></tr><tr><td class="name">AIPageContentCheckGeometry</td><td><pre> Whether to enforce geometry invariants in AIPageContentAgent.
  Only supported for DCHECK-enabled builds.</pre></td><td>❌</td></tr><tr><td class="name">AIPageContentConvertNodeTextToUtf8</td><td><pre> Ensures that text content extracted from DOM nodes are valid UTF-8 Before
- providing them to consumers of AIPageContent.</pre></td><td>✅</td></tr><tr><td class="name">AIPageContentElementCSSRedaction</td><td><pre> When enabled, redact elements with --webkit-text-security.</pre></td><td>✅</td></tr><tr><td class="name">AIPageContentIncludeSVGSubtree</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">AIPageContentLabelExpandFallbackSources</td><td><pre> Add label sources in actionable APC.</pre></td><td>✅</td></tr><tr><td class="name">AIPageContentLabelRemoveRedundant</td><td><pre> Remove labels that duplicate extracted text in any node in its subtree
+ providing them to consumers of AIPageContent.</pre></td><td>✅</td></tr><tr><td class="name">AIPageContentElementCSSRedaction</td><td><pre> When enabled, redact elements with --webkit-text-security.</pre></td><td>✅</td></tr><tr><td class="name">AIPageContentIncludeMathML</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">AIPageContentIncludeSVGSubtree</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">AIPageContentLabelExpandFallbackSources</td><td><pre> Add label sources in actionable APC.</pre></td><td>✅</td></tr><tr><td class="name">AIPageContentLabelRemoveRedundant</td><td><pre> Remove labels that duplicate extracted text in any node in its subtree
  or its image caption. Remove SVG root text when extracted child nodes
  already contain it.</pre></td><td>❌</td></tr><tr><td class="name">AIPageContentLabelRemoveRedundantWholeWordMatching</td><td><pre> Match labels to whole words or phrases in extracted text in any node in
  its subtree or its image caption, ignoring case. For example:
@@ -1015,7 +1019,9 @@
  make sure MouseCursorOverlayController does not transmit mouse
  events to a CaptureController that don&#039;t have any
  capturedmousechange listener attached to it.
- See <a href="https://github.com/screen-share/mouse-events/issues/14">https://github.com/screen-share/mouse-events/issues/14</a></pre></td><td>❌</td></tr><tr><td class="name">CapturedSurfaceControl</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CapturedSurfaceResolution</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CaptureHandle</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CaretBlinking</td><td><pre> Allows automated test runners to keep focused carets visible.</pre></td><td>✅</td></tr><tr><td class="name">CaretOutsideEditableAtomicInline</td><td><pre> Keeps the caret outside an editable atomic inline - e.g.
+ See <a href="https://github.com/screen-share/mouse-events/issues/14">https://github.com/screen-share/mouse-events/issues/14</a></pre></td><td>❌</td></tr><tr><td class="name">CapturedSurfaceControl</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CapturedSurfaceResolution</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CaptureHandle</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CaretBlinking</td><td><pre> Allows automated test runners to keep focused carets visible.</pre></td><td>✅</td></tr><tr><td class="name">CaretBrowsingSequentialFocusStartingPoint</td><td><pre> Updates the sequential focus navigation starting point when moving the
+ caret with the keyboard during caret browsing.
+ <a href="https://crbug.com/567653181">https://crbug.com/567653181</a></pre></td><td>✅</td></tr><tr><td class="name">CaretOutsideEditableAtomicInline</td><td><pre> Keeps the caret outside an editable atomic inline - e.g.
  &lt;div contenteditable style=&quot;display:inline-block&quot;&gt; - for a click that
  landed next to the box rather than on it.
  <a href="https://crbug.com/40780191">https://crbug.com/40780191</a></pre></td><td>✅</td></tr><tr><td class="name">CCTNewRFMPushBehavior</td><td><pre> Kill switch for changes to RenderFrameMetadataObserverImpl in connection with Engagement
@@ -1272,7 +1278,10 @@
  MaxDragImageSize). When disabled, images whose intrinsic area exceeds
  kMaxOriginalImageArea produce no drag preview (legacy behavior). Acts
  as a kill switch for the removal of that cap. See
- <a href="https://crbug.com/518266739">https://crbug.com/518266739</a></pre></td><td>✅</td></tr><tr><td class="name">DumpForAbsentKeyframeSnapshots</td><td><pre> See: crrev.com/c/7874048
+ <a href="https://crbug.com/518266739">https://crbug.com/518266739</a></pre></td><td>✅</td></tr><tr><td class="name">DragThresholdRequiresMouseMovement</td><td><pre> When enabled, the cursor needs to move past the drag start threshold in
+ absolute screen coordinates rather than window relative coordinates.
+ See <a href="https://crbug.com/40943926">https://crbug.com/40943926</a> and
+ <a href="https://html.spec.whatwg.org/multipage/dnd.html#security-risks-in-the-drag-and-drop-model">https://html.spec.whatwg.org/multipage/dnd.html#security-risks-in-the-drag-and-drop-model</a></pre></td><td>❌</td></tr><tr><td class="name">DumpForAbsentKeyframeSnapshots</td><td><pre> See: crrev.com/c/7874048
  Diagnostic flag to gather data for a case when compositable animations lack snapshots without a known reason.</pre></td><td>❌</td></tr><tr><td class="name">EditContextAssignmentAsPerSpec</td><td><pre> See <a href="https://crbug.com/443612843">https://crbug.com/443612843</a></pre></td><td>❌</td></tr><tr><td class="name">EditContextBoundsUpdateSchedulesFrame</td><td><pre> Schedule a main frame when EditContext.updateControlBounds() or
  updateSelectionBounds() changes the bounds of the active EditContext,
  so the new bounds are sent to the browser in TextInputStateChanged even
@@ -1483,7 +1492,13 @@
  in to the navigation&#039;s destination origin via Timing-Allow-Origin and
  the navigation is not a no-referrer navigation.
  <a href="https://github.com/whatwg/fetch/pull/1931">https://github.com/whatwg/fetch/pull/1931</a>
- <a href="https://github.com/whatwg/html/pull/12513">https://github.com/whatwg/html/pull/12513</a></pre></td><td>✅</td></tr><tr><td class="name">NavigationTypeAndPhase</td><td><pre> Support &lt;navigation-type-test&gt; and &lt;navigation-phase-test&gt;.</pre></td><td>❌</td></tr><tr><td class="name">NavigatorContentUtils</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">NetInfoConstantType</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">NetInfoDownlinkMax</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">NewAnimationCompositingChecking</td><td><pre> See crbug.com/521921832
+ <a href="https://github.com/whatwg/html/pull/12513">https://github.com/whatwg/html/pull/12513</a></pre></td><td>✅</td></tr><tr><td class="name">NavigationTypeAndPhase</td><td><pre> Support &lt;navigation-type-test&gt; and &lt;navigation-phase-test&gt;.</pre></td><td>❌</td></tr><tr><td class="name">NavigatorContentUtils</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">NetInfoConstantType</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">NetInfoDownlinkMax</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">NeutralKeyframeEasingCompliance</td><td><pre> See crbug.com/567611289
+ Per <a href="https://www.w3.org/TR/web-animations-1/">https://www.w3.org/TR/web-animations-1/</a>
+ #the-effect-value-of-a-keyframe-animation-effect:
+ Keyframes not affecting the target property are to be removed prior
+ to populating interval endpoints. Blink&#039;s longstanding behavior was
+ not spec-compliant. Introducing a kill-switch to allow a quick revert
+ should this be a breaking change for sites.</pre></td><td>✅</td></tr><tr><td class="name">NewAnimationCompositingChecking</td><td><pre> See crbug.com/521921832
  Any potential behavioral changes excepting bugfixes from the V2 implementation (including
  changes to when the histogram is reported, like early-outs in Animation::PreCommit) are behind
  this flag, for safety and consistent reporting on the V1 enum while it is still supported.</pre></td><td>❌</td></tr><tr><td class="name">NewAnimationDispositionReporting</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">NewHTMLSettingMethods</td><td><pre> <a href="https://chromestatus.com/feature/5054329641893888">https://chromestatus.com/feature/5054329641893888</a>
@@ -1673,7 +1688,12 @@
  <a href="https://github.com/whatwg/html/issues/12227">https://github.com/whatwg/html/issues/12227</a></pre></td><td>❌</td></tr><tr><td class="name">SelectedcontentMultiple</td><td><pre> Makes the &lt;selectedcontent&gt; element work in &lt;select multiple&gt; by
  cloning the contents for each option which is selected into the
  &lt;selectedcontent&gt; element.
- <a href="https://issues.chromium.org/issues/483769482">https://issues.chromium.org/issues/483769482</a></pre></td><td>❌</td></tr><tr><td class="name">SelectionAndFocusedVisiblePositionMatch</td><td><pre> See <a href="https://crbug.com/40664519">https://crbug.com/40664519</a>
+ <a href="https://issues.chromium.org/issues/483769482">https://issues.chromium.org/issues/483769482</a></pre></td><td>❌</td></tr><tr><td class="name">SelectedcontentSpec2</td><td><pre> Makes minor tweaks to edge cases with the &lt;selectedcontent&gt; element.
+ The prior set of spec-driven changes to the selectedcontent element
+ were called &quot;SelectedcontentSpec&quot;, so this one is called
+ &quot;SelectedcontentSpec2&quot;.
+ <a href="https://github.com/whatwg/html/pull/12263">https://github.com/whatwg/html/pull/12263</a>
+ Enabled in M156, can be removed in M159.</pre></td><td>✅</td></tr><tr><td class="name">SelectionAndFocusedVisiblePositionMatch</td><td><pre> See <a href="https://crbug.com/40664519">https://crbug.com/40664519</a>
  Disabled due to UI freeze issues, see <a href="https://crbug.com/448833953">https://crbug.com/448833953</a>.</pre></td><td>❌</td></tr><tr><td class="name">SelectionCollapsedDirectionNone</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SelectionEditingBoundarySlottedContent</td><td><pre> Allows a selection to extend into the light-DOM content assigned to a
  &lt;slot&gt;, e.g. the content of an open &lt;details&gt;, instead of clamping the
  focus at the slot&#039;s shadow host in EditingBoundaryAdjuster.
@@ -1746,12 +1766,16 @@
  <a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/YYBd-eksiE8">https://groups.google.com/a/chromium.org/g/blink-dev/c/YYBd-eksiE8</a></pre></td><td>❌</td></tr><tr><td class="name">SpellCheckChunking</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SpellCheckCustomDictionaryAPI</td><td><pre> API for accessing the Custom Dictionary for spell checking purpose.
  <a href="https://chromestatus.com/feature/6185007701557248">https://chromestatus.com/feature/6185007701557248</a></pre></td><td>❌</td></tr><tr><td class="name">SplitQualifiedNameOnFirstColon</td><td><pre> Splits a qualified name on its first colon, per the DOM &quot;validate and
  extract&quot; algorithm, so any later colons are part of the local name.
- See <a href="https://crbug.com/490251709">https://crbug.com/490251709</a></pre></td><td>❌</td></tr><tr><td class="name">SplitTextNotCleanupDummySpans</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SrcsetSelectionMatchesImageSet</td><td><pre> Kill switch for change to unify image-set and srcset selection logic.</pre></td><td>✅</td></tr><tr><td class="name">StableBlinkFeatures</td><td><pre> Used as argument in attribute of stable-release functions/interfaces
+ See <a href="https://crbug.com/490251709">https://crbug.com/490251709</a></pre></td><td>❌</td></tr><tr><td class="name">SplitTextNotCleanupDummySpans</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SrcsetSelectionMatchesImageSet</td><td><pre> Kill switch for change to unify image-set and srcset selection logic.</pre></td><td>✅</td></tr><tr><td class="name">SrcsetTwoDimensionalSizes</td><td><pre> Supports two-dimensional source sizes (&quot;contain&quot;/&quot;cover&quot; &lt;length&gt;
+ &lt;length&gt;) in sizes, takes the srcset &#039;h&#039; descriptor and the width/height
+ attributes into account during source selection, and makes auto-sizes
+ take the content box height and object-fit into account.
+ <a href="https://github.com/whatwg/html/pull/13053">https://github.com/whatwg/html/pull/13053</a></pre></td><td>❌</td></tr><tr><td class="name">StableBlinkFeatures</td><td><pre> Used as argument in attribute of stable-release functions/interfaces
  where a runtime-enabled feature name is required for correct IDL syntax.
  This is a global flag; do not change its status.</pre></td><td>✅</td></tr><tr><td class="name">StackingContextIsNotStacked</td><td><pre> Kill switch for falsifying IsStacked() for non-stacked
  stacking contexts. <a href="https://crbug.com/40208685">https://crbug.com/40208685</a></pre></td><td>✅</td></tr><tr><td class="name">StaleImageNaturalSizeDuringRevalidation</td><td><pre> Kill switch for sending ImageChanged() to newly added
  observers while a stale cached image is revalidating.
- <a href="https://crbug.com/40757070">https://crbug.com/40757070</a></pre></td><td>✅</td></tr><tr><td class="name">StandardizedBrowserZoom</td><td><pre> See <a href="https://github.com/w3c/csswg-drafts/issues/9398">https://github.com/w3c/csswg-drafts/issues/9398</a></pre></td><td>✅</td></tr><tr><td class="name">StandardizedBrowserZoomOptOut</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">StickyPositionHasOverflowPerAxis</td><td><pre> Killswitch M149.</pre></td><td>✅</td></tr><tr><td class="name">StickyUserActivationAcrossSameOriginNavigation</td><td><pre> Preserves the sticky user activation state after a page navigates to
+ <a href="https://crbug.com/40757070">https://crbug.com/40757070</a></pre></td><td>✅</td></tr><tr><td class="name">StandardizedBrowserZoom</td><td><pre> See <a href="https://github.com/w3c/csswg-drafts/issues/9398">https://github.com/w3c/csswg-drafts/issues/9398</a></pre></td><td>✅</td></tr><tr><td class="name">StandardizedBrowserZoomOptOut</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">StickyUserActivationAcrossSameOriginNavigation</td><td><pre> Preserves the sticky user activation state after a page navigates to
  another same-origin page. <a href="https://crbug.com/433729626">https://crbug.com/433729626</a></pre></td><td>✅</td></tr><tr><td class="name">StorageBuckets</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">StorageBucketsDurability</td><td><pre> Gates the <code>durability()</code> method on a storage bucket and the property in
  the options struct.</pre></td><td>❌</td></tr><tr><td class="name">StorageBucketsLocks</td><td><pre> Gates the <code>locks()</code> method on a storage bucket.</pre></td><td>❌</td></tr><tr><td class="name">StrictMimeTypesForWorkers</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">StyleResourceFetcherIdentityCheck</td><td><pre> When enabled, a StyleImage/FontResource cached on a (potentially
  shared) StyleSheetContents is keyed on the requesting document&#039;s
@@ -3733,7 +3757,7 @@
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>Updated</strong>: 2026-10-15. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
+        <strong>Updated</strong>: 2026-10-16. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
       </p>
     </div>
   </footer>
