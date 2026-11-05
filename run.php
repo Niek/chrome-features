@@ -155,6 +155,14 @@ foreach (glob('xml/namespace*.xml') as $file) {
   }
 }
 
+// Optimization Guide's per-feature setting prefs are returned by a function
+// in feature_keys.cc rather than declared as char constants.
+$featureKeys = file_get_contents('src/components_optimization_guide_core_feature_registry_feature_keys.cc');
+preg_match_all('/^\s*return\s+"(optimization_guide\.[^"]+)"\s*;/m', $featureKeys, $matches);
+foreach ($matches[1] as $name) {
+  addPreference($prefs, $name);
+}
+
 usort($features, fn($a, $b) => strcasecmp($a['name'], $b['name']));
 sortTree($prefs);
 
