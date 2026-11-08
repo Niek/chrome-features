@@ -1310,8 +1310,7 @@
  See <a href="https://crbug.com/1366037">https://crbug.com/1366037</a></pre></td><td>❌</td></tr><tr><td class="name">DisplayCutoutAPI</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DocumentCookie</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DocumentDomain</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DocumentIsolationPolicy</td><td><pre> Enables DocumentIsolationPolicy.
  See <a href="https://https://github.com/WICG/document-isolation-policy">https://https://github.com/WICG/document-isolation-policy</a>.</pre></td><td>❌</td></tr><tr><td class="name">DocumentOpenIframeUnloadEvents</td><td><pre> Fix iframe unload events not firing during document.open()
  <a href="https://crbug.com/40947017">https://crbug.com/40947017</a>
- Lands in M144; remove this flag in M146 after the milestone rolls.</pre></td><td>✅</td></tr><tr><td class="name">DocumentOpenOriginAliasRemoval</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DocumentOpenSandboxInheritanceRemoval</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">DocumentPatching</td><td><pre> <a href="https://chromestatus.com/feature/5111042975465472">https://chromestatus.com/feature/5111042975465472</a>
- &lt;template patchfor&gt; etc.</pre></td><td>✅</td></tr><tr><td class="name">DocumentPictureInPictureAPI</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DocumentPictureInPicturePreferInitialPlacement</td><td><pre> Enables <code>preferInitialWindowPlacement</code> Document PiP option to skip
+ Lands in M144; remove this flag in M146 after the milestone rolls.</pre></td><td>✅</td></tr><tr><td class="name">DocumentOpenOriginAliasRemoval</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DocumentOpenSandboxInheritanceRemoval</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">DocumentPictureInPictureAPI</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DocumentPictureInPicturePreferInitialPlacement</td><td><pre> Enables <code>preferInitialWindowPlacement</code> Document PiP option to skip
  re-using the previous pip window bounds.</pre></td><td>❌</td></tr><tr><td class="name">DocumentPictureInPictureUserActivation</td><td><pre> Enables propagating user activation from a document picture-in-picture
  window up to its opener window and vice versa.</pre></td><td>❌</td></tr><tr><td class="name">DocumentPictureInPictureWindowLookupAndroid</td><td><pre> Kill switch for letting Blink look up a document&#039;s picture-in-picture
  window and owner on Android, which lets the window focus its opener
@@ -1554,7 +1553,7 @@
  <a href="https://crbug.com/534781954">https://crbug.com/534781954</a></pre></td><td>✅</td></tr><tr><td class="name">ModulePreloadReferrer</td><td><pre> ModulePreloadReferrer enables modulepreload to send proper referrer
  headers as specified in the HTML spec.
  <a href="https://crbug.com/441933555">https://crbug.com/441933555</a></pre></td><td>✅</td></tr><tr><td class="name">ModulePreloadStyleJson</td><td><pre> <a href="https://crbug.com/466888680">https://crbug.com/466888680</a></pre></td><td>✅</td></tr><tr><td class="name">MojoJS</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">MojoJSTest</td><td><pre> MojoJSTest is used exclusively in testing environments, whereas MojoJS
- may also be used elsewhere.</pre></td><td>❌</td></tr><tr><td class="name">MonospaceGlyphCompaction</td><td><pre> Optimization for monospace text.</pre></td><td>✅</td></tr><tr><td class="name">MoveEndingSelectionToListChild</td><td><pre> Move the selection to the last position in the list item. See
+ may also be used elsewhere.</pre></td><td>❌</td></tr><tr><td class="name">Monetization</td><td><pre> Web Monetization. <a href="https://webmonetization.org/specification/">https://webmonetization.org/specification/</a></pre></td><td>❌</td></tr><tr><td class="name">MonospaceGlyphCompaction</td><td><pre> Optimization for monospace text.</pre></td><td>✅</td></tr><tr><td class="name">MoveEndingSelectionToListChild</td><td><pre> Move the selection to the last position in the list item. See
  <a href="https://crbug.com/331841851">https://crbug.com/331841851</a></pre></td><td>✅</td></tr><tr><td class="name">MoveParagraphsPreserveInlineStructure</td><td><pre> <a href="https://issues.chromium.org/issues/41015847">https://issues.chromium.org/issues/41015847</a>
  This will be shipped in M151, and it can be removed in M153.</pre></td><td>✅</td></tr><tr><td class="name">MulticolColumnWidthMaxContentClamp</td><td><pre> Clamp a column-count:auto multicol container&#039;s max-content inline
  size to column-width per css-sizing-4. Kill switch for
@@ -1701,7 +1700,9 @@
  This will be shipped in M148, and it can be removed in M150.
  See <a href="https://issues.chromium.org/issues/452981723">https://issues.chromium.org/issues/452981723</a>.</pre></td><td>✅</td></tr><tr><td class="name">ReadOnlyTextControlSelection</td><td><pre> Enables caret visibility and keyboard selection/navigation for
  readonly text controls (input and textarea).
- <a href="https://issues.chromium.org/issues/40801366">https://issues.chromium.org/issues/40801366</a></pre></td><td>✅</td></tr><tr><td class="name">RecheckParentDuringNodeVectorInsertion</td><td><pre> Shipping in M148, revised in M151, so should be removed around M153.</pre></td><td>✅</td></tr><tr><td class="name">ReduceUserAgentMinorVersion</td><td><pre> If enabled, the minor version of the User-Agent string will be reduced.
+ <a href="https://issues.chromium.org/issues/40801366">https://issues.chromium.org/issues/40801366</a>
+ Behavior changed to exclude disabled text controls, which should not
+ show a caret: <a href="https://issues.chromium.org/issues/581932200">https://issues.chromium.org/issues/581932200</a></pre></td><td>✅</td></tr><tr><td class="name">RecheckParentDuringNodeVectorInsertion</td><td><pre> Shipping in M148, revised in M151, so should be removed around M153.</pre></td><td>✅</td></tr><tr><td class="name">ReduceUserAgentMinorVersion</td><td><pre> If enabled, the minor version of the User-Agent string will be reduced.
  This User-Agent Reduction feature has been enabled starting from M101,
  but we still keep this flag for future phase tests.</pre></td><td>✅</td></tr><tr><td class="name">RegionCapture</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">RelatedWebsitePartitionAPI</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ReleasePaintHoldingWithoutContentfulPaint</td><td><pre> Kill switch for <a href="https://crbug.com/376516545">https://crbug.com/376516545</a>.
  Releases paint holding (deferred compositor commits) early for pages
@@ -3889,7 +3890,7 @@
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>Updated</strong>: 2026-11-07. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
+        <strong>Updated</strong>: 2026-11-08. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
       </p>
     </div>
   </footer>
