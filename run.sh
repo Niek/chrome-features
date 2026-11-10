@@ -60,7 +60,7 @@ files=(
   "components/custom_handlers/pref_names.h"
   "components/device_signals/core/browser/pref_names.cc"
   "components/device_signals/core/browser/pref_names.h"
-  "components/dom_distiller/core/pref_names.h"
+  "components/web_distiller/core/pref_names.h"
   "components/embedder_support/origin_trials/pref_names.cc"
   "components/embedder_support/origin_trials/pref_names.h"
   "components/embedder_support/pref_names.h"
