@@ -139,7 +139,8 @@
  displayed, the field id to anchor the popup on did not change.
  TODO(crbug.com/8233280): This is a kill-switch feature, remove once we are
  sure no bug was introduced.</pre></td><td>✅</td></tr><tr><td class="name">AutofillComplementCountryUsingPhoneNumber</td><td><pre> When enabled, deduce country of a new address profile based on the phone
- number if not explicitly observed.</pre></td><td>❌</td></tr><tr><td class="name">AutofillCustomFormControlScripts</td><td><pre> If enabled, Autofill runs site-specific scripts to detect and fill custom
+ number if not explicitly observed.</pre></td><td>❌</td></tr><tr><td class="name">AutofillCustomFormControlExtraction</td><td><pre> If enabled, Autofill extracts custom form controls detected by site-specific
+ scripts into <code>FormData</code>. Requires <code>kAutofillCustomFormControlScripts</code>.</pre></td><td>❌</td></tr><tr><td class="name">AutofillCustomFormControlScripts</td><td><pre> If enabled, Autofill runs site-specific scripts to detect and fill custom
  form controls (e.g. select-like widgets that aren&#039;t &lt;select&gt;).</pre></td><td>❌</td></tr><tr><td class="name">AutofillDelayApcForPredictions</td><td><pre> If enabled, <code>FormPredictionsTracker</code> will wait up to 1 second
  for Autofill to finish parsing forms pesent on a given tab before capturing
  APC. For more context see: go/autofill-actor-mode-implementation
@@ -177,10 +178,7 @@
  The forms in those frames are extracted either way.
  TODO(crbug.com/40196220): Remove once launched.</pre></td><td>❌</td></tr><tr><td class="name">AutofillExtractShadowDomIframes</td><td><pre> When enabled, Autofill also extracts iframes inside shadow DOM rather than
  only iframes in the light DOM.
- TODO(crbug.com/569934654): Clean up when launched.</pre></td><td>❌</td></tr><tr><td class="name">AutofillFixIframeOwnership</td><td><pre> When enabled, iframes are associated with the outermost ancestor form
- (analogous to form control ownership) rather than the closest ancestor form
- (analogous to form control association).
- TODO(crbug.com/536963555): Clean up when launched.</pre></td><td>✅</td></tr><tr><td class="name">AutofillFixLabelGenerationForStreetAddress</td><td><pre> Prioritizes ADDRESS_HOME_STREET_ADDRESS over postal code in inferred labels.
+ TODO(crbug.com/569934654): Clean up when launched.</pre></td><td>❌</td></tr><tr><td class="name">AutofillFixLabelGenerationForStreetAddress</td><td><pre> Prioritizes ADDRESS_HOME_STREET_ADDRESS over postal code in inferred labels.
  See crbug.com/540151895.</pre></td><td>✅</td></tr><tr><td class="name">AutofillFixRewriterRules</td><td><pre> When enabled, the rewriter uses updated rewrite rules.
  TODO(crbug.com/445863287): Cleanup when launched.</pre></td><td>✅</td></tr><tr><td class="name">AutofillFixStateCountryMisclassification</td><td><pre> When enabled, the rationalization engine will fix misclassifications where
  a field is detected as a COUNTRY when it should be a STATE or vice versa.
@@ -217,7 +215,10 @@
  algorithm instead of an exponential one that generates all name variants.
  TODO(crbug.com/479905438) Remove once launched.</pre></td><td>✅</td></tr><tr><td class="name">AutofillOtpCoordinator</td><td><pre> When enabled, uses the tab-scoped <code>OtpCoordinator</code> and per-frame
  <code>OtpTabToFrameOrchestrator</code> instead of <code>OtpManagerImpl</code>.</pre></td><td>❌</td></tr><tr><td class="name">AutofillPageLanguageDetection</td><td><pre> Enables detection of language from Translate.
- TODO(crbug.com/40158074): Cleanup when launched.</pre></td><td>❌</td></tr><tr><td class="name">AutofillPaymentsFieldSwapping</td><td><pre> When enabled, focusing on a credit card number field that was traditionally
+ TODO(crbug.com/40158074): Cleanup when launched.</pre></td><td>❌</td></tr><tr><td class="name">AutofillParseMonthFromStringByWordBoundary</td><td><pre> When enabled, <code>data_util::ParseMonthFromString()</code> requires named and
+ abbreviated month matches to be bounded by word boundaries rather than
+ matching arbitrary substrings inside words.
+ TODO(crbug.com/581485526): Default enabled in M160, cleanup after M166.</pre></td><td>✅</td></tr><tr><td class="name">AutofillPaymentsFieldSwapping</td><td><pre> When enabled, focusing on a credit card number field that was traditionally
  autofilled will yield all credit card suggestions.
  TODO(crbug.com/354175563): Remove when launched.</pre></td><td>❌</td></tr><tr><td class="name">AutofillPersonalizationAndTrustAddressSurvey</td><td><pre> If enabled, the user may be prompted a HaTS survey about the personalization
  experience and the perceived trust they have in the features.
@@ -405,8 +406,7 @@
  <a href="https://github.com/WICG/digital-goods/">https://github.com/WICG/digital-goods/</a></pre></td><td>❌</td></tr><tr><td class="name">DIPS</td><td><pre> Enables the BTM (Bounce Tracking Mitigation) feature.
  On by default to allow for collecting metrics. All potentially dangerous
  behavior (database persistence, storage deletion) will be gated by params.</pre></td><td>✅</td></tr><tr><td class="name">DIPSTtl</td><td><pre> Flag used to control the TTL for user interactions (separately from the
- |kBtm| feature flag).</pre></td><td>✅</td></tr><tr><td class="name">DirectOpusAudioDecoding</td><td><pre> Controls whether the OpusAudioDecoder is used for Opus audio decoding
- (instead of the FFmpegAudioDecoder).</pre></td><td>✅</td></tr><tr><td class="name">DisableArrayBufferSizeLimitsForTesting</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DisablePartialStorageCleanupForGPUDiskCache</td><td><pre> When this feature is enabled, partial storage cleanup will be
+ |kBtm| feature flag).</pre></td><td>✅</td></tr><tr><td class="name">DisableArrayBufferSizeLimitsForTesting</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">DisablePartialStorageCleanupForGPUDiskCache</td><td><pre> When this feature is enabled, partial storage cleanup will be
  disabled for the GPU disk cache. (Performance improvement)</pre></td><td>❌</td></tr><tr><td class="name">DisableProcessReuse</td><td><pre> When enabled, OOPIFs will not try to reuse compatible processes from
  unrelated tabs.</pre></td><td>❌</td></tr><tr><td class="name">DisallowMixedOpaqueMediaResponses</td><td><pre> Killswitch for disallowing mixing opaque and non-opaque responses and
  skipping Service Workers after network redirects in
@@ -788,7 +788,10 @@
  renderer processes. This makes it possible for all kinds of mojo calls
  to be sent to the renderer process before OnProcessLaunched fires. When the
  feature is disabled, those messages are instead queued because the IPC
- channel is paused, and only flushed at OnProcessLaunched.</pre></td><td>✅</td></tr><tr><td class="name">SodaXnnpackDelegate</td><td><pre> Asks the Speech On-Device API (SODA) to run its TFLite models through the
+ channel is paused, and only flushed at OnProcessLaunched.</pre></td><td>✅</td></tr><tr><td class="name">SkipRedundantRemoteFrameCheckCompleted</td><td><pre> Skips redundant RemoteFrameHost::CheckCompleted() IPCs from
+ RemoteFrame::DidStopLoading() when the parent frame in the current renderer
+ process is a RemoteFrame, notifying any in-process LocalFrame ancestor
+ directly instead.</pre></td><td>❌</td></tr><tr><td class="name">SodaXnnpackDelegate</td><td><pre> Asks the Speech On-Device API (SODA) to run its TFLite models through the
  XNNPACK delegate. Older SODA binaries ignore the request.</pre></td><td>❌</td></tr><tr><td class="name">SpareRendererForSitePerProcess</td><td><pre> Controls whether SpareRenderProcessHostManager tries to always have a warm
  spare renderer process around for the most recently requested BrowserContext.
  This feature is only consulted in site-per-process mode.</pre></td><td>✅</td></tr><tr><td class="name">SpareRendererProcessPriority</td><td><pre> When enabled, sends the spare renderer information when setting the
@@ -1065,7 +1068,9 @@
  <a href="https://crbug.com/40780191">https://crbug.com/40780191</a></pre></td><td>✅</td></tr><tr><td class="name">CaretWidthIgnoresTransform</td><td><pre> Keeps the bar caret width independent of the element transform scale,
  so scaling an editable down does not fade the caret away and scaling it
  up does not make it fat.
- <a href="https://crbug.com/353556446">https://crbug.com/353556446</a></pre></td><td>✅</td></tr><tr><td class="name">CCTNewRFMPushBehavior</td><td><pre> Kill switch for changes to RenderFrameMetadataObserverImpl in connection with Engagement
+ <a href="https://crbug.com/353556446">https://crbug.com/353556446</a></pre></td><td>✅</td></tr><tr><td class="name">CaseSensitiveAnchorMatching</td><td><pre> Makes anchor name matching case-sensitive in quirks mode.
+ Ships in M160; the kill switch can be removed in M162.
+ <a href="https://chromestatus.com/feature/5085237991309312">https://chromestatus.com/feature/5085237991309312</a></pre></td><td>✅</td></tr><tr><td class="name">CCTNewRFMPushBehavior</td><td><pre> Kill switch for changes to RenderFrameMetadataObserverImpl in connection with Engagement
  Signals. See <a href="https://crrev.com/c/4544201">https://crrev.com/c/4544201</a> and <a href="https://crbug.com/1458640">https://crbug.com/1458640</a>.</pre></td><td>❌</td></tr><tr><td class="name">CDTNewCrossOriginHandling</td><td><pre> Compression Dictionary Transport: Align handling of crossorigin
  attribute on the spec.</pre></td><td>❌</td></tr><tr><td class="name">CDTNewDestination</td><td><pre> Compression Dictionary Transport: Use &quot;compression-dictionary&quot; as the
  destination string.</pre></td><td>❌</td></tr><tr><td class="name">CDTNewReferrerAndReferrerPolicyHandling</td><td><pre> Compression Dictionary Transport: Align handling of referrerpolicy
@@ -1075,7 +1080,9 @@
  <a href="https://html.spec.whatwg.org/multipage/webappapis.html#event-handler-content-attributes">https://html.spec.whatwg.org/multipage/webappapis.html#event-handler-content-attributes</a>
  <a href="https://w3c.github.io/webappsec-csp/#should-block-inline">https://w3c.github.io/webappsec-csp/#should-block-inline</a></pre></td><td>✅</td></tr><tr><td class="name">ClampUnfocusedSelectionCache</td><td><pre> crbug.com/517429018</pre></td><td>✅</td></tr><tr><td class="name">CleanUpActivationBehavior</td><td><pre> This is a kill switch for a refactor of the way activation
  behaviors are triggered. It should not affect behavior.
- This flag shipped in M157 and can be removed in M160.</pre></td><td>✅</td></tr><tr><td class="name">ClearCrossOriginRelatedTarget</td><td><pre> Killswitch for preventing cross-origin relatedTarget on boundary
+ This flag shipped in M157 and can be removed in M160.</pre></td><td>✅</td></tr><tr><td class="name">ClearCrossDocumentRelatedTarget</td><td><pre> Killswitch for preventing cross-document relatedTarget on boundary
+ events.
+ <a href="https://issues.chromium.org/issues/574379564">https://issues.chromium.org/issues/574379564</a></pre></td><td>✅</td></tr><tr><td class="name">ClearCrossOriginRelatedTarget</td><td><pre> Killswitch for preventing cross-origin relatedTarget on boundary
  events.
  <a href="https://issues.chromium.org/issues/574379564">https://issues.chromium.org/issues/574379564</a></pre></td><td>✅</td></tr><tr><td class="name">ClearCurrentTargetAfterDispatch</td><td><pre> Set currentTarget to null after dispatch for EventTarget.
  This was added in M142 and can be removed after M144.
@@ -1156,14 +1163,8 @@
  <a href="https://drafts.csswg.org/css-values-4/#calc-simplification">https://drafts.csswg.org/css-values-4/#calc-simplification</a>
  <a href="https://drafts.csswg.org/css-values-4/#calc-serialize">https://drafts.csswg.org/css-values-4/#calc-serialize</a></pre></td><td>❌</td></tr><tr><td class="name">CSSCaretAnimation</td><td><pre> <a href="https://chromestatus.com/feature/5082469066604544">https://chromestatus.com/feature/5082469066604544</a></pre></td><td>✅</td></tr><tr><td class="name">CSSCaretColorWithOptionalSecondValue</td><td><pre> Two-value caret-color: &lt;color&gt; [&lt;color&gt;]?
  <a href="https://github.com/w3c/csswg-drafts/issues/13723">https://github.com/w3c/csswg-drafts/issues/13723</a></pre></td><td>❌</td></tr><tr><td class="name">CSSCaretShape</td><td><pre> <a href="https://chromestatus.com/feature/6106160780017664">https://chromestatus.com/feature/6106160780017664</a></pre></td><td>✅</td></tr><tr><td class="name">CSSCaseSensitiveSelector</td><td><pre> Support case-sensitive attribute selector modifier
- <a href="https://drafts.csswg.org/selectors-4/#attribute-case">https://drafts.csswg.org/selectors-4/#attribute-case</a></pre></td><td>❌</td></tr><tr><td class="name">CSSChUnitSpecCompliantFallback</td><td><pre> In the cases where it is impossible or impractical to determine the
- measure of the &ldquo;0&rdquo; glyph, it must be assumed to be 0.5em wide by 1em
- tall. Thus, the ch unit falls back to 0.5em in the general case, and to
- 1em when it would be typeset upright (i.e. writing-mode is vertical-rl or
- vertical-lr and text-orientation is upright).
- <a href="https://drafts.csswg.org/css-values-4/#ch">https://drafts.csswg.org/css-values-4/#ch</a>
- See crbug.com/416145497 for more details.</pre></td><td>✅</td></tr><tr><td class="name">CSSColorTypedOM</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CSSContainerProgressNotation</td><td><pre> <a href="https://drafts.csswg.org/css-values-5/#progress">https://drafts.csswg.org/css-values-5/#progress</a>
- container-progress()</pre></td><td>❌</td></tr><tr><td class="name">CSSContainerStyleQueriesRange</td><td><pre> <a href="https://drafts.csswg.org/css-conditional-5/#typedef-style-range">https://drafts.csswg.org/css-conditional-5/#typedef-style-range</a></pre></td><td>✅</td></tr><tr><td class="name">CSSCornersShorthand</td><td><pre> <a href="https://drafts.csswg.org/css-borders-4/#corner-shaping">https://drafts.csswg.org/css-borders-4/#corner-shaping</a></pre></td><td>❌</td></tr><tr><td class="name">CSSCounterResetReversed</td><td><pre> <a href="https://drafts.csswg.org/css-lists-3/#counter-reset">https://drafts.csswg.org/css-lists-3/#counter-reset</a>
+ <a href="https://drafts.csswg.org/selectors-4/#attribute-case">https://drafts.csswg.org/selectors-4/#attribute-case</a></pre></td><td>❌</td></tr><tr><td class="name">CSSColorTypedOM</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CSSContainerProgressNotation</td><td><pre> <a href="https://drafts.csswg.org/css-values-5/#progress">https://drafts.csswg.org/css-values-5/#progress</a>
+ container-progress()</pre></td><td>❌</td></tr><tr><td class="name">CSSContainerStyleQueriesRange</td><td><pre> <a href="https://drafts.csswg.org/css-conditional-5/#typedef-style-range">https://drafts.csswg.org/css-conditional-5/#typedef-style-range</a></pre></td><td>✅</td></tr><tr><td class="name">CSSCornersShorthand</td><td><pre> <a href="https://drafts.csswg.org/css-borders-4/#corner-shaping">https://drafts.csswg.org/css-borders-4/#corner-shaping</a></pre></td><td>✅</td></tr><tr><td class="name">CSSCounterResetReversed</td><td><pre> <a href="https://drafts.csswg.org/css-lists-3/#counter-reset">https://drafts.csswg.org/css-lists-3/#counter-reset</a>
  <a href="https://crbug.com/40760770">https://crbug.com/40760770</a></pre></td><td>❌</td></tr><tr><td class="name">CSSCounterStyleSymbolsFunction</td><td><pre> The symbols() function for defining an anonymous counter style inline.
  <a href="https://drafts.csswg.org/css-counter-styles-3/#symbols-function">https://drafts.csswg.org/css-counter-styles-3/#symbols-function</a></pre></td><td>✅</td></tr><tr><td class="name">CSSCrossFade</td><td><pre> Unprefixed cross-fade() (in addition to the existing -webkit-cross-fade()).
  <a href="https://drafts.csswg.org/css-images-4/#cross-fade-function">https://drafts.csswg.org/css-images-4/#cross-fade-function</a></pre></td><td>❌</td></tr><tr><td class="name">CSSCustomHighlightExtensions</td><td><pre> Custom Highlight API Extensions.
@@ -1287,7 +1288,7 @@
  <a href="https://issues.chromium.org/issues/523756329">https://issues.chromium.org/issues/523756329</a>
  <a href="https://issues.chromium.org/issues/523748081">https://issues.chromium.org/issues/523748081</a>
  <a href="https://issues.chromium.org/issues/523737685">https://issues.chromium.org/issues/523737685</a>
- Enabled in 151, safe to remove in 153.</pre></td><td>✅</td></tr><tr><td class="name">DisconnectWebSocketOnBFCache</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">DispatchHiddenVisibilityTransitions</td><td><pre> <code>kHidden</code> and <code>kHiddenButPainting</code> visibility states are treated as
+ Enabled in 151, safe to remove in 153.</pre></td><td>✅</td></tr><tr><td class="name">DisallowSpecialSchemeOnNonSpecialUrl</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">DisconnectWebSocketOnBFCache</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">DispatchHiddenVisibilityTransitions</td><td><pre> <code>kHidden</code> and <code>kHiddenButPainting</code> visibility states are treated as
  hidden in the sense of <code>document.visibilityState</code>.  However, they are
  handled differently internally.  For example, video playback should
  continue in <code>kHiddenButPainting</code>, such as when the page is being
@@ -1355,7 +1356,7 @@
  crbug.com/435623334.</pre></td><td>✅</td></tr><tr><td class="name">EndpointInclusiveCommitStyles</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">EntropyIgnoredForFirstVideoFrameLCP</td><td><pre> When enabled, the LCP algorithm ignores image entropy for the first
  video frame. See crbug.com/434659232.</pre></td><td>❌</td></tr><tr><td class="name">EventPseudoTargetProperty</td><td><pre> <code>event.pseudoTarget</code> property to represent pseudo-elements in events. Returns <code>CSSPseudoElement</code> or null.</pre></td><td>✅</td></tr><tr><td class="name">EventPseudoTargetViewTransitionName</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">EventTimingInteractionCount</td><td><pre> Kill-switch for <a href="https://chromestatus.com/feature/5153386492198912">https://chromestatus.com/feature/5153386492198912</a>
  Added in M144, can be removed in M146.</pre></td><td>✅</td></tr><tr><td class="name">EventTimingMatchingHTML</td><td><pre> Interoperable dispatch timing for transitionrun and media query events.
- <a href="https://chromestatus.com/feature/6312504658624512">https://chromestatus.com/feature/6312504658624512</a></pre></td><td>✅</td></tr><tr><td class="name">EventTimingTargetSelector</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">EventTrigger</td><td><pre> <a href="https://drafts.csswg.org/web-animations-2/#triggers">https://drafts.csswg.org/web-animations-2/#triggers</a></pre></td><td>❌</td></tr><tr><td class="name">ExclusionSpaceCopyOnWrite</td><td><pre> <a href="https://crbug.com/578672563">https://crbug.com/578672563</a></pre></td><td>✅</td></tr><tr><td class="name">ExperimentalContentSecurityPolicyFeatures</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ExperimentalJSProfilerMarkers</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ExperimentalMachineLearningNeuralNetwork</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ExperimentalPolicies</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ExposeCSSFontFeatureValuesRule</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ExposeRenderTimeNonTaoDelayedImage</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ExtendedTextMetrics</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ExtensionScriptTagging</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ExtensionScriptTaggingTestingAPI</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ExternalPopupMenuClickEvent</td><td><pre> Kill-switch for crbug.com/40434449.
+ <a href="https://chromestatus.com/feature/6312504658624512">https://chromestatus.com/feature/6312504658624512</a></pre></td><td>✅</td></tr><tr><td class="name">EventTimingTargetSelector</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">EventTrigger</td><td><pre> <a href="https://drafts.csswg.org/web-animations-2/#triggers">https://drafts.csswg.org/web-animations-2/#triggers</a></pre></td><td>❌</td></tr><tr><td class="name">ExclusionSpaceCopyOnWrite</td><td><pre> <a href="https://crbug.com/578672563">https://crbug.com/578672563</a></pre></td><td>✅</td></tr><tr><td class="name">ExperimentalContentSecurityPolicyFeatures</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ExperimentalJSProfilerMarkers</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ExperimentalMachineLearningNeuralNetwork</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ExperimentalPolicies</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ExposeRenderTimeNonTaoDelayedImage</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ExtendedTextMetrics</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ExtensionScriptTagging</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ExtensionScriptTaggingTestingAPI</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ExternalPopupMenuClickEvent</td><td><pre> Kill-switch for crbug.com/40434449.
  Added in M139, and it can be removed in M141.</pre></td><td>✅</td></tr><tr><td class="name">EyeDropperAPI</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FaceDetector</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FastCommonGraphemeClusterPrefixLength</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FastCompositionCharacterBounds</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FastPlainTextRangeCreateRange</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FastPositionIterator</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FastTypingCommandCreateSelection</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FedCm</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FedCmActiveModeMultipleIdentityProviders</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FedCmAutofill</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FedCmDelegation</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FedCmIdentityHandler</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FedCmIdPRegistration</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FedCmLightweightMode</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FedCmMultipleIdentityProviders</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FedCmMultipleRequests</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FedCmNavigationInterception</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FencedFrames</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FencedFramesAPIChanges</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FencedFramesLocalUnpartitionedDataAccess</td><td><pre> Allows fenced frames to access unpartioned data via Shared Storage in
  exchange for disabling untrusted network access. This is the Blink
  counterpart of the base::Feature with the same name. Because local
@@ -1730,9 +1731,15 @@
  Spec: <a href="https://w3c.github.io/webrtc-extensions/#dom-rtcrtpreceiver-jitterbuffertarget">https://w3c.github.io/webrtc-extensions/#dom-rtcrtpreceiver-jitterbuffertarget</a></pre></td><td>✅</td></tr><tr><td class="name">RTCLegacyCallbackBasedGetStats</td><td><pre> Legacy callback-based getStats() has limited availability unless this
  Deprecation Trial is enabled.
  TODO(<a href="https://crbug.com/822696">https://crbug.com/822696</a>): Remove when origin trial ends.</pre></td><td>❌</td></tr><tr><td class="name">RTCLegacyDiagnosticLogging</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">RTCRtpEncodingParametersCodec</td><td><pre> Enables the use of |RTCRtpEncodingParameters.codec|</pre></td><td>✅</td></tr><tr><td class="name">RtcRtpHeaderEncryptionPolicy</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">RTCRtpScaleResolutionDownTo</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">RTCRtpScriptTransform</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">RTCRtpTransport</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">RTCStatsRelativePacketArrivalDelay</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">RTCSvcScalabilityMode</td><td><pre> Enables the use of SVC scalability mode in WebRTC.
- Spec: <a href="https://w3c.github.io/webrtc-svc/">https://w3c.github.io/webrtc-svc/</a></pre></td><td>✅</td></tr><tr><td class="name">RubySoftWrapAfterPreservedSpace</td><td><pre> Allows a soft wrap after a preserved space (e.g. <code>white-space:  pre-wrap</code>) that is followed by a &lt;ruby&gt;, by ignoring the bidi
+ Spec: <a href="https://w3c.github.io/webrtc-svc/">https://w3c.github.io/webrtc-svc/</a></pre></td><td>✅</td></tr><tr><td class="name">RubyOverflowWrapDeferToOuterLine</td><td><pre> Lets the outer line breaker, not the sub-line breakers for ruby base
+ and annotations, decide when to apply <code>overflow-wrap</code> emergency
+ breaking, so a ruby wraps at an earlier break opportunity first.
+ <a href="https://crbug.com/580840306">https://crbug.com/580840306</a></pre></td><td>✅</td></tr><tr><td class="name">RubySoftWrapAfterPreservedSpace</td><td><pre> Allows a soft wrap after a preserved space (e.g. <code>white-space:  pre-wrap</code>) that is followed by a &lt;ruby&gt;, by ignoring the bidi
  controls of ruby columns when checking break opportunities.
- <a href="https://crbug.com/580840306">https://crbug.com/580840306</a></pre></td><td>✅</td></tr><tr><td class="name">RubyTextDecorationSpacing</td><td><pre> Places ruby annotations clear of the base&#039;s underline or overline.
+ <a href="https://crbug.com/580840306">https://crbug.com/580840306</a></pre></td><td>✅</td></tr><tr><td class="name">RubySubLineUsesRubyStyle</td><td><pre> Starts the sub-line breakers for ruby base and annotations with the
+ style of the &lt;ruby&gt; or &lt;rt&gt; instead of the container&#039;s line style, so
+ that properties such as <code>overflow-wrap</code> and <code>white-space</code> set on them
+ apply. <a href="https://crbug.com/580840306">https://crbug.com/580840306</a></pre></td><td>✅</td></tr><tr><td class="name">RubyTextDecorationSpacing</td><td><pre> Places ruby annotations clear of the base&#039;s underline or overline.
  <a href="https://drafts.csswg.org/css-ruby-1/#ruby-text-decoration">https://drafts.csswg.org/css-ruby-1/#ruby-text-decoration</a></pre></td><td>✅</td></tr><tr><td class="name">RunMicrotaskBeforeXmlScript</td><td><pre> Runs a microtask checkpoint before prepare script in
  XML Parser. This was added in M148 and can be removed
  after M150.
@@ -2045,7 +2052,7 @@
  This is done in chrome/renderer/chrome_content_renderer_client.cc to prevent
  making the API available to Linux and WebView. Ideally we would set the status
  below to &quot;stable&quot; once we can do so without significant test expectation duplication.</pre></td><td>❌</td></tr><tr><td class="name">WebSocketOptionBag</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebSocketStream</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebSocketStreamStandardBinaryChunkType</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebSpeechRecognitionContext</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebSpeechTimestamps</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebSpeechUnspokenPunctuation</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">WebTransportAnticipatedConcurrentIncomingStreams</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebTransportApplicationProtocol</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebTransportCongestionControl</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebTransportCreateStreamsBeforeReady</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebTransportCustomCertificates</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebTransportDatagramsReadableType</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebTransportDatagramsWritable</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebTransportDraining</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebTransportErrorSerialization</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebTransportExportKeyingMaterial</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebTransportHeaders</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebTransportReceiveStream</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebTransportReliability</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebTransportSendGroup</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebTransportStats</td><td><pre> Note: enabling this without setting WebTransportCongestionControl to
- either BBRv1 or BBRv2 will produce poor bandwidth estimates.</pre></td><td>❌</td></tr><tr><td class="name">WebUIBundledCodeCacheAsyncFetch</td><td><pre> Fetches the WebUI code cache from the resource bundle asynchronously
+ either BBRv1 or BBRv2 will produce poor bandwidth estimates.</pre></td><td>✅</td></tr><tr><td class="name">WebUIBundledCodeCacheAsyncFetch</td><td><pre> Fetches the WebUI code cache from the resource bundle asynchronously
  on a worker thread.</pre></td><td>❌</td></tr><tr><td class="name">WebUSB</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebUSBOnDedicatedWorkers</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebUSBOnServiceWorkers</td><td><pre> It is only enabled in extension environment for now.</pre></td><td>❌</td></tr><tr><td class="name">WebViewEnvReorderFix</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">WebVTTCueLayoutByPositionAlignment</td><td><pre> Kill switch for sizing and placing WebVTT cue boxes by the computed
  position alignment instead of the CSS text alignment.
  Spec: <a href="https://w3c.github.io/webvtt/#cue-computed-position-alignment">https://w3c.github.io/webvtt/#cue-computed-position-alignment</a></pre></td><td>✅</td></tr><tr><td class="name">WebVTTCueTightLineBox</td><td><pre> Killswitch for sizing each cue line box using the cue text font
@@ -2071,7 +2078,9 @@
  RuntimeEnabledFeature status unless the base::Feature is overridden,
  in which case both sides follow the override. This keeps the renderer
  and browser consistent, so that the browser can reject split requests
- from a renderer when the base::Feature is disabled.</pre></td><td>❌</td></tr><tr><td class="name">WordSkipSpacesPunctuationFix</td><td><pre> Fixes an issue where Ctrl+Right Arrow skips punctuation before a newline.</pre></td><td>✅</td></tr><tr><td class="name">XMLNoExternalEntities</td><td><pre> Moving to the Rust parser requires deprecation of the niche feature
+ from a renderer when the base::Feature is disabled. For the same
+ reason, OriginTrialContext::CanEnableTrialFromName() refuses to enable
+ the origin trial when the base::Feature is disabled.</pre></td><td>❌</td></tr><tr><td class="name">WordSkipSpacesPunctuationFix</td><td><pre> Fixes an issue where Ctrl+Right Arrow skips punctuation before a newline.</pre></td><td>✅</td></tr><tr><td class="name">XMLNoExternalEntities</td><td><pre> Moving to the Rust parser requires deprecation of the niche feature
  of synchronously including external entities.
  <a href="https://crbug.com/455813733">https://crbug.com/455813733</a></pre></td><td>✅</td></tr><tr><td class="name">XMLParserReplaceLoneSurrogates</td><td><pre> Replaces lone surrogates in the XML source with U+FFFD so that the
  parser makes a best-effort parse instead of rejecting the whole
@@ -3895,7 +3904,7 @@
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>Updated</strong>: 2026-11-10. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
+        <strong>Updated</strong>: 2026-11-11. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
       </p>
     </div>
   </footer>
