@@ -778,7 +778,9 @@
  TODO(rouslan): Remove this.</pre></td><td>✅</td></tr><tr><td class="name">ServiceWorkerRaceNetworkRequestAbortedErrorMessage</td><td><pre> Rejects <code>fetch(event.request)</code> in a ServiceWorker fetch handler with a
  dedicated cancellation TypeError message instead of generic &quot;Failed to fetch&quot;
  when a <code>race-network-and-fetch-handler</code> request fails with <code>net::ERR_ABORTED</code>
- before receiving response headers.</pre></td><td>❌</td></tr><tr><td class="name">ServiceWorkerRaceNetworkRequestFallbackOnDisconnect</td><td><pre> Enables fallback to network request when the RaceNetworkRequest Mojo pipe is
+ before receiving response headers.
+ TODO(crbug.com/584629540): Remove this temporary custom error message once
+ standardized cancellation reporting is defined and implemented.</pre></td><td>✅</td></tr><tr><td class="name">ServiceWorkerRaceNetworkRequestFallbackOnDisconnect</td><td><pre> Enables fallback to network request when the RaceNetworkRequest Mojo pipe is
  disconnected.</pre></td><td>❌</td></tr><tr><td class="name">ServiceWorkerSyntheticResponse</td><td><pre> (crbug.com/352578800): Enables building a sysnthetic response by
  ServiceWorker. For navigation requests, the pre-learned static response
  header is returned in parallel with dispatching the network request.</pre></td><td>❌</td></tr><tr><td class="name">SetIntervalWithoutClamp</td><td><pre> If enabled, calling setInterval(..., 0) will not clamp to 1ms.
@@ -1500,7 +1502,11 @@
  <a href="https://html.spec.whatwg.org/multipage/input.html#dom-input-alpha">https://html.spec.whatwg.org/multipage/input.html#dom-input-alpha</a>
  <a href="https://chromestatus.com/feature/5736024861966336">https://chromestatus.com/feature/5736024861966336</a></pre></td><td>❌</td></tr><tr><td class="name">InsertBlockquoteBeforeOuterBlock</td><td><pre> Insert a blockquote before a outer block after creating the blockquote
  when indenting a node whose outer block is a blockquote. See
- <a href="https://crbug.com/327665597">https://crbug.com/327665597</a></pre></td><td>✅</td></tr><tr><td class="name">InstalledApp</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">InstallElement</td><td><pre> <a href="https://chromestatus.com/feature/5152834368700416">https://chromestatus.com/feature/5152834368700416</a></pre></td><td>❌</td></tr><tr><td class="name">InstallOnDeviceSpeechRecognition</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">IntegrityPolicyScript</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">InterestEventsNonComposed</td><td><pre> Fixes a bug in the implementation of <code>interest</code> and <code>loseinterest</code>
+ <a href="https://crbug.com/327665597">https://crbug.com/327665597</a></pre></td><td>✅</td></tr><tr><td class="name">InsertParagraphInEditingHostCannotHaveDiv</td><td><pre> Make insertParagraph insert a line break instead of a &lt;div&gt; when the
+ editing host cannot have a &lt;div&gt;, e.g., &lt;p contenteditable&gt;, and split a
+ block inside such an editing host instead of inserting a line break.
+ Kill switch, enabled by default in M160.
+ crbug.com/40869970</pre></td><td>✅</td></tr><tr><td class="name">InstalledApp</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">InstallElement</td><td><pre> <a href="https://chromestatus.com/feature/5152834368700416">https://chromestatus.com/feature/5152834368700416</a></pre></td><td>❌</td></tr><tr><td class="name">InstallOnDeviceSpeechRecognition</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">IntegrityPolicyScript</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">InterestEventsNonComposed</td><td><pre> Fixes a bug in the implementation of <code>interest</code> and <code>loseinterest</code>
  events - they should not be composed events.
  This shipped in M149 and can be removed in M151.</pre></td><td>✅</td></tr><tr><td class="name">InterestForSpecAlignment</td><td><pre> Kill switch for several <code>interestfor</code> behavior changes that align with
  the spec PR (<a href="https://github.com/whatwg/html/pull/11006">https://github.com/whatwg/html/pull/11006</a>).</pre></td><td>✅</td></tr><tr><td class="name">IntersectionObserverCompositedAnimationsForceMainFrames</td><td><pre> If enabled, BeginMainFrame will always be requested when there are
@@ -3932,7 +3938,7 @@
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>Updated</strong>: 2026-11-15. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
+        <strong>Updated</strong>: 2026-11-16. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
       </p>
     </div>
   </footer>
