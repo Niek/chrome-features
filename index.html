@@ -180,7 +180,7 @@
  See crbug.com/540151895.</pre></td><td>✅</td></tr><tr><td class="name">AutofillFixRewriterRules</td><td><pre> When enabled, the rewriter uses updated rewrite rules.
  TODO(crbug.com/445863287): Cleanup when launched.</pre></td><td>✅</td></tr><tr><td class="name">AutofillFixStateCountryMisclassification</td><td><pre> When enabled, the rationalization engine will fix misclassifications where
  a field is detected as a COUNTRY when it should be a STATE or vice versa.
- TODO(crbug.com/444180493): Cleanup when launched.</pre></td><td>✅</td></tr><tr><td class="name">AutofillGmailOtpPreLaunchMetrics</td><td><pre> Enables pre-launch metrics for one-time passwords (OTPs) received in Gmail.</pre></td><td>❌</td></tr><tr><td class="name">AutofillGreekRegexes</td><td><pre> When enabled, Greek regexes are used for parsing in branded builds.</pre></td><td>✅</td></tr><tr><td class="name">AutofillGuardEmptyUpdatePrompts</td><td><pre> Kill switch for guarding against offering an address update prompt when there
+ TODO(crbug.com/444180493): Cleanup when launched.</pre></td><td>✅</td></tr><tr><td class="name">AutofillGmailOtpPreLaunchMetrics</td><td><pre> Enables pre-launch metrics for one-time passwords (OTPs) received in Gmail.</pre></td><td>✅</td></tr><tr><td class="name">AutofillGreekRegexes</td><td><pre> When enabled, Greek regexes are used for parsing in branded builds.</pre></td><td>✅</td></tr><tr><td class="name">AutofillGuardEmptyUpdatePrompts</td><td><pre> Kill switch for guarding against offering an address update prompt when there
  are no UI-visible differences (e.g. only whitespace or formatting changes
  normalized away by <code>GetEnvelopeStyleAddress()</code>).</pre></td><td>✅</td></tr><tr><td class="name">AutofillHideSuggestionsOnFocusChange</td><td><pre> When enabled, <code>BrowserAutofillManager</code> hides suggestions as soon as the
  renderer reports that the focus moved away from the field the suggestions
@@ -207,14 +207,17 @@
  model for field type predictions will be guarded.
  TODO(crbug.com/40276177): Remove when launched.</pre></td><td>❌</td></tr><tr><td class="name">AutofillMoveSmallFormLogicToClient</td><td><pre> When Enabled Autofill server will stop applying small form rule and Chrome
  will take care of this logic.</pre></td><td>❌</td></tr><tr><td class="name">AutofillNewSuggestionGeneration</td><td><pre> If enabled, the new suggestion generation logic is used.
- TODO(crbug.com/409962888): Remove once launched.</pre></td><td>❌</td></tr><tr><td class="name">AutofillOnlyConsiderSingleFieldFormsAsSearchForms</td><td><pre> When enabled, only single-field forms can be considered search forms (in
+ TODO(crbug.com/409962888): Remove once launched.</pre></td><td>✅</td></tr><tr><td class="name">AutofillOnlyConsiderSingleFieldFormsAsSearchForms</td><td><pre> When enabled, only single-field forms can be considered search forms (in
  addition to matching <code>kUrlSearchActionRe</code> on the form&#039;s action URL).
  TODO(crbug.com/566051797): Clean up when launched.</pre></td><td>❌</td></tr><tr><td class="name">AutofillOnTypingIgnoresAutocompleteOff</td><td><pre> When enabled, <code>SuggestionType::kAddressEntryOnTyping</code> suggestions are offered
  even if <code>FormFieldData::should_autocomplete()</code> is false
  (<code>autocomplete=&amp;quot;off&amp;quot;</code>), matching regular address suggestions.
  TODO(crbug.com/585485879): Remove when launched.</pre></td><td>❌</td></tr><tr><td class="name">AutofillOptimizeIsNormalizedNameVariantOf</td><td><pre> When enabled, <code>IsNormalizedNameVariantOf()</code> uses a linear-time greedy
  algorithm instead of an exponential one that generates all name variants.
- TODO(crbug.com/479905438) Remove once launched.</pre></td><td>✅</td></tr><tr><td class="name">AutofillOtpCoordinator</td><td><pre> When enabled, uses the tab-scoped <code>OtpCoordinator</code> and per-frame
+ TODO(crbug.com/479905438) Remove once launched.</pre></td><td>✅</td></tr><tr><td class="name">AutofillOptimizeSuggestionGeneration</td><td><pre> When enabled, launches asynchronous suggestion generators first and uses
+ <code>SuggestionBarrierCallback</code> to eagerly cancel lower-priority non-mergeable
+ generators once a higher-priority source returns suggestions.
+ TODO(crbug.com/409962888): Remove once launched.</pre></td><td>❌</td></tr><tr><td class="name">AutofillOtpCoordinator</td><td><pre> When enabled, uses the tab-scoped <code>OtpCoordinator</code> and per-frame
  <code>OtpTabToFrameOrchestrator</code> instead of <code>OtpManagerImpl</code>.</pre></td><td>❌</td></tr><tr><td class="name">AutofillPageLanguageDetection</td><td><pre> Enables detection of language from Translate.
  TODO(crbug.com/40158074): Cleanup when launched.</pre></td><td>❌</td></tr><tr><td class="name">AutofillParseMonthFromStringByWordBoundary</td><td><pre> When enabled, <code>data_util::ParseMonthFromString()</code> requires named and
  abbreviated month matches to be bounded by word boundaries rather than
@@ -241,7 +244,15 @@
  emitting of &quot;Autofill.AcceptedSuggestionDesktopRowViewVisibleEnough&quot;.</pre></td><td>❌</td></tr><tr><td class="name">AutofillPopupUseDeleteSoon</td><td><pre> If enabled, <code>PopupBaseView</code> uses <code>DeleteSoon</code> instead of synchronous
  <code>delete this</code> during <code>DoHide()</code> when no widget has been created, and
  guards against double destruction or showing while hiding.
- TODO(crbug.com/524084900): Remove when launched.</pre></td><td>❌</td></tr><tr><td class="name">AutofillQueryPerIframeStructuralSignatures</td><td><pre> Controls whether iframe subqueries use their host form&#039;s structural
+ TODO(crbug.com/524084900): Remove when launched.</pre></td><td>❌</td></tr><tr><td class="name">AutofillPostTaskAfterFillOrPreviewForm</td><td><pre> When enabled, <code>FormFiller::FillOrPreviewForm()</code> runs the bookkeeping of fills
+ after <code>AutofillDriver::ApplyFormAction()</code> (cache updates, undo history, fill
+ log events, metrics and observer notifications) in a separate task instead of
+ synchronously. Previews always notify observers synchronously. Disabled by
+ default because observers are then notified about fills
+ (<code>AutofillManager::Observer::OnFillOrPreviewForm()</code>) one task later, e.g.,
+ after the suggestions were hidden.
+ TODO(crbug.com/582269824): Remove when the asynchronous bookkeeping has
+ launched.</pre></td><td>❌</td></tr><tr><td class="name">AutofillQueryPerIframeStructuralSignatures</td><td><pre> Controls whether iframe subqueries use their host form&#039;s structural
  signature and omit main-form-only metadata.</pre></td><td>❌</td></tr><tr><td class="name">AutofillRecordAutocompleteTableStats</td><td><pre> When enabled, records Autocomplete table-level diagnostics and saturation
  metrics on profile startup.
  TODO(crbug.com/562921257): Remove this feature flag and the associated
@@ -1069,7 +1080,9 @@
  make sure MouseCursorOverlayController does not transmit mouse
  events to a CaptureController that don&#039;t have any
  capturedmousechange listener attached to it.
- See <a href="https://github.com/screen-share/mouse-events/issues/14">https://github.com/screen-share/mouse-events/issues/14</a></pre></td><td>❌</td></tr><tr><td class="name">CapturedSurfaceControl</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CapturedSurfaceResolution</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CaptureHandle</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CaretBlinking</td><td><pre> Allows automated test runners to keep focused carets visible.</pre></td><td>✅</td></tr><tr><td class="name">CaretBrowsingSequentialFocusStartingPoint</td><td><pre> Updates the sequential focus navigation starting point when moving the
+ See <a href="https://github.com/screen-share/mouse-events/issues/14">https://github.com/screen-share/mouse-events/issues/14</a></pre></td><td>❌</td></tr><tr><td class="name">CapturedSurfaceControl</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CapturedSurfaceResolution</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CaptureHandle</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">CaptureSourceLocationSameOriginCheck</td><td><pre> Kill switch for <a href="https://crbug.com/582918766">https://crbug.com/582918766</a>. Checks that the current
+ and incumbent V8 contexts are same-origin with the target
+ ExecutionContext before capturing a V8 stack trace.</pre></td><td>✅</td></tr><tr><td class="name">CaretBlinking</td><td><pre> Allows automated test runners to keep focused carets visible.</pre></td><td>✅</td></tr><tr><td class="name">CaretBrowsingSequentialFocusStartingPoint</td><td><pre> Updates the sequential focus navigation starting point when moving the
  caret with the keyboard during caret browsing.
  <a href="https://crbug.com/567653181">https://crbug.com/567653181</a></pre></td><td>✅</td></tr><tr><td class="name">CaretOutsideEditableAtomicInline</td><td><pre> Keeps the caret outside an editable atomic inline - e.g.
  &lt;div contenteditable style=&quot;display:inline-block&quot;&gt; - for a click that
@@ -1346,12 +1359,15 @@
  absolute screen coordinates rather than window relative coordinates.
  See <a href="https://crbug.com/40943926">https://crbug.com/40943926</a> and
  <a href="https://html.spec.whatwg.org/multipage/dnd.html#security-risks-in-the-drag-and-drop-model">https://html.spec.whatwg.org/multipage/dnd.html#security-risks-in-the-drag-and-drop-model</a></pre></td><td>✅</td></tr><tr><td class="name">DumpForAbsentKeyframeSnapshots</td><td><pre> See: crrev.com/c/7874048
- Diagnostic flag to gather data for a case when compositable animations lack snapshots without a known reason.</pre></td><td>❌</td></tr><tr><td class="name">EditContextAssignmentAsPerSpec</td><td><pre> See <a href="https://crbug.com/443612843">https://crbug.com/443612843</a></pre></td><td>❌</td></tr><tr><td class="name">EditContextBoundsUpdateSchedulesFrame</td><td><pre> Schedule a main frame when EditContext.updateControlBounds() or
+ Diagnostic flag to gather data for a case when compositable animations lack snapshots without a known reason.</pre></td><td>❌</td></tr><tr><td class="name">EditContextAssignmentAsPerSpec</td><td><pre> See <a href="https://crbug.com/443612843">https://crbug.com/443612843</a></pre></td><td>❌</td></tr><tr><td class="name">EditContextBeforeInputForIme</td><td><pre> Dispatch beforeinput for IME operations with an EditContext.
+ See <a href="https://crbug.com/41489598">https://crbug.com/41489598</a></pre></td><td>✅</td></tr><tr><td class="name">EditContextBoundsUpdateSchedulesFrame</td><td><pre> Schedule a main frame when EditContext.updateControlBounds() or
  updateSelectionBounds() changes the bounds of the active EditContext,
  so the new bounds are sent to the browser in TextInputStateChanged even
  when called from an async task that doesn&#039;t otherwise cause a frame.</pre></td><td>✅</td></tr><tr><td class="name">EditContextCodePointDeletion</td><td><pre> Support code point-based deletion calculations in
  DeleteSurroundingTextInCodePoints() for EditContext.</pre></td><td>✅</td></tr><tr><td class="name">EditContextHandleTextOrSelectionUpdateDuringComposition</td><td><pre> See <a href="https://crbug.com/379170477">https://crbug.com/379170477</a></pre></td><td>❌</td></tr><tr><td class="name">EditContextSelectionUpdateBeforeTextUpdateEvent</td><td><pre> Update EditContext selectionStart/End before TextUpdateEvent while
- handling deletion. See <a href="https://crbug.com/529413105">https://crbug.com/529413105</a></pre></td><td>✅</td></tr><tr><td class="name">EditingUseDomPositionApi</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ElasticOverscrollBackgroundPaintLocationFix</td><td><pre> Elastic overscroll requires even solid color background to be painted
+ handling deletion. See <a href="https://crbug.com/529413105">https://crbug.com/529413105</a></pre></td><td>✅</td></tr><tr><td class="name">EditingPasteListIntoRootListItem</td><td><pre> Merge a pasted single-item list into an empty list item that is
+ itself the editable root instead of nesting the list inside it.
+ crbug.com/41103797</pre></td><td>✅</td></tr><tr><td class="name">EditingUseDomPositionApi</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ElasticOverscrollBackgroundPaintLocationFix</td><td><pre> Elastic overscroll requires even solid color background to be painted
  in the border box space to ensure they aren&#039;t shifted away.</pre></td><td>✅</td></tr><tr><td class="name">ElasticOverscrollUseEventDeltaForAxisSelection</td><td><pre> Uses the original event delta to choose the initial elastic overscroll
  axis.</pre></td><td>✅</td></tr><tr><td class="name">ElementCapture</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ElementInternalsBehaviors</td><td><pre> ElementInternals.behaviors allows web authors to attach
  platform-provided behaviors to custom elements, enabling
@@ -1368,7 +1384,9 @@
  crbug.com/435623334.</pre></td><td>✅</td></tr><tr><td class="name">EndpointInclusiveCommitStyles</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">EntropyIgnoredForFirstVideoFrameLCP</td><td><pre> When enabled, the LCP algorithm ignores image entropy for the first
  video frame. See crbug.com/434659232.</pre></td><td>❌</td></tr><tr><td class="name">EventPseudoTargetProperty</td><td><pre> <code>event.pseudoTarget</code> property to represent pseudo-elements in events. Returns <code>CSSPseudoElement</code> or null.</pre></td><td>✅</td></tr><tr><td class="name">EventPseudoTargetViewTransitionName</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">EventTimingInteractionCount</td><td><pre> Kill-switch for <a href="https://chromestatus.com/feature/5153386492198912">https://chromestatus.com/feature/5153386492198912</a>
  Added in M144, can be removed in M146.</pre></td><td>✅</td></tr><tr><td class="name">EventTimingMatchingHTML</td><td><pre> Interoperable dispatch timing for transitionrun and media query events.
- <a href="https://chromestatus.com/feature/6312504658624512">https://chromestatus.com/feature/6312504658624512</a></pre></td><td>✅</td></tr><tr><td class="name">EventTimingTargetSelector</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">EventTrigger</td><td><pre> <a href="https://drafts.csswg.org/web-animations-2/#triggers">https://drafts.csswg.org/web-animations-2/#triggers</a></pre></td><td>❌</td></tr><tr><td class="name">ExclusionSpaceCopyOnWrite</td><td><pre> <a href="https://crbug.com/578672563">https://crbug.com/578672563</a></pre></td><td>✅</td></tr><tr><td class="name">ExperimentalContentSecurityPolicyFeatures</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ExperimentalJSProfilerMarkers</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ExperimentalMachineLearningNeuralNetwork</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ExperimentalPolicies</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ExposeRenderTimeNonTaoDelayedImage</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ExtendedTextMetrics</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ExtensionScriptTagging</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ExtensionScriptTaggingTestingAPI</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ExternalPopupMenuClickEvent</td><td><pre> Kill-switch for crbug.com/40434449.
+ <a href="https://chromestatus.com/feature/6312504658624512">https://chromestatus.com/feature/6312504658624512</a></pre></td><td>✅</td></tr><tr><td class="name">EventTimingTargetSelector</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">EventTrigger</td><td><pre> <a href="https://drafts.csswg.org/web-animations-2/#triggers">https://drafts.csswg.org/web-animations-2/#triggers</a></pre></td><td>❌</td></tr><tr><td class="name">ExclusionSpaceCopyOnWrite</td><td><pre> <a href="https://crbug.com/578672563">https://crbug.com/578672563</a></pre></td><td>✅</td></tr><tr><td class="name">ExperimentalContentSecurityPolicyFeatures</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ExperimentalJSProfilerMarkers</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ExperimentalMachineLearningNeuralNetwork</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ExperimentalPolicies</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ExposeRenderTimeNonTaoDelayedImage</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ExtendedTextMetrics</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ExtendSelectionAndDeleteInCodeUnits</td><td><pre> Delete exact UTF-16 code units in
+ InputMethodController::ExtendSelectionAndDelete() rather than snapping
+ to grapheme cluster boundaries. See <a href="https://crbug.com/505643410">https://crbug.com/505643410</a>.</pre></td><td>✅</td></tr><tr><td class="name">ExtensionScriptTagging</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ExtensionScriptTaggingTestingAPI</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">ExternalPopupMenuClickEvent</td><td><pre> Kill-switch for crbug.com/40434449.
  Added in M139, and it can be removed in M141.</pre></td><td>✅</td></tr><tr><td class="name">EyeDropperAPI</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FaceDetector</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FastCommonGraphemeClusterPrefixLength</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FastCompositionCharacterBounds</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FastPlainTextRangeCreateRange</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FastPositionIterator</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FastTypingCommandCreateSelection</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FedCm</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FedCmActiveModeMultipleIdentityProviders</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FedCmAutofill</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FedCmDelegation</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FedCmIdentityHandler</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FedCmIdPRegistration</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FedCmLightweightMode</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FedCmMultipleIdentityProviders</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FedCmMultipleRequests</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FedCmNavigationInterception</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">FencedFrames</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FencedFramesAPIChanges</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FencedFramesLocalUnpartitionedDataAccess</td><td><pre> Allows fenced frames to access unpartioned data via Shared Storage in
  exchange for disabling untrusted network access. This is the Blink
  counterpart of the base::Feature with the same name. Because local
@@ -1395,7 +1413,7 @@
  shared primitives needed by both the FilterableSelect and
  CustomizableCombobox features.</pre></td><td>❌</td></tr><tr><td class="name">FindBufferCollapseSkippedSpace</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FindBufferMatchAcrossIgnoredNodes</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FindBufferSkipIgnoredSubtrees</td><td><pre> Fix for <a href="https://crbug.com/558819236">https://crbug.com/558819236</a></pre></td><td>✅</td></tr><tr><td class="name">FindFirstMisspellingEndWhenNonEditable</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FindInPageAsymmetricDiacriticSearch</td><td><pre> Enables asymmetric diacritic matching in Find-in-Page so base
  characters match diacritic variants while explicit diacritics only
- match that diacritic (<a href="https://crbug.com/40518349">https://crbug.com/40518349</a>).</pre></td><td>❌</td></tr><tr><td class="name">FirstLetterParagraphOffsets</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FirstLineAndLetterExcludeInputTextarea</td><td><pre> <a href="https://github.com/w3c/csswg-drafts/issues/13926">https://github.com/w3c/csswg-drafts/issues/13926</a></pre></td><td>✅</td></tr><tr><td class="name">FirstLineTextMetrics</td><td><pre> It turned out that this fix was wrong. The plan is to turn it off, and
+ match that diacritic (<a href="https://crbug.com/40518349">https://crbug.com/40518349</a>).</pre></td><td>❌</td></tr><tr><td class="name">FirstLetterParagraphOffsets</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FirstLineAndLetterExcludeInputTextarea</td><td><pre> <a href="https://github.com/w3c/csswg-drafts/issues/13926">https://github.com/w3c/csswg-drafts/issues/13926</a></pre></td><td>✅</td></tr><tr><td class="name">FirstLineBoxDecorationInkOverflow</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">FirstLineTextMetrics</td><td><pre> It turned out that this fix was wrong. The plan is to turn it off, and
  remove if that goes well. crbug.com/41362700</pre></td><td>❌</td></tr><tr><td class="name">FixHTMLFormControlElementIsReadOnly</td><td><pre> When enabled, HTMLFormControlElement::IsReadOnly() returns false for
  types that don&#039;t support readonly.</pre></td><td>✅</td></tr><tr><td class="name">FixMapElementEmptyNameBug</td><td><pre> Fix a bug in the &lt;map&gt; element&#039;s caching of the name attribute. This
  flag was added in M148, and can be removed in M150.</pre></td><td>✅</td></tr><tr><td class="name">FixSelectionPaintRangeNullOpt</td><td><pre> Guard the kStart / kEnd / kStartAndEnd branches of
@@ -1456,7 +1474,9 @@
  <a href="https://issues.chromium.org/issues/491158089">https://issues.chromium.org/issues/491158089</a>
  NOTE: when this flag is removed, be sure to also remove &quot;command&quot;
  from third_party/blink/renderer/core/html/html_tag_names.json5.</pre></td><td>✅</td></tr><tr><td class="name">HTMLCommandForScrollCommands</td><td><pre> Adds support for scroll commands such as &#039;page-up&#039; and &#039;page-block-end&#039;.
- <a href="https://github.com/danielsakhapov/declarative-scroll-commands-for-html-explainer">https://github.com/danielsakhapov/declarative-scroll-commands-for-html-explainer</a></pre></td><td>❌</td></tr><tr><td class="name">HTMLElementScrollParent</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">HTMLInterestForInterestButtonPseudo</td><td><pre> Adds support for the <code>::interest-button</code> pseudo element, which is a sub-
+ <a href="https://github.com/danielsakhapov/declarative-scroll-commands-for-html-explainer">https://github.com/danielsakhapov/declarative-scroll-commands-for-html-explainer</a></pre></td><td>❌</td></tr><tr><td class="name">HTMLElementScrollParent</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">HTMLInputHspaceVspaceImageOnly</td><td><pre> Kill switch: map hspace, vspace and border on &lt;input&gt; only in the
+ Image Button state, including after the type attribute changes.
+ Ships in M160 and can be removed in M162. <a href="https://crbug.com/581012178">https://crbug.com/581012178</a></pre></td><td>✅</td></tr><tr><td class="name">HTMLInterestForInterestButtonPseudo</td><td><pre> Adds support for the <code>::interest-button</code> pseudo element, which is a sub-
  feature of the interest invokers feature.
  <a href="https://open-ui.org/components/interest-invokers.explainer/">https://open-ui.org/components/interest-invokers.explainer/</a></pre></td><td>❌</td></tr><tr><td class="name">HTMLLinkElementAttributeValueChanges</td><td><pre> Prevents the HTMLLinkElement processing model from being invoked when
  attributes are processed but their value doesn&#039;t change. See
@@ -1475,7 +1495,11 @@
  <a href="https://opensource.adobe.com/dc-acrobat-sdk-docs/pdfstandards/PDF32000_2008.pdf">https://opensource.adobe.com/dc-acrobat-sdk-docs/pdfstandards/PDF32000_2008.pdf</a></pre></td><td>✅</td></tr><tr><td class="name">HTMLSwitchAttribute</td><td><pre> Enables the switch attribute on &lt;input type=&quot;checkbox&quot;&gt;.
  <a href="https://open-ui.org/components/switch.attribute.explainer/">https://open-ui.org/components/switch.attribute.explainer/</a></pre></td><td>❌</td></tr><tr><td class="name">HyphenVerticalOrientationFix</td><td><pre> Use orientation segmentation for hyphenation strings in vertical mixed
  text, so characters such as &quot;+=&quot; render sideways instead of upright.
- <a href="https://crbug.com/562849567">https://crbug.com/562849567</a></pre></td><td>✅</td></tr><tr><td class="name">ICUCapitalization</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">IcuSearchLengthLimit</td><td><pre> crbug.com/580881866</pre></td><td>✅</td></tr><tr><td class="name">ImageDataPixelFormat</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ImageDocumentUseLayoutWidth</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ImageSrcsetReselection</td><td><pre> Srcset images respond to viewport/zoom changes by
+ <a href="https://crbug.com/562849567">https://crbug.com/562849567</a></pre></td><td>✅</td></tr><tr><td class="name">ICUCapitalization</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">IcuSearchLengthLimit</td><td><pre> crbug.com/580881866</pre></td><td>✅</td></tr><tr><td class="name">IgnoreSchemeExemptionForImportScriptsMimeTypeCheck</td><td><pre> Makes importScripts() reject data:, blob: and filesystem: URLs unless
+ their MIME type is a JavaScript MIME type.
+ <a href="https://html.spec.whatwg.org/C/#fetch-a-classic-worker-imported-script">https://html.spec.whatwg.org/C/#fetch-a-classic-worker-imported-script</a>
+ <a href="https://github.com/whatwg/html/issues/8869">https://github.com/whatwg/html/issues/8869</a>
+ crbug.com/582540332</pre></td><td>❌</td></tr><tr><td class="name">ImageDataPixelFormat</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ImageDocumentUseLayoutWidth</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">ImageSrcsetReselection</td><td><pre> Srcset images respond to viewport/zoom changes by
  re-selecting the best candidate, including for
  x-descriptors.
  <a href="https://crbug.com/41385706">https://crbug.com/41385706</a></pre></td><td>✅</td></tr><tr><td class="name">ImageSrcsetReselectionForSrcCandidate</td><td><pre> Srcset images also re-select the best candidate on viewport/zoom
@@ -1845,7 +1869,9 @@
  See crbug.com/521896365</pre></td><td>❌</td></tr><tr><td class="name">ShadowRootReferenceTarget</td><td><pre> Reference Target allows IDREF attributes to refer inside Shadow DOM.
  crbug.com/346835896</pre></td><td>✅</td></tr><tr><td class="name">ShadowRootReferenceTargetAriaOwns</td><td><pre> If enabled, Reference Target will support aria-owns.
  <a href="https://github.com/WICG/webcomponents/issues/1091">https://github.com/WICG/webcomponents/issues/1091</a></pre></td><td>❌</td></tr><tr><td class="name">ShadowRootSlotAssignment</td><td><pre> Lets declarative shadow roots opt into manual slot assignment.
- crbug.com/493315747</pre></td><td>✅</td></tr><tr><td class="name">SharedArrayBuffer</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SharedArrayBufferUnrestrictedAccessAllowed</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SharedWorker</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SharedWorkerExtendedLifetime</td><td><pre> If enabled, SharedWorker supports extendedLifetime
+ crbug.com/493315747</pre></td><td>✅</td></tr><tr><td class="name">SharedArrayBuffer</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SharedArrayBufferUnrestrictedAccessAllowed</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SharedWorker</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SharedWorkerConnectEventEmptyStringData</td><td><pre> Kill switch for crbug.com/583449815. Initializes the data attribute of
+ the SharedWorker connect event to the empty string.
+ <a href="https://html.spec.whatwg.org/multipage/workers.html#run-a-worker">https://html.spec.whatwg.org/multipage/workers.html#run-a-worker</a></pre></td><td>✅</td></tr><tr><td class="name">SharedWorkerExtendedLifetime</td><td><pre> If enabled, SharedWorker supports extendedLifetime
  <a href="https://github.com/whatwg/html/issues/10997">https://github.com/whatwg/html/issues/10997</a>
  <a href="https://issues.chromium.org/issues/400473072">https://issues.chromium.org/issues/400473072</a></pre></td><td>✅</td></tr><tr><td class="name">SideRelativeBackgroundPosition</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SignatureBasedInlineIntegrity</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SingleAxisScrollContainers</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SingleAxisScrollContainersForScrollSnap</td><td>&mdash;</td><td>❌</td></tr><tr><td class="name">SkipAd</td><td>&mdash;</td><td>✅</td></tr><tr><td class="name">SkipCallbacksWhenDevToolsNotOpen</td><td><pre> If enabled, only call ResourceLoadObserver callbacks if the DevTools
  panel is open.</pre></td><td>❌</td></tr><tr><td class="name">SkipCompositingStaticBackdropFilterAnimation</td><td><pre> Kill switch for <a href="https://crbug.com/569098933">https://crbug.com/569098933</a>. Doesn&#039;t composite a
@@ -2267,6 +2293,7 @@
         "metadata_upload_events": "",
         "name_and_email_profile_not_selected_counter": "",
         "name_and_email_profile_signature": "",
+        "offers_and_loyalty_cards_enabled": "",
         "payment_card_benefits": "",
         "payment_cvc_storage": "",
         "profile_enabled": "",
@@ -2637,6 +2664,7 @@
             "initiallist": "",
             "initialprovidername": ""
         },
+        "isolated_mode_user_installed_extensions_settings": "",
         "last_chrome_version": "",
         "management": "",
         "oauth_redirect_urls": "",
@@ -3056,6 +3084,11 @@
         "account_store_migrated_to_os_crypt_async": "",
         "clearing_undecryptable_passwords": "",
         "last_negative_password_change_timestamp": "",
+        "on_device_encryption_last_sign_in_time": "",
+        "on_device_encryption_passkey_first_unlock_time": "",
+        "on_device_encryption_passkey_time_to_unlock_last_": "",
+        "on_device_encryption_password_first_unlock_time": "",
+        "on_device_encryption_password_time_to_unlock_last_": "",
         "on_device_encryption_state_passkey_last_reported_bucket": "",
         "on_device_encryption_state_passkey_last_reporting_time": "",
         "on_device_encryption_state_password_last_reported_bucket": "",
@@ -3938,7 +3971,7 @@
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>Updated</strong>: 2026-11-16. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
+        <strong>Updated</strong>: 2026-11-17. For the source code, see the <a href="https://github.com/Niek/chrome-features">GitHub repo</a>.
       </p>
     </div>
   </footer>
