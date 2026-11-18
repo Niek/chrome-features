@@ -150,8 +150,20 @@ trap 'rm -f "${download_list}"' EXIT
 for file in "${files[@]}"; do
   printf '%s\0' "${file}" >>"${download_list}"
 done
-xargs -0 -n1 -P8 bash -c \
-  'file="$1"; curl -fsS "https://raw.githubusercontent.com/chromium/chromium/main/${file}" -o "src/${file//\//_}" || { echo "Failed to download ${file}" >&2; exit 1; }' \
+# raw.githubusercontent.com throttles anonymous bursts with HTTP 429.
+# Authenticate when a token is available (GITHUB_TOKEN in Actions) to get the
+# much higher authenticated limit, and retry as a backstop: curl treats 429
+# and 5xx as transient for --retry and backs off exponentially.
+curl_auth_config=/dev/null
+if [ -n "${GITHUB_TOKEN:-}" ]; then
+  # Pass the header via a config file so the token never appears in argv.
+  curl_auth_config="$(mktemp)"
+  trap 'rm -f "${download_list}" "${curl_auth_config}"' EXIT
+  printf 'header = "Authorization: Bearer %s"\n' "${GITHUB_TOKEN}" >"${curl_auth_config}"
+fi
+export curl_auth_config
+xargs -0 -n1 -P4 bash -c \
+  'file="$1"; curl -fsS -K "${curl_auth_config}" --retry 8 --retry-max-time 300 "https://raw.githubusercontent.com/chromium/chromium/main/${file}" -o "src/${file//\//_}" || { echo "Failed to download ${file}" >&2; exit 1; }' \
   _ <"${download_list}"
 
 # Generate doxygen output

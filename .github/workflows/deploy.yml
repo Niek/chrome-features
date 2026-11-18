@@ -21,6 +21,9 @@ jobs:
         run: sudo apt-get -y install doxygen curl composer php-xml && ./run.sh
         env:
           DEBIAN_FRONTEND: noninteractive
+          # Authenticated downloads from raw.githubusercontent.com avoid the
+          # anonymous rate limit (HTTP 429).
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
