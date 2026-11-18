@@ -150,20 +150,30 @@ trap 'rm -f "${download_list}"' EXIT
 for file in "${files[@]}"; do
   printf '%s\0' "${file}" >>"${download_list}"
 done
-# raw.githubusercontent.com throttles anonymous bursts with HTTP 429.
-# Authenticate when a token is available (GITHUB_TOKEN in Actions) to get the
-# much higher authenticated limit, and retry as a backstop: curl treats 429
-# and 5xx as transient for --retry and backs off exponentially.
-curl_auth_config=/dev/null
+# Anonymous requests to raw.githubusercontent.com get throttled (HTTP 429),
+# especially from shared GitHub Actions runners, and sending a token there
+# does not lift that. When GITHUB_TOKEN is set (as in Actions), download
+# through the REST contents API instead, which applies the token's own rate
+# limit (1,000 requests per hour per repository for GITHUB_TOKEN).
+curl_config="$(mktemp)"
+trap 'rm -f "${download_list}" "${curl_config}"' EXIT
 if [ -n "${GITHUB_TOKEN:-}" ]; then
-  # Pass the header via a config file so the token never appears in argv.
-  curl_auth_config="$(mktemp)"
-  trap 'rm -f "${download_list}" "${curl_auth_config}"' EXIT
-  printf 'header = "Authorization: Bearer %s"\n' "${GITHUB_TOKEN}" >"${curl_auth_config}"
+  base_url="https://api.github.com/repos/chromium/chromium/contents"
+  query="?ref=main"
+  # Headers go in a curl config file so the token never appears in argv.
+  printf 'header = "%s"\n' \
+    "Authorization: Bearer ${GITHUB_TOKEN}" \
+    "Accept: application/vnd.github.raw" \
+    "X-GitHub-Api-Version: 2022-11-28" >"${curl_config}"
+else
+  base_url="https://raw.githubusercontent.com/chromium/chromium/main"
+  query=""
 fi
-export curl_auth_config
+export base_url query curl_config
+# Retry transient errors (429 and 5xx) with curl's exponential backoff. A
+# failed download exits 255 so xargs stops starting new ones straight away.
 xargs -0 -n1 -P4 bash -c \
-  'file="$1"; curl -fsS -K "${curl_auth_config}" --retry 8 --retry-max-time 300 "https://raw.githubusercontent.com/chromium/chromium/main/${file}" -o "src/${file//\//_}" || { echo "Failed to download ${file}" >&2; exit 1; }' \
+  'file="$1"; curl -fsS -K "${curl_config}" --retry 5 --retry-max-time 120 "${base_url}/${file}${query}" -o "src/${file//\//_}" || { echo "Failed to download ${file}" >&2; exit 255; }' \
   _ <"${download_list}"
 
 # Generate doxygen output
