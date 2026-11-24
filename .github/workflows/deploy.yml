@@ -1,16 +1,19 @@
 name: Build and Deploy
 on:
+  pull_request:
   push:
+    branches: [main]
   workflow_dispatch:
   schedule:
-  - cron: "0 0 * * *" # Run every day
+    - cron: "0 0 * * *" # Run every day
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v6
@@ -18,12 +21,35 @@ jobs:
           persist-credentials: false
 
       - name: Build page
-        run: sudo apt-get -y install doxygen curl composer php-xml && ./run.sh
+        run: sudo apt-get -y install doxygen composer php-xml && ./run.sh
         env:
           DEBIAN_FRONTEND: noninteractive
-          # Authenticated downloads from raw.githubusercontent.com avoid the
-          # anonymous rate limit (HTTP 429).
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload page
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        uses: actions/upload-artifact@v4
+        with:
+          name: generated-page
+          path: build/
+          if-no-files-found: error
+
+  deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Download page
+        uses: actions/download-artifact@v4
+        with:
+          name: generated-page
+          path: build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4

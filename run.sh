@@ -144,37 +144,39 @@ files=(
   "services/preferences/public/cpp/tracked/pref_names.h"
 )
 
-# Download the files
-download_list="$(mktemp)"
-trap 'rm -f "${download_list}"' EXIT
-for file in "${files[@]}"; do
-  printf '%s\0' "${file}" >>"${download_list}"
-done
-# Anonymous requests to raw.githubusercontent.com get throttled (HTTP 429),
-# especially from shared GitHub Actions runners, and sending a token there
-# does not lift that. When GITHUB_TOKEN is set (as in Actions), download
-# through the REST contents API instead, which applies the token's own rate
-# limit (1,000 requests per hour per repository for GITHUB_TOKEN).
-curl_config="$(mktemp)"
-trap 'rm -f "${download_list}" "${curl_config}"' EXIT
-if [ -n "${GITHUB_TOKEN:-}" ]; then
-  base_url="https://api.github.com/repos/chromium/chromium/contents"
-  query="?ref=main"
-  # Headers go in a curl config file so the token never appears in argv.
-  printf 'header = "%s"\n' \
-    "Authorization: Bearer ${GITHUB_TOKEN}" \
-    "Accept: application/vnd.github.raw" \
-    "X-GitHub-Api-Version: 2022-11-28" >"${curl_config}"
-else
-  base_url="https://raw.githubusercontent.com/chromium/chromium/main"
-  query=""
+# Fetch just the requested files from one shallow Chromium snapshot.
+chromium_url=https://github.com/chromium/chromium.git
+chromium_tmp="$(mktemp -d)"
+trap 'rm -rf -- "$chromium_tmp"' EXIT
+chromium_src="$chromium_tmp/src"
+
+# Refuse to clone if the server cannot omit blobs (a full checkout is huge).
+GIT_TRACE_PACKET="$chromium_tmp/packets" git -c protocol.version=2 \
+  ls-remote --exit-code "$chromium_url" refs/heads/main >/dev/null
+if ! grep -Eq '< fetch=([^ ]+ )*filter( |$)' "$chromium_tmp/packets"; then
+  echo "Chromium Git server does not support partial clone" >&2
+  exit 1
 fi
-export base_url query curl_config
-# Retry transient errors (429 and 5xx) with curl's exponential backoff. A
-# failed download exits 255 so xargs stops starting new ones straight away.
-xargs -0 -n1 -P4 bash -c \
-  'file="$1"; curl -fsS -K "${curl_config}" --retry 5 --retry-max-time 120 "${base_url}/${file}${query}" -o "src/${file//\//_}" || { echo "Failed to download ${file}" >&2; exit 255; }' \
-  _ <"${download_list}"
+git -c protocol.version=2 clone --depth=1 --filter=blob:none --no-checkout \
+  --single-branch --no-tags --branch main "$chromium_url" "$chromium_src"
+printf '/%s\n' "${files[@]}" | git -C "$chromium_src" sparse-checkout set --no-cone --stdin
+git -C "$chromium_src" checkout --detach HEAD
+echo "Chromium source revision: $(git -C "$chromium_src" rev-parse HEAD)"
+
+# Keep the flattened filenames used by Doxygen and run.php.
+missing=0
+for file in "${files[@]}"; do
+  if [[ ! -f "$chromium_src/$file" ]]; then
+    printf 'Missing Chromium source file: %s\n' "$file" >&2
+    missing=1
+  fi
+done
+if (( missing )); then
+  exit 1
+fi
+for file in "${files[@]}"; do
+  cp -- "$chromium_src/$file" "src/${file//\//_}"
+done
 
 # Generate doxygen output
 echo -e "GENERATE_HTML=NO\nGENERATE_LATEX=NO\nGENERATE_XML=YES\nQUIET=YES\nINPUT=src\nFILE_PATTERNS=*.cc,*.h" | doxygen -
